@@ -45,7 +45,7 @@ border:1.5px solid var(--line);border-radius:14px;padding:15px 14px;margin-botto
 .deck{border:0;border-radius:10px;padding:9px 4px;background:transparent;color:var(--sub);font:600 15px/1.2 inherit;font-family:inherit}
 .deck small{display:block;font-size:11px;font-weight:500;opacity:.8;margin-top:2px}
 .deck.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:22px 0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:22px 0}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
 .stat div{font-size:22px;font-weight:800} .stat span{font-size:12px;color:var(--sub)}
 .toast{color:var(--bad);font-weight:600;text-align:center;margin-top:6px;min-height:22px}
@@ -123,17 +123,17 @@ function home() {
   const resume = s && s.day === S.day;
   app.innerHTML = `
     <h1>TOEIC 영단어</h1>
-    <div class="decks">${Object.entries(DECKS).map(([k, d]) => `<button class="deck${k === ALL.deck ? ' on' : ''}" data-k="${k}">${d.name}<small>${deckIdx(k).length}</small></button>`).join('')}</div>
+    <div class="decks">${Object.entries(DECKS).map(([k, d]) => `<button class="deck${k === ALL.deck ? ' on' : ''}" data-k="${k}">${d.name}</button>`).join('')}</div>
     <p class="muted">${DECKS[ALL.deck].desc}</p>
     <p class="day">Day ${S.day}</p>
     <p class="muted">${n}단어 · 4지선다 · 틀린 단어는 다 맞출 때까지 반복</p>
     <div class="stats">
       <div class="stat"><div>${done}</div><span>완료한 날</span></div>
       <div class="stat"><div>${done ? avg + '%' : '–'}</div><span>평균 첫 정답률</span></div>
-      <div class="stat"><div>${Math.ceil(S.order.length / PER_DAY)}</div><span>전체 일수</span></div>
     </div>
     ${lastDate === today() ? `<p class="muted">오늘 이미 하루치를 끝냈어요. 더 해도 돼요 💪</p>` : ''}
     <div class="spacer"></div>
+    ${resume && s.wrong.length ? `<button class="btn ghost" id="wv">지금까지 틀린 ${s.wrong.length}개 보기</button>` : ''}
     ${resume ? `<button class="btn" id="go">이어하기 · ${s.round === 1 ? '' : '오답 ' + s.round + '회차 · '}${s.pos}/${s.queue.length}</button>
                <button class="btn ghost" id="restart">Day ${S.day} 처음부터</button>`
              : `<button class="btn" id="go">시작하기</button>`}
@@ -144,6 +144,22 @@ function home() {
   const r = document.getElementById('restart');
   if (r) r.onclick = () => { if (confirm('지금까지 푼 기록을 지우고 처음부터 할까요?')) { startDay(); quiz(); } };
   document.getElementById('hist').onclick = history;
+  const wv = document.getElementById('wv');
+  if (wv) wv.onclick = wrongView;
+}
+
+// 중간 오답 보기: 진도에는 영향 없음 (오답들은 그대로 회차 끝 복습에도 다시 나옴)
+function wrongView() {
+  const list = S.sess.wrong;
+  app.innerHTML = `
+    <div class="top"><span>Day ${S.sess.day} · 지금까지 틀린 ${list.length}개</span><button class="x" id="x">✕</button></div>
+    <div class="card list">${list.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>
+    <div class="spacer"></div>
+    <button class="btn" id="go">이 단어들 풀어보기</button>
+    <button class="btn ghost" id="back">돌아가기</button>`;
+  document.getElementById('x').onclick = home;
+  document.getElementById('back').onclick = home;
+  document.getElementById('go').onclick = () => quiz({ prac: true, day: S.sess.day, round: 0, queue: shuffle([...list]), pos: 0, wrong: [], cur: null, picked: null });
 }
 
 function startDay() {
@@ -151,14 +167,16 @@ function startDay() {
   save();
 }
 
-function quiz() {
-  const s = S.sess;
-  if (s.pos >= s.queue.length) return result();
+let active = null;
+function quiz(s = S.sess) {
+  active = s;
+  const persist = () => { if (!s.prac) save(); };
+  if (s.pos >= s.queue.length) return s.prac ? pracResult(s) : result();
   const idx = s.queue[s.pos], w = W[idx];
-  if (!s.cur || s.cur.idx !== idx) { s.cur = { idx, ...makeChoices(idx) }; s.picked = null; save(); }
+  if (!s.cur || s.cur.idx !== idx) { s.cur = { idx, ...makeChoices(idx) }; s.picked = null; persist(); }
   const c = s.cur;
   app.innerHTML = `
-    <div class="top"><span>Day ${s.day} · ${s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
+    <div class="top"><span>Day ${s.day} · ${s.prac ? '오답 미리 풀기' : s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
       <span>${s.pos + 1} / ${s.queue.length} <button class="x" id="x">✕</button></span></div>
     <div class="bar"><i style="width:${s.pos / s.queue.length * 100}%"></i></div>
     <div class="word${w.w.length > 22 ? ' xlong' : w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
@@ -167,16 +185,16 @@ function quiz() {
     <div class="toast" id="toast"></div>
     <div class="spacer"></div>
     <button class="btn" id="next" style="visibility:hidden">다음 →</button>`;
-  document.getElementById('x').onclick = home;
+  document.getElementById('x').onclick = () => { active = null; home(); };
   const btns = [...document.querySelectorAll('.opt')];
   const next = document.getElementById('next');
-  const advance = () => { s.pos++; s.cur = null; s.picked = null; save(); quiz(); };
+  const advance = () => { s.pos++; s.cur = null; s.picked = null; persist(); quiz(s); };
   next.onclick = advance;
   const reveal = (pick, auto) => {
     btns[c.ans].classList.add('ok');
     if (pick !== c.ans) { btns[pick].classList.add('bad'); document.getElementById('toast').textContent = '오답 — 정답: ' + 'ABCD'[c.ans]; }
     next.style.visibility = 'visible';
-    if (pick === c.ans && auto) setTimeout(() => { if (S.sess === s && s.cur === c) advance(); }, 550);
+    if (pick === c.ans && auto) setTimeout(() => { if (active === s && s.cur === c) advance(); }, 550);
   };
   if (s.picked != null) reveal(s.picked, false);   // 앱을 껐다 켰을 때 답 고른 상태 복원
   btns.forEach(b => b.onclick = () => {
@@ -184,9 +202,25 @@ function quiz() {
     const pick = +b.dataset.i;
     s.picked = pick;
     if (pick !== c.ans && !s.wrong.includes(idx)) s.wrong.push(idx);
-    save();
+    persist();
     reveal(pick, true);
   });
+}
+
+function pracResult(s) {
+  active = null;
+  const total = s.queue.length, right = total - s.wrong.length;
+  app.innerHTML = `
+    <h1>Day ${s.day} · 오답 미리 풀기 결과</h1>
+    <p class="muted">맞힌 개수</p>
+    <p class="score">${right}<small> / ${total}</small></p>
+    <p class="muted">${s.wrong.length ? '아직 헷갈리는 단어예요.' : '다 맞혔어요! 👍'} 이 단어들은 본 학습이 끝난 뒤 오답 복습에서 한 번 더 나와요.</p>
+    ${s.wrong.length ? `<div class="card list">${s.wrong.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>` : ''}
+    <div class="spacer"></div>
+    <button class="btn" id="go">본 학습 이어하기</button>
+    <button class="btn ghost" id="back">홈으로</button>`;
+  document.getElementById('go').onclick = () => quiz();
+  document.getElementById('back').onclick = home;
 }
 
 function result() {
