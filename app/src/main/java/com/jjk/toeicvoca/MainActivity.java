@@ -30,6 +30,30 @@ public class MainActivity extends Activity {
             tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "word");
             return 0;
         }
+
+        /** 미국 → (잠깐 쉬고) → 영국 순서로 읽기. 0 = 둘 다, -2 = 영국 음성 없어 미국만, -100 = 준비 중, -1 = 둘 다 없음 */
+        @JavascriptInterface
+        public int speakBoth(String text) {
+            if (!ttsReady || tts == null) return -100;
+            tts.setSpeechRate(0.9f);
+            int us = tts.setLanguage(Locale.US);
+            boolean usOk = us != TextToSpeech.LANG_MISSING_DATA && us != TextToSpeech.LANG_NOT_SUPPORTED;
+            if (usOk) tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "us");
+            int uk = tts.setLanguage(Locale.UK);
+            boolean ukOk = uk != TextToSpeech.LANG_MISSING_DATA && uk != TextToSpeech.LANG_NOT_SUPPORTED;
+            if (ukOk) {
+                if (usOk) tts.playSilentUtterance(500, TextToSpeech.QUEUE_ADD, "gap");
+                tts.speak(text, usOk ? TextToSpeech.QUEUE_ADD : TextToSpeech.QUEUE_FLUSH, null, "uk");
+            }
+            if (usOk && ukOk) return 0;
+            if (usOk) return -2;
+            return -1;
+        }
+
+        @JavascriptInterface
+        public void stop() {
+            if (tts != null) tts.stop();
+        }
     }
 
     @Override
@@ -53,6 +77,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        if (tts != null) tts.stop();   // 앱을 내리면 읽던 발음 멈춤
         if (web != null) web.onPause();
     }
 

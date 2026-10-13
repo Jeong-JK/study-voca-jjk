@@ -30,7 +30,7 @@ background:var(--accent);color:var(--accentInk);margin-top:10px;font-family:inhe
 .word{font-size:40px;font-weight:800;letter-spacing:-.02em;text-align:center;margin:28px 0 8px;word-break:break-word}
 .pos{text-align:center;margin-bottom:26px}
 .say{display:flex;justify-content:center;gap:8px;margin:12px 0 0}
-.say button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:7px 14px;font:600 14px inherit;font-family:inherit}
+.say button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:7px 12px;font:600 14px inherit;font-family:inherit}
 .say button:active{transform:scale(.96)}
 .chip{display:inline-block;font-size:13px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--sub)}
 .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--card);color:var(--ink);
@@ -117,22 +117,50 @@ function makeChoices(idx) {
 
 // ---------- 발음 ----------
 // 앱에서는 폰의 TTS(Android 브리지), 브라우저 미리보기에서는 Web Speech API 사용
-function say(text, acc) {
-  const t = text.replace(/\b[AB]\b/g, '').replace(/~/g, '').trim();
-  const msg = m => { const el = document.getElementById('toast'); if (el) { el.textContent = m; setTimeout(() => { if (el.textContent === m) el.textContent = ''; }, 2500); } };
-  if (window.Android && Android.speak) {
-    const r = Android.speak(t, acc);
-    if (r === -100) msg('음성 준비 중이에요. 잠시 후 다시 눌러주세요.');
-    else if (r < 0) msg((acc === 'uk' ? '영국' : '미국') + ' 영어 음성이 없어요. 설정 → 텍스트 음성 변환에서 음성 데이터를 받아주세요.');
-    return;
-  }
-  if ('speechSynthesis' in window) {
-    const u = new SpeechSynthesisUtterance(t), lang = acc === 'uk' ? 'en-GB' : 'en-US';
-    u.lang = lang; u.rate = 0.9;
+const speakText = text => text.replace(/\b[AB]\b/g, '').replace(/~/g, '').replace(/\s+/g, ' ').trim();
+function sayMsg(m) {
+  const el = document.getElementById('toast');
+  if (el) { el.textContent = m; setTimeout(() => { if (el.textContent === m) el.textContent = ''; }, 3000); }
+}
+function webSpeak(t, langs) {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  langs.forEach(lang => {
+    const u = new SpeechSynthesisUtterance(t); u.lang = lang; u.rate = 0.9;
     const v = speechSynthesis.getVoices().find(v => v.lang.replace('_', '-') === lang);
     if (v) u.voice = v;
-    speechSynthesis.cancel(); speechSynthesis.speak(u);
+    speechSynthesis.speak(u);
+  });
+}
+// 한 가지 발음만
+function say(text, acc) {
+  const t = speakText(text);
+  if (window.Android && Android.speak) {
+    const r = Android.speak(t, acc);
+    if (r === -100) sayMsg('음성 준비 중이에요. 잠시 후 다시 눌러주세요.');
+    else if (r < 0) sayMsg((acc === 'uk' ? '영국' : '미국') + ' 영어 음성이 없어요. 설정 → 텍스트 음성 변환에서 음성 데이터를 받아주세요.');
+    return;
   }
+  webSpeak(t, [acc === 'uk' ? 'en-GB' : 'en-US']);
+}
+// 미국 → 영국 순서로 (문제 나올 때 자동, 다시 듣기 버튼)
+let sayTimer = null;
+function sayBoth(text, tries = 0) {
+  clearTimeout(sayTimer);
+  const t = speakText(text);
+  if (window.Android && Android.speakBoth) {
+    const r = Android.speakBoth(t);
+    if (r === -100 && tries < 10) sayTimer = setTimeout(() => sayBoth(text, tries + 1), 300);   // 앱 시작 직후 엔진 준비 대기
+    else if (r === -2) sayMsg('영국 영어 음성이 없어 미국 발음만 나와요. 설정 → 텍스트 음성 변환에서 받을 수 있어요.');
+    else if (r === -1) sayMsg('영어 음성이 없어요. 설정 → 텍스트 음성 변환에서 음성 데이터를 받아주세요.');
+    return;
+  }
+  webSpeak(t, ['en-US', 'en-GB']);
+}
+function sayStop() {
+  clearTimeout(sayTimer);
+  if (window.Android && Android.stop) Android.stop();
+  else if ('speechSynthesis' in window) speechSynthesis.cancel();
 }
 
 // ---------- 화면 ----------
@@ -210,13 +238,15 @@ function quiz(s = S.sess) {
     <div class="bar"><i style="width:${s.pos / s.queue.length * 100}%"></i></div>
     <div class="word${w.w.length > 22 ? ' xlong' : w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
     <div class="pos"><span class="chip">${POS[w.p] || w.p}</span>
-      <div class="say"><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
+      <div class="say"><button id="replay">🔁 다시 듣기</button><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
     <div id="opts">${c.opts.map((m, i) => `<button class="opt" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>
     <div class="toast" id="toast"></div>
     <div class="spacer"></div>
     <button class="btn" id="next" style="visibility:hidden">다음 →</button>`;
-  document.getElementById('x').onclick = () => { active = null; home(); };
-  document.querySelectorAll('.say button').forEach(b => b.onclick = () => say(w.w, b.dataset.a));
+  document.getElementById('x').onclick = () => { active = null; sayStop(); home(); };
+  document.querySelectorAll('.say button[data-a]').forEach(b => b.onclick = () => say(w.w, b.dataset.a));
+  document.getElementById('replay').onclick = () => sayBoth(w.w);
+  if (s.picked == null) sayBoth(w.w);   // 새 문제가 나오면 미국 → 영국 순서로 자동 재생
   const btns = [...document.querySelectorAll('.opt')];
   const next = document.getElementById('next');
   const advance = () => { s.pos++; s.cur = null; s.picked = null; persist(); quiz(s); };
