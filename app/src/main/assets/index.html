@@ -121,6 +121,7 @@ function home() {
   const avg = done ? Math.round(S.history.reduce((a, h) => a + h.first / h.total * 100, 0) / done) : 0;
   const lastDate = S.history.length ? S.history[S.history.length - 1].date : '';
   const resume = s && s.day === S.day;
+  const rDay = resume ? S.day : (S.history.length ? S.history[S.history.length - 1].day : null);
   app.innerHTML = `
     <h1>TOEIC 영단어</h1>
     <div class="decks">${Object.entries(DECKS).map(([k, d]) => `<button class="deck${k === ALL.deck ? ' on' : ''}" data-k="${k}">${d.name}</button>`).join('')}</div>
@@ -133,6 +134,7 @@ function home() {
     </div>
     ${lastDate === today() ? `<p class="muted">오늘 이미 하루치를 끝냈어요. 더 해도 돼요 💪</p>` : ''}
     <div class="spacer"></div>
+    ${rDay ? `<button class="btn ghost" id="rt">Day ${rDay} 단어 다시 테스트 (순서 섞기)</button>` : ''}
     ${resume && s.wrong.length ? `<button class="btn ghost" id="wv">지금까지 틀린 ${s.wrong.length}개 보기</button>` : ''}
     ${resume ? `<button class="btn" id="go">이어하기 · ${s.round === 1 ? '' : '오답 ' + s.round + '회차 · '}${s.pos}/${s.queue.length}</button>`
              : `<button class="btn" id="go">시작하기</button>`}
@@ -143,6 +145,13 @@ function home() {
   document.getElementById('hist').onclick = history;
   const wv = document.getElementById('wv');
   if (wv) wv.onclick = wrongView;
+  const rt = document.getElementById('rt');
+  if (rt) rt.onclick = () => startPrac('all', rDay, dayWords(rDay));
+}
+
+// 연습 모드(진도·기록에 영향 없음): 'all' = 그 Day 단어 전체 다시 테스트, 'wrong' = 지금까지 틀린 단어
+function startPrac(kind, day, items) {
+  quiz({ prac: kind, day, items: [...items], round: 0, queue: shuffle([...items]), pos: 0, wrong: [], cur: null, picked: null });
 }
 
 // 중간 오답 보기: 진도에는 영향 없음 (오답들은 그대로 회차 끝 복습에도 다시 나옴)
@@ -156,7 +165,7 @@ function wrongView() {
     <button class="btn ghost" id="back">돌아가기</button>`;
   document.getElementById('x').onclick = home;
   document.getElementById('back').onclick = home;
-  document.getElementById('go').onclick = () => quiz({ prac: true, day: S.sess.day, round: 0, queue: shuffle([...list]), pos: 0, wrong: [], cur: null, picked: null });
+  document.getElementById('go').onclick = () => startPrac('wrong', S.sess.day, list);
 }
 
 function startDay() {
@@ -173,7 +182,7 @@ function quiz(s = S.sess) {
   if (!s.cur || s.cur.idx !== idx) { s.cur = { idx, ...makeChoices(idx) }; s.picked = null; persist(); }
   const c = s.cur;
   app.innerHTML = `
-    <div class="top"><span>Day ${s.day} · ${s.prac ? '오답 미리 풀기' : s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
+    <div class="top"><span>Day ${s.day} · ${s.prac === 'all' ? '다시 테스트' : s.prac ? '오답 미리 풀기' : s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
       <span>${s.pos + 1} / ${s.queue.length} <button class="x" id="x">✕</button></span></div>
     <div class="bar"><i style="width:${s.pos / s.queue.length * 100}%"></i></div>
     <div class="word${w.w.length > 22 ? ' xlong' : w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
@@ -207,16 +216,23 @@ function quiz(s = S.sess) {
 function pracResult(s) {
   active = null;
   const total = s.queue.length, right = total - s.wrong.length;
+  const resume = S.sess && S.sess.day === S.day;
   app.innerHTML = `
-    <h1>Day ${s.day} · 오답 미리 풀기 결과</h1>
+    <h1>Day ${s.day} · ${s.prac === 'all' ? '다시 테스트' : '오답 미리 풀기'} 결과</h1>
     <p class="muted">맞힌 개수</p>
     <p class="score">${right}<small> / ${total}</small></p>
-    <p class="muted">${s.wrong.length ? '아직 헷갈리는 단어예요.' : '다 맞혔어요! 👍'} 이 단어들은 본 학습이 끝난 뒤 오답 복습에서 한 번 더 나와요.</p>
+    <p class="muted">${s.wrong.length ? '아직 헷갈리는 단어예요.' : '다 맞혔어요! 👍'} 연습이라 진도·기록에는 영향이 없어요.</p>
     ${s.wrong.length ? `<div class="card list">${s.wrong.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>` : ''}
     <div class="spacer"></div>
-    <button class="btn" id="go">본 학습 이어하기</button>
+    <button class="btn" id="again">한 번 더 (순서 섞어서)</button>
+    ${s.wrong.length && s.wrong.length < total ? `<button class="btn ghost" id="wrongonly">틀린 ${s.wrong.length}개만 다시</button>` : ''}
+    ${resume ? `<button class="btn ghost" id="go">본 학습 이어하기</button>` : ''}
     <button class="btn ghost" id="back">홈으로</button>`;
-  document.getElementById('go').onclick = () => quiz();
+  document.getElementById('again').onclick = () => startPrac(s.prac, s.day, s.items);
+  const wo = document.getElementById('wrongonly');
+  if (wo) wo.onclick = () => startPrac('wrong', s.day, s.wrong);
+  const go = document.getElementById('go');
+  if (go) go.onclick = () => quiz();
   document.getElementById('back').onclick = home;
 }
 
