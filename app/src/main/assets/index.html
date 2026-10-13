@@ -134,15 +134,12 @@ function home() {
     ${lastDate === today() ? `<p class="muted">오늘 이미 하루치를 끝냈어요. 더 해도 돼요 💪</p>` : ''}
     <div class="spacer"></div>
     ${resume && s.wrong.length ? `<button class="btn ghost" id="wv">지금까지 틀린 ${s.wrong.length}개 보기</button>` : ''}
-    ${resume ? `<button class="btn" id="go">이어하기 · ${s.round === 1 ? '' : '오답 ' + s.round + '회차 · '}${s.pos}/${s.queue.length}</button>
-               <button class="btn ghost" id="restart">Day ${S.day} 처음부터</button>`
+    ${resume ? `<button class="btn" id="go">이어하기 · ${s.round === 1 ? '' : '오답 ' + s.round + '회차 · '}${s.pos}/${s.queue.length}</button>`
              : `<button class="btn" id="go">시작하기</button>`}
     <button class="btn ghost" id="hist">기록 보기</button>
     <p class="muted" style="font-size:11px;text-align:center;margin-top:14px">단어 목록: TSL · BSL · NGSL (Browne, Culligan &amp; Phillips) · CC BY-SA 4.0</p>`;
   document.querySelectorAll('.deck').forEach(b => b.onclick = () => { useDeck(b.dataset.k); save(); home(); });
   document.getElementById('go').onclick = () => { if (!resume) startDay(); quiz(); };
-  const r = document.getElementById('restart');
-  if (r) r.onclick = () => { if (confirm('지금까지 푼 기록을 지우고 처음부터 할까요?')) { startDay(); quiz(); } };
   document.getElementById('hist').onclick = history;
   const wv = document.getElementById('wv');
   if (wv) wv.onclick = wrongView;
