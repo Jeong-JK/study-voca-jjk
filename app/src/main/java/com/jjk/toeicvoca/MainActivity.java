@@ -3,6 +3,7 @@ package com.jjk.toeicvoca;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -20,6 +21,7 @@ public class MainActivity extends Activity {
         s.setDomStorageEnabled(true);   // localStorage로 진도 저장
         s.setAllowFileAccess(true);
         web.setWebViewClient(new WebViewClient());
+        web.setWebChromeClient(new WebChromeClient());   // confirm() 확인창이 뜨도록
         web.loadUrl("file:///android_asset/index.html");
         setContentView(web);
     }
