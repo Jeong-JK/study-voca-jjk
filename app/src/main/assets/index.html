@@ -916,6 +916,18 @@ function privacyView() {
   document.getElementById('x').onclick = moreView;
 }
 
+// ---------- 휴대폰 뒤로가기 ----------
+// 앱(MainActivity)에서 뒤로가기를 누르면 호출. true = 앱 안에서 이전 화면으로 이동, false = 앱 기본 동작(나가기)
+window.goBack = function () {
+  const fi = document.getElementById('fakeint'); if (fi) { fi.remove(); return true; }
+  const x = document.querySelector('#app #x') || document.querySelector('#app #back');   // 화면마다 있는 ✕ / 돌아가기 버튼과 똑같이
+  if (x) { x.click(); return true; }
+  const t = tabs.hidden ? null : tabs.querySelector('.on');
+  if (t) { if (t.dataset.t !== 'study') { home(); return true; } return false; }   // 학습 탭(첫 화면)에서는 앱 나가기
+  if (ALL.perDay != null) { home(); return true; }   // 결과 화면 등 → 학습 탭으로
+  return false;
+};
+
 home();
 </script>
 </body>

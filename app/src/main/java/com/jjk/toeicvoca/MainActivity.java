@@ -166,6 +166,16 @@ public class MainActivity extends Activity {
         setContentView(root);
     }
 
+    /** 휴대폰 뒤로가기: 앱 안의 이전 화면으로. 첫 화면(학습 탭)일 때만 앱 기본 동작 */
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onBackPressed() {
+        if (web == null) { super.onBackPressed(); return; }
+        web.evaluateJavascript("(window.goBack && window.goBack()) ? 1 : 0", v -> {
+            if (!"1".equals(v)) super.onBackPressed();
+        });
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
