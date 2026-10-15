@@ -1,14 +1,76 @@
 # 토익 단어 (ToeicVoca)
 
-하루 100단어 · 4지선다(A–D) · 틀린 단어만 다 맞출 때까지 반복. 진도는 폰에 자동 저장.
+토익 영단어·숙어 학습 안드로이드 앱.
+하루 학습량(30~100개)만큼 4지선다(A–D)로 풀고, 틀린 단어는 다 맞출 때까지 반복합니다. 진도는 폰에 자동 저장됩니다.
 
 ## 최신 APK 받기 (폰에서 이 링크만 열면 됨)
 https://github.com/Jeong-JK/study-voca-jjk/releases/latest/download/ToeicVoca.apk
 
-main에 push하면 GitHub Actions가 자동으로 빌드해서 위 링크를 최신 버전으로 바꿉니다(3–5분).
-서명 키(`app/debug.keystore`)가 고정이라 새 APK를 덮어 설치해도 학습 기록이 유지됩니다.
+- `main`에 push하면 GitHub Actions가 자동으로 빌드해서 위 링크를 최신 버전으로 바꿉니다 (2~5분).
+- 서명 키(`app/debug.keystore`)가 고정이라 새 APK를 덮어 설치해도 학습 기록이 유지됩니다.
+- 버전 번호는 빌드 번호를 따라갑니다 (`v1.<빌드번호>`).
+
+## 주요 기능
+- **하루 학습량 선택**: 첫 실행 때 30~100개(10개 단위) 중 선택, 설정(⚙)에서 변경. 바꾼 학습량은 아직 시작하지 않은 Day부터 적용
+- **4지선다 문제**: 오답 보기는 같은 품사에서 뽑고, 뜻이 겹치는 단어는 제외. 단어와 숙어가 섞여서 출제
+- **오답 반복**: 하루치를 다 풀면 틀린 단어만 다시, 전부 맞힐 때까지 반복
+- **중간 오답 보기**: 풀다가 나가도 지금까지 틀린 단어를 확인하고 다시 풀 수 있음 (진도에 영향 없음)
+- **다시 테스트**: 끝낸 Day(또는 진행 중인 Day)의 단어 전체를 순서를 섞어서 몇 번이든 다시 풀기 (진도에 영향 없음)
+- **발음 듣기**: 문제가 나오면 미국 → 영국 발음 순서로 자동 재생, 🔁 다시 듣기 / 🔊 미국 / 🔊 영국 버튼. 폰의 TTS 엔진 사용(오프라인)
+- **단어장 3종**: 토익 / 기본 / 전부, 단어장마다 진도·기록 따로 저장
+- **학습 기록**: Day별 첫 정답률과 반복 횟수
+
+## 멤버십
+
+| | Free | Basic | Premium |
+|---|---|---|---|
+| 하루 학습량 | 30개 | 30~50개 | 30~100개 |
+| 진행 | 하루에 Day 1개 | 하루에 Day 1개 | 원하는 만큼 계속, Day 골라서 학습 |
+| 오답 목록 보기 | ✓ | ✓ | ✓ |
+| 오답 다시 풀기 | ✕ | ✓ | ✓ |
+| 지난 Day 다시 테스트 | ✓ | ✓ | ✓ |
+| 발음 듣기 | ✓ | ✓ | ✓ |
+| 문제 화면 하단 배너 광고 | ✓ | ✕ | ✕ |
+| 하루치 끝나면 전면 광고 | ✓ | ✓ | ✕ |
+
+- 처음 설치하면 Free로 시작합니다.
+- "하루에 Day 1개" 제한은 단어장(토익/기본/전부)을 합쳐서 하루 1개 기준입니다.
+- 등급을 낮추면 하루 학습량도 그 등급의 최대치로 맞춰집니다.
+- 등급별 설정은 `index.html`의 `PLANS` 객체에서 바꿀 수 있습니다.
+
+> ⚠️ **아직 결제 연동 전입니다.** 지금은 구독 화면에서 버튼을 누르면 등급이 바로 바뀌는 테스트 버전입니다.
+
+## 광고 (AdMob)
+- 배너(문제 화면 하단)와 전면 광고(하루치 완료 시)는 Google AdMob으로 표시됩니다.
+- **현재는 구글 공식 테스트 광고 ID**를 사용합니다 (화면에 "Test Ad" 표시).
+- 브라우저에서 `index.html`을 열면 회색 가짜 광고 박스로 대신 표시됩니다.
+
+## 출시 전 할 일
+1. **AdMob**: 계정 생성 → 앱 등록 → 실제 ID로 교체
+   - `app/src/main/AndroidManifest.xml`의 `APPLICATION_ID`
+   - `MainActivity.java`의 `BANNER_ID`, `INTERSTITIAL_ID`
+2. **결제(Google Play Billing)**: Play Console에 앱 등록(내부 테스트 트랙 이상) → Basic/Premium 구독 상품 생성 → 결제 라이브러리 연동. 링크로 받아 설치한 APK에서는 결제가 동작하지 않습니다.
+3. **서명 키**: Play 스토어용으로는 별도의 출시용(release) 키를 만들어 안전하게 보관합니다. 지금의 `debug.keystore`는 공개 저장소에 올라가 있으므로 출시용으로 쓰지 않습니다.
+4. **Play 출시 조건**: 개인 개발자 계정은 정식 출시 전 테스터 12명 이상이 14일 동안 비공개 테스트를 해야 합니다.
+
+## 프로젝트 구조
+```
+app/src/main/
+├── assets/
+│   ├── index.html     # 앱 화면과 로직 전부 (HTML/CSS/JS)
+│   ├── words.js       # TSL 단어
+│   ├── phrases.js     # 숙어
+│   ├── bsl.js         # BSL 단어
+│   └── ngsl.js        # NGSL 단어
+├── java/com/jjk/toeicvoca/MainActivity.java   # WebView + 발음(TTS) + 광고(AdMob) 연결
+└── AndroidManifest.xml
+.github/workflows/build.yml   # APK 자동 빌드 + Release 업로드
+```
+
+앱 화면은 `index.html` 하나로 되어 있어서, PC 브라우저로 열면 그대로 미리 볼 수 있습니다 (발음은 브라우저 음성, 광고는 가짜 박스).
 
 ## 단어장
+
 | 단어장 | 내용 |
 |---|---|
 | 토익 | TSL + 숙어 + BSL |
@@ -16,7 +78,10 @@ main에 push하면 GitHub Actions가 자동으로 빌드해서 위 링크를 최
 | 전부 | 위 전체 |
 
 ## 단어 추가/수정
-`app/src/main/assets/` 의 파일에 `단어|품사|뜻` 형식으로 한 줄씩 (품사: 명/동/형/부/숙)
+`app/src/main/assets/`의 파일에 `단어|품사|뜻` 형식으로 한 줄씩 추가합니다 (품사: 명/동/형/부/숙).
 - `words.js` TSL · `phrases.js` 숙어 · `bsl.js` BSL · `ngsl.js` NGSL
+- 같은 단어가 여러 파일에 있으면 먼저 나온 것 하나만 쓰입니다.
 
-출처: TOEIC Service List, Business Service List, New General Service List — Browne, Culligan & Phillips, newgeneralservicelist.com, CC BY-SA 4.0. 한글 뜻은 별도로 붙인 것이며 같은 라이선스를 따릅니다.
+## 출처 · 라이선스
+TOEIC Service List, Business Service List, New General Service List — Browne, Culligan & Phillips, [newgeneralservicelist.com](https://www.newgeneralservicelist.com), **CC BY-SA 4.0**.
+한글 뜻과 품사는 별도로 붙인 것이며, 단어 데이터 파일은 같은 라이선스(CC BY-SA 4.0)를 따릅니다.
