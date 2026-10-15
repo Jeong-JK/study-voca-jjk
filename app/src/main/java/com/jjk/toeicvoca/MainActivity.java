@@ -1,6 +1,9 @@
 package com.jjk.toeicvoca;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
@@ -69,6 +72,27 @@ public class MainActivity extends Activity {
         }
     }
 
+    /** JS에서 window.AndroidApp.* 로 호출: 앱 버전, 일일 학습 알림 */
+    public class AppBridge {
+        @JavascriptInterface
+        public String version() {
+            try { return getPackageManager().getPackageInfo(getPackageName(), 0).versionName; }
+            catch (Exception e) { return "-"; }
+        }
+
+        /** 알림 켜기/끄기 + 시간. 켤 때 알림 권한이 없으면 요청하고 false 반환 */
+        @JavascriptInterface
+        public boolean setDailyReminder(boolean on, int hour, int minute) {
+            ReminderReceiver.save(MainActivity.this, on, hour, minute);
+            if (on && Build.VERSION.SDK_INT >= 33
+                    && checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                runOnUiThread(() -> requestPermissions(new String[]{ Manifest.permission.POST_NOTIFICATIONS }, 7));
+                return false;
+            }
+            return true;
+        }
+    }
+
     /** 웹 화면(JS)에서 window.Android.speak("word", "us" | "uk") 로 호출 */
     public class Speaker {
         /** 0 = 재생, -100 = 음성 엔진 준비 중, 그 외 음수 = 해당 언어 음성 데이터 없음 */
@@ -125,6 +149,7 @@ public class MainActivity extends Activity {
         web.setWebChromeClient(new WebChromeClient());   // confirm() 확인창이 뜨도록
         web.addJavascriptInterface(new Speaker(), "Android");   // 발음 듣기
         web.addJavascriptInterface(new Ads(), "AndroidAds");    // 광고
+        web.addJavascriptInterface(new AppBridge(), "AndroidApp");   // 앱 버전 · 알림
         web.loadUrl("file:///android_asset/index.html");
 
         // 화면 = 웹 화면(위) + 배너 광고(아래, 평소엔 숨김)
