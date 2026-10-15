@@ -46,7 +46,12 @@ border:1.5px solid var(--line);border-radius:14px;padding:15px 14px;margin-botto
 .row span:last-child{color:var(--sub);text-align:right}
 .hd{display:flex;align-items:center;gap:8px;margin:0 0 20px}.hd h1{margin:0;flex:1}
 .badge{border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:99px;padding:4px 10px;font-family:inherit;font-weight:700;font-size:12px}
-.badge.pro{background:var(--accent);color:var(--accentInk);border-color:var(--accent)}
+.badge.premium{background:var(--accent);color:var(--accentInk);border-color:var(--accent)}
+.badge.basic{color:var(--accent);border-color:var(--accent)}
+.lockbtn{color:var(--sub)}
+#fakead{position:fixed;left:0;right:0;bottom:0;height:56px;display:grid;place-items:center;background:#ddd;color:#555;font-size:13px;border-top:1px solid #bbb}
+body.withad #app{padding-bottom:72px}
+#fakeint{position:fixed;inset:0;background:rgba(0,0,0,.85);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;font-size:18px;z-index:9}
 .gear{border:0;background:none;color:var(--sub);font-size:22px;padding:2px 4px}
 .dayrow{display:flex;align-items:flex-end;justify-content:space-between}
 .link{border:0;background:none;color:var(--accent);font-family:inherit;font-weight:600;font-size:14px;padding:0 0 10px}
@@ -98,9 +103,14 @@ const deckIdx = k => [...W.keys()].filter(i => DECKS[k].has.includes(W[i].d));
 const KEY = 'toeic_voca_decks_v1';
 // 구독 플랜 (결제 연동 전: 플랜 화면에서 바로 전환되는 테스트용)
 const PLANS = {
-  basic:   { name: 'Basic',   max: 50,  free: false, perks: ['하루 학습량 30~50개', '하루에 Day 1개씩 진행', '다시 테스트 · 오답 복습 · 발음 듣기'] },
-  premium: { name: 'Premium', max: 100, free: true,  perks: ['하루 학습량 30~100개', 'Day 2, Day 3… 하고 싶은 만큼 계속', 'Day를 골라서 자유롭게 학습', '다시 테스트 · 오답 복습 · 발음 듣기'] },
+  free:    { name: 'Free',    max: 30,  banner: true,  endAd: true,  redo: false, oneDay: true,  pick: false,
+             perks: ['하루 30개', '하루에 Day 1개씩 진행', '지난 Day 다시 테스트 · 발음 듣기', '오답은 목록으로만 확인 (다시 풀기 ✕)', '문제 풀 때 하단 광고 · 하루치 끝나면 광고'] },
+  basic:   { name: 'Basic',   max: 50,  banner: false, endAd: true,  redo: true,  oneDay: true,  pick: false,
+             perks: ['하루 30~50개', '하루에 Day 1개씩 진행', '오답 다시 풀기 · 다시 테스트 · 발음 듣기', '하루치 끝날 때만 광고'] },
+  premium: { name: 'Premium', max: 100, banner: false, endAd: false, redo: true,  oneDay: false, pick: true,
+             perks: ['하루 30~100개', 'Day 2, Day 3… 하고 싶은 만큼 계속', 'Day를 골라서 자유롭게 학습', '모든 기능', '광고 없음'] },
 };
+const PLAN_OF = a => a <= PLANS.free.max ? 'free' : a <= PLANS.basic.max ? 'basic' : 'premium';   // 이 학습량을 쓰려면 필요한 최소 등급
 const AMOUNTS = [30, 40, 50, 60, 70, 80, 90, 100];
 const POS = { '명': '명사', '동': '동사', '형': '형용사', '부': '부사', '숙': '숙어' };
 
@@ -111,7 +121,7 @@ const today = () => { const d = new Date(); return `${d.getFullYear()}-${d.getMo
 let ALL, S;
 try { ALL = JSON.parse(localStorage.getItem(KEY)); } catch (e) { ALL = null; }
 if (!ALL || !ALL.decks) ALL = { deck: 'toeic', decks: {} };
-if (!PLANS[ALL.plan]) ALL.plan = 'basic';
+if (!PLANS[ALL.plan]) ALL.plan = 'free';
 if (ALL.perDay === undefined) ALL.perDay = null;          // null이면 첫 실행 → 하루 학습량 선택
 if (!ALL.lastMainDate) ALL.lastMainDate = '';             // Basic: 하루 1 Day 제한용 (마지막으로 Day를 끝낸 날짜)
 const plan = () => PLANS[ALL.plan];
@@ -163,7 +173,7 @@ function trimDays() {
   }
 }
 // Basic은 하루에 Day 1개: 오늘 이미 Day를 끝냈으면 새 Day 시작 불가 (진행 중인 Day는 계속 가능)
-const lockedToday = () => !isPremium() && ALL.lastMainDate === today();
+const lockedToday = () => plan().oneDay && ALL.lastMainDate === today();
 // Day 이동 (진행 중이던 Day는 잠시 보관했다가 다시 오면 이어서)
 function goDay(n) {
   if (S.sess && S.sess.day !== n) { S.paused[S.sess.day] = S.sess; S.sess = null; }
@@ -232,8 +242,33 @@ function sayStop() {
   else if ('speechSynthesis' in window) speechSynthesis.cancel();
 }
 
+// ---------- 광고 ----------
+// 앱: AdMob(AndroidAds 브리지) · 브라우저 미리보기: 가짜 광고 박스
+function adBanner(on) {
+  on = !!on && plan().banner;
+  if (window.AndroidAds) { AndroidAds.banner(on); return; }
+  let el = document.getElementById('fakead');
+  if (on && !el) { el = document.createElement('div'); el.id = 'fakead'; el.textContent = '광고 (테스트 배너)'; document.body.appendChild(el); }
+  if (!on && el) el.remove();
+  document.body.classList.toggle('withad', on);
+}
+function adInterstitial() {
+  if (!plan().endAd) return;
+  if (window.AndroidAds) { AndroidAds.interstitial(); return; }
+  const o = document.createElement('div'); o.id = 'fakeint';
+  o.innerHTML = '<div>광고 (테스트 전면 광고)</div><button class="btn" style="max-width:200px">닫기</button>';
+  o.querySelector('button').onclick = () => o.remove();
+  document.body.appendChild(o);
+}
+const lockBtn = (id, text) => `<button class="btn ghost lockbtn" id="${id}">🔒 ${text}</button>`;
+
 // ---------- 화면 ----------
 const app = document.getElementById('app');
+// 화면이 바뀔 때마다 배너 갱신: 문제 화면(quiz)에서만 bannerOn = true 로 켬
+let bannerOn = false;
+const _setHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML').set;
+const _getHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML').get;
+Object.defineProperty(app, 'innerHTML', { get() { return _getHTML.call(this); }, set(v) { _setHTML.call(this, v); adBanner(bannerOn); bannerOn = false; } });
 
 function home() {
   if (ALL.perDay == null) return amountView(true);
@@ -245,12 +280,12 @@ function home() {
   const rDay = resume ? S.day : (S.history.length ? S.history[S.history.length - 1].day : null);
   app.innerHTML = `
     <div class="hd"><h1>TOEIC 영단어</h1>
-      <button class="badge${isPremium() ? ' pro' : ''}" id="planb">${plan().name}</button>
+      <button class="badge ${ALL.plan}" id="planb">${plan().name}</button>
       <button class="gear" id="set" aria-label="설정">⚙︎</button></div>
     <div class="decks">${Object.entries(DECKS).map(([k, d]) => `<button class="deck${k === ALL.deck ? ' on' : ''}" data-k="${k}">${d.name}</button>`).join('')}</div>
     <p class="muted">${DECKS[ALL.deck].desc}</p>
     <div class="dayrow"><p class="day">Day ${S.day}</p>
-      <button class="link" id="pick">Day 선택 ${isPremium() ? '›' : '🔒'}</button></div>
+      <button class="link" id="pick">Day 선택 ${plan().pick ? '›' : '🔒'}</button></div>
     <p class="muted">${n}단어 · 4지선다 · 틀린 단어는 다 맞출 때까지 반복</p>
     <div class="stats">
       <div class="stat"><div>${done}</div><span>완료한 Day</span></div>
@@ -275,7 +310,7 @@ function home() {
   on('set', settingsView);
   on('planb', () => planView());
   on('up', () => planView());
-  on('pick', () => isPremium() ? dayPicker() : planView());
+  on('pick', () => plan().pick ? dayPicker() : planView());
 }
 
 // ---------- 하루 학습량 선택 (첫 실행 / 설정) ----------
@@ -285,8 +320,8 @@ function amountView(first) {
     ${first ? `<h1>TOEIC 영단어</h1>` : `<div class="top"><span>하루 학습량</span><button class="x" id="x">✕</button></div>`}
     <p class="big">하루에 몇 단어<br>공부할까요?</p>
     <p class="muted">${first ? '나중에 설정에서 언제든 바꿀 수 있어요.' : '바꾼 학습량은 아직 시작하지 않은 Day부터 적용돼요.'}</p>
-    <div class="amts">${AMOUNTS.map(a => `<button class="amt${a === cur ? ' on' : ''}${a > max ? ' lock' : ''}" data-a="${a}">${a}<small>${a > max ? 'Premium' : '개'}</small></button>`).join('')}</div>
-    <p class="muted">Basic은 하루 50개까지, Premium은 100개까지 고를 수 있어요.</p>
+    <div class="amts">${AMOUNTS.map(a => `<button class="amt${a === cur ? ' on' : ''}${a > max ? ' lock' : ''}" data-a="${a}">${a}<small>${a > max ? PLANS[PLAN_OF(a)].name : '개'}</small></button>`).join('')}</div>
+    <p class="muted">Free는 하루 30개, Basic은 50개까지, Premium은 100개까지 고를 수 있어요.</p>
     <div class="spacer"></div>`;
   const x = document.getElementById('x'); if (x) x.onclick = settingsView;
   document.querySelectorAll('.amt').forEach(b => b.onclick = () => {
@@ -301,12 +336,12 @@ function setAmount(a) { ALL.perDay = Math.min(a, plan().max); trimDays(); save()
 function planView(opt = {}) {
   app.innerHTML = `
     <div class="top"><span>구독</span><button class="x" id="x">✕</button></div>
-    ${opt.want ? `<p class="muted">하루 ${opt.want}개는 Premium에서 쓸 수 있어요.</p>` : ''}
+    ${opt.want ? `<p class="muted">하루 ${opt.want}개는 ${PLANS[PLAN_OF(opt.want)].name}부터 쓸 수 있어요.</p>` : ''}
     ${Object.entries(PLANS).map(([k, p]) => `
-      <div class="card plan${k === ALL.plan ? ' cur' : ''}${k === 'premium' ? ' pro' : ''}">
+      <div class="card plan ${k}${k === ALL.plan ? ' cur' : ''}">
         <div class="plan-h"><b>${p.name}</b>${k === ALL.plan ? '<span class="chip">이용 중</span>' : ''}</div>
         <ul>${p.perks.map(t => `<li>${t}</li>`).join('')}</ul>
-        ${k === ALL.plan ? '' : `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}">${p.name}${k === 'premium' ? '로 업그레이드' : '로 변경'}</button>`}
+        ${k === ALL.plan ? '' : `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}">${p.name}${Object.keys(PLANS).indexOf(k) > Object.keys(PLANS).indexOf(ALL.plan) ? '로 업그레이드' : '로 변경'}</button>`}
       </div>`).join('')}
     <p class="muted" style="font-size:12px">※ 결제 연동 전 테스트 버전이라 누르면 바로 바뀌어요.</p>
     <div class="spacer"></div>`;
@@ -314,7 +349,7 @@ function planView(opt = {}) {
   document.querySelectorAll('.plan .btn').forEach(b => b.onclick = () => {
     ALL.plan = b.dataset.p;
     if (opt.want && opt.want <= plan().max) setAmount(opt.want);
-    else if (ALL.perDay != null && ALL.perDay > plan().max) setAmount(plan().max);   // Premium → Basic: 학습량 50개로
+    else if (ALL.perDay != null && ALL.perDay > plan().max) setAmount(plan().max);   // 등급을 낮추면 학습량도 그 등급 최대치로
     save(); home();
   });
 }
@@ -358,11 +393,12 @@ function wrongView() {
     <div class="top"><span>Day ${S.sess.day} · 지금까지 틀린 ${list.length}개</span><button class="x" id="x">✕</button></div>
     <div class="card list">${list.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>
     <div class="spacer"></div>
-    <button class="btn" id="go">이 단어들 풀어보기</button>
+    ${plan().redo ? `<button class="btn" id="go">이 단어들 풀어보기</button>` : lockBtn('up', '오답 다시 풀기는 Basic부터')}
     <button class="btn ghost" id="back">돌아가기</button>`;
   document.getElementById('x').onclick = home;
   document.getElementById('back').onclick = home;
-  document.getElementById('go').onclick = () => startPrac('wrong', S.sess.day, list);
+  const go = document.getElementById('go'); if (go) go.onclick = () => startPrac('wrong', S.sess.day, list);
+  const up = document.getElementById('up'); if (up) up.onclick = () => planView();
 }
 
 function startDay() {
@@ -378,6 +414,7 @@ function quiz(s = S.sess) {
   const idx = s.queue[s.pos], w = W[idx];
   if (!s.cur || s.cur.idx !== idx) { s.cur = { idx, ...makeChoices(idx) }; s.picked = null; persist(); }
   const c = s.cur;
+  bannerOn = true;
   app.innerHTML = `
     <div class="top"><span>Day ${s.day} · ${s.prac === 'all' ? '다시 테스트' : s.prac ? '오답 미리 풀기' : s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
       <span>${s.pos + 1} / ${s.queue.length} <button class="x" id="x">✕</button></span></div>
@@ -426,12 +463,13 @@ function pracResult(s) {
     ${s.wrong.length ? `<div class="card list">${s.wrong.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>` : ''}
     <div class="spacer"></div>
     <button class="btn" id="again">한 번 더 (순서 섞어서)</button>
-    ${s.wrong.length && s.wrong.length < total ? `<button class="btn ghost" id="wrongonly">틀린 ${s.wrong.length}개만 다시</button>` : ''}
+    ${s.wrong.length && s.wrong.length < total ? (plan().redo ? `<button class="btn ghost" id="wrongonly">틀린 ${s.wrong.length}개만 다시</button>` : lockBtn('up', `틀린 ${s.wrong.length}개만 다시 (Basic부터)`)) : ''}
     ${resume ? `<button class="btn ghost" id="go">본 학습 이어하기</button>` : ''}
     <button class="btn ghost" id="back">홈으로</button>`;
   document.getElementById('again').onclick = () => startPrac(s.prac, s.day, s.items);
   const wo = document.getElementById('wrongonly');
   if (wo) wo.onclick = () => startPrac('wrong', s.day, s.wrong);
+  const up = document.getElementById('up'); if (up) up.onclick = () => planView();
   const go = document.getElementById('go');
   if (go) go.onclick = () => quiz();
   document.getElementById('back').onclick = home;
@@ -440,18 +478,20 @@ function pracResult(s) {
 function result() {
   const s = S.sess, total = s.queue.length, wrongN = s.wrong.length, right = total - wrongN;
   if (s.round === 1 && s.firstScore == null) { s.firstScore = right; save(); }
+  const redo = wrongN && plan().redo;     // Free: 오답은 목록만 보고, 다시 풀기 없이 완료
   app.innerHTML = `
     <h1>Day ${s.day} · ${s.round === 1 ? '본 학습 결과' : '오답 ' + s.round + '회차 결과'}</h1>
     <p class="muted">맞힌 개수</p>
     <p class="score">${right}<small> / ${total}</small></p>
-    ${wrongN ? `<p class="muted">틀린 ${wrongN}개를 다시 풀어요.</p>
+    ${wrongN ? `<p class="muted">${redo ? `틀린 ${wrongN}개를 다시 풀어요.` : `틀린 ${wrongN}개예요. 뜻을 확인해두세요.`}</p>
       <div class="card list">${s.wrong.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>`
       : `<p class="muted">${s.round === 1 ? '한 번에 다 맞혔어요! 🎉' : '오답까지 전부 맞혔어요! 🎉'}</p>`}
     <div class="spacer"></div>
-    ${wrongN ? `<button class="btn" id="go">오답 다시 풀기 (${wrongN}개)</button>`
-             : `<button class="btn" id="go">완료${isPremium() ? ' · 다음 Day로' : ''}</button>`}`;
+    ${redo ? `<button class="btn" id="go">오답 다시 풀기 (${wrongN}개)</button>`
+           : `${wrongN ? lockBtn('up', '오답 다시 풀기는 Basic부터') : ''}<button class="btn" id="go">완료${plan().oneDay ? '' : ' · 다음 Day로'}</button>`}`;
+  const up = document.getElementById('up'); if (up) up.onclick = () => planView();
   document.getElementById('go').onclick = () => {
-    if (wrongN) {
+    if (redo) {
       Object.assign(s, { round: s.round + 1, queue: shuffle([...s.wrong]), pos: 0, wrong: [], cur: null, picked: null });
       save(); quiz();
     } else {
@@ -459,6 +499,7 @@ function result() {
       S.done[s.day] = true; ALL.lastMainDate = today(); S.sess = null;
       let nx = s.day + 1; while (S.done[nx]) nx++;
       goDay(nx); save(); home();
+      adInterstitial();          // Free·Basic: 하루치가 끝나면 전면 광고
     }
   };
 }
