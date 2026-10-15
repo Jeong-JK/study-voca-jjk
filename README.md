@@ -3,10 +3,8 @@
 토익 영단어·숙어 학습 안드로이드 앱.
 하루 학습량(30~100개)만큼 4지선다(A–D)로 풀고, 틀린 단어는 다 맞출 때까지 반복합니다. 진도는 폰에 자동 저장됩니다.
 
-## 최신 APK 받기 (폰에서 이 링크만 열면 됨)
-https://github.com/Jeong-JK/study-voca-jjk/releases/latest/download/ToeicVoca.apk
-
-- `main`에 push하면 GitHub Actions가 자동으로 빌드해서 위 링크를 최신 버전으로 바꿉니다 (2~5분).
+## 빌드
+- `main`에 push하면 GitHub Actions가 자동으로 APK를 빌드합니다 (2~5분).
 - 서명 키(`app/debug.keystore`)가 고정이라 새 APK를 덮어 설치해도 학습 기록이 유지됩니다.
 - 버전 번호는 빌드 번호를 따라갑니다 (`v1.<빌드번호>`).
 
