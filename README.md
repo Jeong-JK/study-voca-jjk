@@ -14,6 +14,8 @@
 - **오답 반복**: 하루치를 다 풀면 틀린 단어만 다시, 전부 맞힐 때까지 반복
 - **중간 오답 보기**: 풀다가 나가도 지금까지 틀린 단어를 확인하고 다시 풀 수 있음 (진도에 영향 없음)
 - **다시 테스트**: 끝낸 Day(또는 진행 중인 Day)의 단어 전체를 순서를 섞어서 몇 번이든 다시 풀기 (진도에 영향 없음)
+- **발음기호**: 단어 아래에 미국식·영국식 발음기호(IPA) 표시
+- **아는 단어**: 문제 화면에서 '✓ 아는 단어'를 누르면 그 단어는 앞으로 출제되지 않음 (몇 초간 되돌리기 가능, 설정 → 아는 단어에서 언제든 되돌리기)
 - **발음 듣기**: 문제가 나오면 미국 → 영국 발음 순서로 자동 재생, 🔁 다시 듣기 / 🔊 미국 / 🔊 영국 버튼. 폰의 TTS 엔진 사용(오프라인)
 - **단어장 3종**: 토익 / 기본 / 전부, 단어장마다 진도·기록 따로 저장
 - **학습 기록**: Day별 첫 정답률과 반복 횟수
@@ -59,7 +61,8 @@ app/src/main/
 │   ├── words.js       # TSL 단어
 │   ├── phrases.js     # 숙어
 │   ├── bsl.js         # BSL 단어
-│   └── ngsl.js        # NGSL 단어
+│   ├── ngsl.js        # NGSL 단어
+│   └── ipa.js         # 발음기호 (단어|미국|영국)
 ├── java/com/jjk/toeicvoca/MainActivity.java   # WebView + 발음(TTS) + 광고(AdMob) 연결
 └── AndroidManifest.xml
 .github/workflows/build.yml   # APK 자동 빌드 + Release 업로드
@@ -83,3 +86,5 @@ app/src/main/
 ## 출처 · 라이선스
 TOEIC Service List, Business Service List, New General Service List — Browne, Culligan & Phillips, [newgeneralservicelist.com](https://www.newgeneralservicelist.com), **CC BY-SA 4.0**.
 한글 뜻과 품사는 별도로 붙인 것이며, 단어 데이터 파일은 같은 라이선스(CC BY-SA 4.0)를 따릅니다.
+
+발음기호: [ipa-dict](https://github.com/open-dict-data/ipa-dict) (MIT License, 미국식은 CMU 발음사전 기반)에서 가져와 표기를 정리하고, 빠진 영국식 발음 일부는 직접 보완했습니다.

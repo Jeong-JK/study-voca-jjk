@@ -32,6 +32,13 @@ background:var(--accent);color:var(--accentInk);margin-top:10px;font-family:inhe
 .say{display:flex;justify-content:center;gap:8px;margin:12px 0 0}
 .say button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:7px 12px;font-family:inherit;font-weight:600;font-size:14px}
 .say button:active{transform:scale(.96)}
+.ipa{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 14px;margin:-2px 0 12px;font-size:15px;color:var(--sub);font-family:"Noto Sans","Segoe UI","Lucida Sans Unicode","DejaVu Sans",system-ui,sans-serif}
+.ipa i{font-style:normal;font-size:11px;font-weight:700;border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-right:5px;vertical-align:1px}
+.chip.known{margin-left:6px;background:var(--card);font-family:inherit;color:var(--ok);border-color:var(--ok)}
+.undo{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--ink);color:var(--bg);border-radius:12px;padding:10px 14px;font-size:14px;margin-top:8px}
+.undo button,.mini{border:0;background:none;font:inherit;font-weight:700;color:var(--accent);padding:4px}
+.undo button{color:#8fb0ff}
+.mini{font-size:13px;flex:none}
 .chip{display:inline-block;font-size:13px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--sub)}
 .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--card);color:var(--ink);
 border:1.5px solid var(--line);border-radius:14px;padding:15px 14px;margin-bottom:10px;font-size:17px;font-family:inherit}
@@ -100,6 +107,7 @@ body.withad #app{padding-bottom:72px}
 <script src="phrases.js"></script>
 <script src="bsl.js"></script>
 <script src="ngsl.js"></script>
+<script src="ipa.js"></script>
 <script>
 // ---------- 데이터 ----------
 const W = [], seen = new Set();
@@ -114,6 +122,9 @@ const DECKS = {
   basic: { name: '기본', desc: '일반 영어 핵심 단어 (NGSL)', has: 'G' },
   all:   { name: '전부', desc: '모든 단어와 숙어', has: 'TPBG' },
 };
+// 발음기호: 단어(소문자) → [미국, 영국]
+const IPA = {};
+IPA_RAW.trim().split('\n').forEach(l => { const [w, us, uk] = l.split('|'); IPA[w] = [us, uk]; });
 const deckIdx = k => [...W.keys()].filter(i => DECKS[k].has.includes(W[i].d));
 const KEY = 'toeic_voca_decks_v1';
 // 구독 플랜 (결제 연동 전: 플랜 화면에서 바로 전환되는 테스트용)
@@ -139,7 +150,10 @@ try { ALL = JSON.parse(localStorage.getItem(KEY)); } catch (e) { ALL = null; }
 if (!ALL || !ALL.decks) ALL = { deck: 'toeic', decks: {} };
 if (!PLANS[ALL.plan]) ALL.plan = 'free';
 if (ALL.perDay === undefined) ALL.perDay = null;          // null이면 첫 실행 → 하루 학습량 선택
-if (!ALL.lastMainDate) ALL.lastMainDate = '';             // Basic: 하루 1 Day 제한용 (마지막으로 Day를 끝낸 날짜)
+if (!ALL.lastMainDate) ALL.lastMainDate = '';
+if (!ALL.known) ALL.known = {};                          // 아는 단어: { 'word': 표시한 시각 } → 앞으로 출제에서 제외
+const keyOf = i => W[i].w.toLowerCase();
+const isKnown = i => !!ALL.known[keyOf(i)];             // Basic: 하루 1 Day 제한용 (마지막으로 Day를 끝낸 날짜)
 const plan = () => PLANS[ALL.plan];
 const isPremium = () => ALL.plan === 'premium';
 
@@ -161,24 +175,32 @@ const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ALL)); } cat
 save();
 
 // Day마다 단어 범위(시작 위치, 개수)를 처음 열 때 고정 → 학습량을 바꿔도 지난 Day는 그대로
+// Day마다 단어 목록을 처음 열 때 고정 (아는 단어는 건너뛰고 학습량만큼 채움)
+// → 학습량을 바꾸거나 아는 단어를 표시해도 지난 Day 구성은 그대로
+const dayEnd = d => d.ids ? d.end : d.start + d.count;      // 이전 형식({start,count})도 지원
 function ensureDays(n) {
   const L = S.order.length;
+  if (S.ptr == null) S.ptr = S.days.length ? dayEnd(S.days[S.days.length - 1]) : 0;
   while (S.days.length < n) {
-    const last = S.days[S.days.length - 1];
-    S.days.push({ start: last ? (last.start + last.count) % L : 0, count: ALL.perDay || AMT_MIN });
+    const want = ALL.perDay || AMT_MIN, ids = [];
+    // 아는 단어에서 되돌린 단어(이미 지나간 순서)는 다음 Day에 먼저 넣기
+    while (ids.length < want && S.extra && S.extra.length) { const i = S.extra.shift(); if (!isKnown(i) && !ids.includes(i)) ids.push(i); }
+    let p = S.ptr, guard = 0;
+    while (ids.length < want && guard < L) { const i = S.order[p % L]; p++; guard++; if (!isKnown(i)) ids.push(i); }
+    S.ptr = p; S.days.push({ ids, end: p });
   }
 }
 function dayWords(day) {
   ensureDays(day);
-  const { start, count } = S.days[day - 1], out = [];
-  for (let i = 0; i < count; i++) out.push(S.order[(start + i) % S.order.length]);
-  return out;
+  const d = S.days[day - 1];
+  const ids = d.ids || Array.from({ length: d.count }, (_, k) => S.order[(d.start + k) % S.order.length]);
+  return ids.filter(i => !isKnown(i));
 }
 function totalDays() {
-  const used = S.days.reduce((a, d) => a + d.count, 0);
+  const used = S.ptr != null ? S.ptr : S.days.reduce((a, d) => a + (d.count || d.ids.length), 0);
   return Math.max(S.days.length + Math.ceil(Math.max(0, S.order.length - used) / (ALL.perDay || AMT_MIN)), S.day);
 }
-// 학습량을 바꾸면, 아직 시작 안 한 Day 범위는 지워서 새 학습량으로 다시 잡히게
+// 학습량을 바꾸면, 아직 시작 안 한 Day 구성은 지워서 새 학습량으로 다시 잡히게
 function trimDays() {
   for (const k in ALL.decks) {
     const d = ALL.decks[k]; if (!d.days) continue;
@@ -187,6 +209,7 @@ function trimDays() {
     Object.keys(d.paused || {}).forEach(x => keep = Math.max(keep, +x));
     if (d.sess) keep = Math.max(keep, d.sess.day);
     d.days.length = Math.min(d.days.length, keep);
+    d.ptr = d.days.length ? dayEnd(d.days[d.days.length - 1]) : 0;
   }
 }
 // Basic은 하루에 Day 1개: 오늘 이미 Day를 끝냈으면 새 Day 시작 불가 (진행 중인 Day는 계속 가능)
@@ -407,11 +430,40 @@ function settingsView() {
     <div class="card list">
       <button class="row rowbtn" id="amt"><span>하루 학습량</span><span>${ALL.perDay}개 ›</span></button>
       <button class="row rowbtn" id="pl"><span>구독</span><span>${plan().name} ›</span></button>
+      <button class="row rowbtn" id="kn"><span>아는 단어</span><span>${Object.keys(ALL.known).length}개 ›</span></button>
     </div>
     <div class="spacer"></div>`;
   document.getElementById('x').onclick = home;
   document.getElementById('amt').onclick = () => amountView(false);
   document.getElementById('pl').onclick = () => planView();
+  document.getElementById('kn').onclick = knownView;
+}
+
+// 아는 단어 목록 (되돌리면 다시 출제됨)
+function knownView() {
+  const byKey = {}; W.forEach((o, i) => byKey[o.w.toLowerCase()] = i);
+  const list = Object.entries(ALL.known).sort((a, b) => b[1] - a[1]).map(([k]) => byKey[k]).filter(i => i != null);
+  app.innerHTML = `
+    <div class="top"><span>아는 단어 ${list.length}개</span><button class="x" id="x">✕</button></div>
+    <p class="muted">여기 있는 단어는 문제에 나오지 않아요. 되돌리면 다시 문제에 나와요.</p>
+    ${list.length ? `<div class="card list">${list.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b> <small class="muted">${esc(W[i].m)}</small></span>
+      <button class="mini" data-k="${esc(keyOf(i))}">되돌리기</button></div>`).join('')}</div>`
+      : `<p class="muted">아직 없어요. 문제 화면에서 '✓ 아는 단어'를 누르면 여기에 모여요.</p>`}
+    <div class="spacer"></div>`;
+  document.getElementById('x').onclick = settingsView;
+  document.querySelectorAll('.mini').forEach(b => b.onclick = () => { unknow(byKey[b.dataset.k]); save(); knownView(); });
+}
+// 아는 단어 되돌리기: 이미 만들어진 Day에 있던 단어면 그 Day에 다시 나오고,
+// 건너뛰어진 단어면 다음에 만들어질 Day에 넣어줌
+function unknow(i) {
+  delete ALL.known[keyOf(i)];
+  for (const k in ALL.decks) {
+    const d = ALL.decks[k], pos = d.order.indexOf(i);
+    if (pos < 0 || !d.days) continue;
+    const inDay = d.days.some(x => x.ids ? x.ids.includes(i) : ((pos - x.start + d.order.length) % d.order.length) < x.count);
+    const passed = d.ptr != null ? pos < d.ptr : false;
+    if (!inDay && passed) (d.extra = d.extra || []).push(i);
+  }
 }
 
 // ---------- Day 선택 (Premium) ----------
@@ -448,14 +500,26 @@ function wrongView() {
 }
 
 function startDay() {
+  if (!dayWords(S.day).length) {
+    S.done[S.day] = true; let nx = S.day + 1; while (S.done[nx]) nx++; goDay(nx);
+  }
   S.sess = { day: S.day, round: 1, queue: shuffle(dayWords(S.day)), pos: 0, wrong: [], firstScore: null, cur: null, picked: null };
   save();
 }
 
-let active = null;
+let active = null, undoKnown = null, undoTimer = null;
+// 발음기호 (미국 / 영국)
+function ipaHTML(word) {
+  const p = IPA[word.toLowerCase()];
+  if (!p) return '';
+  return `<div class="ipa">${p[0] ? `<span><i>미</i>/${esc(p[0])}/</span>` : ''}${p[1] ? `<span><i>영</i>/${esc(p[1])}/</span>` : ''}</div>`;
+}
 function quiz(s = S.sess) {
   active = s;
   const persist = () => { if (!s.prac) save(); };
+  // 아는 단어로 표시된 단어는 문제에서 빼기
+  while (s.pos < s.queue.length && isKnown(s.queue[s.pos])) { s.queue.splice(s.pos, 1); s.cur = null; s.picked = null; }
+  s.wrong = s.wrong.filter(i => !isKnown(i));
   if (s.pos >= s.queue.length) return s.prac ? pracResult(s) : result();
   const idx = s.queue[s.pos], w = W[idx];
   if (!s.cur || s.cur.idx !== idx) { s.cur = { idx, ...makeChoices(idx) }; s.picked = null; persist(); }
@@ -466,12 +530,34 @@ function quiz(s = S.sess) {
       <span>${s.pos + 1} / ${s.queue.length} <button class="x" id="x">✕</button></span></div>
     <div class="bar"><i style="width:${s.pos / s.queue.length * 100}%"></i></div>
     <div class="word${w.w.length > 22 ? ' xlong' : w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
-    <div class="pos"><span class="chip">${POS[w.p] || w.p}</span>
+    ${ipaHTML(w.w)}
+    <div class="pos"><span class="chip">${POS[w.p] || w.p}</span><button class="chip known" id="known">✓ 아는 단어</button>
       <div class="say"><button id="replay">🔁 다시 듣기</button><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
     <div id="opts">${c.opts.map((m, i) => `<button class="opt" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>
     <div class="toast" id="toast"></div>
+    ${undoKnown && undoKnown.s === s ? `<div class="undo"><span>'${esc(W[undoKnown.idx].w)}' 아는 단어로 뺐어요</span><button id="undo">되돌리기</button></div>` : ''}
     <div class="spacer"></div>
     <button class="btn" id="next" style="visibility:hidden">다음 →</button>`;
+  // 아는 단어: 앞으로 출제에서 빼고 바로 다음 문제로 (몇 초간 되돌리기 가능)
+  document.getElementById('known').onclick = () => {
+    sayStop();
+    ALL.known[keyOf(idx)] = Date.now();
+    s.queue.splice(s.pos, 1); s.wrong = s.wrong.filter(i => i !== idx);
+    if (s.items) s.items = s.items.filter(i => i !== idx);
+    s.cur = null; s.picked = null;
+    undoKnown = { s, idx, pos: s.pos };
+    clearTimeout(undoTimer); undoTimer = setTimeout(() => { undoKnown = null; const u = document.querySelector('.undo'); if (u) u.remove(); }, 4000);
+    save(); quiz(s);
+  };
+  const ub = document.getElementById('undo');
+  if (ub) ub.onclick = () => {
+    const u = undoKnown; undoKnown = null; clearTimeout(undoTimer);
+    delete ALL.known[keyOf(u.idx)];
+    if (s.cur) { s.cur = null; s.picked = null; }
+    s.queue.splice(u.pos, 0, u.idx); s.pos = u.pos;
+    if (s.items) s.items.push(u.idx);
+    save(); quiz(s);
+  };
   document.getElementById('x').onclick = () => { active = null; sayStop(); home(); };
   document.querySelectorAll('.say button[data-a]').forEach(b => b.onclick = () => say(w.w, b.dataset.a));
   document.getElementById('replay').onclick = () => sayBoth(w.w);
