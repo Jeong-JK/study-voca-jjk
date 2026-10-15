@@ -2,6 +2,9 @@ package com.jjk.toeicvoca;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.webkit.JavascriptInterface;
@@ -10,12 +13,61 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
 import java.util.Locale;
 
 public class MainActivity extends Activity {
     private WebView web;
     private TextToSpeech tts;
     private volatile boolean ttsReady = false;
+
+    // ---- 광고 (AdMob) ----
+    // 지금은 구글 공식 "테스트" 광고 ID. 출시 전에 AdMob에서 발급받은 실제 ID로 교체해야 함
+    private static final String BANNER_ID = "ca-app-pub-3940256099942544/6300978111";
+    private static final String INTERSTITIAL_ID = "ca-app-pub-3940256099942544/1033173712";
+    private AdView banner;
+    private boolean bannerLoaded = false;
+    private InterstitialAd interstitial;
+
+    private void loadInterstitial() {
+        InterstitialAd.load(this, INTERSTITIAL_ID, new AdRequest.Builder().build(), new InterstitialAdLoadCallback() {
+            @Override public void onAdLoaded(InterstitialAd ad) { interstitial = ad; }
+            @Override public void onAdFailedToLoad(LoadAdError e) { interstitial = null; }
+        });
+    }
+
+    /** JS에서 window.AndroidAds.banner(true/false), window.AndroidAds.interstitial() 로 호출 */
+    public class Ads {
+        @JavascriptInterface
+        public void banner(boolean on) {
+            runOnUiThread(() -> {
+                if (on) {
+                    banner.setVisibility(View.VISIBLE);
+                    if (!bannerLoaded) { banner.loadAd(new AdRequest.Builder().build()); bannerLoaded = true; }
+                } else {
+                    banner.setVisibility(View.GONE);
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void interstitial() {
+            runOnUiThread(() -> {
+                if (interstitial != null) {
+                    interstitial.show(MainActivity.this);
+                    interstitial = null;
+                }
+                loadInterstitial();   // 다음 번을 위해 미리 받아두기
+            });
+        }
+    }
 
     /** 웹 화면(JS)에서 window.Android.speak("word", "us" | "uk") 로 호출 */
     public class Speaker {
@@ -60,6 +112,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         tts = new TextToSpeech(this, status -> ttsReady = (status == TextToSpeech.SUCCESS));
+        MobileAds.initialize(this, status -> {});
+        loadInterstitial();
 
         web = new WebView(this);
         web.setBackgroundColor(Color.TRANSPARENT);
@@ -70,8 +124,21 @@ public class MainActivity extends Activity {
         web.setWebViewClient(new WebViewClient());
         web.setWebChromeClient(new WebChromeClient());   // confirm() 확인창이 뜨도록
         web.addJavascriptInterface(new Speaker(), "Android");   // 발음 듣기
+        web.addJavascriptInterface(new Ads(), "AndroidAds");    // 광고
         web.loadUrl("file:///android_asset/index.html");
-        setContentView(web);
+
+        // 화면 = 웹 화면(위) + 배너 광고(아래, 평소엔 숨김)
+        LinearLayout root = new LinearLayout(this);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.addView(web, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
+        banner = new AdView(this);
+        banner.setAdUnitId(BANNER_ID);
+        banner.setAdSize(AdSize.BANNER);
+        banner.setVisibility(View.GONE);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.gravity = Gravity.CENTER_HORIZONTAL;
+        root.addView(banner, lp);
+        setContentView(root);
     }
 
     @Override
@@ -90,6 +157,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         if (tts != null) tts.shutdown();
+        if (banner != null) banner.destroy();
         super.onDestroy();
     }
 }
