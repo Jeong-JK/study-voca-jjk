@@ -57,11 +57,26 @@ body.withad #app{padding-bottom:72px}
 .link{border:0;background:none;color:var(--accent);font-family:inherit;font-weight:600;font-size:14px;padding:0 0 10px}
 .notice{margin-top:4px;line-height:1.6}.notice .btn{font-size:15px;padding:12px}
 .big{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.25;margin:18px 0 6px}
-.amts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0 14px}
-.amt{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:14px 0 10px;font-family:inherit;font-weight:800;font-size:22px}
-.amt small{display:block;font-size:11px;font-weight:600;color:var(--sub);margin-top:2px}
-.amt.on{border-color:var(--accent);background:var(--accent);color:var(--accentInk)}.amt.on small{color:var(--accentInk)}
-.amt.lock{opacity:.55}.amt.lock small{color:var(--accent)}
+
+.amtval{display:flex;align-items:baseline;justify-content:center;gap:6px;margin:34px 0 4px}
+.amtval b{font-size:64px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.amtval span{color:var(--sub);font-size:16px}
+.amttier{text-align:center;font-size:14px;font-weight:600;min-height:20px;color:var(--sub)}
+.amttier.basic{color:#d08a12}.amttier.premium{color:var(--accent)}
+.slider{position:relative;margin:30px 18px 8px;height:44px}
+.slider .zones{position:absolute;left:0;right:0;top:18px;height:8px;border-radius:4px;overflow:hidden;background:var(--line)}
+.z{position:absolute;top:0;bottom:0;opacity:.35}
+.z.free{background:#8a8a94}.z.basic{background:#f0a020}.z.premium{background:var(--accent)}
+.slider input{position:absolute;left:-15px;right:-15px;width:calc(100% + 30px);top:0;height:44px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;touch-action:pan-y}
+.slider input::-webkit-slider-runnable-track{height:8px;border-radius:4px;background:linear-gradient(to right,var(--accent) 0 var(--p,0%),transparent var(--p,0%))}
+.slider input::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:var(--card);border:3px solid var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.slider input::-moz-range-track{height:8px;border-radius:4px;background:transparent}
+.slider input::-moz-range-progress{height:8px;border-radius:4px;background:var(--accent)}
+.slider input::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--card);border:3px solid var(--accent)}
+.ticks{position:absolute;left:0;right:0;top:40px;height:16px}
+.ticks span{position:absolute;transform:translateX(-50%);font-size:11px;color:var(--sub)}
+.legend{display:flex;justify-content:center;gap:14px;margin-top:30px;font-size:12px;color:var(--sub)}
+.legend .z{position:static;display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px;opacity:.6}
 .plan{margin-bottom:12px}.plan.cur{border-color:var(--accent)}.plan-h{display:flex;align-items:center;justify-content:space-between;font-size:20px}
 .plan ul{margin:10px 0 4px;padding-left:18px;line-height:1.8;color:var(--sub);font-size:14px}
 .rowbtn{width:100%;background:none;border:0;color:var(--ink);font:inherit;font-size:16px;text-align:left;padding:14px 0}
@@ -103,15 +118,16 @@ const deckIdx = k => [...W.keys()].filter(i => DECKS[k].has.includes(W[i].d));
 const KEY = 'toeic_voca_decks_v1';
 // 구독 플랜 (결제 연동 전: 플랜 화면에서 바로 전환되는 테스트용)
 const PLANS = {
-  free:    { name: 'Free',    max: 30,  banner: true,  endAd: true,  redo: false, oneDay: true,  pick: false,
-             perks: ['하루 30개', '하루에 Day 1개씩 진행', '지난 Day 다시 테스트 · 발음 듣기', '오답은 목록으로만 확인 (다시 풀기 ✕)', '문제 풀 때 하단 광고 · 하루치 끝나면 광고'] },
+  free:    { name: 'Free',    max: 20,  banner: true,  endAd: true,  redo: false, oneDay: true,  pick: false,
+             perks: ['하루 20개', '하루에 Day 1개씩 진행', '지난 Day 다시 테스트 · 발음 듣기', '오답은 목록으로만 확인 (다시 풀기 ✕)', '문제 풀 때 하단 광고 · 하루치 끝나면 광고'] },
   basic:   { name: 'Basic',   max: 50,  banner: false, endAd: true,  redo: true,  oneDay: true,  pick: false,
-             perks: ['하루 30~50개', '하루에 Day 1개씩 진행', '오답 다시 풀기 · 다시 테스트 · 발음 듣기', '하루치 끝날 때만 광고'] },
+             perks: ['하루 20~50개', '하루에 Day 1개씩 진행', '오답 다시 풀기 · 다시 테스트 · 발음 듣기', '하루치 끝날 때만 광고'] },
   premium: { name: 'Premium', max: 100, banner: false, endAd: false, redo: true,  oneDay: false, pick: true,
-             perks: ['하루 30~100개', 'Day 2, Day 3… 하고 싶은 만큼 계속', 'Day를 골라서 자유롭게 학습', '모든 기능', '광고 없음'] },
+             perks: ['하루 20~100개', 'Day 2, Day 3… 하고 싶은 만큼 계속', 'Day를 골라서 자유롭게 학습', '모든 기능', '광고 없음'] },
 };
+const ro = name => name + (name === 'Free' ? '로' : '으로');   // Basic으로 / Premium으로 / Free로
 const PLAN_OF = a => a <= PLANS.free.max ? 'free' : a <= PLANS.basic.max ? 'basic' : 'premium';   // 이 학습량을 쓰려면 필요한 최소 등급
-const AMOUNTS = [30, 40, 50, 60, 70, 80, 90, 100];
+const AMT_MIN = 20, AMT_MAX = 100, AMT_STEP = 10;   // 하루 학습량: 20~100개, 10개 단위
 const POS = { '명': '명사', '동': '동사', '형': '형용사', '부': '부사', '숙': '숙어' };
 
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -140,6 +156,7 @@ function useDeck(k) {
   ALL.decks[k] = cur; ALL.deck = k; S = cur;
 }
 useDeck(DECKS[ALL.deck] ? ALL.deck : 'toeic');
+if (ALL.perDay != null && ALL.perDay > PLANS[ALL.plan].max) ALL.perDay = PLANS[ALL.plan].max;
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ALL)); } catch (e) {} };
 save();
 
@@ -148,7 +165,7 @@ function ensureDays(n) {
   const L = S.order.length;
   while (S.days.length < n) {
     const last = S.days[S.days.length - 1];
-    S.days.push({ start: last ? (last.start + last.count) % L : 0, count: ALL.perDay || 30 });
+    S.days.push({ start: last ? (last.start + last.count) % L : 0, count: ALL.perDay || AMT_MIN });
   }
 }
 function dayWords(day) {
@@ -159,7 +176,7 @@ function dayWords(day) {
 }
 function totalDays() {
   const used = S.days.reduce((a, d) => a + d.count, 0);
-  return Math.max(S.days.length + Math.ceil(Math.max(0, S.order.length - used) / (ALL.perDay || 30)), S.day);
+  return Math.max(S.days.length + Math.ceil(Math.max(0, S.order.length - used) / (ALL.perDay || AMT_MIN)), S.day);
 }
 // 학습량을 바꾸면, 아직 시작 안 한 Day 범위는 지워서 새 학습량으로 다시 잡히게
 function trimDays() {
@@ -315,20 +332,49 @@ function home() {
 
 // ---------- 하루 학습량 선택 (첫 실행 / 설정) ----------
 function amountView(first) {
-  const cur = ALL.perDay, max = plan().max;
+  const max = plan().max;
+  let val = Math.min(ALL.perDay || AMT_MIN, AMT_MAX);
+  const pct = v => (v - AMT_MIN) / (AMT_MAX - AMT_MIN) * 100;
+  const ticks = [];
+  for (let a = AMT_MIN; a <= AMT_MAX; a += AMT_STEP) ticks.push(a);
   app.innerHTML = `
     ${first ? `<h1>TOEIC 영단어</h1>` : `<div class="top"><span>하루 학습량</span><button class="x" id="x">✕</button></div>`}
     <p class="big">하루에 몇 단어<br>공부할까요?</p>
     <p class="muted">${first ? '나중에 설정에서 언제든 바꿀 수 있어요.' : '바꾼 학습량은 아직 시작하지 않은 Day부터 적용돼요.'}</p>
-    <div class="amts">${AMOUNTS.map(a => `<button class="amt${a === cur ? ' on' : ''}${a > max ? ' lock' : ''}" data-a="${a}">${a}<small>${a > max ? PLANS[PLAN_OF(a)].name : '개'}</small></button>`).join('')}</div>
-    <p class="muted">Free는 하루 30개, Basic은 50개까지, Premium은 100개까지 고를 수 있어요.</p>
-    <div class="spacer"></div>`;
+    <div class="amtval"><b id="av">${val}</b><span>개 / 하루</span></div>
+    <div class="amttier" id="at"></div>
+    <div class="slider">
+      <div class="zones">
+        <i class="z free" style="left:0;width:${pct(PLANS.free.max)}%"></i>
+        <i class="z basic" style="left:${pct(PLANS.free.max)}%;width:${pct(PLANS.basic.max) - pct(PLANS.free.max)}%"></i>
+        <i class="z premium" style="left:${pct(PLANS.basic.max)}%;width:${100 - pct(PLANS.basic.max)}%"></i>
+      </div>
+      <input type="range" id="rng" min="${AMT_MIN}" max="${AMT_MAX}" step="1" value="${val}">
+      <div class="ticks">${ticks.map(a => `<span style="left:${pct(a)}%">${a}</span>`).join('')}</div>
+    </div>
+    <div class="legend"><span><i class="z free"></i>Free ~${PLANS.free.max}</span><span><i class="z basic"></i>Basic ~${PLANS.basic.max}</span><span><i class="z premium"></i>Premium ~${PLANS.premium.max}</span></div>
+    <div class="spacer"></div>
+    <button class="btn" id="ok"></button>`;
+  const rng = document.getElementById('rng'), av = document.getElementById('av'), at = document.getElementById('at'), ok = document.getElementById('ok');
+  const snap = v => Math.round(v / AMT_STEP) * AMT_STEP;
+  const show = () => {
+    const raw = +rng.value; val = snap(raw);
+    av.textContent = val;
+    rng.style.setProperty('--p', pct(raw) + '%');
+    const need = PLAN_OF(val);
+    at.className = 'amttier ' + need;
+    at.textContent = val > max ? `🔒 ${PLANS[need].name}${need === 'premium' ? '' : ' 이상'} 필요` : `${plan().name}에서 사용 가능`;
+    ok.textContent = val > max ? `${ro(PLANS[need].name)} 업그레이드` : first ? `하루 ${val}개로 시작하기` : `하루 ${val}개로 저장`;
+  };
+  // 드래그하는 동안은 부드럽게 움직이고, 손을 떼면 10개 단위 눈금에 착 붙음
+  rng.oninput = show;
+  rng.onchange = () => { rng.value = snap(+rng.value); show(); };
+  show();
   const x = document.getElementById('x'); if (x) x.onclick = settingsView;
-  document.querySelectorAll('.amt').forEach(b => b.onclick = () => {
-    const a = +b.dataset.a;
-    if (a > plan().max) return planView({ want: a, first });
-    setAmount(a); first ? home() : settingsView();
-  });
+  ok.onclick = () => {
+    if (val > plan().max) return planView({ want: val, first });
+    setAmount(val); first ? home() : settingsView();
+  };
 }
 function setAmount(a) { ALL.perDay = Math.min(a, plan().max); trimDays(); save(); }
 
@@ -341,7 +387,7 @@ function planView(opt = {}) {
       <div class="card plan ${k}${k === ALL.plan ? ' cur' : ''}">
         <div class="plan-h"><b>${p.name}</b>${k === ALL.plan ? '<span class="chip">이용 중</span>' : ''}</div>
         <ul>${p.perks.map(t => `<li>${t}</li>`).join('')}</ul>
-        ${k === ALL.plan ? '' : `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}">${p.name}${Object.keys(PLANS).indexOf(k) > Object.keys(PLANS).indexOf(ALL.plan) ? '로 업그레이드' : '로 변경'}</button>`}
+        ${k === ALL.plan ? '' : `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}">${ro(p.name)}${Object.keys(PLANS).indexOf(k) > Object.keys(PLANS).indexOf(ALL.plan) ? ' 업그레이드' : ' 변경'}</button>`}
       </div>`).join('')}
     <p class="muted" style="font-size:12px">※ 결제 연동 전 테스트 버전이라 누르면 바로 바뀌어요.</p>
     <div class="spacer"></div>`;
