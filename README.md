@@ -68,6 +68,7 @@ app/src/main/
 │   ├── phrases.js     # 숙어
 │   ├── bsl.js         # BSL 단어
 │   ├── ngsl.js        # NGSL 단어
+│   ├── cefr.js        # CEFR 일반 영어 단어 (CEFR-J + Octanove)
 │   ├── ipa.js         # 발음기호 (단어|미국|영국)
 │   └── levels.js      # 단어 레벨 (단어|CEFR 레벨|공식1/추정0)
 ├── java/com/jjk/toeicvoca/MainActivity.java     # WebView + 발음(TTS) + 광고(AdMob) + 앱 버전·알림 연결
@@ -83,12 +84,12 @@ app/src/main/
 | 단어장 | 내용 |
 |---|---|
 | 토익 | TSL + 숙어 + BSL |
-| 기본 | NGSL (기능어 제외) |
+| 기본 | NGSL + CEFR 일반 영어 단어 (입문~최상급) |
 | 전부 | 위 전체 |
 
 ## 단어 추가/수정
 `app/src/main/assets/`의 파일에 `단어|품사|뜻` 형식으로 한 줄씩 추가합니다 (품사: 명/동/형/부/숙).
-- `words.js` TSL · `phrases.js` 숙어 · `bsl.js` BSL · `ngsl.js` NGSL
+- `words.js` TSL · `phrases.js` 숙어 · `bsl.js` BSL · `ngsl.js` NGSL · `cefr.js` CEFR 일반 단어
 - 같은 단어가 여러 파일에 있으면 먼저 나온 것 하나만 쓰입니다.
 
 ## 출처 · 라이선스
