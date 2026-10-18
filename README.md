@@ -9,6 +9,8 @@
 - 버전 번호는 빌드 번호를 따라갑니다 (`v1.<빌드번호>`).
 
 ## 주요 기능
+- **레벨 테스트**: 처음 설치하면 20문제(A1→C2 순서, '모르겠어요' 가능)로 단어 레벨을 측정하고, 처음으로 60% 미만인 레벨부터 2단계를 학습 범위로 추천
+- **출제 설정**: 레벨(A1 입문 ~ C2 최상급)과 유형(명사·동사·형용사·부사·숙어)을 체크박스로 골라 그 단어만 출제. 바꾸면 아직 시작하지 않은 Day부터 적용
 - **하단 탭**: 학습 / 오답노트 / 더보기
 - **오답노트**: 틀린 단어가 모두 쌓이고(틀린 횟수 표시), 오답노트 풀기에서 맞히면 노트에서 빠짐. '외웠어요'로 직접 삭제
 - **더보기**: 총 학습한 단어 수·전체 정답률, 하루 학습량, 학습 기록, 아는 단어, 푸시 알림(공지/업데이트/이벤트/일일 학습 알림), 자동 발음, 구독 멤버십 관리, 데이터 초기화, 앱 사용설명서, 개인정보 처리방침, 앱 정보
@@ -66,7 +68,8 @@ app/src/main/
 │   ├── phrases.js     # 숙어
 │   ├── bsl.js         # BSL 단어
 │   ├── ngsl.js        # NGSL 단어
-│   └── ipa.js         # 발음기호 (단어|미국|영국)
+│   ├── ipa.js         # 발음기호 (단어|미국|영국)
+│   └── levels.js      # 단어 레벨 (단어|CEFR 레벨|공식1/추정0)
 ├── java/com/jjk/toeicvoca/MainActivity.java     # WebView + 발음(TTS) + 광고(AdMob) + 앱 버전·알림 연결
 ├── java/com/jjk/toeicvoca/ReminderReceiver.java # 일일 학습 알림 예약·표시
 └── AndroidManifest.xml
@@ -93,3 +96,5 @@ TOEIC Service List, Business Service List, New General Service List — Browne, 
 한글 뜻과 품사는 별도로 붙인 것이며, 단어 데이터 파일은 같은 라이선스(CC BY-SA 4.0)를 따릅니다.
 
 발음기호: [ipa-dict](https://github.com/open-dict-data/ipa-dict) (MIT License, 미국식은 CMU 발음사전 기반)에서 가져와 표기를 정리하고, 빠진 영국식 발음 일부는 직접 보완했습니다.
+
+레벨: CEFR-J Wordlist Version 1.5, compiled by Yukio Tono, Tokyo University of Foreign Studies (상업적 이용 무료, 출처 표기) · Octanove Vocabulary Profile C1/C2 1.0 (Octanove Labs, CC BY-SA 4.0). 두 목록에 없는 단어는 사용 빈도([wordfreq](https://github.com/rspeer/wordfreq))로 추정했고, 숙어 레벨은 직접 분류했습니다.

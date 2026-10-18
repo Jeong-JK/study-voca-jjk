@@ -121,6 +121,18 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 .plain{margin:10px 0;padding-left:18px;line-height:1.8}
 .doc{line-height:1.7;font-size:15px}.doc h3{font-size:16px;margin:22px 0 6px}.doc p{margin:6px 0}.doc ul{margin:6px 0;padding-left:20px}
 .doc .contact{margin:26px 0 10px;padding-top:14px;border-top:1px solid var(--line);font-weight:600}.doc a{color:var(--accent)}
+.lvchip{display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:99px;padding:6px 12px;font-family:inherit;font-size:13px;margin:-4px 0 0}
+.lvchip b{color:var(--accent)}
+.chip.lv{margin-left:6px;color:var(--accent);border-color:var(--accent);font-weight:700}
+.lvtable{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 6px}
+.lvtable div{display:flex;flex-direction:column;align-items:center}.lvtable b{font-size:20px;color:var(--accent)}.lvtable span{font-size:12px;color:var(--sub)}
+.opt.idk{border-style:dashed;color:var(--sub)}
+.lvres{display:flex;align-items:baseline;gap:12px;margin:8px 0 16px}.lvres b{font-size:56px;font-weight:800;color:var(--accent);letter-spacing:-.02em}.lvres span{color:var(--sub);font-weight:600}
+.lvbars .row{align-items:center}.lvbars .row>span:first-child{flex:0 0 96px;font-size:14px}
+.lvbar{flex:1;height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin:0 10px}.lvbar i{display:block;height:100%;background:var(--accent)}
+.pct{flex:0 0 40px;text-align:right;font-size:13px;color:var(--sub)}
+.ck{display:flex;align-items:center;gap:12px;cursor:pointer}.ck input{width:22px;height:22px;accent-color:var(--accent);margin:0;flex:none}.ck span:nth-of-type(1){flex:1}
+.sec small{font-weight:600;color:var(--accent)}
 .decks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:var(--line);padding:4px;border-radius:14px;margin:-12px 0 18px}
 .deck{border:0;border-radius:10px;padding:9px 4px;background:transparent;color:var(--sub);font-family:inherit;font-weight:600;font-size:15px}
 .deck small{display:block;font-size:11px;font-weight:500;opacity:.8;margin-top:2px}
@@ -143,6 +155,7 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 <script src="bsl.js"></script>
 <script src="ngsl.js"></script>
 <script src="ipa.js"></script>
+<script src="levels.js"></script>
 <script>
 // ---------- 데이터 ----------
 const W = [], seen = new Set();
@@ -160,6 +173,12 @@ const DECKS = {
 // 발음기호: 단어(소문자) → [미국, 영국]
 const IPA = {};
 IPA_RAW.trim().split('\n').forEach(l => { const [w, us, uk] = l.split('|'); IPA[w] = [us, uk]; });
+// 레벨(CEFR): A1 입문 ~ C2 최상급. v = 1 이면 공식 목록 기준(레벨 테스트 출제용), 0 이면 추정
+const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const LV_NAME = { A1: '입문', A2: '초급', B1: '중급', B2: '중상급', C1: '고급', C2: '최상급' };
+const TYPES = [['명', '명사'], ['동', '동사'], ['형', '형용사'], ['부', '부사'], ['숙', '숙어']];
+{ const LV = {}; LEVEL_RAW.trim().split('\n').forEach(l => { const [w, L, v] = l.split('|'); LV[w] = [L, v === '1']; });
+  W.forEach(o => { const x = LV[o.w.toLowerCase()] || ['B1', false]; o.lv = x[0]; o.lvv = x[1]; }); }
 const deckIdx = k => [...W.keys()].filter(i => DECKS[k].has.includes(W[i].d));
 const KEY = 'toeic_voca_decks_v1';
 // 구독 플랜 (결제 연동 전: 플랜 화면에서 바로 전환되는 테스트용)
@@ -191,6 +210,11 @@ const keyOf = i => W[i].w.toLowerCase();
 if (!ALL.wrongNote) ALL.wrongNote = {};                  // 오답노트: { 'word': { n: 틀린 횟수, t: 마지막으로 틀린 시각 } }
 if (!ALL.push) ALL.push = { notice: true, update: true, event: false, daily: false, time: '20:00' };
 if (ALL.autoSay === undefined) ALL.autoSay = true;       // 자동 발음
+if (!Array.isArray(ALL.levels) || !ALL.levels.length) ALL.levels = [...LEVELS];   // 출제 레벨
+if (!Array.isArray(ALL.types) || !ALL.types.length) ALL.types = TYPES.map(t => t[0]);   // 출제 유형(품사·숙어)
+if (ALL.myLevel === undefined) ALL.myLevel = null;       // 레벨 테스트 결과
+// 새 Day를 만들 때 넣을 단어: 아는 단어 제외 + 선택한 레벨·유형만
+const wanted = i => !isKnown(i) && ALL.levels.includes(W[i].lv) && ALL.types.includes(W[i].p);
 const isKnown = i => !!ALL.known[keyOf(i)];             // Basic: 하루 1 Day 제한용 (마지막으로 Day를 끝낸 날짜)
 const plan = () => PLANS[ALL.plan];
 const isPremium = () => ALL.plan === 'premium';
@@ -233,7 +257,7 @@ function ensureDays(n) {
     // 아는 단어에서 되돌린 단어(이미 지나간 순서)는 다음 Day에 먼저 넣기
     while (ids.length < want && S.extra && S.extra.length) { const i = S.extra.shift(); if (!isKnown(i) && !ids.includes(i)) ids.push(i); }
     let p = S.ptr, guard = 0;
-    while (ids.length < want && guard < L) { const i = S.order[p % L]; p++; guard++; if (!isKnown(i)) ids.push(i); }
+    while (ids.length < want && guard < L) { const i = S.order[p % L]; p++; guard++; if (wanted(i)) ids.push(i); }
     S.ptr = p; S.days.push({ ids, end: p });
   }
 }
@@ -364,7 +388,7 @@ const _getHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')
 Object.defineProperty(app, 'innerHTML', { get() { return _getHTML.call(this); }, set(v) { _setHTML.call(this, v); adBanner(bannerOn); showTabs(tabOn); bannerOn = false; tabOn = null; window.scrollTo(0, 0); } });
 
 function home() {
-  if (ALL.perDay == null) return amountView(true);
+  if (ALL.perDay == null) return ALL.testSeen ? amountView(true) : levelIntro(true);
   const s = S.sess, n = dayWords(S.day).length;
   const done = S.history.length;
   tabOn = 'study';
@@ -377,9 +401,10 @@ function home() {
       <button class="badge ${ALL.plan}" id="planb">${plan().name}</button></div>
     <div class="decks">${Object.entries(DECKS).map(([k, d]) => `<button class="deck${k === ALL.deck ? ' on' : ''}" data-k="${k}">${d.name}</button>`).join('')}</div>
     <p class="muted">${DECKS[ALL.deck].desc}</p>
+    <button class="lvchip" id="lvset">${ALL.myLevel ? `내 레벨 <b>${ALL.myLevel}</b> · 학습 ${lvRange()}` : '레벨 테스트로 내 수준에 맞는 단어 받기'} ›</button>
     <div class="dayrow"><p class="day">Day ${S.day}</p>
       <button class="link" id="pick">Day 선택 ${plan().pick ? '›' : '🔒'}</button></div>
-    <p class="muted">${n}단어 · 4지선다 · 틀린 단어는 다 맞출 때까지 반복</p>
+    <p class="muted">${n ? `${n}단어 · 4지선다 · 틀린 단어는 다 맞출 때까지 반복` : '선택한 레벨·유형에 남은 단어가 없어요. 출제 설정을 바꿔주세요.'}</p>
     <div class="stats">
       <div class="stat"><div>${done}</div><span>완료한 Day</span></div>
       <div class="stat"><div>${done ? avg + '%' : '–'}</div><span>평균 첫 정답률</span></div>
@@ -391,7 +416,7 @@ function home() {
     ${rDay ? `<button class="btn ghost" id="rt">Day ${rDay} 단어 다시 테스트 (순서 섞기)</button>` : ''}
     ${resume && s.wrong.length ? `<button class="btn ghost" id="wv">지금까지 틀린 ${s.wrong.length}개 보기</button>` : ''}
     ${resume ? `<button class="btn" id="go">이어하기 · ${s.round === 1 ? '' : '오답 ' + s.round + '회차 · '}${s.pos}/${s.queue.length}</button>`
-             : locked ? '' : `<button class="btn" id="go">시작하기</button>`}`;
+             : locked ? '' : n ? `<button class="btn" id="go">시작하기</button>` : `<button class="btn" id="filt">출제 설정 바꾸기</button>`}`;
   const on = (id, f) => { const el = document.getElementById(id); if (el) el.onclick = f; };
   document.querySelectorAll('.deck').forEach(b => b.onclick = () => { useDeck(b.dataset.k); save(); home(); });
   on('go', () => { if (!resume) startDay(); quiz(); });
@@ -400,6 +425,105 @@ function home() {
   on('planb', () => planView());
   on('up', () => planView());
   on('pick', () => plan().pick ? dayPicker() : planView());
+  on('lvset', () => ALL.myLevel ? filterView(home) : levelIntro(false));
+  on('filt', () => filterView(home));
+}
+const lvRange = () => { const s = LEVELS.filter(l => ALL.levels.includes(l)); return s.length === 6 ? '전체' : s.length === 1 ? s[0] : s[0] + '~' + s[s.length - 1]; };
+
+// ---------- 레벨 테스트 ----------
+function levelIntro(first) {
+  ALL.testSeen = true; save();
+  app.innerHTML = `
+    ${first ? `<h1>TOEIC 영단어</h1>` : `<div class="top"><span>레벨 테스트</span><button class="x" id="x">✕</button></div>`}
+    <p class="big">내 영어 단어<br>레벨은?</p>
+    <p class="muted">20문제로 지금 실력을 확인하고, 수준에 맞는 단어부터 공부할 수 있게 맞춰드려요.</p>
+    <div class="card lvtable">${LEVELS.map(l => `<div><b>${l}</b><span>${LV_NAME[l]}</span></div>`).join('')}</div>
+    <ul class="plain muted">
+      <li>쉬운 단어부터 점점 어려워져요 (약 3분)</li>
+      <li>모르는 단어는 찍지 말고 <b>'모르겠어요'</b>를 눌러주세요</li>
+    </ul>
+    <div class="spacer"></div>
+    <button class="btn" id="go">테스트 시작</button>
+    <button class="btn ghost" id="skip">${first ? '건너뛰기 (모든 레벨 단어로 시작)' : '취소'}</button>`;
+  const x = document.getElementById('x'); if (x) x.onclick = moreView;
+  document.getElementById('go').onclick = () => levelTest(first);
+  document.getElementById('skip').onclick = () => first ? amountView(true) : moreView();
+}
+// 레벨별 문제 수 (총 20): 쉬운 단어 → 어려운 단어 순서
+const TEST_PLAN = { A1: 2, A2: 3, B1: 4, B2: 4, C1: 4, C2: 3 };
+function levelTest(first) {
+  const qs = [];
+  LEVELS.forEach(l => {
+    const pool = shuffle([...W.keys()].filter(i => W[i].lv === l && W[i].lvv && W[i].p !== '숙'));
+    pool.slice(0, TEST_PLAN[l]).forEach(i => qs.push(i));
+  });
+  const t = { first, qs, pos: 0, res: [] };
+  testQ(t);
+}
+function testQ(t) {
+  if (t.pos >= t.qs.length) return testResult(t);
+  const idx = t.qs[t.pos], w = W[idx], c = makeChoices(idx);
+  app.innerHTML = `
+    <div class="top"><span>레벨 테스트</span><span>${t.pos + 1} / ${t.qs.length} <button class="x" id="x">✕</button></span></div>
+    <div class="bar"><i style="width:${t.pos / t.qs.length * 100}%"></i></div>
+    <div class="word${w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
+    ${ipaHTML(w.w)}
+    <div class="pos"><span class="chip">${POS[w.p] || w.p}</span></div>
+    <div id="opts">${c.opts.map((m, i) => `<button class="opt" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>
+    <button class="opt idk" id="idk"><b>?</b><span>모르겠어요</span></button>
+    <div class="spacer"></div>`;
+  document.getElementById('x').onclick = () => t.first ? levelIntro(true) : moreView();
+  const next = ok => { t.res.push({ lv: w.lv, ok }); t.pos++; testQ(t); };
+  document.querySelectorAll('#opts .opt').forEach(b => b.onclick = () => next(+b.dataset.i === c.ans));
+  document.getElementById('idk').onclick = () => next(false);
+}
+function testResult(t) {
+  // 레벨마다 60% 이상 맞히면 통과. 처음으로 통과 못 한 레벨부터 2단계를 공부 범위로 추천
+  const rate = {}; LEVELS.forEach(l => { const r = t.res.filter(x => x.lv === l); rate[l] = r.length ? r.filter(x => x.ok).length / r.length : 0; });
+  let f = LEVELS.findIndex(l => rate[l] < 0.6);
+  const my = f === -1 ? 'C2' : f === 0 ? 'A1' : LEVELS[f - 1];
+  if (f === -1) f = 4;
+  const rec = LEVELS.slice(f, Math.min(f + 2, 6));
+  const right = t.res.filter(x => x.ok).length;
+  app.innerHTML = `
+    <h1>레벨 테스트 결과</h1>
+    <p class="muted">${right} / ${t.res.length} 정답</p>
+    <div class="lvres"><b>${my}</b><span>${f === 0 && rate.A1 < 0.6 ? '입문 단계부터 시작해요' : LV_NAME[my] + ' 수준'}</span></div>
+    <div class="card list lvbars">${LEVELS.map(l => `<div class="row"><span><b>${l}</b> ${LV_NAME[l]}</span>
+      <span class="lvbar"><i style="width:${Math.round(rate[l] * 100)}%"></i></span><span class="pct">${Math.round(rate[l] * 100)}%</span></div>`).join('')}</div>
+    <p class="muted">추천 학습 범위: <b>${rec.join(', ')}</b> (${rec.map(l => LV_NAME[l]).join('·')}) — 아직 헷갈리는 수준의 단어부터 공부해요.</p>
+    <div class="spacer"></div>
+    <button class="btn" id="ok">추천 레벨로 공부하기</button>
+    <button class="btn ghost" id="custom">레벨 직접 고르기</button>`;
+  const apply = () => { ALL.myLevel = my; ALL.levels = rec; trimDays(); save(); };
+  document.getElementById('ok').onclick = () => { apply(); t.first ? amountView(true) : home(); };
+  document.getElementById('custom').onclick = () => { apply(); filterView(t.first ? () => amountView(true) : home); };
+}
+
+// ---------- 출제 설정: 레벨 / 유형 체크박스 ----------
+function filterView(back = moreView) {
+  const deckWords = deckIdx(ALL.deck).filter(i => !isKnown(i));
+  const cnt = f => deckWords.filter(f).length;
+  const total = cnt(i => ALL.levels.includes(W[i].lv) && ALL.types.includes(W[i].p));
+  app.innerHTML = `
+    <div class="top"><span>출제 설정</span><button class="x" id="x">✕</button></div>
+    <p class="muted">체크한 레벨과 유형의 단어만 나와요. 바꾸면 아직 시작하지 않은 Day부터 적용돼요.</p>
+    <p class="sec">레벨 ${ALL.myLevel ? `<small>· 내 레벨 ${ALL.myLevel}</small>` : ''}</p>
+    <div class="card list menu">${LEVELS.map(l => `<label class="row ck"><input type="checkbox" data-g="levels" value="${l}"${ALL.levels.includes(l) ? ' checked' : ''}>
+      <span><b>${l}</b> ${LV_NAME[l]}</span><span class="muted">${cnt(i => W[i].lv === l)}개</span></label>`).join('')}</div>
+    <p class="sec">유형</p>
+    <div class="card list menu">${TYPES.map(([k, n]) => `<label class="row ck"><input type="checkbox" data-g="types" value="${k}"${ALL.types.includes(k) ? ' checked' : ''}>
+      <span>${n}</span><span class="muted">${cnt(i => W[i].p === k)}개</span></label>`).join('')}</div>
+    <p class="info">'${DECKS[ALL.deck].name}' 단어장에서 출제될 단어: <b>${total.toLocaleString()}개</b></p>
+    <div class="spacer"></div>
+    <button class="btn ghost" id="retest">레벨 테스트 다시 보기</button>`;
+  document.getElementById('x').onclick = back;
+  document.getElementById('retest').onclick = () => levelIntro(false);
+  document.querySelectorAll('.ck input').forEach(cb => cb.onchange = () => {
+    const g = cb.dataset.g, sel = [...document.querySelectorAll(`.ck input[data-g="${g}"]:checked`)].map(x => x.value);
+    if (!sel.length) { cb.checked = true; return; }          // 최소 하나는 선택
+    ALL[g] = sel; trimDays(); save(); filterView(back);
+  });
 }
 
 // ---------- 하루 학습량 선택 (첫 실행 / 설정) ----------
@@ -566,7 +690,7 @@ function quiz(s = S.sess) {
     <div class="bar"><i style="width:${s.pos / s.queue.length * 100}%"></i></div>
     <div class="word${w.w.length > 22 ? ' xlong' : w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
     ${ipaHTML(w.w)}
-    <div class="pos"><span class="chip">${POS[w.p] || w.p}</span>
+    <div class="pos"><span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span>
       <div class="say"><button id="replay">🔁 다시 듣기</button><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
     <div id="opts">${c.opts.map((m, i) => `<button class="opt" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>
     <div class="toast" id="toast"></div>
@@ -751,6 +875,8 @@ function moreView() {
     <div class="card list menu">
       <button class="row rowbtn" id="m-amt"><span>하루 학습량</span><span>${ALL.perDay}개 ›</span></button>
       <button class="row rowbtn" id="m-hist"><span>학습 기록</span><span>›</span></button>
+      <button class="row rowbtn" id="m-filter"><span>출제 설정<small class="muted">레벨 · 품사 · 숙어 선택</small></span><span>${lvRange()} ›</span></button>
+      <button class="row rowbtn" id="m-test"><span>레벨 테스트</span><span>${ALL.myLevel ? '내 레벨 ' + ALL.myLevel : '아직 안 봤어요'} ›</span></button>
       <button class="row rowbtn" id="m-known"><span>아는 단어</span><span>${Object.keys(ALL.known).length}개 ›</span></button>
     </div>
 
@@ -768,12 +894,14 @@ function moreView() {
       <button class="row rowbtn" id="m-privacy"><span>개인정보 처리방침</span><span>›</span></button>
       <div class="row"><span>앱 정보</span><span class="muted">버전 ${esc(appVersion())}</span></div>
     </div>
-    <p class="muted" style="font-size:11px;text-align:center;margin:18px 0 0">단어 목록: TSL · BSL · NGSL (Browne, Culligan &amp; Phillips) · CC BY-SA 4.0</p>`;
+    <p class="muted" style="font-size:11px;text-align:center;margin:18px 0 0">단어 목록: TSL · BSL · NGSL (Browne, Culligan &amp; Phillips) · CC BY-SA 4.0<br>레벨: CEFR-J Wordlist 1.5 (Tono Lab, TUFS) · Octanove Vocabulary Profile (CC BY-SA 4.0)</p>`;
   const on = (id, f) => document.getElementById(id).onclick = f;
   on('planb', () => planView({ back: moreView }));
   on('m-amt', () => amountView(false));
   on('m-hist', history);
   on('m-known', knownView);
+  on('m-filter', () => filterView(moreView));
+  on('m-test', () => levelIntro(false));
   on('m-push', pushView);
   on('m-say', () => { ALL.autoSay = !ALL.autoSay; save(); moreView(); });
   on('m-plan', () => planView({ back: moreView }));
