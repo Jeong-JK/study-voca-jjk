@@ -140,6 +140,8 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:22px 0}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
 .stat div{font-size:22px;font-weight:800} .stat span{font-size:12px;color:var(--sub)}
+.kn{padding-top:6px;padding-bottom:6px}.kn .row{align-items:center}.kn .row>span:first-child{flex:1;min-width:0}
+.kn .row span.tm{flex:none;font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums}
 .toast{color:var(--bad);font-weight:600;text-align:center;margin-top:6px;min-height:22px}
 /* 문제 화면: 스크롤 없이 한 화면에 고정. 화면이 작으면 t1→t2→t3 순서로 간격·글자를 줄임 */
 #app.fit{height:100vh;height:100dvh;min-height:0;overflow:hidden;padding-top:16px;padding-bottom:16px}
@@ -633,14 +635,27 @@ function planView(opt = {}) {
 // 아는 단어 목록 (되돌리면 다시 출제됨)
 function knownView() {
   const byKey = {}; W.forEach((o, i) => byKey[o.w.toLowerCase()] = i);
-  const list = Object.entries(ALL.known).sort((a, b) => b[1] - a[1]).map(([k]) => byKey[k]).filter(i => i != null);
+  const list = Object.entries(ALL.known).sort((a, b) => b[1] - a[1]).filter(([k]) => byKey[k] != null);
+  // 누른 날짜별로 묶기 (최근 날짜가 위)
+  const p2 = n => String(n).padStart(2, '0');
+  const dayKey = t => { const d = new Date(t); return `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}`; };
+  const today = dayKey(Date.now()), yest = dayKey(Date.now() - 864e5);
+  const dayLabel = t => { const d = new Date(t), k = dayKey(t);
+    return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 (${'일월화수목금토'[d.getDay()]})${k === today ? ' · 오늘' : k === yest ? ' · 어제' : ''}`; };
+  const groups = [];
+  list.forEach(([k, t]) => { const g = groups[groups.length - 1];
+    if (g && g.key === dayKey(t)) g.items.push([k, t]); else groups.push({ key: dayKey(t), t, items: [[k, t]] }); });
+  const y = window.scrollY;
   app.innerHTML = `
     <div class="top"><span>아는 단어 ${list.length}개</span><button class="x" id="x">✕</button></div>
-    <p class="muted">여기 있는 단어는 문제에 나오지 않아요. 되돌리면 다시 문제에 나와요.</p>
-    ${list.length ? `<div class="card list">${list.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b> <small class="muted">${esc(W[i].m)}</small></span>
-      <button class="mini" data-k="${esc(keyOf(i))}">되돌리기</button></div>`).join('')}</div>`
+    <p class="muted">여기 있는 단어는 문제에 나오지 않아요. 잘못 눌렀다면 되돌리기를 누르세요. 다시 문제에 나와요.</p>
+    ${list.length ? groups.map(g => `<div class="sec">${dayLabel(g.t)} <small>${g.items.length}개</small></div>
+      <div class="card list kn">${g.items.map(([k, t]) => { const i = byKey[k], d = new Date(t);
+        return `<div class="row"><span><b>${esc(W[i].w)}</b> <small class="muted">${esc(W[i].m)}</small></span>
+        <span class="tm">${p2(d.getHours())}:${p2(d.getMinutes())}</span><button class="mini" data-k="${esc(k)}">되돌리기</button></div>`; }).join('')}</div>`).join('')
       : `<p class="muted">아직 없어요. 문제 화면에서 '✓ 아는 단어'를 누르면 여기에 모여요.</p>`}
     <div class="spacer"></div>`;
+  window.scrollTo(0, y);   // 되돌리기 후에도 보던 위치 유지
   document.getElementById('x').onclick = moreView;
   document.querySelectorAll('.mini').forEach(b => b.onclick = () => { unknow(byKey[b.dataset.k]); save(); knownView(); });
 }
@@ -1027,7 +1042,7 @@ function guideView() {
     ${sec('4. 오답 복습', `<p>하루치를 다 풀면 <b>틀린 단어만 다시</b> 나오고, 전부 맞힐 때까지 반복해요. 풀다가 나갔을 때는 학습 탭의 <b>'지금까지 틀린 N개 보기'</b>로 미리 확인할 수 있어요.</p>`)}
     ${sec('5. 오답노트', `<p>지금까지 틀린 단어는 모두 <b>오답노트</b> 탭에 모여요(틀린 횟수 ✕N 표시).</p><ul><li><b>오답노트 풀기</b> — 모아둔 오답을 순서를 섞어 풀어요. 맞힌 단어는 오답노트에서 빠져요.</li><li><b>외웠어요</b> — 그 단어를 오답노트에서 바로 지워요.</li></ul>`)}
     ${sec('6. 다시 테스트', `<p>학습 탭의 <b>'Day N 단어 다시 테스트'</b>로 그날 단어 전체를 순서를 섞어 몇 번이든 다시 풀 수 있어요. 연습이라 진도에는 영향이 없어요.</p>`)}
-    ${sec('7. 아는 단어', `<p>이미 아는 단어는 문제 화면의 <b>✓ 아는 단어</b>를 누르세요. 그 단어는 앞으로 나오지 않고, 다음 Day는 다른 단어로 채워져요. 잘못 눌렀다면 바로 뜨는 <b>되돌리기</b>나 <b>더보기 → 아는 단어</b>에서 되돌릴 수 있어요.</p>`)}
+    ${sec('7. 아는 단어', `<p>이미 아는 단어는 문제 화면의 <b>✓ 아는 단어</b>를 누르세요. 그 단어는 앞으로 나오지 않고, 다음 Day는 다른 단어로 채워져요. 잘못 눌렀다면 바로 뜨는 <b>되돌리기</b>나 <b>더보기 → 아는 단어</b>에서 되돌릴 수 있어요. 누른 날짜·시간별로 정리돼 있어서 언제 누른 단어인지 바로 찾을 수 있어요.</p>`)}
     ${sec('8. 멤버십', `<ul><li><b>Free</b> — 하루 20개, 하루 Day 1개, 오답은 목록으로만 확인, 광고 있음</li><li><b>Basic</b> — 하루 50개까지, 하루 Day 1개, 오답 다시 풀기·오답노트 풀기, 하루치 끝날 때만 광고</li><li><b>Premium</b> — 하루 100개까지, Day를 골라 원하는 만큼 학습, 광고 없음</li></ul><p><b>더보기 → 구독 멤버십 관리</b>에서 바꿀 수 있어요.</p>`)}
     ${sec('9. 알림', `<p><b>더보기 → 푸시 알림</b>에서 공지사항·업데이트·이벤트·일일 학습 알림을 각각 켜고 끌 수 있어요. 일일 학습 알림은 원하는 시간을 정할 수 있어요.</p>`)}
     ${sec('10. 기록과 초기화', `<p><b>더보기</b> 위쪽에서 총 학습한 단어 수와 전체 정답률을 볼 수 있고, <b>학습 기록</b>에서 Day별 첫 정답률을 확인할 수 있어요. <b>데이터 초기화</b>를 하면 진도·학습 기록·오답노트·통계가 지워져요.</p>`)}
