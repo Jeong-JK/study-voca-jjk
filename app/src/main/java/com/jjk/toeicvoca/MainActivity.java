@@ -2,7 +2,9 @@ package com.jjk.toeicvoca;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.graphics.Color;
 import android.view.Gravity;
@@ -24,6 +26,12 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 public class MainActivity extends Activity {
@@ -90,6 +98,60 @@ public class MainActivity extends Activity {
                 return false;
             }
             return true;
+        }
+
+        /** 백업 파일 저장: 저장 위치를 고르는 창 → 고르면 내용 기록 → JS onBackupSaved(true/false) */
+        @JavascriptInterface
+        public void saveBackup(String name, String text) {
+            pendingBackup = text;
+            runOnUiThread(() -> {
+                Intent i = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+                i.addCategory(Intent.CATEGORY_OPENABLE);
+                i.setType("application/json");
+                i.putExtra(Intent.EXTRA_TITLE, name);
+                try { startActivityForResult(i, REQ_SAVE); } catch (Exception e) { callJs("onBackupSaved(false)"); }
+            });
+        }
+
+        /** 백업 파일 불러오기: 파일 고르는 창 → 내용을 JS onBackupLoaded(text) 로 전달 (취소하면 null) */
+        @JavascriptInterface
+        public void openBackup() {
+            runOnUiThread(() -> {
+                Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                i.addCategory(Intent.CATEGORY_OPENABLE);
+                i.setType("*/*");
+                try { startActivityForResult(i, REQ_OPEN); } catch (Exception e) { callJs("onBackupLoaded(null)"); }
+            });
+        }
+    }
+
+    private static final int REQ_SAVE = 41, REQ_OPEN = 42;
+    private String pendingBackup;
+
+    private void callJs(String js) {
+        runOnUiThread(() -> { if (web != null) web.evaluateJavascript("window." + js, null); });
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    protected void onActivityResult(int req, int res, Intent data) {
+        super.onActivityResult(req, res, data);
+        Uri uri = (res == RESULT_OK && data != null) ? data.getData() : null;
+        if (req == REQ_SAVE) {
+            String text = pendingBackup; pendingBackup = null;
+            if (uri == null || text == null) return;   // 취소
+            try (OutputStream out = getContentResolver().openOutputStream(uri, "wt")) {
+                out.write(text.getBytes(StandardCharsets.UTF_8));
+                callJs("onBackupSaved(true)");
+            } catch (Exception e) { callJs("onBackupSaved(false)"); }
+        } else if (req == REQ_OPEN) {
+            if (uri == null) { callJs("onBackupLoaded(null)"); return; }
+            try (InputStream in = getContentResolver().openInputStream(uri)) {
+                ByteArrayOutputStream buf = new ByteArrayOutputStream();
+                byte[] b = new byte[8192]; int n;
+                while ((n = in.read(b)) > 0) { buf.write(b, 0, n); if (buf.size() > 20_000_000) break; }
+                callJs("onBackupLoaded(" + JSONObject.quote(buf.toString("UTF-8")) + ")");
+            } catch (Exception e) { callJs("onBackupLoaded('')"); }
         }
     }
 

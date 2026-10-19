@@ -158,6 +158,37 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 .fit.t3 .bar{margin-bottom:8px}.fit.t3 .word{font-size:28px;margin:0 0 2px}.fit.t3 .ipa{margin-bottom:4px}.fit.t3 .pos{margin-bottom:6px}
 .fit.t3 .say{margin-top:6px}.fit.t3 .opt{padding:6px 10px;margin-bottom:5px;font-size:14px}.fit.t3 .known{padding:6px;margin-top:0}
 .fit.t3 .toast{margin-top:2px;min-height:18px}.fit.t3 .btn{padding:9px;margin-top:4px}
+/* 문제 유형 */
+.word.kor{font-size:30px;line-height:1.25}.word.kor.long{font-size:24px}.word.kor.xlong{font-size:20px}
+.word.listen{margin-top:18px}
+#bigsay{width:86px;height:86px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:38px;box-shadow:0 6px 18px rgba(47,91,234,.3)}
+#bigsay:active{transform:scale(.95)}
+.qhint{font-family:inherit}
+.chip.qt{margin-right:6px;background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
+.opt:disabled{color:var(--ink);opacity:1}
+.opt.en span{font-weight:700;letter-spacing:-.01em}
+.spell{display:flex;gap:8px;margin:4px 0 6px}
+.spell input{flex:1;min-width:0;font:inherit;font-size:22px;font-weight:700;text-align:center;border:2px solid var(--line);border-radius:14px;padding:12px;background:var(--card);color:var(--ink);letter-spacing:.02em}
+.spell input:focus{outline:0;border-color:var(--accent)}
+.spell input.ok{border-color:var(--ok);background:var(--okbg)}.spell input.bad{border-color:var(--bad);background:var(--badbg);color:var(--bad)}
+.spell .btn{width:auto;margin:0;padding:0 20px;flex:none}
+.spans{text-align:center;font-size:18px;min-height:26px;margin-bottom:4px}.spans b{color:var(--ok);font-size:22px}
+/* 예문 */
+.ex{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:8px 12px;margin-top:6px;font-size:14px;line-height:1.4}
+.ex b{color:var(--accent)}.ex small{display:block;color:var(--sub);font-size:12.5px;margin-top:2px}
+.fit.t2 .ex{font-size:13px;padding:6px 10px;margin-top:4px}.fit.t3 .ex small{display:none}
+/* 복습 카드 */
+.card.review{margin:-8px 0 16px}.card.review small{display:block;margin-top:2px;font-size:12px}
+/* 검색 */
+.search{width:100%;font:inherit;font-size:17px;border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;background:var(--card);color:var(--ink);margin-bottom:12px}
+.search:focus{outline:0;border-color:var(--accent)}
+.srl{padding:0 16px}.srow{border-top:1px solid var(--line)}.srow:first-child{border-top:0}
+.srow .row{border:0;align-items:center}.srow .row small{display:block;margin-top:2px;font-weight:400}
+.srow .row>span:first-child{flex:1;min-width:0}
+.kn-tag{display:inline!important;color:var(--ok);font-size:11px;font-weight:700}
+.sdet{padding:0 0 14px}.sm{margin:6px 0}.sm .chip{margin-right:6px}.smean{font-size:17px;font-weight:600;margin:4px 0}
+.sbtn{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.sbtn button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:99px;padding:7px 12px;font-family:inherit;font-weight:600;font-size:13px}
 </style>
 </head>
 <body>
@@ -174,6 +205,7 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 <script src="cefr.js"></script>
 <script src="ipa.js"></script>
 <script src="levels.js"></script>
+<script src="examples.js"></script>
 <script>
 // ---------- 데이터 ----------
 const W = [], seen = new Set();
@@ -231,6 +263,20 @@ if (ALL.autoSay === undefined) ALL.autoSay = true;       // 자동 발음
 if (!Array.isArray(ALL.levels) || !ALL.levels.length) ALL.levels = [...LEVELS];   // 출제 레벨
 if (!Array.isArray(ALL.types) || !ALL.types.length) ALL.types = TYPES.map(t => t[0]);   // 출제 유형(품사·숙어)
 if (ALL.myLevel === undefined) ALL.myLevel = null;       // 레벨 테스트 결과
+// 문제 유형: ek 영→한 · ke 한→영 · listen 듣고 고르기 · spell 스펠링 쓰기 (켜둔 것 중에서 섞어서 출제)
+const QTYPES = [['ek', '영어 → 뜻', '단어를 보고 뜻 고르기'], ['ke', '뜻 → 영어', '뜻을 보고 영어 단어 고르기'], ['listen', '듣고 고르기', '발음만 듣고 뜻 고르기 (리스닝)'], ['spell', '스펠링 쓰기', '뜻을 보고 영어 단어 직접 입력 (숙어 제외)']];
+if (!Array.isArray(ALL.qtypes) || !ALL.qtypes.length) ALL.qtypes = ['ek', 'ke', 'listen'];
+// 복습 주기(망각곡선): { 'word': { b: 단계, due: 복습할 날(날짜 번호) } } — 맞히면 1→3→7→14→30→60일 뒤, 틀리면 다음 날부터 다시
+const SRS_GAP = [1, 3, 7, 14, 30, 60];
+const dayNo = (t = Date.now()) => Math.floor((t - new Date(t).getTimezoneOffset() * 6e4) / 864e5);   // 휴대폰 날짜 기준 날짜 번호
+if (!ALL.srs) {
+  ALL.srs = {};
+  // 처음 한 번: 이미 공부한 단어들을 앞으로 7일에 나눠서 복습에 넣기
+  Object.keys((ALL.stats && ALL.stats.seen) || {}).forEach((k, n) => { if (!ALL.known[k]) ALL.srs[k] = { b: 0, due: dayNo() + 1 + n % 7 }; });
+}
+// 예문: 단어(소문자) → [영어 예문, 한글 해석]
+const EX = {};
+if (typeof EXAMPLES_RAW === 'string') EXAMPLES_RAW.trim().split('\n').forEach(l => { const [w, e, k] = l.split('|'); if (w && e) EX[w.trim().toLowerCase()] = [e.trim(), (k || '').trim()]; });
 // 새 Day를 만들 때 넣을 단어: 아는 단어 제외 + 선택한 레벨·유형만
 const wanted = i => !isKnown(i) && ALL.levels.includes(W[i].lv) && ALL.types.includes(W[i].p);
 const isKnown = i => !!ALL.known[keyOf(i)];             // Basic: 하루 1 Day 제한용 (마지막으로 Day를 끝낸 날짜)
@@ -321,16 +367,25 @@ function goDay(n) {
 }
 
 // 오답 보기: 같은 품사에서, 정답과 뜻이 겹치지 않는 것으로 3개
-function makeChoices(idx) {
+// key = 'm' → 보기가 한글 뜻, 'w' → 보기가 영어 단어 (한→영 문제)
+function makeChoices(idx, key = 'm') {
   const ans = W[idx], toks = new Set(ans.m.split(/,\s*/));
-  const okDistractor = o => o.m !== ans.m && !o.m.split(/,\s*/).some(t => toks.has(t));
+  const okDistractor = o => o.m !== ans.m && o.w.toLowerCase() !== ans.w.toLowerCase() && !o.m.split(/,\s*/).some(t => toks.has(t));
   // 단어·숙어를 섞어서 보기 구성: 숙어 문제는 전체에서, 단어 문제는 같은 품사 + 숙어에서
-  let pool = shuffle(W.filter((o, k) => k !== idx && (ans.p === '숙' || o.p === ans.p || o.p === '숙') && okDistractor(o)));
-  if (pool.length < 3) pool = pool.concat(shuffle(W.filter((o, k) => k !== idx && o.p !== ans.p && okDistractor(o))));
-  const picks = [], used = new Set();
-  for (const o of pool) { if (!used.has(o.m)) { used.add(o.m); picks.push(o.m); } if (picks.length === 3) break; }
-  const opts = shuffle([ans.m, ...picks]);
-  return { opts, ans: opts.indexOf(ans.m) };
+  // (한→영은 단어끼리·숙어끼리 비교되도록 같은 종류에서만)
+  const same = o => key === 'w' ? (ans.p === '숙') === (o.p === '숙') && (ans.p === '숙' || o.p === ans.p) : (ans.p === '숙' || o.p === ans.p || o.p === '숙');
+  let pool = shuffle(W.filter((o, k) => k !== idx && same(o) && okDistractor(o)));
+  if (pool.length < 3) pool = pool.concat(shuffle(W.filter((o, k) => k !== idx && !same(o) && okDistractor(o))));
+  const picks = [], used = new Set([ans[key]]);
+  for (const o of pool) { if (!used.has(o[key])) { used.add(o[key]); picks.push(o[key]); } if (picks.length === 3) break; }
+  const opts = shuffle([ans[key], ...picks]);
+  return { opts, ans: opts.indexOf(ans[key]) };
+}
+// 이번 문제 유형 고르기: 켜둔 유형 중 무작위 (스펠링은 숙어·긴 단어 제외)
+function pickType(idx, s) {
+  if (s.prac === 'test') return 'ek';
+  const ok = ALL.qtypes.filter(t => t !== 'spell' || (W[idx].p !== '숙' && W[idx].w.length <= 15 && /^[a-z-]+$/i.test(W[idx].w)));
+  return ok.length ? ok[Math.random() * ok.length | 0] : 'ek';
 }
 
 // ---------- 발음 ----------
@@ -433,6 +488,7 @@ function home() {
   const rDay = resume ? S.day : (S.history.length ? S.history[S.history.length - 1].day : null);
   app.innerHTML = `
     <div class="hd"><h1>TOEIC 영단어</h1>
+      <button class="gear" id="srch" aria-label="단어 검색">🔍</button>
       <button class="badge ${ALL.plan}" id="planb">${plan().name}</button></div>
     <div class="decks">${Object.entries(DECKS).map(([k, d]) => `<button class="deck${k === ALL.deck ? ' on' : ''}" data-k="${k}">${d.name}</button>`).join('')}</div>
     <p class="muted">${DECKS[ALL.deck].desc}</p>
@@ -444,6 +500,7 @@ function home() {
       <div class="stat"><div>${done}</div><span>완료한 Day</span></div>
       <div class="stat"><div>${done ? avg + '%' : '–'}</div><span>평균 첫 정답률</span></div>
     </div>
+    ${reviewCard()}
     ${locked ? `<div class="card notice"><b>오늘 학습 완료! 🎉</b><br>Day ${S.day}은 내일 열려요.
         <button class="btn ghost" id="up">Premium이면 바로 이어서 할 수 있어요</button></div>`
       : ALL.lastMainDate === today() ? `<p class="muted">오늘 이미 하루치를 끝냈어요. 더 해도 돼요 💪</p>` : ''}
@@ -462,6 +519,8 @@ function home() {
   on('pick', () => plan().pick ? dayPicker() : planView());
   on('lvset', () => ALL.myLevel ? filterView(home) : levelIntro(false));
   on('filt', () => filterView(home));
+  on('rv', startReview);
+  on('srch', () => searchView(home));
 }
 const lvRange = () => { const s = LEVELS.filter(l => ALL.levels.includes(l)); return s.length === 6 ? '전체' : s.length === 1 ? s[0] : s[0] + '~' + s[s.length - 1]; };
 
@@ -685,6 +744,36 @@ function dayPicker() {
   document.querySelectorAll('.dayc').forEach(b => b.onclick = () => { goDay(+b.dataset.d); save(); home(); });
 }
 
+// ---------- 복습 주기 (망각곡선) ----------
+let BYKEY = null;
+const byKey = () => { if (!BYKEY) { BYKEY = {}; W.forEach((o, i) => BYKEY[o.w.toLowerCase()] = i); } return BYKEY; };
+// 오늘 복습할 단어 (오래 밀린 것부터)
+function dueList(day = dayNo()) {
+  const bk = byKey();
+  return Object.entries(ALL.srs).filter(([k, e]) => e.due <= day && bk[k] != null && !ALL.known[k]).sort((a, b) => a[1].due - b[1].due).map(([k]) => bk[k]);
+}
+function srsAnswer(k, ok, s) {
+  if (s.srsDone && s.srsDone[k]) return;           // 한 세션에서 처음 답한 것만 반영
+  (s.srsDone = s.srsDone || {})[k] = ok ? 1 : -1;
+  const e = ALL.srs[k] || { b: 0 };
+  e.b = ok ? Math.min((ALL.srs[k] ? e.b + 1 : 0), SRS_GAP.length - 1) : 0;
+  e.due = dayNo() + SRS_GAP[e.b];
+  ALL.srs[k] = e;
+}
+const REVIEW_MAX = 50;   // 한 번에 복습하는 최대 개수 (더 있으면 이어서 한 번 더)
+function startReview() {
+  const items = dueList().slice(0, REVIEW_MAX);
+  if (!items.length) return home();
+  startPrac('review', 0, items);
+}
+function reviewCard() {
+  const due = dueList().length, tmr = dueList(dayNo() + 1).length - due;
+  const total = Object.keys(ALL.srs).filter(k => !ALL.known[k]).length;
+  return `<div class="card review"><div><b>🔁 오늘의 복습</b><small class="muted">맞힌 단어도 1·3·7·14·30일 뒤에 다시 나와요</small></div>
+    ${due ? `<button class="btn" id="rv">복습하기 · ${due}개</button>`
+          : `<p class="muted" style="margin:8px 0 0">${total ? `오늘 복습할 단어를 다 끝냈어요 ✓${tmr > 0 ? ` 내일 ${tmr}개` : ''}` : '하루치를 풀면 내일부터 복습이 시작돼요.'}</p>`}</div>`;
+}
+
 // 연습 모드(진도·기록에 영향 없음): 'all' = 그 Day 단어 전체 다시 테스트, 'wrong' = 지금까지 틀린 단어
 function startPrac(kind, day, items) {
   quiz({ prac: kind, day, items: [...items], round: 0, queue: shuffle([...items]), pos: 0, wrong: [], cur: null, picked: null });
@@ -730,20 +819,32 @@ function quiz(s = S.sess) {
   s.wrong = s.wrong.filter(i => !isKnown(i));
   if (s.pos >= s.queue.length) return s.prac ? pracResult(s) : result();
   const idx = s.queue[s.pos], w = W[idx];
-  if (!s.cur || s.cur.idx !== idx) { s.cur = { idx, ...makeChoices(idx) }; s.picked = null; persist(); }
-  const c = s.cur;
+  if (!s.cur || s.cur.idx !== idx) {
+    const t = pickType(idx, s);
+    s.cur = { idx, t, ...(t === 'spell' ? { opts: [], ans: -1 } : makeChoices(idx, t === 'ke' ? 'w' : 'm')) }; s.picked = null; persist();
+  }
+  const c = s.cur, T = c.t || 'ek';
+  const ex = EX[keyOf(idx)];
+  const wcls = n => n > 22 ? ' xlong' : n > 13 ? ' long' : '';
+  // 문제 부분: 유형마다 다르게 (정답을 고르기 전에는 답이 드러나지 않게)
+  const head = T === 'ek' ? `<div class="word${wcls(w.w.length)}">${esc(w.w)}</div>${ipaHTML(w.w)}`
+    : T === 'listen' ? `<div class="word listen" id="hidden"><button id="bigsay">🔊</button></div><div class="ipa qhint">발음을 듣고 뜻을 고르세요</div>`
+    : `<div class="word kor${wcls(w.m.length * 1.6)}">${esc(w.m)}</div><div class="ipa qhint" id="hidden">${T === 'spell' ? `${esc(w.w[0])}${' _'.repeat(w.w.length - 1)} · ${w.w.length}글자` : '알맞은 영어 단어를 고르세요'}</div>`;
+  const tag = { ek: '', ke: '<span class="chip qt">뜻→영어</span>', listen: '<span class="chip qt">듣기</span>', spell: '<span class="chip qt">스펠링</span>' }[T];
   bannerOn = true; fitOn = true;
   app.innerHTML = `
-    <div class="top"><span>${s.prac === 'note' ? '' : `Day ${s.day} · `}${s.prac === 'all' ? '다시 테스트' : s.prac === 'note' ? '오답노트' : s.prac ? '오답 미리 풀기' : s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
+    <div class="top"><span>${s.prac === 'note' || s.prac === 'review' ? '' : `Day ${s.day} · `}${s.prac === 'all' ? '다시 테스트' : s.prac === 'note' ? '오답노트' : s.prac === 'review' ? '오늘의 복습' : s.prac ? '오답 미리 풀기' : s.round === 1 ? '본 학습' : '오답 ' + s.round + '회차'}</span>
       <span>${s.pos + 1} / ${s.queue.length} <button class="x" id="x">✕</button></span></div>
     <div class="bar"><i style="width:${s.pos / s.queue.length * 100}%"></i></div>
-    <div class="word${w.w.length > 22 ? ' xlong' : w.w.length > 13 ? ' long' : ''}">${esc(w.w)}</div>
-    ${ipaHTML(w.w)}
-    <div class="pos"><span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span>
-      <div class="say"><button id="replay">🔁 다시 듣기</button><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
-    <div id="opts">${c.opts.map((m, i) => `<button class="opt" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>
+    ${head}
+    <div class="pos">${tag}<span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span>
+      <div class="say"${T === 'ek' || T === 'listen' ? '' : ' style="visibility:hidden"'}><button id="replay">🔁 다시 듣기</button><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
+    ${T === 'spell' ? `<form id="spf" class="spell" autocomplete="off"><input id="spin" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="영어로 입력"><button class="btn" id="spok">확인</button></form>
+      <div class="spans" id="spans"></div>`
+      : `<div id="opts">${c.opts.map((m, i) => `<button class="opt${T === 'ke' ? ' en' : ''}" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>`}
     <button class="known" id="known">✓ 이미 아는 단어예요 (다음부터 안 나오게)</button>
     <div class="toast" id="toast"></div>
+    ${ex ? `<div class="ex" id="ex" style="visibility:hidden"><div>${exHTML(ex[0], w.w)}</div><small>${esc(ex[1])}</small></div>` : ''}
     <div class="spacer"></div>
     <div class="nextrow">
       <button class="btn" id="next" style="visibility:hidden">다음 →</button>
@@ -752,7 +853,7 @@ function quiz(s = S.sess) {
   // 아는 단어: 앞으로 출제에서 빼고 바로 다음 문제로 (몇 초간 되돌리기 가능)
   document.getElementById('known').onclick = () => {
     sayStop();
-    ALL.known[keyOf(idx)] = Date.now();
+    ALL.known[keyOf(idx)] = Date.now(); delete ALL.srs[keyOf(idx)];
     s.queue.splice(s.pos, 1); s.wrong = s.wrong.filter(i => i !== idx);
     if (s.items) s.items = s.items.filter(i => i !== idx);
     s.cur = null; s.picked = null;
@@ -772,37 +873,71 @@ function quiz(s = S.sess) {
   document.getElementById('x').onclick = () => { active = null; sayStop(); s.prac === 'note' ? wrongNote() : home(); };
   document.querySelectorAll('.say button[data-a]').forEach(b => b.onclick = () => say(w.w, b.dataset.a));
   document.getElementById('replay').onclick = () => sayBoth(w.w);
-  if (s.picked == null && ALL.autoSay) sayBoth(w.w);   // 자동 발음: 새 문제가 나오면 미국 → 영국 순서로 재생
+  const big = document.getElementById('bigsay'); if (big) big.onclick = () => sayBoth(w.w);
+  // 자동 발음: 영→한은 설정에 따라, 듣기 문제는 항상. 뜻→영어·스펠링은 답이 드러나므로 답한 뒤에
+  if (s.picked == null && (T === 'listen' || (T === 'ek' && ALL.autoSay))) sayBoth(w.w);
   const btns = [...document.querySelectorAll('.opt')];
   const next = document.getElementById('next');
   const advance = () => { s.pos++; s.cur = null; s.picked = null; persist(); quiz(s); };
   next.onclick = advance;
-  const reveal = (pick, auto) => {
-    btns[c.ans].classList.add('ok');
-    if (pick !== c.ans) { btns[pick].classList.add('bad'); document.getElementById('toast').textContent = '오답 — 정답: ' + 'ABCD'[c.ans]; }
+  const reveal = (ok, pick, auto) => {
+    if (T !== 'spell') { btns[c.ans].classList.add('ok'); if (!ok) btns[pick].classList.add('bad'); btns.forEach(b => b.disabled = true); }
+    else {
+      const inp = document.getElementById('spin'); inp.disabled = true; inp.value = typeof pick === 'string' ? pick : inp.value;
+      inp.classList.add(ok ? 'ok' : 'bad'); document.getElementById('spok').style.display = 'none';
+      document.getElementById('spans').innerHTML = ok ? '' : `정답: <b>${esc(w.w)}</b>`;
+    }
+    // 답한 뒤에는 단어·발음기호·발음 버튼을 보여줌
+    const hd = document.getElementById('hidden');
+    if (T !== 'ek' && hd) hd.outerHTML = T === 'listen' ? `<div class="word${wcls(w.w.length)}">${esc(w.w)}</div>${ipaHTML(w.w)}` : `<div class="ipa"><span><b>${esc(w.w)}</b> ${IPA[keyOf(idx)] && IPA[keyOf(idx)][0] ? '/' + esc(IPA[keyOf(idx)][0]) + '/' : ''}</span></div>`;
+    const sy = document.querySelector('.say'); sy.style.visibility = 'visible';
+    if (T === 'ke' || T === 'spell') { if (ALL.autoSay && auto) sayBoth(w.w); }
+    if (!ok) document.getElementById('toast').textContent = T === 'spell' ? '오답' : '오답 — 정답: ' + 'ABCD'[c.ans];
+    const exEl = document.getElementById('ex'); if (exEl) exEl.style.visibility = 'visible';
     next.style.visibility = 'visible';
-    if (pick === c.ans && auto) setTimeout(() => { if (active === s && s.cur === c) advance(); }, 550);
+    fitScreen();
+    // 맞히면 자동으로 다음 (예문이 있으면 읽을 시간을 조금 더)
+    if (ok && auto) setTimeout(() => { if (active === s && s.cur === c) advance(); }, exEl ? 1600 : (T === 'ek' ? 550 : 900));
   };
-  if (s.picked != null) reveal(s.picked, false);   // 앱을 껐다 켰을 때 답 고른 상태 복원
-  btns.forEach(b => b.onclick = () => {
+  const answer = (ok, pick) => {
     if (s.picked != null) return;
     const ud = document.querySelector('.undo'); if (ud) { ud.remove(); undoKnown = null; clearTimeout(undoTimer); }   // 답을 고르면 되돌리기 안내를 닫고 '다음' 버튼 자리 비우기
-    const pick = +b.dataset.i;
-    s.picked = pick;
-    if (pick !== c.ans && !s.wrong.includes(idx)) s.wrong.push(idx);
-    // 통계 / 오답노트 (모든 문제 공통)
+    s.picked = pick; c.ok = ok;
+    if (!ok && !s.wrong.includes(idx)) s.wrong.push(idx);
+    // 통계 / 오답노트 / 복습 주기 (모든 문제 공통)
     const k = keyOf(idx);
     ALL.stats.answered++; ALL.stats.seen[k] = 1;
-    if (pick === c.ans) {
+    if (ok) {
       ALL.stats.correct++;
       if (s.prac === 'note' && ALL.wrongNote[k]) { delete ALL.wrongNote[k]; s.cleared = (s.cleared || 0) + 1; }   // 오답노트 풀기에서 맞히면 노트에서 빠짐
     } else {
       const e = ALL.wrongNote[k] || { n: 0 }; e.n++; e.t = Date.now(); ALL.wrongNote[k] = e;
     }
+    if (s.prac === 'review') srsAnswer(k, ok, s);
+    else if (!s.prac && s.round === 1 && !ALL.srs[k]) ALL.srs[k] = { b: 0, due: dayNo() + SRS_GAP[0] };   // 본 학습에서 처음 본 단어 → 내일 첫 복습
     save();
     persist();
-    reveal(pick, true);
-  });
+    reveal(ok, pick, true);
+  };
+  if (s.picked != null) reveal(c.ok != null ? c.ok : s.picked === c.ans, s.picked, false);   // 앱을 껐다 켰을 때 답 고른 상태 복원
+  btns.forEach(b => b.onclick = () => answer(+b.dataset.i === c.ans, +b.dataset.i));
+  const spf = document.getElementById('spf');
+  if (spf) {
+    const inp = document.getElementById('spin');
+    spf.onsubmit = e => {
+      e.preventDefault();
+      const v = inp.value.trim();
+      answer(v.toLowerCase() === w.w.toLowerCase(), v);
+      inp.blur();
+    };
+    if (s.picked == null) setTimeout(() => inp.focus(), 50);
+  }
+}
+// 예문에서 그 단어(변형 포함)를 굵게
+function exHTML(sentence, word) {
+  const base = word.toLowerCase().replace(/[^a-z ]/g, '').split(' ')[0];
+  const stem = base.length > 4 ? base.replace(/(e|y)$/, '') : base;
+  return esc(sentence).replace(new RegExp(`\\b(${stem.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[a-z]*)`, 'i'), '<b>$1</b>');
 }
 
 function pracResult(s) {
@@ -810,6 +945,7 @@ function pracResult(s) {
   const total = s.queue.length, right = total - s.wrong.length;
   const resume = S.sess && S.sess.day === S.day;
   if (s.prac === 'note') return noteResult(s);
+  if (s.prac === 'review') return reviewResult(s);
   app.innerHTML = `
     <h1>Day ${s.day} · ${s.prac === 'all' ? '다시 테스트' : '오답 미리 풀기'} 결과</h1>
     <p class="muted">맞힌 개수</p>
@@ -827,6 +963,21 @@ function pracResult(s) {
   const up = document.getElementById('up'); if (up) up.onclick = () => planView();
   const go = document.getElementById('go');
   if (go) go.onclick = () => quiz();
+  document.getElementById('back').onclick = home;
+}
+
+function reviewResult(s) {
+  const total = s.queue.length, right = total - s.wrong.length, left = dueList().length;
+  app.innerHTML = `
+    <h1>오늘의 복습 결과</h1>
+    <p class="muted">맞힌 개수</p>
+    <p class="score">${right}<small> / ${total}</small></p>
+    <p class="muted">맞힌 단어는 다음 복습이 더 뒤로 미뤄지고, 틀린 단어는 내일 다시 나와요(오답노트에도 들어가요).</p>
+    ${s.wrong.length ? `<div class="card list">${s.wrong.map(i => `<div class="row"><span><b>${esc(W[i].w)}</b></span><span>${esc(W[i].m)}</span></div>`).join('')}</div>` : ''}
+    <div class="spacer"></div>
+    ${left ? `<button class="btn" id="more">남은 복습 이어서 (${left}개)</button>` : ''}
+    <button class="btn${left ? ' ghost' : ''}" id="back">홈으로</button>`;
+  const m = document.getElementById('more'); if (m) m.onclick = startReview;
   document.getElementById('back').onclick = home;
 }
 
@@ -930,6 +1081,8 @@ function moreView() {
       <button class="row rowbtn" id="m-filter"><span>출제 설정<small class="muted">레벨 · 품사 · 숙어 선택</small></span><span>${lvRange()} ›</span></button>
       <button class="row rowbtn" id="m-test"><span>레벨 테스트</span><span>${ALL.myLevel ? '내 레벨 ' + ALL.myLevel : '아직 안 봤어요'} ›</span></button>
       <button class="row rowbtn" id="m-known"><span>아는 단어</span><span>${Object.keys(ALL.known).length}개 ›</span></button>
+      <button class="row rowbtn" id="m-qt"><span>문제 유형<small class="muted">영어→뜻 · 뜻→영어 · 듣고 고르기 · 스펠링</small></span><span>${ALL.qtypes.length}개 ›</span></button>
+      <button class="row rowbtn" id="m-search"><span>단어 검색</span><span>›</span></button>
     </div>
 
     <p class="sec">설정</p>
@@ -937,6 +1090,7 @@ function moreView() {
       <button class="row rowbtn" id="m-push"><span>푸시 알림</span><span>›</span></button>
       <div class="row"><span>자동 발음<small class="muted">문제가 나오면 미국 → 영국 발음 재생</small></span>${toggle('m-say', ALL.autoSay)}</div>
       <button class="row rowbtn" id="m-plan"><span>구독 멤버십 관리</span><span>${plan().name} ›</span></button>
+      <button class="row rowbtn" id="m-backup"><span>학습 기록 백업 · 복원<small class="muted">폰을 바꿔도 기록 그대로</small></span><span>›</span></button>
       <button class="row rowbtn" id="m-reset"><span>데이터 초기화</span><span>›</span></button>
     </div>
 
@@ -958,9 +1112,141 @@ function moreView() {
   on('m-say', () => { ALL.autoSay = !ALL.autoSay; save(); moreView(); });
   on('m-plan', () => planView({ back: moreView }));
   on('m-reset', resetView);
+  on('m-qt', qtypeView);
+  on('m-search', () => searchView(moreView));
+  on('m-backup', () => backupView());
   on('m-guide', guideView);
   on('m-privacy', privacyView);
 }
+
+// 문제 유형 선택 (켜둔 유형을 섞어서 출제)
+function qtypeView() {
+  app.innerHTML = `
+    <div class="top"><span>문제 유형</span><button class="x" id="x">✕</button></div>
+    <p class="muted">체크한 유형이 섞여서 나와요. 본 학습·다시 테스트·오답노트·복습 모두 적용돼요.</p>
+    <div class="card list menu">${QTYPES.map(([k, n, d]) => `<label class="row ck"><input type="checkbox" value="${k}"${ALL.qtypes.includes(k) ? ' checked' : ''}>
+      <span>${n}<small class="muted">${d}</small></span></label>`).join('')}</div>
+    <p class="muted" style="font-size:12px">※ 듣고 고르기는 휴대폰 음성(TTS)이 필요해요. 스펠링 쓰기는 숙어와 긴 단어에서는 다른 유형으로 나와요.</p>
+    <div class="spacer"></div>`;
+  document.getElementById('x').onclick = moreView;
+  document.querySelectorAll('.ck input').forEach(cb => cb.onchange = () => {
+    const sel = [...document.querySelectorAll('.ck input:checked')].map(x => x.value);
+    if (!sel.length) { cb.checked = true; return; }          // 최소 하나는 선택
+    ALL.qtypes = sel;
+    for (const k in ALL.decks) { const x = ALL.decks[k].sess; if (x && x.picked == null) x.cur = null; }   // 아직 안 푼 현재 문제는 새 유형으로
+    save();
+  });
+}
+
+// 단어 검색: 영어(앞부분부터) 또는 한글 뜻으로
+const SRC_NAME = { T: '토익', P: '토익 숙어', B: '비즈니스', G: '기본', C: '기본' };
+let searchQ = '';
+function searchView(back = home) {
+  app.innerHTML = `
+    <div class="top"><span>단어 검색</span><button class="x" id="x">✕</button></div>
+    <input class="search" id="q" type="search" placeholder="영어 단어나 한글 뜻으로 검색" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(searchQ)}">
+    <div id="sres"></div>
+    <div class="spacer"></div>`;
+  document.getElementById('x').onclick = back;
+  const q = document.getElementById('q'), box = document.getElementById('sres');
+  let open = null;
+  const detail = i => {
+    const w = W[i], k = keyOf(i), ex = EX[k], ipa = IPA[k] && IPA[k][0];
+    const sr = ALL.srs[k];
+    return `<div class="sdet">
+      ${ipa ? `<div class="muted">/${esc(ipa)}/</div>` : ''}
+      <div class="sm"><span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span><span class="chip">${SRC_NAME[w.d]}</span></div>
+      ${ex ? `<div class="ex"><div>${exHTML(ex[0], w.w)}</div><small>${esc(ex[1])}</small></div>` : ''}
+      ${ALL.wrongNote[k] ? `<p class="muted" style="margin:6px 0 0">오답노트 ✕${ALL.wrongNote[k].n}</p>` : ''}
+      ${sr && !isKnown(i) ? `<p class="muted" style="margin:4px 0 0">다음 복습: ${sr.due <= dayNo() ? '오늘' : (sr.due - dayNo()) + '일 뒤'}</p>` : ''}
+      <div class="sbtn"><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button>
+        <button data-act="known">${isKnown(i) ? '아는 단어 해제' : '✓ 아는 단어'}</button>
+        <button data-act="note">${ALL.wrongNote[k] ? '오답노트에서 빼기' : '+ 오답노트'}</button></div></div>`;
+  };
+  const render = () => {
+    const v = q.value.trim().toLowerCase(); searchQ = q.value;
+    if (!v) { box.innerHTML = `<p class="muted" style="text-align:center;margin-top:40px">예) negotiate · 회의 · fill out</p>`; return; }
+    let hits;
+    if (/[가-힣]/.test(v)) hits = [...W.keys()].filter(i => W[i].m.includes(v));
+    else {
+      const a = [], b = [];
+      W.forEach((o, i) => { const lw = o.w.toLowerCase(); if (lw.startsWith(v)) a.push(i); else if (lw.includes(v)) b.push(i); });
+      a.sort((x, y) => W[x].w.length - W[y].w.length);
+      hits = a.concat(b);
+    }
+    const more = hits.length > 50; hits = hits.slice(0, 50);
+    box.innerHTML = hits.length ? `<div class="card list srl">${hits.map(i => `<div class="srow" data-i="${i}">
+        <button class="row rowbtn"><span><b>${esc(W[i].w)}</b>${isKnown(i) ? ' <small class="kn-tag">아는 단어</small>' : ''}<small class="muted">${esc(W[i].m)}</small></span><span>${open === i ? '⌃' : '⌄'}</span></button>
+        ${open === i ? detail(i) : ''}</div>`).join('')}</div>${more ? `<p class="muted" style="text-align:center">앞의 50개만 보여요. 더 길게 입력해보세요.</p>` : ''}`
+      : `<p class="muted" style="text-align:center;margin-top:40px">찾는 단어가 없어요.</p>`;
+    box.querySelectorAll('.srow').forEach(r => {
+      const i = +r.dataset.i;
+      r.querySelector('.rowbtn').onclick = () => { open = open === i ? null : i; render(); };
+      r.querySelectorAll('[data-a]').forEach(b => b.onclick = () => say(W[i].w, b.dataset.a));
+      r.querySelectorAll('[data-act]').forEach(b => b.onclick = () => {
+        const k = keyOf(i);
+        if (b.dataset.act === 'known') { if (isKnown(i)) unknow(i); else { ALL.known[k] = Date.now(); delete ALL.srs[k]; } }
+        else { if (ALL.wrongNote[k]) delete ALL.wrongNote[k]; else ALL.wrongNote[k] = { n: 0, t: Date.now() }; }
+        save(); render();
+      });
+    });
+  };
+  q.oninput = () => { open = null; render(); };
+  render();
+  if (!searchQ) q.focus();
+}
+
+// 학습 기록 백업 · 복원 (파일로 저장 → 새 폰에서 불러오기)
+function backupView(msg) {
+  const last = ALL.lastBackup ? new Date(ALL.lastBackup) : null;
+  app.innerHTML = `
+    <div class="top"><span>학습 기록 백업 · 복원</span><button class="x" id="x">✕</button></div>
+    <p class="muted">진도, 학습 기록, 오답노트, 아는 단어, 복습 일정, 설정을 파일 하나로 저장해요. 폰을 바꾸거나 앱을 다시 설치했을 때 그 파일을 불러오면 그대로 이어서 할 수 있어요.</p>
+    <div class="card">
+      <b>백업 파일 저장</b>
+      <p class="muted" style="margin:4px 0 0">${last ? `마지막 백업: ${last.getFullYear()}.${last.getMonth() + 1}.${last.getDate()} ${String(last.getHours()).padStart(2, '0')}:${String(last.getMinutes()).padStart(2, '0')}` : '아직 백업한 적이 없어요.'}</p>
+      <button class="btn" id="save">백업 파일 저장하기</button>
+      <p class="muted" style="font-size:12px;margin:8px 0 0">구글 드라이브나 다운로드 폴더에 저장해두면 새 폰에서도 꺼낼 수 있어요.</p>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <b>백업 파일 불러오기</b>
+      <p class="muted" style="margin:4px 0 0">지금 폰의 기록은 불러온 파일 내용으로 바뀌어요.</p>
+      <button class="btn ghost" id="load">백업 파일 불러오기</button>
+    </div>
+    ${msg ? `<p class="info">${esc(msg)}</p>` : ''}
+    <div class="spacer"></div>`;
+  document.getElementById('x').onclick = moreView;
+  document.getElementById('save').onclick = () => {
+    const d = new Date(), p2 = n => String(n).padStart(2, '0');
+    const name = `토익단어_백업_${d.getFullYear()}${p2(d.getMonth() + 1)}${p2(d.getDate())}.json`;
+    const text = JSON.stringify({ app: 'toeicvoca', ver: 1, at: Date.now(), data: { ...ALL, lastBackup: Date.now() } });
+    if (window.AndroidApp && AndroidApp.saveBackup) { AndroidApp.saveBackup(name, text); return; }   // 결과는 onBackupSaved로
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'application/json' })); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    window.onBackupSaved(true);
+  };
+  document.getElementById('load').onclick = () => {
+    if (window.AndroidApp && AndroidApp.openBackup) { AndroidApp.openBackup(); return; }   // 결과는 onBackupLoaded로
+    const inp = document.createElement('input'); inp.type = 'file'; inp.accept = '.json,application/json';
+    inp.onchange = () => { const f = inp.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => window.onBackupLoaded(r.result); r.readAsText(f); };
+    inp.click();
+  };
+}
+// 앱(안드로이드)에서 파일 저장/열기가 끝나면 호출
+window.onBackupSaved = ok => {
+  if (ok) { ALL.lastBackup = Date.now(); save(); }
+  backupView(ok ? '백업 파일을 저장했어요.' : '저장하지 못했어요. 다시 시도해주세요.');
+};
+window.onBackupLoaded = text => {
+  if (text == null) return backupView();   // 선택 취소
+  let b;
+  try { b = JSON.parse(text); } catch (e) { b = null; }
+  if (!b || b.app !== 'toeicvoca' || !b.data || !b.data.decks) return backupView('토익 단어 백업 파일이 아니에요. 다른 파일을 골라주세요.');
+  const d = new Date(b.at);
+  if (!confirm(`${d.getFullYear()}.${d.getMonth() + 1}.${d.getDate()}에 만든 백업으로 바꿀까요?\n지금 폰의 학습 기록은 이 파일 내용으로 바뀌어요.`)) return backupView();
+  b.data.plan = ALL.plan;   // 멤버십은 백업 파일이 아니라 지금 폰의 구독을 따름
+  try { localStorage.setItem(KEY, JSON.stringify(b.data)); } catch (e) { return backupView('불러오지 못했어요.'); }
+  location.reload();
+};
 
 // 푸시 알림
 function pushView(msg) {
@@ -1013,7 +1299,7 @@ function resetView() {
       <b>학습 기록을 모두 지워요</b>
       <ul class="plain">
         <li>모든 단어장의 Day 진도와 학습 기록</li>
-        <li>오답노트</li>
+        <li>오답노트와 복습 일정</li>
         <li>총 학습한 단어 · 정답률 통계</li>
       </ul>
       <p class="muted" style="margin:0">아는 단어 목록, 하루 학습량, 구독, 알림 설정은 그대로 남아요.<br>지운 기록은 되돌릴 수 없어요.</p>
@@ -1024,7 +1310,7 @@ function resetView() {
   document.getElementById('go').onclick = () => {
     if (!confirm('정말 학습 기록을 모두 지울까요?')) return;
     for (const k in ALL.decks) ALL.decks[k] = freshDeck(k);
-    ALL.wrongNote = {}; ALL.stats = { answered: 0, correct: 0, seen: {} }; ALL.lastMainDate = '';
+    ALL.wrongNote = {}; ALL.srs = {}; ALL.stats = { answered: 0, correct: 0, seen: {} }; ALL.lastMainDate = '';
     useDeck(ALL.deck); save(); home();
   };
 }
@@ -1038,14 +1324,18 @@ function guideView() {
     ${sec('1. 시작하기', `<p>처음 실행하면 <b>하루에 공부할 단어 수</b>를 슬라이더로 고릅니다(20~100개, 10개 단위). 나중에 <b>더보기 → 하루 학습량</b>에서 바꿀 수 있고, 바꾼 학습량은 아직 시작하지 않은 Day부터 적용돼요.</p>`)}
     ${sec('2. 단어장 고르기', `<p><b>학습</b> 탭 위쪽에서 단어장을 고릅니다.</p><ul><li><b>토익</b> — 토익 빈출 단어 + 숙어 + 비즈니스 어휘</li><li><b>기본</b> — 일반 영어 단어 (입문~최상급)</li><li><b>전부</b> — 모든 단어와 숙어</li></ul><p>단어장마다 진도가 따로 저장돼요.</p>`)}
     ${sec('2-1. 레벨 테스트와 출제 설정', `<p>처음 설치하면 <b>레벨 테스트 20문제</b>로 단어 실력을 확인해요. 결과에 따라 아직 헷갈리는 레벨부터 공부하도록 맞춰져요. 모르는 단어는 찍지 말고 '모르겠어요'를 누르는 게 정확해요.</p><p><b>더보기 → 출제 설정</b>에서 레벨(A1 입문 ~ C2 최상급)과 유형(명사·동사·형용사·부사·숙어)을 체크해서 원하는 단어만 나오게 할 수 있어요. 레벨 테스트는 언제든 다시 볼 수 있어요.</p>`)}
-    ${sec('3. 하루 학습', `<p><b>시작하기</b>를 누르면 그날의 단어가 4지선다(A~D)로 나옵니다.</p><ul><li>단어 아래에 <b>미국식·영국식 발음기호</b>가 보여요.</li><li>문제가 나오면 미국 → 영국 발음 순서로 읽어줘요. 🔁 다시 듣기, 🔊 미국, 🔊 영국 버튼으로 다시 들을 수 있어요. (더보기 → 자동 발음에서 끌 수 있어요)</li><li>맞히면 바로 다음 문제로, 틀리면 정답을 보여주고 '다음'을 눌러 넘어가요.</li><li>중간에 ✕로 나가도 진도가 저장돼서 <b>이어하기</b>로 계속할 수 있어요.</li></ul>`)}
+    ${sec('3. 하루 학습', `<p><b>시작하기</b>를 누르면 그날의 단어가 4지선다(A~D)로 나옵니다.</p><ul><li>단어 아래에 <b>미국식 발음기호</b>가 보여요.</li><li>문제가 나오면 미국 → 영국 발음 순서로 읽어줘요. 🔁 다시 듣기, 🔊 미국, 🔊 영국 버튼으로 다시 들을 수 있어요. (더보기 → 자동 발음에서 끌 수 있어요)</li><li>맞히면 바로 다음 문제로, 틀리면 정답을 보여주고 '다음'을 눌러 넘어가요.</li><li>중간에 ✕로 나가도 진도가 저장돼서 <b>이어하기</b>로 계속할 수 있어요.</li></ul>`)}
     ${sec('4. 오답 복습', `<p>하루치를 다 풀면 <b>틀린 단어만 다시</b> 나오고, 전부 맞힐 때까지 반복해요. 풀다가 나갔을 때는 학습 탭의 <b>'지금까지 틀린 N개 보기'</b>로 미리 확인할 수 있어요.</p>`)}
     ${sec('5. 오답노트', `<p>지금까지 틀린 단어는 모두 <b>오답노트</b> 탭에 모여요(틀린 횟수 ✕N 표시).</p><ul><li><b>오답노트 풀기</b> — 모아둔 오답을 순서를 섞어 풀어요. 맞힌 단어는 오답노트에서 빠져요.</li><li><b>외웠어요</b> — 그 단어를 오답노트에서 바로 지워요.</li></ul>`)}
     ${sec('6. 다시 테스트', `<p>학습 탭의 <b>'Day N 단어 다시 테스트'</b>로 그날 단어 전체를 순서를 섞어 몇 번이든 다시 풀 수 있어요. 연습이라 진도에는 영향이 없어요.</p>`)}
     ${sec('7. 아는 단어', `<p>이미 아는 단어는 문제 화면의 <b>✓ 아는 단어</b>를 누르세요. 그 단어는 앞으로 나오지 않고, 다음 Day는 다른 단어로 채워져요. 잘못 눌렀다면 바로 뜨는 <b>되돌리기</b>나 <b>더보기 → 아는 단어</b>에서 되돌릴 수 있어요. 누른 날짜·시간별로 정리돼 있어서 언제 누른 단어인지 바로 찾을 수 있어요.</p>`)}
+    ${sec('7-1. 오늘의 복습', `<p>본 학습에서 푼 단어는 <b>1일 → 3일 → 7일 → 14일 → 30일 → 60일</b> 간격으로 다시 나와요(망각곡선). 학습 탭의 <b>🔁 오늘의 복습</b>에서 풀고, 맞히면 다음 복습이 더 뒤로 미뤄지고 틀리면 다음 날 다시 나와요.</p>`)}
+    ${sec('7-2. 문제 유형', `<p><b>더보기 → 문제 유형</b>에서 켜둔 유형이 섞여서 나와요.</p><ul><li><b>영어 → 뜻</b>: 단어를 보고 뜻 고르기</li><li><b>뜻 → 영어</b>: 뜻을 보고 영어 단어 고르기</li><li><b>듣고 고르기</b>: 발음만 듣고 뜻 고르기 (🔊로 다시 듣기)</li><li><b>스펠링 쓰기</b>: 첫 글자와 글자 수를 힌트로 직접 입력</li></ul><p>답을 고르면 그 단어가 들어간 <b>예문</b>과 해석이 보여요(예문이 있는 단어).</p>`)}
+    ${sec('7-3. 단어 검색', `<p>학습 탭 위의 <b>🔍</b>이나 <b>더보기 → 단어 검색</b>에서 영어나 한글 뜻으로 찾을 수 있어요. 눌러서 발음·예문을 보고, 아는 단어로 빼거나 오답노트에 넣을 수 있어요.</p>`)}
     ${sec('8. 멤버십', `<ul><li><b>Free</b> — 하루 20개, 하루 Day 1개, 오답은 목록으로만 확인, 광고 있음</li><li><b>Basic</b> — 하루 50개까지, 하루 Day 1개, 오답 다시 풀기·오답노트 풀기, 하루치 끝날 때만 광고</li><li><b>Premium</b> — 하루 100개까지, Day를 골라 원하는 만큼 학습, 광고 없음</li></ul><p><b>더보기 → 구독 멤버십 관리</b>에서 바꿀 수 있어요.</p>`)}
     ${sec('9. 알림', `<p><b>더보기 → 푸시 알림</b>에서 공지사항·업데이트·이벤트·일일 학습 알림을 각각 켜고 끌 수 있어요. 일일 학습 알림은 원하는 시간을 정할 수 있어요.</p>`)}
-    ${sec('10. 기록과 초기화', `<p><b>더보기</b> 위쪽에서 총 학습한 단어 수와 전체 정답률을 볼 수 있고, <b>학습 기록</b>에서 Day별 첫 정답률을 확인할 수 있어요. <b>데이터 초기화</b>를 하면 진도·학습 기록·오답노트·통계가 지워져요.</p>`)}
+    ${sec('10. 기록과 초기화', `<p><b>더보기</b> 위쪽에서 총 학습한 단어 수와 전체 정답률을 볼 수 있고, <b>학습 기록</b>에서 Day별 첫 정답률을 확인할 수 있어요. <b>데이터 초기화</b>를 하면 진도·학습 기록·오답노트·복습 일정·통계가 지워져요.</p>`)}
+    ${sec('11. 백업 · 복원', `<p><b>더보기 → 학습 기록 백업 · 복원</b>에서 기록을 파일로 저장해두세요. 폰을 바꾸거나 앱을 다시 설치했을 때 그 파일을 불러오면 그대로 이어서 할 수 있어요. 구글 드라이브에 저장해두면 편해요.</p>`)}
     </div>`;
   document.getElementById('x').onclick = moreView;
 }
@@ -1061,9 +1351,10 @@ function privacyView() {
     <h3>2. 기기에만 저장되는 정보</h3>
     <p>아래 정보는 이용자의 휴대폰 안에만 저장되며, 개발자의 서버로 전송되지 않습니다.</p>
     <ul>
-      <li>학습 데이터: 단어장별 진도, 학습 기록, 오답노트, 아는 단어 목록, 정답률 통계</li>
-      <li>앱 설정: 하루 학습량, 멤버십 등급, 자동 발음, 푸시 알림 설정과 알림 시간</li>
+      <li>학습 데이터: 단어장별 진도, 학습 기록, 오답노트, 아는 단어 목록, 복습 일정, 정답률 통계</li>
+      <li>앱 설정: 하루 학습량, 멤버십 등급, 문제 유형, 자동 발음, 푸시 알림 설정과 알림 시간</li>
     </ul>
+    <p>'학습 기록 백업'을 사용하면 위 정보가 이용자가 고른 위치(휴대폰 저장공간, 구글 드라이브 등)에 파일로 저장됩니다. 이 파일은 이용자가 직접 관리하며, 개발자에게 전송되지 않습니다.</p>
     <p>이 정보는 앱을 삭제하거나 '더보기 → 데이터 초기화'를 하면 지워집니다.</p>
     <h3>3. 광고 (Free · Basic 멤버십)</h3>
     <p>앱은 Google AdMob 광고를 표시합니다. 광고 제공을 위해 Google이 다음 정보를 수집·처리할 수 있습니다.</p>
