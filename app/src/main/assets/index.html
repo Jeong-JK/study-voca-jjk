@@ -704,11 +704,11 @@ function quiz(s = S.sess) {
     <div class="pos"><span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span>
       <div class="say"><button id="replay">🔁 다시 듣기</button><button data-a="us">🔊 미국</button><button data-a="uk">🔊 영국</button></div></div>
     <div id="opts">${c.opts.map((m, i) => `<button class="opt" data-i="${i}"><b>${'ABCD'[i]}</b><span>${esc(m)}</span></button>`).join('')}</div>
+    <button class="known" id="known">✓ 이미 아는 단어예요 (다음부터 안 나오게)</button>
     <div class="toast" id="toast"></div>
     ${undoKnown && undoKnown.s === s ? `<div class="undo"><span>'${esc(W[undoKnown.idx].w)}' 아는 단어로 뺐어요</span><button id="undo">되돌리기</button></div>` : ''}
     <div class="spacer"></div>
-    <button class="btn" id="next" style="visibility:hidden">다음 →</button>
-    <button class="known" id="known">✓ 이미 아는 단어예요 (다음부터 안 나오게)</button>`;
+    <button class="btn" id="next" style="visibility:hidden">다음 →</button>`;
   // 아는 단어: 앞으로 출제에서 빼고 바로 다음 문제로 (몇 초간 되돌리기 가능)
   document.getElementById('known').onclick = () => {
     sayStop();
