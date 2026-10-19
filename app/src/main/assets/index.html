@@ -678,11 +678,11 @@ function startDay() {
 }
 
 let active = null, undoKnown = null, undoTimer = null;
-// 발음기호 (미국 / 영국)
+// 발음기호 (미국식)
 function ipaHTML(word) {
   const p = IPA[word.toLowerCase()];
   if (!p) return '';
-  return `<div class="ipa">${p[0] ? `<span><i>미</i>/${esc(p[0])}/</span>` : ''}${p[1] ? `<span><i>영</i>/${esc(p[1])}/</span>` : ''}</div>`;
+  return p[0] ? `<div class="ipa"><span>/${esc(p[0])}/</span></div>` : '';   // 미국식 발음기호만 표시
 }
 function quiz(s = S.sess) {
   active = s;
