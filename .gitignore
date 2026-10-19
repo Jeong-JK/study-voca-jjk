@@ -1,0 +1,6 @@
+*.jks
+*.keystore.b64
+keystore_base64.txt
+build/
+.gradle/
+!app/debug.keystore

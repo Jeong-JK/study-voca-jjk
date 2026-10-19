@@ -4,11 +4,17 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.graphics.Insets;
 import android.net.Uri;
 import android.os.Build;
 import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.window.OnBackInvokedCallback;
+import android.window.OnBackInvokedDispatcher;
 import android.widget.LinearLayout;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -36,6 +42,7 @@ import java.util.Locale;
 
 public class MainActivity extends Activity {
     private WebView web;
+    private LinearLayout root;
     private TextToSpeech tts;
     private volatile boolean ttsReady = false;
 
@@ -215,7 +222,7 @@ public class MainActivity extends Activity {
         web.loadUrl("file:///android_asset/index.html");
 
         // 화면 = 웹 화면(위) + 배너 광고(아래, 평소엔 숨김)
-        LinearLayout root = new LinearLayout(this);
+        root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
         root.addView(web, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f));
         banner = new AdView(this);
@@ -226,9 +233,59 @@ public class MainActivity extends Activity {
         lp.gravity = Gravity.CENTER_HORIZONTAL;
         root.addView(banner, lp);
         setContentView(root);
+        applySystemBars();
+
+        // Android 15+ 는 화면이 상태바·내비게이션바 밑까지 그려짐 → 그만큼 안쪽으로 띄움 (키보드가 올라오면 키보드 높이만큼)
+        if (Build.VERSION.SDK_INT >= 35) {
+            root.setOnApplyWindowInsetsListener((v, ins) -> {
+                Insets bars = ins.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+                Insets ime = ins.getInsets(WindowInsets.Type.ime());
+                v.setPadding(bars.left, bars.top, bars.right, Math.max(bars.bottom, ime.bottom));
+                return WindowInsets.CONSUMED;
+            });
+        }
+
+        // Android 13+ 뒤로가기 (targetSdk 36부터는 onBackPressed가 호출되지 않음)
+        if (Build.VERSION.SDK_INT >= 33) {
+            backCallback = this::handleBack;
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(OnBackInvokedDispatcher.PRIORITY_DEFAULT, backCallback);
+        }
     }
 
-    /** 휴대폰 뒤로가기: 앱 안의 이전 화면으로. 첫 화면(학습 탭)일 때만 앱 기본 동작 */
+    private OnBackInvokedCallback backCallback;
+
+    private boolean isNight() {
+        return (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
+
+    /** 상태바·내비게이션바 영역을 앱 배경색으로, 아이콘 색은 밝기에 맞게 */
+    private void applySystemBars() {
+        boolean night = isNight();
+        root.setBackgroundColor(night ? 0xFF121214 : 0xFFF5F4EF);   // index.html 의 --bg 와 같은 색
+        if (Build.VERSION.SDK_INT >= 30) {
+            WindowInsetsController c = getWindow().getInsetsController();
+            if (c != null) {
+                int light = WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS | WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+                c.setSystemBarsAppearance(night ? 0 : light, light);
+            }
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (root != null) applySystemBars();
+    }
+
+    /** 앱 안의 이전 화면으로. 첫 화면(학습 탭)이면 앱을 뒤로 보냄 */
+    private void handleBack() {
+        if (web == null) { moveTaskToBack(true); return; }
+        web.evaluateJavascript("(window.goBack && window.goBack()) ? 1 : 0", v -> {
+            if (!"1".equals(v)) moveTaskToBack(true);
+        });
+    }
+
+    /** Android 12 이하 뒤로가기: 앱 안의 이전 화면으로. 첫 화면(학습 탭)일 때만 앱 기본 동작 */
     @Override
     @SuppressWarnings("deprecation")
     public void onBackPressed() {

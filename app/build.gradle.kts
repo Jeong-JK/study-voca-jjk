@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.jjk.toeicvoca"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.jjk.toeicvoca"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         // GitHub 빌드 번호를 버전으로 사용 → 새 APK가 항상 업데이트로 인식됨
         val build = (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInt()
         versionCode = build
@@ -24,12 +24,22 @@ android {
             keyAlias = "androiddebugkey"
             keyPassword = "android"
         }
+        // 플레이스토어 업로드용 정식 키: GitHub Secrets에서 넣어 줌 (키 파일은 저장소에 올리지 않음)
+        val ks = System.getenv("RELEASE_KEYSTORE")
+        if (ks != null && file(ks).exists()) {
+            create("release") {
+                storeFile = file(ks)
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = "upload"
+                keyPassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
 

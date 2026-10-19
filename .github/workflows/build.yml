@@ -19,15 +19,29 @@ jobs:
           java-version: "17"
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.7"
+          gradle-version: "8.11.1"
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon
       - name: Rename APK
         run: mv app/build/outputs/apk/debug/app-debug.apk ToeicVoca.apk
+      # 플레이스토어 업로드용 AAB (정식 키로 서명). Secrets가 없으면 이 단계들은 건너뜀
+      - name: Build release AAB
+        env:
+          KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then echo "정식 서명 키가 없어 AAB는 건너뜀"; exit 0; fi
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          RELEASE_KEYSTORE="$RUNNER_TEMP/upload.jks" gradle bundleRelease --no-daemon
+          mv app/build/outputs/bundle/release/app-release.aab ToeicVoca.aab
+          rm -f "$RUNNER_TEMP/upload.jks"
       - uses: actions/upload-artifact@v4
         with:
           name: ToeicVoca
-          path: ToeicVoca.apk
+          path: |
+            ToeicVoca.apk
+            ToeicVoca.aab
+          if-no-files-found: ignore
       # 최신 APK를 고정 링크로 받을 수 있게 Release에 올림
       # https://github.com/Jeong-JK/study-voca-jjk/releases/latest/download/ToeicVoca.apk
       - uses: softprops/action-gh-release@v2
@@ -35,5 +49,8 @@ jobs:
           tag_name: v${{ github.run_number }}
           name: ToeicVoca v1.${{ github.run_number }}
           body: ${{ github.event.head_commit.message }}
-          files: ToeicVoca.apk
+          files: |
+            ToeicVoca.apk
+            ToeicVoca.aab
+          fail_on_unmatched_files: false
           make_latest: true
