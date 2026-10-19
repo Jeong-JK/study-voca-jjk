@@ -7200,4 +7200,2511 @@ hone|He sharpened the knife on a hone.|그는 숫돌에 칼을 갈았다.
 honorable|He is an honorable man.|그는 명예로운 사람이다.
 hood|She pulled up her hood in the rain.|그녀는 비가 오자 후드를 썼다.
 hospice|She works as a nurse at a hospice.|그녀는 호스피스에서 간호사로 일한다.
+hospitable|The local people were very hospitable.|그 지역 사람들은 매우 친절했다.
+hospitalize|He was hospitalized for a week.|그는 일주일 동안 입원했다.
+housemaster|The housemaster checks the dormitory every night.|사감이 매일 밤 기숙사를 점검한다.
+housewife|My mother was a housewife.|우리 어머니는 주부셨다.
+hover|A helicopter hovered over the building.|헬리콥터가 건물 위를 맴돌았다.
+human rights|The group fights for human rights.|그 단체는 인권을 위해 싸운다.
+humane|We need a more humane system.|더 인도적인 제도가 필요하다.
+humanist|He was a famous humanist writer.|그는 유명한 인문주의 작가였다.
+humanize|Good design can humanize technology.|좋은 디자인은 기술을 인간답게 만든다.
+humble|He is humble about his success.|그는 자기 성공에 대해 겸손하다.
+humbug|His speech was pure humbug.|그의 연설은 순전히 허튼소리였다.
+humiliate|Don't humiliate people in public.|사람들 앞에서 남에게 굴욕감을 주지 마세요.
+humiliating|Losing 10-0 was humiliating.|10대 0으로 진 것은 굴욕적이었다.
+humiliation|He felt deep humiliation.|그는 깊은 굴욕감을 느꼈다.
+hunting|Hunting is not allowed in the park.|그 공원에서는 사냥이 금지되어 있다.
+hush|She hushed the crying baby.|그녀는 우는 아기를 달래 조용히 시켰다.
+hyperbole|"I've told you a million times" is hyperbole.|'백만 번은 말했다'는 과장법이다.
+hyphen|Use a hyphen in "well-known."|'well-known'에는 하이픈을 쓰세요.
+iceman|In the old days, the iceman delivered ice to homes.|옛날에는 얼음 장수가 집으로 얼음을 배달했다.
+idiot|I felt like an idiot.|내가 바보 같았다.
+idolize|Many kids idolize sports stars.|많은 아이가 스포츠 스타를 우상화한다.
+ignorance|His mistake was due to ignorance.|그의 실수는 무지에서 비롯되었다.
+ignorant|I was ignorant of the rules.|나는 규칙을 몰랐다.
+imagery|The poem is full of beautiful imagery.|그 시는 아름다운 이미지로 가득하다.
+imitation|The bag is a cheap imitation.|그 가방은 싸구려 모조품이다.
+immerse|Immerse the vegetables in cold water.|채소를 찬물에 담그세요.
+immoral|Lying to customers is immoral.|고객에게 거짓말하는 것은 부도덕하다.
+immortal|The gods in the story are immortal.|그 이야기 속 신들은 불멸이다.
+immortality|People have long dreamed of immortality.|사람들은 오랫동안 불멸을 꿈꿔 왔다.
+impartial|A judge must be impartial.|판사는 공정해야 한다.
+impatiently|He waited impatiently for the bus.|그는 버스를 조급하게 기다렸다.
+impermanent|Life is impermanent.|삶은 영원하지 않다.
+impolite|It's impolite to talk with your mouth full.|입에 음식을 넣고 말하는 것은 무례하다.
+impolitely|He answered impolitely.|그는 무례하게 대답했다.
+impossibility|It's an impossibility to finish today.|오늘 끝내는 것은 불가능한 일이다.
+impractical|The plan is too impractical.|그 계획은 너무 비현실적이다.
+impressed|I was impressed by her work.|나는 그녀의 작업에 감명받았다.
+impressionism|Monet is famous for impressionism.|모네는 인상주의로 유명하다.
+impressionist|The museum has paintings by French impressionists.|그 미술관에는 프랑스 인상파 화가들의 그림이 있다.
+imprison|The king imprisoned his enemies.|왕은 적들을 투옥했다.
+imprisonment|He was sentenced to two years' imprisonment.|그는 징역 2년을 선고받았다.
+improbable|It is improbable that he will win.|그가 이길 것 같지 않다.
+improperly|The machine was improperly installed.|그 기계는 부적절하게 설치되었다.
+improved|The improved version is faster.|개선된 버전은 더 빠르다.
+impulse|I bought the shoes on impulse.|나는 충동적으로 그 신발을 샀다.
+impulsive|He is too impulsive with money.|그는 돈 문제에서 너무 충동적이다.
+inaccurate|The report contains inaccurate figures.|그 보고서에는 부정확한 수치가 있다.
+inanimate|A rock is an inanimate object.|돌은 무생물이다.
+inborn|She has an inborn talent for music.|그녀는 타고난 음악적 재능이 있다.
+incense|The temple smelled of incense.|사원에서 향 냄새가 났다.
+incurable|The disease was once incurable.|그 병은 한때 불치병이었다.
+indebted|I am deeply indebted to my teachers.|나는 선생님들께 큰 은혜를 입었다.
+indent|Indent the first line of each paragraph.|각 단락의 첫 줄을 들여쓰세요.
+indescribable|The beauty of the place was indescribable.|그곳의 아름다움은 형언할 수 없었다.
+indifferent|He seemed indifferent to the news.|그는 그 소식에 무관심해 보였다.
+indignity|He suffered the indignity of being ignored.|그는 무시당하는 모욕을 겪었다.
+indispensable|Smartphones have become indispensable.|스마트폰은 없어서는 안 될 물건이 되었다.
+indulge|I indulged in a piece of chocolate cake.|나는 초콜릿 케이크 한 조각을 마음껏 즐겼다.
+indulgent|His parents are very indulgent.|그의 부모님은 매우 관대하시다.
+industrialize|The country industrialized quickly.|그 나라는 빠르게 산업화되었다.
+inert|Helium is an inert gas.|헬륨은 비활성 기체이다.
+infected|The wound became infected.|상처가 감염되었다.
+infectious|The flu is highly infectious.|독감은 전염성이 강하다.
+inflammation|The cream reduces inflammation.|그 크림은 염증을 줄여 준다.
+inflammatory|His inflammatory comments angered many people.|그의 선동적인 발언이 많은 사람을 화나게 했다.
+influenza|Influenza spreads quickly in winter.|독감은 겨울에 빠르게 퍼진다.
+infringe|The company infringed the patent.|그 회사는 특허를 침해했다.
+infringement|The lawsuit was about copyright infringement.|그 소송은 저작권 침해에 관한 것이었다.
+inhabit|Many birds inhabit the island.|많은 새가 그 섬에 산다.
+injured|The injured man was taken to hospital.|부상당한 남자가 병원으로 옮겨졌다.
+innate|Children have an innate ability to learn languages.|아이들은 언어를 배우는 타고난 능력이 있다.
+innocently|She smiled innocently.|그녀는 순진하게 미소 지었다.
+inseparable|The two friends are inseparable.|두 친구는 떼려야 뗄 수 없는 사이다.
+inspirational|She gave an inspirational speech.|그녀는 영감을 주는 연설을 했다.
+instantly|The pain stopped instantly.|통증이 즉시 멈췄다.
+instil|Parents should instil good habits in children.|부모는 아이에게 좋은 습관을 심어 주어야 한다.
+instill|The coach instilled confidence in the team.|코치는 팀에 자신감을 불어넣었다.
+insult|His comment was an insult.|그의 발언은 모욕이었다.
+interpersonal|The job requires good interpersonal skills.|그 일에는 좋은 대인 관계 능력이 필요하다.
+interruption|Sorry for the interruption.|방해해서 죄송합니다.
+intimate|They are intimate friends.|그들은 친밀한 친구 사이다.
+intransitive|"Sleep" is an intransitive verb.|'sleep'은 자동사이다.
+intravenous|The patient received intravenous fluids.|환자는 정맥 주사로 수액을 맞았다.
+intrude|I don't want to intrude on your privacy.|당신의 사생활을 침범하고 싶지 않아요.
+intruder|The alarm went off when the intruder entered.|침입자가 들어오자 경보가 울렸다.
+intrusion|The constant calls are an intrusion.|계속되는 전화는 사생활 침해이다.
+invariable|His answer is invariable.|그의 대답은 변함이 없다.
+invariably|He is invariably late.|그는 언제나 늦는다.
+inventor|Edison was a famous inventor.|에디슨은 유명한 발명가였다.
+inverted commas|Put the title in inverted commas.|제목을 따옴표 안에 넣으세요.
+invisible|The writing was almost invisible.|글씨가 거의 보이지 않았다.
+invitingly|The pool looked invitingly cool.|수영장은 유혹하듯 시원해 보였다.
+invoke|The government invoked emergency powers.|정부는 비상 권한을 발동했다.
+ironically|Ironically, the fire station burned down.|아이러니하게도 소방서가 불에 탔다.
+irrational|His fear of flying is irrational.|그의 비행 공포는 비이성적이다.
+irresistible|The cake looked irresistible.|그 케이크는 거부할 수 없을 만큼 맛있어 보였다.
+irresistibly|I was irresistibly drawn to the music.|나는 억누를 수 없이 그 음악에 끌렸다.
+irresponsible|It was irresponsible to leave the door open.|문을 열어 둔 것은 무책임했다.
+irritated|She was irritated by the delay.|그녀는 지연 때문에 짜증이 났다.
+irritating|The noise is irritating.|그 소음은 짜증 난다.
+irritation|He couldn't hide his irritation.|그는 짜증을 숨기지 못했다.
+islander|The islanders are friendly.|섬 주민들은 친절하다.
+italicize|Italicize the titles of books.|책 제목은 이탤릭체로 쓰세요.
+itch|My arm itches.|팔이 가렵다.
+jaw|He hurt his jaw.|그는 턱을 다쳤다.
+jealously|She jealously guarded her secret.|그녀는 질투하듯 자기 비밀을 지켰다.
+jeopardize|The delay could jeopardize the project.|그 지연은 프로젝트를 위태롭게 할 수 있다.
+jeweler|The jeweler fixed my watch.|보석상이 내 시계를 고쳐 주었다.
+judo|He has a black belt in judo.|그는 유도 검은띠다.
+junk food|Try to avoid junk food.|정크 푸드를 피하도록 하세요.
+juror|Each juror listened carefully.|배심원들은 각자 주의 깊게 들었다.
+kangaroo|We saw kangaroos in Australia.|우리는 호주에서 캥거루를 봤다.
+karaoke|We went to karaoke after dinner.|우리는 저녁 식사 후 노래방에 갔다.
+keeper|The zoo keeper fed the animals.|동물원 관리인이 동물들에게 먹이를 주었다.
+kerosene|The lamp burns kerosene.|그 램프는 등유를 태운다.
+keystroke|You can save the file with a single keystroke.|키 한 번만 눌러 파일을 저장할 수 있다.
+kneel|She knelt down to tie her shoe.|그녀는 신발 끈을 묶으려고 무릎을 꿇었다.
+knot|Tie a knot in the rope.|밧줄에 매듭을 지으세요.
+knowingly|He knowingly broke the rules.|그는 알면서도 규칙을 어겼다.
+known|He is known as a good teacher.|그는 좋은 선생님으로 알려져 있다.
+laborer|The farm hired more laborers.|그 농장은 노동자를 더 고용했다.
+lame|That's a lame excuse.|그건 설득력 없는 변명이다.
+lance|The knight carried a lance.|기사는 창을 들고 있었다.
+landing|The plane made a smooth landing.|비행기가 부드럽게 착륙했다.
+landlady|Our landlady lives downstairs.|우리 여자 집주인은 아래층에 산다.
+landslide|The heavy rain caused a landslide.|폭우로 산사태가 났다.
+lap|The cat sat on my lap.|고양이가 내 무릎 위에 앉았다.
+lark|A lark was singing in the field.|종달새가 들판에서 노래하고 있었다.
+last minute|He always finishes his work at the last minute.|그는 늘 마지막 순간에 일을 끝낸다.
+last-minute|We made some last-minute changes.|우리는 막바지에 몇 가지를 바꿨다.
+lastly|Lastly, I want to thank my family.|마지막으로 가족에게 감사하고 싶습니다.
+lava|Hot lava flowed down the mountain.|뜨거운 용암이 산 아래로 흘러내렸다.
+lawmaker|Lawmakers passed the new bill.|입법자들이 새 법안을 통과시켰다.
+layabout|He was called a lazy layabout.|그는 게으름뱅이라는 소리를 들었다.
+leaflet|They handed out leaflets in the street.|그들은 거리에서 전단을 나눠 주었다.
+learning|Online learning is popular.|온라인 학습이 인기가 있다.
+leash|Keep your dog on a leash.|개에게 목줄을 채우세요.
+leek|Add some leek to the soup.|수프에 리크를 조금 넣으세요.
+legend|The story is an old legend.|그 이야기는 오래된 전설이다.
+legendary|He is a legendary football player.|그는 전설적인 축구 선수이다.
+legislate|The government plans to legislate against smoking in cars.|정부는 차 안 흡연을 금지하는 법을 제정할 계획이다.
+legislator|The legislator spoke about education.|그 국회의원은 교육에 대해 연설했다.
+leisurely|We walked leisurely along the beach.|우리는 해변을 따라 느긋하게 걸었다.
+lengthen|The days lengthen in spring.|봄에는 낮이 길어진다.
+leopard|A leopard has spots.|표범에게는 반점이 있다.
+lick|The dog licked my hand.|개가 내 손을 핥았다.
+lid|Put the lid on the pot.|냄비 뚜껑을 덮으세요.
+lifeless|The city looked lifeless at night.|밤에는 도시가 생기 없어 보였다.
+lighten|Light colors can lighten a room.|밝은 색은 방을 환하게 할 수 있다.
+lighting|The lighting in the room is too dark.|방 조명이 너무 어둡다.
+limb|He broke a limb in the accident.|그는 사고로 팔다리 하나가 부러졌다.
+linen|The tablecloth is made of linen.|그 식탁보는 리넨으로 만들어졌다.
+liner|They crossed the ocean on a liner.|그들은 여객선을 타고 바다를 건넜다.
+ling|The fishermen caught ling and cod.|어부들이 대구류 생선을 잡았다.
+linger|The smell of coffee lingered in the room.|커피 향이 방에 오래 남았다.
+literal|The literal meaning is different.|문자 그대로의 의미는 다르다.
+litter|Please don't drop litter.|쓰레기를 버리지 마세요.
+loneliness|He suffered from loneliness.|그는 외로움에 시달렸다.
+long-distance|They have a long-distance relationship.|그들은 장거리 연애를 하고 있다.
+long-term|We need a long-term plan.|장기적인 계획이 필요하다.
+loosely|The rope was loosely tied.|밧줄이 느슨하게 묶여 있었다.
+lousy|The food was lousy.|음식이 형편없었다.
+lower|Please lower your voice.|목소리를 낮춰 주세요.
+lowland|The lowland floods every spring.|그 저지대는 매년 봄 침수된다.
+lush|The valley is lush and green.|그 계곡은 무성하고 푸르다.
+luxurious|They stayed in a luxurious hotel.|그들은 호화로운 호텔에 묵었다.
+lyrics|I don't know the lyrics of this song.|이 노래 가사를 모른다.
+madam|Can I help you, madam?|도와드릴까요, 부인?
+madame|Madame Curie was a famous scientist.|퀴리 부인은 유명한 과학자였다.
+madness|It would be madness to drive in this storm.|이 폭풍 속에 운전하는 것은 미친 짓이다.
+maestro|The maestro conducted the orchestra.|거장이 오케스트라를 지휘했다.
+magnify|The lens magnifies the image.|그 렌즈는 이미지를 확대한다.
+malady|Loneliness is a malady of modern life.|외로움은 현대 생활의 병폐이다.
+malaria|Malaria is spread by mosquitoes.|말라리아는 모기를 통해 퍼진다.
+mama|The little girl ran to her mama.|어린 소녀가 엄마에게 달려갔다.
+mamma|"Mamma, look!" the child shouted.|"엄마, 봐!" 아이가 외쳤다.
+mango|I love fresh mango juice.|나는 신선한 망고 주스를 좋아한다.
+mansion|They live in a large mansion.|그들은 큰 대저택에 산다.
+manufacturing|Manufacturing is important to the economy.|제조업은 경제에 중요하다.
+marathon|She ran a marathon last year.|그녀는 작년에 마라톤을 뛰었다.
+marketing|He works in marketing.|그는 마케팅 분야에서 일한다.
+martial art|Taekwondo is a Korean martial art.|태권도는 한국의 무술이다.
+massacre|The museum remembers the victims of the massacre.|그 박물관은 학살 희생자들을 기린다.
+masseur|The masseur gave me a massage.|안마사가 나에게 마사지를 해 주었다.
+masterpiece|The painting is a masterpiece.|그 그림은 걸작이다.
+mastery|She has complete mastery of the piano.|그녀는 피아노를 완벽하게 숙달했다.
+mausoleum|The king was buried in a large mausoleum.|왕은 큰 능에 묻혔다.
+means|The bus is the cheapest means of transport.|버스가 가장 싼 교통수단이다.
+mechanize|Farms became mechanized in the 1900s.|농장들은 1900년대에 기계화되었다.
+medieval|We visited a medieval castle.|우리는 중세의 성을 방문했다.
+mediocre|The food was mediocre.|음식은 그저 그랬다.
+melody|The song has a beautiful melody.|그 노래는 선율이 아름답다.
+memorial|We visited the war memorial.|우리는 전쟁 기념관을 방문했다.
+mercy|The king showed mercy to the prisoners.|왕은 죄수들에게 자비를 베풀었다.
+metaphor|"Time is money" is a metaphor.|'시간은 돈이다'는 은유이다.
+micro|He bought a micro for his small office.|그는 작은 사무실용으로 소형 컴퓨터를 샀다.
+microbe|Microbes are too small to see.|미생물은 너무 작아서 보이지 않는다.
+microcomputer|Early microcomputers were very slow.|초기 마이크로컴퓨터는 매우 느렸다.
+micrometer|A micrometer is one millionth of a meter.|1마이크로미터는 100만분의 1미터이다.
+microorganism|Bacteria are microorganisms.|박테리아는 미생물이다.
+microscopic|The particles are microscopic.|그 입자들은 미세하다.
+microscopy|The lab uses electron microscopy.|그 실험실은 전자 현미경 검사를 사용한다.
+midst|In the midst of the meeting, the power went out.|회의 한가운데 정전이 되었다.
+mighty|The mighty river flows to the sea.|거대한 강이 바다로 흐른다.
+millimeter|The screw is three millimeters wide.|그 나사는 폭이 3밀리미터이다.
+millionaire|He became a millionaire at 30.|그는 30세에 백만장자가 되었다.
+mimic|The parrot is a good mimic.|그 앵무새는 흉내를 잘 낸다.
+miniature|He collects miniature cars.|그는 소형 자동차 모형을 모은다.
+mint|I'd like mint tea.|박하차 주세요.
+misconception|It is a common misconception.|그것은 흔한 오해이다.
+misfortune|He had the misfortune to lose his job.|그는 불운하게도 직장을 잃었다.
+misleading|The title is misleading.|그 제목은 오해의 소지가 있다.
+missile|The missile was tested in the sea.|그 미사일은 바다에서 시험되었다.
+mist|The mountains were covered in mist.|산이 안개에 덮여 있었다.
+mistreat|Animals should never be mistreated.|동물은 절대 학대받아서는 안 된다.
+mistrustful|She is mistrustful of strangers.|그녀는 낯선 사람을 불신한다.
+mock|Students take mock exams before the real one.|학생들은 실제 시험 전에 모의시험을 본다.
+modernization|The modernization of the factory took a year.|공장 현대화에 1년이 걸렸다.
+modernize|The hotel was modernized last year.|그 호텔은 작년에 현대화되었다.
+mogul|He is a media mogul.|그는 언론계의 거물이다.
+momentarily|The line went dead momentarily.|전화가 잠깐 끊겼다.
+momentary|There was a momentary silence.|순간적인 침묵이 흘렀다.
+monastery|The monks live in a monastery.|수도사들은 수도원에서 산다.
+moody|Teenagers can be moody.|십대들은 변덕스러울 수 있다.
+moonlight|We walked in the moonlight.|우리는 달빛 아래를 걸었다.
+moonscape|The desert looked like a moonscape.|사막은 달 표면 풍경처럼 보였다.
+morality|The film raises questions about morality.|그 영화는 도덕성에 관한 질문을 던진다.
+morally|It is morally wrong to steal.|도둑질은 도덕적으로 잘못이다.
+mortal|All humans are mortal.|모든 인간은 죽는다.
+mortar|The bricks are held together with mortar.|벽돌은 회반죽으로 붙어 있다.
+mortify|She was mortified by her mistake.|그녀는 자기 실수에 몹시 창피해했다.
+mother-in-law|My mother-in-law is a great cook.|우리 시어머니는 요리를 아주 잘하신다.
+motivated|She is a highly motivated student.|그녀는 의욕이 넘치는 학생이다.
+motorbike|He rides a motorbike to work.|그는 오토바이를 타고 출근한다.
+motorist|Motorists should drive carefully in snow.|운전자는 눈길에서 조심해서 운전해야 한다.
+mournful|The song has a mournful tune.|그 노래는 애절한 곡조를 갖고 있다.
+mover|The movers carried the sofa upstairs.|이삿짐 운송업자들이 소파를 위층으로 옮겼다.
+moving|It was a very moving film.|정말 감동적인 영화였다.
+muddy|The road was muddy after the rain.|비가 온 뒤 길이 진흙투성이였다.
+mumble|I couldn't understand his mumble.|그가 중얼거리는 말을 알아들을 수 없었다.
+murmur|There was a murmur of voices in the hall.|홀에서 사람들이 속삭이는 소리가 났다.
+muse|He mused about his future.|그는 자기 미래에 대해 사색했다.
+mustache|He has a thick mustache.|그는 콧수염이 짙다.
+mutability|The poem is about the mutability of life.|그 시는 삶의 무상함에 관한 것이다.
+mutable|Plans are mutable.|계획은 바뀔 수 있다.
+mutter|I heard a mutter from the back.|뒤쪽에서 중얼거리는 소리가 들렸다.
+mutton|We had mutton stew for dinner.|우리는 저녁으로 양고기 스튜를 먹었다.
+mystify|His sudden decision mystified everyone.|그의 갑작스러운 결정이 모두를 어리둥절하게 했다.
+nano|The company develops nano technology.|그 회사는 나노 기술을 개발한다.
+narcissistic|He is a bit narcissistic.|그는 조금 자기도취적이다.
+narrator|The narrator of the story is a child.|그 이야기의 화자는 아이이다.
+narrowly|The team narrowly won the game.|그 팀은 간신히 경기에서 이겼다.
+native speaker|She is a native speaker of Spanish.|그녀는 스페인어 원어민이다.
+naughty|The naughty boy broke the window.|버릇없는 소년이 창문을 깼다.
+naval|The city has a large naval base.|그 도시에는 큰 해군 기지가 있다.
+navigate|It's hard to navigate the old streets.|오래된 거리에서 길을 찾기가 어렵다.
+navigation|The car has a navigation system.|그 차에는 내비게이션이 있다.
+navy|He served in the navy.|그는 해군에서 복무했다.
+needless|Needless to say, we were happy.|말할 필요도 없이 우리는 기뻤다.
+negatively|The news affected sales negatively.|그 소식은 매출에 부정적인 영향을 주었다.
+neighboring|They visited a neighboring village.|그들은 이웃 마을을 방문했다.
+neither|I don't like it, and neither does she.|나도 그걸 안 좋아하고 그녀도 안 좋아한다.
+nerves|I always have nerves before a test.|나는 시험 전에 늘 긴장한다.
+nervously|He laughed nervously.|그는 초조하게 웃었다.
+net surfer|He is a heavy net surfer.|그는 인터넷을 많이 한다.
+netsurfer|The site is popular with netsurfers.|그 사이트는 인터넷 사용자들에게 인기가 있다.
+neurosis|She suffers from a mild neurosis.|그녀는 가벼운 신경증을 앓고 있다.
+newscaster|The newscaster read the headlines.|뉴스 진행자가 주요 뉴스를 읽었다.
+newsworthy|The event was not newsworthy.|그 행사는 보도 가치가 없었다.
+nicely|The plan worked nicely.|그 계획은 잘 됐다.
+nightclub|They went to a nightclub on Saturday.|그들은 토요일에 나이트클럽에 갔다.
+nightmare|I had a nightmare last night.|어젯밤 악몽을 꿨다.
+nobility|The palace was home to the nobility.|그 궁전은 귀족들의 거처였다.
+noble|Helping others is a noble act.|남을 돕는 것은 고귀한 행동이다.
+nobleman|The nobleman owned a large estate.|그 귀족은 넓은 영지를 소유했다.
+nomad|The nomads moved with their animals.|유목민들은 가축과 함께 이동했다.
+nominee|She is a nominee for best actress.|그녀는 여우주연상 후보이다.
+non-smoking|I'd like a non-smoking room.|금연실로 주세요.
+nonprofessional|The play was performed by nonprofessional actors.|그 연극은 비전문 배우들이 공연했다.
+northward|The birds fly northward in spring.|새들은 봄에 북쪽으로 날아간다.
+nostril|He breathed through his nostrils.|그는 콧구멍으로 숨을 쉬었다.
+nought|The number has three noughts.|그 숫자에는 0이 세 개 있다.
+nourish|Good food nourishes the body.|좋은 음식은 몸에 영양을 공급한다.
+nourishment|Plants get nourishment from the soil.|식물은 흙에서 영양분을 얻는다.
+novelty|The novelty of the new job soon wore off.|새 일의 새로움은 곧 사라졌다.
+nuisance|The noise is a real nuisance.|그 소음은 정말 성가시다.
+nursery|My daughter goes to a nursery.|우리 딸은 어린이집에 다닌다.
+nut|Nuts are a healthy snack.|견과류는 건강한 간식이다.
+nutshell|In a nutshell, the plan failed.|간단히 말해서 그 계획은 실패했다.
+oath|The president took an oath.|대통령이 선서를 했다.
+obedience|The dog was trained in obedience.|그 개는 복종 훈련을 받았다.
+obedient|The dog is very obedient.|그 개는 아주 순종적이다.
+obey|Children should obey the rules.|아이들은 규칙을 지켜야 한다.
+obsess|He is obsessed with soccer.|그는 축구에 푹 빠져 있다.
+obsession|Shopping became an obsession for her.|쇼핑은 그녀의 집착이 되었다.
+obsessive|He is obsessive about cleanliness.|그는 청결에 강박적이다.
+offend|I didn't mean to offend you.|기분 상하게 할 생각은 없었어요.
+offender|Repeat offenders face longer sentences.|재범자는 더 긴 형을 받는다.
+offhand|I can't tell you the price offhand.|가격을 바로 말씀드릴 수는 없어요.
+ointment|Put some ointment on the cut.|베인 곳에 연고를 바르세요.
+olive|I like olives on my pizza.|나는 피자에 올리브 올리는 것을 좋아한다.
+Olympia|The ancient Olympic Games were held in Olympia.|고대 올림픽은 올림피아에서 열렸다.
+Olympiad|She won a medal at the Math Olympiad.|그녀는 수학 올림피아드에서 메달을 땄다.
+optimist|He is an optimist who always sees the good side.|그는 늘 좋은 면을 보는 낙관주의자이다.
+orator|He was a great orator.|그는 훌륭한 연설가였다.
+orchestral|The film has beautiful orchestral music.|그 영화에는 아름다운 관현악 음악이 있다.
+orchid|She grows orchids at home.|그녀는 집에서 난초를 키운다.
+originality|The judges praised the originality of her design.|심사위원들은 그녀 디자인의 독창성을 칭찬했다.
+ornament|We hung ornaments on the Christmas tree.|우리는 크리스마스트리에 장식품을 걸었다.
+outback|They drove through the Australian outback.|그들은 호주 오지를 차로 지나갔다.
+outdistance|The leader outdistanced the other runners.|선두 주자가 다른 주자들을 훨씬 앞질렀다.
+outdo|He tried to outdo his brother.|그는 형을 능가하려 했다.
+outgrow|Children quickly outgrow their shoes.|아이들은 금방 커서 신발이 작아진다.
+outing|The company organized an outing to the beach.|회사가 해변 야유회를 준비했다.
+outlive|Women usually outlive men.|여성은 대개 남성보다 오래 산다.
+outpatient|He was treated as an outpatient.|그는 외래 환자로 치료받았다.
+outrageous|The price is outrageous.|가격이 터무니없다.
+outshine|She outshone all the other singers.|그녀는 다른 모든 가수보다 뛰어났다.
+outskirts|They live on the outskirts of the city.|그들은 도시 변두리에 산다.
+outwardly|Outwardly, she seemed calm.|겉으로는 그녀가 침착해 보였다.
+overboard|He fell overboard.|그는 배 밖으로 떨어졌다.
+overbook|The airline overbooked the flight.|항공사가 그 항공편 예약을 초과로 받았다.
+overcoat|He wore a heavy overcoat.|그는 두꺼운 외투를 입었다.
+overemphasize|You cannot overemphasize the importance of safety.|안전의 중요성은 아무리 강조해도 지나치지 않다.
+overestimate|We overestimated the number of guests.|우리는 손님 수를 과대평가했다.
+overhear|I overheard their conversation.|나는 그들의 대화를 우연히 들었다.
+overly|He is overly careful.|그는 지나치게 조심스럽다.
+overshadow|The bad news overshadowed the celebration.|나쁜 소식이 축하 행사를 무색하게 했다.
+oversize|She wore an oversize sweater.|그녀는 큼직한 스웨터를 입었다.
+overstep|He overstepped his authority.|그는 자기 권한을 넘어섰다.
+overtake|Don't overtake on a curve.|커브에서는 추월하지 마세요.
+overthrow|The army tried to overthrow the government.|군대가 정부를 전복하려 했다.
+overturn|The boat overturned in the storm.|폭풍에 배가 뒤집혔다.
+owl|An owl hooted in the night.|밤에 올빼미가 울었다.
+ox|The ox pulled the cart.|황소가 수레를 끌었다.
+ozone|The ozone layer protects the earth.|오존층은 지구를 보호한다.
+packed|The train was packed.|기차가 꽉 찼다.
+paintbrush|Clean the paintbrush after use.|사용 후 그림붓을 씻으세요.
+pajamas|He was still in his pajamas.|그는 아직 잠옷 차림이었다.
+pallet|The boxes were stacked on a pallet.|상자들이 운반대 위에 쌓여 있었다.
+pancake|We had pancakes for breakfast.|우리는 아침으로 팬케이크를 먹었다.
+pandemic|The disease became pandemic.|그 질병이 전국적으로 유행하게 되었다.
+papaya|Papaya is a tropical fruit.|파파야는 열대 과일이다.
+paperless|The office is going paperless.|그 사무실은 종이 없는 사무실로 바뀌고 있다.
+paradox|It is a paradox that the richest country has so many poor people.|가장 부유한 나라에 가난한 사람이 그렇게 많다는 것은 역설이다.
+paralysis|The accident caused paralysis in his legs.|그 사고로 그의 다리가 마비되었다.
+paramedic|The paramedic team arrived quickly.|응급 구조팀이 빠르게 도착했다.
+paratrooper|The paratroopers jumped from the plane.|낙하산병들이 비행기에서 뛰어내렸다.
+parliament|The bill was passed by parliament.|그 법안은 의회를 통과했다.
+partisan|The team has many partisans in the city.|그 팀은 도시에 지지자가 많다.
+passionate|She is passionate about music.|그녀는 음악에 열정적이다.
+passionately|He spoke passionately about the project.|그는 그 프로젝트에 대해 열정적으로 말했다.
+pastor|The pastor gave a sermon.|목사님이 설교를 했다.
+pastoral|The painting shows a pastoral scene.|그 그림은 목가적인 풍경을 보여 준다.
+patiently|She waited patiently.|그녀는 참을성 있게 기다렸다.
+patriot|He was a true patriot.|그는 진정한 애국자였다.
+patriotic|They sang patriotic songs.|그들은 애국적인 노래를 불렀다.
+patriotism|The holiday celebrates patriotism.|그 공휴일은 애국심을 기린다.
+pave|The city paved the old road.|시가 오래된 길을 포장했다.
+pavement|Don't park on the pavement.|보도에 주차하지 마세요.
+paw|The cat licked its paw.|고양이가 자기 발을 핥았다.
+pawnbroker|He sold his watch to a pawnbroker.|그는 시계를 전당포 주인에게 팔았다.
+pawnshop|There is a pawnshop on the corner.|모퉁이에 전당포가 있다.
+peacefully|The baby slept peacefully.|아기가 평화롭게 잤다.
+peach|This peach is very sweet.|이 복숭아는 아주 달다.
+pearl|She wore a pearl necklace.|그녀는 진주 목걸이를 했다.
+pebble|The beach is covered with pebbles.|해변이 조약돌로 덮여 있다.
+pedal|Push the pedal to start the bike.|페달을 밟아 자전거를 출발시키세요.
+pedantic|His pedantic comments bored everyone.|그의 현학적인 말에 모두가 지루해했다.
+peel|Put the orange peel in the bin.|오렌지 껍질은 쓰레기통에 넣으세요.
+peep|Let me take a peep at the gift.|선물 좀 살짝 엿보게 해 줘.
+penetrate|The rain penetrated the roof.|비가 지붕을 뚫고 스며들었다.
+penguin|Penguins live in cold places.|펭귄은 추운 곳에 산다.
+penicillin|Penicillin was discovered in 1928.|페니실린은 1928년에 발견되었다.
+pentagon|A pentagon has five sides.|오각형은 변이 다섯 개이다.
+permanence|They wanted a sense of permanence in their home.|그들은 집에서 영속성을 느끼고 싶었다.
+permeate|The smell of coffee permeated the room.|커피 향이 방에 스며들었다.
+perseverance|Success requires perseverance.|성공에는 인내가 필요하다.
+persistence|Her persistence paid off.|그녀의 끈기가 결실을 맺었다.
+personification|She is the personification of kindness.|그녀는 친절의 화신이다.
+personify|In the story, the wind is personified.|그 이야기에서는 바람이 의인화된다.
+perspiration|His shirt was wet with perspiration.|그의 셔츠는 땀으로 젖어 있었다.
+persuasion|It took a lot of persuasion to change his mind.|그의 마음을 바꾸는 데 많은 설득이 필요했다.
+pessimist|Don't be such a pessimist.|그렇게 비관적으로 굴지 마.
+pessimistic|He is pessimistic about the future.|그는 미래에 대해 비관적이다.
+petrified|She was petrified of the dog.|그녀는 그 개를 보고 겁에 질렸다.
+pH|Test the pH of the water.|물의 산도를 측정하세요.
+philosophical|They had a philosophical discussion.|그들은 철학적인 토론을 했다.
+pi|Pi is about 3.14.|원주율은 약 3.14이다.
+pickle|I'd like a pickle with my sandwich.|샌드위치에 피클 주세요.
+picky|She is picky about food.|그녀는 음식에 까다롭다.
+picturesque|It's a picturesque village.|그곳은 그림 같은 마을이다.
+pillowcase|Change the pillowcase every week.|베갯잇을 매주 갈아 주세요.
+pine|The forest is full of pine trees.|그 숲은 소나무로 가득하다.
+pint|He ordered a pint of beer.|그는 맥주 1파인트를 주문했다.
+piracy|Software piracy is illegal.|소프트웨어 불법 복제는 불법이다.
+pirate|The children dressed up as pirates.|아이들이 해적 분장을 했다.
+planning|The event needs careful planning.|그 행사에는 세심한 계획이 필요하다.
+playmate|He was my childhood playmate.|그는 어린 시절 내 놀이 친구였다.
+playwright|Shakespeare was a great playwright.|셰익스피어는 위대한 극작가였다.
+pluck|She plucked a flower from the garden.|그녀는 정원에서 꽃 한 송이를 뽑았다.
+plum|The plum tree is in bloom.|자두나무에 꽃이 피었다.
+pneumonia|He was hospitalized with pneumonia.|그는 폐렴으로 입원했다.
+point of view|From my point of view, the plan is good.|내 관점에서는 그 계획이 좋다.
+pointless|It's pointless to argue.|다투는 건 무의미하다.
+polar bear|Polar bears live in the Arctic.|북극곰은 북극에 산다.
+polio|Children are vaccinated against polio.|아이들은 소아마비 예방 접종을 받는다.
+politeness|Politeness costs nothing.|공손함에는 돈이 들지 않는다.
+polity|The country has a democratic polity.|그 나라는 민주적인 정치 체제를 갖고 있다.
+polo|They watched a polo match.|그들은 폴로 경기를 관람했다.
+ponder|She pondered the question for a moment.|그녀는 잠시 그 질문을 숙고했다.
+popularize|The show helped popularize Korean food.|그 프로그램은 한국 음식을 대중화하는 데 기여했다.
+porch|We sat on the porch.|우리는 현관에 앉았다.
+posh|They had dinner at a posh restaurant.|그들은 고급 식당에서 저녁을 먹었다.
+possessed|He worked like a man possessed.|그는 무언가에 홀린 사람처럼 일했다.
+potent|This medicine is very potent.|이 약은 효과가 매우 강력하다.
+powerfully|The engine runs powerfully.|그 엔진은 강력하게 돌아간다.
+practicality|We need to think about practicality.|실용성을 생각해야 한다.
+practically|The project is practically finished.|그 프로젝트는 사실상 끝났다.
+prance|The horse moved with a proud prance.|말이 자랑스럽게 껑충거리며 움직였다.
+prawn|I ordered prawn curry.|나는 새우 카레를 주문했다.
+predicament|We are in a difficult predicament.|우리는 어려운 곤경에 처해 있다.
+predicate|The report predicates that sales will rise.|그 보고서는 매출이 오를 것이라고 단언한다.
+predicative|In "She is happy," "happy" is predicative.|'She is happy'에서 'happy'는 서술적 용법이다.
+predictive|The company uses predictive software.|그 회사는 예측 소프트웨어를 쓴다.
+prefect|He was a school prefect.|그는 학교 반장이었다.
+preferable|Morning meetings are preferable.|아침 회의가 더 낫다.
+preferably|Call me tomorrow, preferably in the morning.|내일 되도록이면 아침에 전화 주세요.
+prehistoric|The cave has prehistoric paintings.|그 동굴에는 선사 시대 그림이 있다.
+prehuman|Scientists studied the bones of prehumans.|과학자들은 원인의 뼈를 연구했다.
+preindustrial|In preindustrial times, most people were farmers.|산업화 이전 시대에는 대부분이 농부였다.
+prejudge|Don't prejudge people.|사람을 미리 판단하지 마세요.
+preoccupy|Worries about money preoccupied him.|돈 걱정이 그를 사로잡았다.
+prestige|The job brings prestige.|그 직업은 위신을 가져다준다.
+preventive|We take preventive measures against fire.|우리는 화재 예방 조치를 취한다.
+priceless|The painting is priceless.|그 그림은 매우 귀중하다.
+prick|I felt a prick on my finger.|손가락이 따끔 찔렸다.
+prime minister|The prime minister visited the factory.|총리가 공장을 방문했다.
+programming|He is learning computer programming.|그는 컴퓨터 프로그래밍을 배우고 있다.
+prom|She bought a dress for the prom.|그녀는 졸업 파티에 입을 드레스를 샀다.
+prominence|She rose to prominence as a writer.|그녀는 작가로 두각을 나타냈다.
+proponent|He is a strong proponent of the plan.|그는 그 계획의 강력한 지지자이다.
+proposed|The proposed changes will save money.|제안된 변경안은 돈을 절약할 것이다.
+prose|She writes both poetry and prose.|그녀는 시와 산문을 모두 쓴다.
+proudly|He proudly showed us his new car.|그는 자랑스럽게 새 차를 보여 주었다.
+proven|The method is proven to work.|그 방법은 효과가 입증되었다.
+proximity|The hotel's proximity to the beach is a plus.|해변과 가깝다는 것이 그 호텔의 장점이다.
+psychologically|The job is psychologically demanding.|그 일은 심리적으로 힘들다.
+pudding|We had chocolate pudding for dessert.|우리는 디저트로 초콜릿 푸딩을 먹었다.
+pulse|The nurse checked my pulse.|간호사가 내 맥박을 쟀다.
+pumpkin|We made pumpkin soup.|우리는 호박 수프를 만들었다.
+punch|He gave the bag a punch.|그는 샌드백에 주먹을 날렸다.
+punctuality|Punctuality is important in business.|비즈니스에서는 시간 엄수가 중요하다.
+purposeful|She walked with purposeful steps.|그녀는 목적의식 있는 걸음으로 걸었다.
+puzzled|He looked puzzled.|그는 어리둥절해 보였다.
+quarantine|The travelers were kept in quarantine.|여행자들은 격리되었다.
+quarrel|They had a quarrel about money.|그들은 돈 문제로 말다툼을 했다.
+quarrelsome|He is a quarrelsome man.|그는 다투기 좋아하는 사람이다.
+quotable|The speech had many quotable lines.|그 연설에는 인용할 만한 구절이 많았다.
+racism|The school has a policy against racism.|그 학교는 인종 차별에 반대하는 정책이 있다.
+racist|Racist comments are not tolerated.|인종 차별적인 발언은 용납되지 않는다.
+radar|The plane was tracked by radar.|그 비행기는 레이더로 추적되었다.
+radiate|The heater radiates warmth.|난로가 온기를 내뿜는다.
+radically|The city has changed radically.|그 도시는 근본적으로 변했다.
+radium|Marie Curie discovered radium.|마리 퀴리는 라듐을 발견했다.
+rafter|The old house has wooden rafters.|그 오래된 집에는 나무 서까래가 있다.
+rag|Clean the table with a rag.|헝겊으로 탁자를 닦으세요.
+rainbow|We saw a rainbow after the rain.|비가 그친 후 무지개를 보았다.
+rainstorm|We got caught in a rainstorm.|우리는 폭풍우를 만났다.
+ram|A ram has curly horns.|숫양은 뿔이 휘어 있다.
+ramp|The building has a ramp for wheelchairs.|그 건물에는 휠체어용 경사로가 있다.
+ranger|The park ranger showed us the trail.|산림 감시원이 우리에게 산길을 알려 주었다.
+rash|Don't make a rash decision.|성급한 결정을 내리지 마세요.
+rattle|I heard a rattle in the engine.|엔진에서 덜거덕 소리가 났다.
+ravage|The town suffered the ravage of the storm.|그 마을은 폭풍의 파괴를 겪었다.
+real estate|He invested in real estate.|그는 부동산에 투자했다.
+rebellious|She was a rebellious teenager.|그녀는 반항적인 십대였다.
+recollect|I can't recollect his name.|그의 이름이 기억나지 않는다.
+recollection|I have no recollection of that day.|그날에 대한 기억이 없다.
+recommendable|The hotel is highly recommendable.|그 호텔은 강력히 추천할 만하다.
+rectangular|The room is rectangular.|그 방은 직사각형이다.
+redo|I had to redo the report.|보고서를 다시 써야 했다.
+redundant|Remove any redundant words.|불필요한 단어는 빼세요.
+reed|Reeds grow along the river.|강을 따라 갈대가 자란다.
+referent|Each pronoun needs a clear referent noun.|대명사마다 지시 대상인 명사가 분명해야 한다.
+reflective|Wear a reflective vest at night.|밤에는 반사 조끼를 입으세요.
+refrain|Everyone sang the refrain together.|모두가 함께 후렴을 불렀다.
+refuge|They found refuge from the storm.|그들은 폭풍을 피할 곳을 찾았다.
+refute|He refuted the claim.|그는 그 주장을 반박했다.
+reggae|She loves reggae music.|그녀는 레게 음악을 좋아한다.
+regrettably|Regrettably, the event was canceled.|유감스럽게도 행사가 취소되었다.
+rejoin|She rejoined the company after a year.|그녀는 1년 뒤 회사에 다시 합류했다.
+related|The two problems are related.|두 문제는 관련이 있다.
+relativity|Einstein developed the theory of relativity.|아인슈타인은 상대성 이론을 정립했다.
+relay|Our team won the relay race.|우리 팀이 계주에서 이겼다.
+relic|The museum displays ancient relics.|그 박물관은 고대 유물을 전시한다.
+relieved|I was relieved to hear the news.|그 소식을 듣고 안도했다.
+remaining|The remaining tickets are sold out.|남은 표는 매진되었다.
+remains|They found the remains of an old city.|그들은 고대 도시의 유적을 발견했다.
+reorganize|We need to reorganize the files.|파일을 재정리해야 한다.
+repaint|The house needs a repaint.|그 집은 다시 칠할 필요가 있다.
+replica|The statue is a replica.|그 조각상은 복제품이다.
+repress|She tried to repress her anger.|그녀는 화를 억누르려 했다.
+repression|The people suffered years of repression.|국민들은 수년간 억압에 시달렸다.
+reprove|The teacher reproved him for being late.|선생님이 지각했다고 그를 꾸짖었다.
+resonant|He has a deep, resonant voice.|그는 깊고 울림 있는 목소리를 가졌다.
+respectably|He was respectably dressed.|그는 점잖게 차려입었다.
+respected|She is a respected doctor.|그녀는 존경받는 의사이다.
+respiration|The machine helps the patient's respiration.|그 기계는 환자의 호흡을 돕는다.
+respiratory|He has a respiratory infection.|그는 호흡기 감염이 있다.
+retina|The retina is at the back of the eye.|망막은 눈 뒤쪽에 있다.
+revelation|The news was a revelation.|그 소식은 놀라운 폭로였다.
+revenge|The movie is about revenge.|그 영화는 복수에 관한 것이다.
+reverence|They spoke of him with reverence.|그들은 그를 존경을 담아 이야기했다.
+revolve|The earth revolves around the sun.|지구는 태양 주위를 돈다.
+rhinoceros|A rhinoceros has a horn on its nose.|코뿔소는 코에 뿔이 있다.
+rhyme|"Cat" rhymes with "hat."|'cat'은 'hat'과 운이 맞는다.
+rhythmic|We heard the rhythmic sound of the waves.|파도의 리듬감 있는 소리가 들렸다.
+rib|He broke a rib.|그는 갈비뼈가 부러졌다.
+ridge|We walked along the mountain ridge.|우리는 산등성이를 따라 걸었다.
+righteousness|He believed in righteousness.|그는 정의를 믿었다.
+rim|The rim of the cup is chipped.|컵 가장자리가 이가 빠졌다.
+rip|Be careful not to rip the paper.|종이가 찢어지지 않게 조심하세요.
+rite|The wedding is an important rite.|결혼식은 중요한 의식이다.
+ritual|Morning coffee is my daily ritual.|아침 커피는 나의 일상 의식이다.
+roam|The dog went for a roam in the park.|개가 공원을 한 바퀴 배회했다.
+roar|The lion roared.|사자가 으르렁거렸다.
+rocket|The rocket was launched into space.|로켓이 우주로 발사되었다.
+rocky|The path is steep and rocky.|그 길은 가파르고 바위가 많다.
+roommate|My roommate is from Japan.|내 룸메이트는 일본 출신이다.
+rosy|She has rosy cheeks.|그녀는 뺨이 장밋빛이다.
+rub|He rubbed his eyes.|그는 눈을 비볐다.
+rubble|The building was reduced to rubble.|그 건물은 돌무더기가 되었다.
+ruinous|The war was ruinous for the economy.|그 전쟁은 경제에 파멸적이었다.
+rush hour|Avoid driving during rush hour.|출퇴근 시간에는 운전을 피하세요.
+rusty|The old gate is rusty.|그 낡은 문은 녹슬었다.
+sag|There is a sag in the middle of the bed.|침대 가운데가 처져 있다.
+sage|The old sage gave wise advice.|늙은 현인이 현명한 조언을 해 주었다.
+salesmanship|Good salesmanship increased our sales.|뛰어난 판매 기술로 매출이 늘었다.
+saleswoman|The saleswoman helped me choose a dress.|여자 판매원이 드레스 고르는 것을 도와주었다.
+salsa|They danced salsa all night.|그들은 밤새 살사를 췄다.
+salty|The soup is too salty.|수프가 너무 짜다.
+sandstone|The building is made of sandstone.|그 건물은 사암으로 지어졌다.
+sanitary|The kitchen must be kept sanitary.|주방은 위생적으로 유지되어야 한다.
+sanitation|Good sanitation prevents disease.|좋은 위생 시설은 질병을 막는다.
+saving|The new system gives a saving of 20 percent.|새 시스템으로 20퍼센트를 절약할 수 있다.
+savings|She used her savings to buy a car.|그녀는 저축한 돈으로 차를 샀다.
+scar|He has a scar on his arm.|그는 팔에 흉터가 있다.
+scarcely|I could scarcely believe it.|나는 그걸 거의 믿을 수 없었다.
+scarlet|She wore a scarlet dress.|그녀는 진홍색 드레스를 입었다.
+scent|The scent of roses filled the air.|장미 향기가 공기를 가득 채웠다.
+scheduled|The scheduled meeting was canceled.|예정된 회의가 취소되었다.
+scholasticism|He wrote a book on medieval scholasticism.|그는 중세 스콜라 철학에 관한 책을 썼다.
+schoolgirl|The schoolgirl was reading on the bus.|여학생이 버스에서 책을 읽고 있었다.
+scientifically|The claim has not been scientifically proven.|그 주장은 과학적으로 증명되지 않았다.
+scooter|He rides a scooter to work.|그는 스쿠터를 타고 출근한다.
+scramble|People scrambled for the last seats.|사람들이 마지막 자리를 차지하려고 앞다퉜다.
+scribble|The page was covered in scribbles.|그 페이지는 낙서로 덮여 있었다.
+scrooge|Don't be such a scrooge!|그렇게 구두쇠처럼 굴지 마!
+scuba|They went scuba diving in Jeju.|그들은 제주에서 스쿠버 다이빙을 했다.
+scythe|The farmer cut the grass with a scythe.|농부가 큰 낫으로 풀을 베었다.
+second person|"You" is the second person pronoun.|'you'는 2인칭 대명사이다.
+seesaw|The children are playing on the seesaw.|아이들이 시소를 타고 있다.
+self-confidence|The training gave her self-confidence.|그 교육은 그녀에게 자신감을 주었다.
+self-confident|He is a self-confident speaker.|그는 자신감 있는 연사이다.
+selfless|She is a selfless volunteer.|그녀는 이타적인 자원봉사자이다.
+semi-final|Our team reached the semi-final.|우리 팀이 준결승에 진출했다.
+semicolon|Use a semicolon between the two sentences.|두 문장 사이에 세미콜론을 쓰세요.
+senator|The senator voted for the bill.|그 상원 의원은 법안에 찬성표를 던졌다.
+serene|The lake looked serene.|호수가 고요해 보였다.
+setback|The project suffered a setback.|그 프로젝트는 차질을 빚었다.
+sexism|The company has a strict policy against sexism.|그 회사는 성차별에 대해 엄격한 정책을 갖고 있다.
+sexy|The new car has a sleek, sexy design.|새 차는 매끈하고 섹시한 디자인이다.
+shabby|He wore a shabby old coat.|그는 허름하고 낡은 코트를 입었다.
+shaken|She was shaken by the accident.|그녀는 그 사고로 동요했다.
+Shakespearean|She acted in a Shakespearean play.|그녀는 셰익스피어 연극에 출연했다.
+shaky|The table is shaky.|탁자가 흔들거린다.
+shatter|The glass shattered on the floor.|유리가 바닥에서 산산조각 났다.
+shipping|Shipping is free for orders over $30.|30달러 이상 주문하면 배송비가 무료이다.
+shipwreck|Divers explored the old shipwreck.|다이버들이 오래된 난파선을 탐사했다.
+shooting|The shooting of the film starts next week.|영화 촬영은 다음 주에 시작된다.
+shopkeeper|The shopkeeper gave me the change.|가게 주인이 나에게 거스름돈을 주었다.
+shoplift|Anyone caught shoplifting will be reported.|물건을 훔치다 걸리면 신고된다.
+shoplifter|The shoplifter was caught by security.|그 좀도둑은 보안 요원에게 붙잡혔다.
+shoplifting|Shoplifting is a crime.|가게 물건 절도는 범죄이다.
+short-term|This is only a short-term solution.|이것은 단기적인 해결책일 뿐이다.
+shortness|He suffers from shortness of breath.|그는 숨이 차는 증상이 있다.
+showbiz|She wants a career in showbiz.|그녀는 연예계에서 일하고 싶어 한다.
+showcase|The fair is a showcase for new products.|그 박람회는 신제품 공개 행사이다.
+shrug|He shrugged and said nothing.|그는 어깨를 으쓱하고 아무 말도 하지 않았다.
+silverware|Put the silverware on the table.|은식기를 식탁 위에 놓으세요.
+simplification|The rules need simplification.|그 규정은 단순화가 필요하다.
+simultaneous|The speech had simultaneous translation.|그 연설에는 동시통역이 제공되었다.
+since|He left in 2010 and hasn't been back since.|그는 2010년에 떠났고 그 이후로 돌아오지 않았다.
+sincere|Please accept my sincere apologies.|진심으로 사과드립니다.
+sincerity|I don't doubt his sincerity.|나는 그의 진정성을 의심하지 않는다.
+sister-in-law|My sister-in-law lives in Busan.|우리 시누이는 부산에 산다.
+skateboarder|The skateboarder did a cool trick.|스케이트보드 타는 사람이 멋진 묘기를 보였다.
+skilful|She is a skilful driver.|그녀는 운전 실력이 좋다.
+skilfully|He skilfully repaired the clock.|그는 능숙하게 시계를 고쳤다.
+skilled|We need skilled workers.|숙련된 근로자가 필요하다.
+skillful|She is a skillful negotiator.|그녀는 능숙한 협상가이다.
+skillfully|He skillfully avoided the question.|그는 솜씨 있게 질문을 피했다.
+skip|Don't skip breakfast.|아침을 거르지 마세요.
+skylark|A skylark sang high in the sky.|종다리가 하늘 높이 노래했다.
+skyward|The rocket shot skyward.|로켓이 하늘로 치솟았다.
+slam|Please don't slam the door.|문을 쾅 닫지 마세요.
+slang|Avoid using slang in a business email.|업무 이메일에서는 속어를 쓰지 마세요.
+slap|He gave the table a slap.|그는 탁자를 철썩 내리쳤다.
+slaughter|The farm sends its cattle to slaughter.|그 농장은 소를 도축장으로 보낸다.
+sliver|She cut a thin sliver of cake.|그녀는 케이크를 얇게 한 조각 잘랐다.
+sloppy|His work is sloppy.|그의 일은 엉성하다.
+smash|The ball smashed the window.|공이 창문을 박살 냈다.
+smokestack|Smoke rose from the factory smokestack.|공장 굴뚝에서 연기가 올라왔다.
+sneak|He sneaked out of the meeting.|그는 회의에서 살금살금 빠져나갔다.
+sneer|She answered with a sneer.|그녀는 비웃으며 대답했다.
+sniff|The dog sniffed the bag.|개가 가방 냄새를 맡았다.
+snore|His snore kept me awake.|그의 코 고는 소리에 잠을 못 잤다.
+snowball|The children threw snowballs.|아이들이 눈뭉치를 던졌다.
+so-called|The so-called expert gave bad advice.|소위 전문가라는 사람이 나쁜 조언을 했다.
+soak|Give the beans a long soak.|콩을 오래 불려 두세요.
+soaked|I got soaked in the rain.|나는 비에 흠뻑 젖었다.
+soaking|My shoes are soaking wet.|내 신발이 흠뻑 젖었다.
+sob|The child sobbed quietly.|아이가 조용히 흐느꼈다.
+sociable|She is very sociable.|그녀는 아주 사교적이다.
+socialize|I like to socialize with coworkers.|나는 동료들과 어울리는 것을 좋아한다.
+softness|I love the softness of this blanket.|나는 이 담요의 부드러움이 좋다.
+solar|The house uses solar energy.|그 집은 태양 에너지를 쓴다.
+solidity|The building is known for its solidity.|그 건물은 견고함으로 유명하다.
+soliloquy|Hamlet's soliloquy is famous.|햄릿의 독백은 유명하다.
+solo|She went on a solo trip to Europe.|그녀는 혼자 유럽 여행을 떠났다.
+solvent|Clean the brushes with a solvent.|용제로 붓을 닦으세요.
+son-in-law|Their son-in-law is a doctor.|그들의 사위는 의사이다.
+sonnet|Shakespeare wrote many sonnets.|셰익스피어는 많은 소네트를 썼다.
+sophisticated|The phone has sophisticated features.|그 휴대폰에는 정교한 기능이 있다.
+soundtrack|I love the soundtrack of this movie.|나는 이 영화의 사운드트랙을 좋아한다.
+southward|The birds fly southward in winter.|새들은 겨울에 남쪽으로 날아간다.
+Soviet|He lived in the Soviet Union as a child.|그는 어린 시절 소련에서 살았다.
+soybean|Tofu is made from soybeans.|두부는 콩으로 만든다.
+sparerib|We ordered barbecue spareribs.|우리는 바비큐 돼지갈비를 주문했다.
+sparkling|Would you like still or sparkling water?|일반 생수와 탄산수 중 어느 것을 드릴까요?
+sparrow|A sparrow landed on the window.|참새 한 마리가 창문에 앉았다.
+spectacle|The fireworks were a great spectacle.|불꽃놀이는 대단한 장관이었다.
+speeder|The police caught a speeder on the highway.|경찰이 고속도로에서 과속 운전자를 잡았다.
+spellbound|The audience was spellbound.|관객들은 넋을 잃었다.
+splatter|There was a splatter of paint on the floor.|바닥에 페인트가 튀어 있었다.
+spokeswoman|A spokeswoman for the company made a statement.|회사 여성 대변인이 성명을 발표했다.
+sprint|He won the 100-meter sprint.|그는 100미터 달리기에서 우승했다.
+squad|The police sent a special squad.|경찰은 특별 팀을 보냈다.
+squash|We play squash every Thursday.|우리는 목요일마다 스쿼시를 친다.
+stab|He stabbed a piece of meat with his fork.|그는 포크로 고기 한 점을 찍었다.
+stagger|He walked with a stagger.|그는 비틀거리며 걸었다.
+stammer|He stammered when he was nervous.|그는 긴장하면 말을 더듬었다.
+standby|We have a standby generator.|우리에게는 대기용 발전기가 있다.
+standstill|Traffic came to a standstill.|교통이 완전히 멈췄다.
+stanza|The poem has four stanzas.|그 시는 4연으로 되어 있다.
+startle|The noise startled the baby.|소리에 아기가 깜짝 놀랐다.
+starvation|Many animals died of starvation in the drought.|가뭄 동안 많은 동물이 굶어 죽었다.
+starve|Don't starve yourself to lose weight.|살을 빼려고 굶지 마세요.
+starving|I'm starving! Let's eat.|배고파 죽겠어! 먹자.
+statesman|He was a respected statesman.|그는 존경받는 정치가였다.
+statewide|The law applies statewide.|그 법은 주 전체에 적용된다.
+steely|She had a steely look in her eyes.|그녀의 눈빛은 강철 같았다.
+steering wheel|Keep both hands on the steering wheel.|운전대를 두 손으로 잡으세요.
+stepfather|His stepfather is very kind.|그의 새아버지는 아주 친절하다.
+stepmother|She gets along well with her stepmother.|그녀는 새어머니와 잘 지낸다.
+stereotype|That's just a stereotype.|그건 그냥 고정관념이다.
+stern|The teacher gave a stern warning.|선생님이 엄하게 경고했다.
+stew|We had beef stew for dinner.|우리는 저녁으로 소고기 스튜를 먹었다.
+stiff|My neck is stiff.|목이 뻣뻣하다.
+stimulant|Coffee is a mild stimulant.|커피는 가벼운 흥분제이다.
+stimulation|Babies need mental stimulation.|아기에게는 정신적 자극이 필요하다.
+stingy|He is too stingy to buy a gift.|그는 너무 인색해서 선물을 안 산다.
+stink|The garbage stinks.|쓰레기에서 악취가 난다.
+stitch|The doctor put three stitches in the cut.|의사가 상처를 세 바늘 꿰맸다.
+stock market|The stock market fell today.|오늘 주식 시장이 하락했다.
+stockpile|The country has a stockpile of food.|그 나라는 식량을 비축하고 있다.
+stonework|The church has beautiful stonework.|그 교회에는 아름다운 석조물이 있다.
+stool|He sat on a stool at the bar.|그는 바의 등받이 없는 의자에 앉았다.
+stopover|We had a stopover in Tokyo.|우리는 도쿄를 경유했다.
+stopwatch|The coach timed us with a stopwatch.|코치가 초시계로 우리 시간을 쟀다.
+straighten|Straighten your back.|허리를 똑바로 펴세요.
+strait|Ships pass through the narrow strait.|배들이 좁은 해협을 통과한다.
+strand|A strand of hair fell over her face.|머리카락 한 가닥이 그녀의 얼굴에 흘러내렸다.
+strangle|The weeds are strangling the flowers.|잡초가 꽃들을 휘감아 죽이고 있다.
+stride|He strode into the room.|그는 방으로 성큼성큼 걸어 들어왔다.
+striking|She wore a striking red dress.|그녀는 눈에 띄는 빨간 드레스를 입었다.
+stubbornly|He stubbornly refused to change.|그는 완고하게 변화를 거부했다.
+stylist|My hair stylist is very good.|내 헤어 스타일리스트는 실력이 아주 좋다.
+subcontinent|India is a large subcontinent.|인도는 큰 아대륙이다.
+subculture|Skateboarding has its own subculture.|스케이트보드에는 고유한 하위문화가 있다.
+subdivision|Each chapter has several subdivisions.|각 장에는 여러 하위 항목이 있다.
+subjunctive|"If I were you" uses the subjunctive.|'If I were you'는 가정법을 쓴다.
+subplot|The movie has an interesting subplot.|그 영화에는 흥미로운 부차적 줄거리가 있다.
+subside|The pain will subside soon.|통증은 곧 가라앉을 것이다.
+subtitle|We watched the film with subtitles.|우리는 자막을 켜고 영화를 봤다.
+suck|The baby sucked her thumb.|아기가 엄지를 빨았다.
+suffering|The war caused great suffering.|전쟁은 큰 고통을 가져왔다.
+suitably|Please dress suitably for the interview.|면접에 맞게 옷을 입어 주세요.
+sulfur|Sulfur has a strong smell.|황은 냄새가 강하다.
+sulphur|The hot spring smells of sulphur.|그 온천에서는 유황 냄새가 난다.
+sunbeam|A sunbeam came through the window.|햇살이 창문으로 들어왔다.
+superintendent|The building superintendent fixed the heater.|건물 관리자가 난방기를 고쳤다.
+supernatural|The movie is about supernatural events.|그 영화는 초자연적인 사건에 관한 것이다.
+surroundings|The hotel has beautiful surroundings.|그 호텔은 주변 환경이 아름답다.
+suspiciously|He looked at me suspiciously.|그는 나를 의심스럽게 쳐다봤다.
+swan|A swan swam across the lake.|백조가 호수를 가로질러 헤엄쳤다.
+swift|We received a swift reply.|우리는 신속한 답변을 받았다.
+syllable|"Banana" has three syllables.|'banana'는 3음절이다.
+symbolic|The ring is symbolic of their love.|그 반지는 그들의 사랑을 상징한다.
+sympathetic|She was sympathetic to my problem.|그녀는 내 문제에 공감해 주었다.
+sympathize|I sympathize with you.|당신 마음 이해해요.
+synonym|"Big" is a synonym for "large."|'big'은 'large'의 동의어이다.
+tabloid|He reads a tabloid newspaper.|그는 타블로이드 신문을 읽는다.
+tack|She tacked the notice to the board.|그녀는 공지를 게시판에 압정으로 붙였다.
+tactile|Children enjoy tactile toys.|아이들은 촉감 장난감을 좋아한다.
+tame|The deer in the park are very tame.|공원의 사슴들은 아주 순하다.
+tan|She got a tan at the beach.|그녀는 해변에서 선탠을 했다.
+tanned|He came back from vacation tanned.|그는 햇볕에 그을린 채 휴가에서 돌아왔다.
+tatter|The flag was in tatters after the storm.|폭풍 뒤 깃발이 너덜너덜해졌다.
+tattoo|He has a tattoo on his arm.|그는 팔에 문신이 있다.
+taunt|He ignored the taunts of the crowd.|그는 관중의 조롱을 무시했다.
+teaspoon|Add a teaspoon of salt.|소금 한 찻숟가락을 넣으세요.
+telescope|We looked at the stars through a telescope.|우리는 망원경으로 별을 봤다.
+temperate|Korea has a temperate climate.|한국은 온대 기후이다.
+temptation|I resisted the temptation to eat the cake.|나는 케이크를 먹고 싶은 유혹을 참았다.
+tenderly|She held the baby tenderly.|그녀는 아기를 부드럽게 안았다.
+tenderness|He spoke with tenderness.|그는 다정하게 말했다.
+terrace|We had lunch on the terrace.|우리는 테라스에서 점심을 먹었다.
+terrifying|It was a terrifying experience.|무서운 경험이었다.
+that|The movie wasn't that good.|그 영화는 그렇게 좋지 않았다.
+theorist|He is a famous economic theorist.|그는 유명한 경제 이론가이다.
+therapist|She sees a physical therapist every week.|그녀는 매주 물리 치료사를 만난다.
+thermometer|The thermometer shows 30 degrees.|온도계가 30도를 가리킨다.
+thesis|She is writing her thesis.|그녀는 논문을 쓰고 있다.
+thickly|Spread the butter thickly.|버터를 두껍게 바르세요.
+thickness|Measure the thickness of the wall.|벽의 두께를 재세요.
+thigh|He injured his thigh.|그는 허벅지를 다쳤다.
+thinker|Confucius was a great thinker.|공자는 위대한 사상가였다.
+third person|The story is written in the third person.|그 이야기는 3인칭으로 쓰였다.
+thirdly|Thirdly, we need more staff.|셋째로 직원이 더 필요하다.
+though|It was hard work; I enjoyed it, though.|힘든 일이었다. 그렇지만 즐거웠다.
+thoughtful|It was thoughtful of you to call.|전화해 주다니 사려 깊네요.
+thoughtless|That was a thoughtless remark.|그건 생각 없는 발언이었다.
+thread|She needs a needle and thread.|그녀는 바늘과 실이 필요하다.
+thrilled|I'm thrilled to be here.|여기 오게 되어 아주 신나요.
+thrilling|It was a thrilling game.|스릴 넘치는 경기였다.
+tickle|Don't tickle me!|간지럽히지 마!
+tightrope|The acrobat walked on a tightrope.|곡예사가 줄 위를 걸었다.
+timeless|The song has a timeless quality.|그 노래는 시대를 초월하는 매력이 있다.
+timeliness|The timeliness of the report is important.|보고서가 시의적절한 것이 중요하다.
+timing|The timing of the announcement was perfect.|발표 타이밍이 완벽했다.
+tiptoe|She tiptoed past the sleeping baby.|그녀는 잠든 아기 옆을 발끝으로 걸어 지나갔다.
+tiredness|Tiredness can cause accidents.|피로는 사고를 일으킬 수 있다.
+tiresome|The long meeting was tiresome.|긴 회의는 지루했다.
+toenail|Cut your toenails regularly.|발톱을 정기적으로 깎으세요.
+toil|The farmers toiled in the fields.|농부들은 들판에서 힘들게 일했다.
+tolerant|She is tolerant of other opinions.|그녀는 다른 의견에 관대하다.
+tomb|The king's tomb was found in 1922.|그 왕의 무덤은 1922년에 발견되었다.
+torch|Bring a torch for the camping trip.|캠핑에 손전등을 가져가세요.
+tortoiseshell|She wore tortoiseshell glasses.|그녀는 거북딱지 무늬 안경을 썼다.
+torture|Torture is banned under international law.|고문은 국제법으로 금지되어 있다.
+toxic|The factory released toxic waste.|그 공장은 유독성 폐기물을 배출했다.
+trailer|We watched the trailer for the new movie.|우리는 새 영화 예고편을 봤다.
+traitor|He was called a traitor.|그는 배신자로 불렸다.
+tramp|A tramp slept on the bench.|부랑자가 벤치에서 잤다.
+trample|The flowers were ruined by the trample of feet.|사람들이 짓밟아서 꽃들이 망가졌다.
+transcript|Please send your college transcript.|대학 성적 증명서를 보내 주세요.
+transfusion|He needed a blood transfusion.|그는 수혈이 필요했다.
+transient|The pain is transient.|그 통증은 일시적이다.
+transistor|The old radio uses transistors.|그 오래된 라디오는 트랜지스터를 쓴다.
+transitive|"Eat" can be a transitive verb.|'eat'은 타동사가 될 수 있다.
+traverse|The traverse of the mountain took two days.|그 산을 횡단하는 데 이틀이 걸렸다.
+tread|Don't tread on the grass.|잔디를 밟지 마세요.
+trek|We went on a trek in Nepal.|우리는 네팔에서 트레킹을 했다.
+tremendously|The show was tremendously popular.|그 쇼는 엄청나게 인기가 있었다.
+tremor|We felt a small tremor last night.|어젯밤 작은 미진을 느꼈다.
+triangle|Draw a triangle on the paper.|종이에 삼각형을 그리세요.
+trio|A jazz trio played at the café.|재즈 3인조가 카페에서 연주했다.
+trivial|Don't worry about trivial things.|사소한 일에 신경 쓰지 마세요.
+trolley|Put your bags on the trolley.|가방을 손수레에 올리세요.
+trophy|The team won the trophy.|그 팀이 트로피를 차지했다.
+tropic|The tropic heat was hard to bear.|열대의 더위는 견디기 힘들었다.
+troublesome|The old car is troublesome.|그 낡은 차는 골칫거리이다.
+trunk|Put the bags in the trunk.|가방을 트렁크에 넣으세요.
+trusty|He rode his trusty old bike.|그는 믿음직한 낡은 자전거를 탔다.
+truthful|Please be truthful with me.|나에게 솔직해 주세요.
+truthfulness|We value truthfulness.|우리는 진실성을 중시한다.
+tub|She bought a tub of ice cream.|그녀는 아이스크림 한 통을 샀다.
+tuberculosis|Tuberculosis can be treated with medicine.|결핵은 약으로 치료할 수 있다.
+tug|I felt a tug on my sleeve.|누군가 내 소매를 잡아당겼다.
+tulip|The garden is full of tulips.|정원이 튤립으로 가득하다.
+tumor|The doctors removed the tumor.|의사들이 종양을 제거했다.
+turbulent|The country went through a turbulent period.|그 나라는 격동의 시기를 겪었다.
+tutor|She works as an English tutor.|그녀는 영어 개인 교사로 일한다.
+twinkle|There was a twinkle in his eye.|그의 눈이 반짝였다.
+twisted|The metal was twisted in the crash.|충돌로 금속이 뒤틀렸다.
+typhoid|Typhoid is spread through dirty water.|장티푸스는 더러운 물을 통해 퍼진다.
+tyranny|The people fought against tyranny.|국민들은 폭정에 맞서 싸웠다.
+tyrant|The king was a cruel tyrant.|그 왕은 잔인한 폭군이었다.
+unacceptable|This behavior is unacceptable.|이런 행동은 받아들일 수 없다.
+unashamedly|He unashamedly asked for more money.|그는 뻔뻔하게 돈을 더 달라고 했다.
+unattractive|The design is unattractive.|그 디자인은 매력이 없다.
+unaware|I was unaware of the problem.|나는 그 문제를 몰랐다.
+unbearable|The heat was unbearable.|더위가 견딜 수 없었다.
+unbeatable|Our prices are unbeatable.|저희 가격은 따라올 곳이 없습니다.
+uncharacteristic|His anger was uncharacteristic.|그가 화를 낸 것은 이례적이었다.
+unclearly|He spoke unclearly.|그는 불분명하게 말했다.
+uncomfortably|The room was uncomfortably hot.|방이 불편할 정도로 더웠다.
+uncommon|Snow is uncommon here.|이곳에서는 눈이 흔하지 않다.
+unconcerned|He seemed unconcerned about the test.|그는 시험에 무관심해 보였다.
+unconscious|He was unconscious after the fall.|그는 넘어진 후 의식을 잃었다.
+undergraduate|She is an undergraduate at Seoul National University.|그녀는 서울대학교 학부생이다.
+underneath|The cat is hiding underneath the bed.|고양이가 침대 밑에 숨어 있다.
+undersea|They explored the undersea world.|그들은 해저 세계를 탐험했다.
+understandable|His anger is understandable.|그가 화난 것은 이해할 만하다.
+understanding|My boss is very understanding.|우리 상사는 이해심이 아주 많다.
+underwear|Pack enough underwear for the trip.|여행에 속옷을 충분히 챙기세요.
+undreamed|They achieved undreamed success.|그들은 꿈도 못 꾼 성공을 거뒀다.
+undressed|He got undressed and went to bed.|그는 옷을 벗고 잠자리에 들었다.
+unease|There was a sense of unease in the office.|사무실에 불안감이 감돌았다.
+uneasily|She looked around uneasily.|그녀는 불안하게 주위를 둘러봤다.
+unenthusiastic|The team was unenthusiastic about the plan.|팀은 그 계획에 시큰둥했다.
+uneven|The floor is uneven.|바닥이 고르지 않다.
+unfashionable|His clothes are unfashionable.|그의 옷은 유행에 뒤떨어졌다.
+unforeseen|Unforeseen problems delayed the project.|예상치 못한 문제로 프로젝트가 지연되었다.
+ungodly|He called me at an ungodly hour.|그는 터무니없이 이른 시간에 나에게 전화했다.
+unhappiness|Money cannot cure unhappiness.|돈으로 불행을 치료할 수 없다.
+unhelpful|The staff were unhelpful.|직원들이 도움이 안 되었다.
+unimaginable|The pain was unimaginable.|그 고통은 상상할 수 없을 정도였다.
+unimaginably|The view was unimaginably beautiful.|경치가 상상할 수 없을 만큼 아름다웠다.
+united|The family stood united.|그 가족은 하나로 뭉쳤다.
+unjustly|He was unjustly accused.|그는 부당하게 고발당했다.
+unkind|It was unkind of him to say that.|그가 그렇게 말한 것은 불친절했다.
+unlock|Use this key to unlock the door.|이 열쇠로 문을 여세요.
+unmistakable|The smell of coffee was unmistakable.|틀림없는 커피 냄새였다.
+unmistakably|The voice was unmistakably hers.|그 목소리는 틀림없이 그녀의 것이었다.
+unnatural|The color of the food looks unnatural.|그 음식 색깔이 부자연스러워 보인다.
+unofficial|This is an unofficial meeting.|이건 비공식 회의이다.
+unrealistic|The deadline is unrealistic.|그 마감일은 비현실적이다.
+unreasonable|The request is unreasonable.|그 요구는 불합리하다.
+unrest|There was political unrest in the country.|그 나라에 정치적 불안이 있었다.
+unsafe|The old bridge is unsafe.|그 낡은 다리는 안전하지 않다.
+unsatisfactory|The results were unsatisfactory.|결과가 만족스럽지 못했다.
+unselfish|She is kind and unselfish.|그녀는 친절하고 이기적이지 않다.
+unstoppable|The team seemed unstoppable.|그 팀은 막을 수 없어 보였다.
+unsuccessful|The attempt was unsuccessful.|그 시도는 성공하지 못했다.
+unsuitable|The shoes are unsuitable for hiking.|그 신발은 등산에 부적합하다.
+untalented|He thought he was untalented, but he was wrong.|그는 자신이 재능이 없다고 생각했지만 틀렸다.
+unthinkably|Prices rose unthinkably high.|가격이 상상도 못 할 정도로 올랐다.
+untie|Untie the rope.|밧줄을 푸세요.
+untreated|Untreated water can make you sick.|처리되지 않은 물은 병을 일으킬 수 있다.
+untrimmed|His beard was untrimmed.|그의 수염은 다듬어지지 않았다.
+unusualness|The unusualness of the design attracted attention.|그 디자인의 특이함이 관심을 끌었다.
+unwise|It would be unwise to quit now.|지금 그만두는 것은 현명하지 못하다.
+unworldly|She is shy and unworldly.|그녀는 수줍고 세상 물정을 모른다.
+upbringing|He had a strict upbringing.|그는 엄격하게 자랐다.
+upright|Keep your seat in the upright position.|좌석을 똑바로 세워 주세요.
+upside down|The picture is upside down.|그림이 거꾸로 걸려 있다.
+usher|The guide ushered us into the hall.|안내원이 우리를 홀로 안내했다.
+utter|She didn't utter a word.|그녀는 한마디도 하지 않았다.
+utterly|I was utterly exhausted.|나는 완전히 지쳤다.
+valentine|He sent her a valentine.|그는 그녀에게 밸런타인 카드를 보냈다.
+vanish|The sun vanished behind the clouds.|해가 구름 뒤로 사라졌다.
+vanity|His vanity made him buy expensive clothes.|그는 허영심 때문에 비싼 옷을 샀다.
+varied|The menu is varied.|메뉴가 다양하다.
+verbally|He was warned verbally.|그는 구두로 경고를 받았다.
+verse|Read the first verse of the poem.|그 시의 첫 절을 읽으세요.
+vibrate|My phone vibrated in my pocket.|주머니 속 휴대폰이 진동했다.
+vibration|We felt the vibration of the train.|기차의 진동이 느껴졌다.
+vigor|She works with great vigor.|그녀는 대단한 활력으로 일한다.
+vigorous|Vigorous exercise is good for the heart.|활발한 운동은 심장에 좋다.
+vigorously|He shook his head vigorously.|그는 세차게 고개를 저었다.
+villa|They rented a villa by the sea.|그들은 바닷가 별장을 빌렸다.
+villager|The villagers welcomed us.|마을 사람들이 우리를 환영했다.
+vinegar|Add a little vinegar to the salad.|샐러드에 식초를 약간 넣으세요.
+virtual reality|The game uses virtual reality.|그 게임은 가상 현실을 사용한다.
+visibly|She was visibly upset.|그녀는 눈에 띄게 속상해했다.
+vocalist|She is the band's lead vocalist.|그녀는 그 밴드의 리드 보컬이다.
+vomit|The nurse cleaned up the vomit.|간호사가 토사물을 치웠다.
+waist|The pants are too big at the waist.|그 바지는 허리가 너무 크다.
+waistcoat|He wore a suit with a waistcoat.|그는 조끼가 있는 정장을 입었다.
+walkabout|The mayor went on a walkabout in the market.|시장은 시장 곳곳을 걸어 다니며 둘러보았다.
+walker|The trail is popular with walkers.|그 산길은 걷는 사람들에게 인기가 있다.
+wallboard|The walls are made of wallboard.|벽은 벽판으로 되어 있다.
+walnut|The cake has walnuts in it.|그 케이크에는 호두가 들어 있다.
+warship|A warship sailed into the harbor.|군함이 항구로 들어왔다.
+wartime|Food was scarce in wartime.|전시에는 식량이 부족했다.
+wasp|A wasp stung me.|말벌에 쏘였다.
+waterproof|This watch is waterproof.|이 시계는 방수가 된다.
+weakly|He smiled weakly.|그는 힘없이 미소 지었다.
+wearisome|The long journey was wearisome.|긴 여정은 지루했다.
+weary|She looked weary after work.|그녀는 퇴근 후 지쳐 보였다.
+weave|The fabric has a tight weave.|그 천은 짜임새가 촘촘하다.
+weed|We pulled weeds in the garden.|우리는 정원의 잡초를 뽑았다.
+well-balanced|She eats a well-balanced diet.|그녀는 균형 잡힌 식사를 한다.
+well-built|He is tall and well-built.|그는 키가 크고 체격이 좋다.
+well-organized|The event was well-organized.|그 행사는 잘 준비되었다.
+well-paid|She has a well-paid job.|그녀는 보수가 좋은 일을 한다.
+whip|The cook whipped the cream.|요리사가 크림을 휘저었다.
+whiskey|He ordered a glass of whiskey.|그는 위스키 한 잔을 주문했다.
+whisky|Scotland is famous for its whisky.|스코틀랜드는 위스키로 유명하다.
+widow|The widow lives alone in a small house.|그 미망인은 작은 집에서 혼자 산다.
+width|Measure the width of the window.|창문의 폭을 재세요.
+wilderness|They hiked through the wilderness.|그들은 황야를 걸어서 지나갔다.
+will|She has a strong will to succeed.|그녀는 성공하려는 의지가 강하다.
+willing|Are you willing to help?|기꺼이 도와줄 수 있어요?
+willingly|He willingly agreed to the plan.|그는 기꺼이 그 계획에 동의했다.
+winding|We drove along a winding road.|우리는 구불구불한 길을 따라 운전했다.
+windshield|The windshield is dirty.|앞유리가 더럽다.
+wink|She gave me a wink.|그녀가 나에게 윙크했다.
+wit|He is known for his wit.|그는 재치로 유명하다.
+witty|She gave a witty answer.|그녀는 재치 있는 대답을 했다.
+wolf|A wolf howled in the forest.|숲에서 늑대가 울부짖었다.
+wondrous|The cave is a wondrous place.|그 동굴은 경이로운 곳이다.
+woodcarving|The shop sells woodcarvings.|그 가게는 목각품을 판다.
+wordlessly|He wordlessly handed me the letter.|그는 말없이 나에게 편지를 건넸다.
+workaholic|My father is a workaholic.|우리 아버지는 일 중독자이다.
+workbench|The tools are on the workbench.|공구들은 작업대 위에 있다.
+workman|A workman is fixing the roof.|일꾼이 지붕을 고치고 있다.
+worktable|Clear the worktable before you start.|시작하기 전에 작업대를 정리하세요.
+worldly|He gave up all his worldly possessions.|그는 모든 세속적인 소유물을 포기했다.
+worldview|Travel changed my worldview.|여행이 내 세계관을 바꿨다.
+worm|The bird caught a worm.|새가 벌레를 잡았다.
+worn out|My shoes are worn out.|내 신발이 닳아 해졌다.
+worn-out|I feel worn-out after work.|퇴근 후 녹초가 된다.
+wornout|The wornout workers went home early.|지친 일꾼들이 일찍 집에 갔다.
+worrying|The news is worrying.|그 소식은 걱정스럽다.
+worship|The temple is a place of worship.|그 사원은 예배하는 곳이다.
+worthless|The old coins are worthless.|그 옛 동전들은 가치가 없다.
+wreck|Divers found the wreck of an old ship.|잠수부들이 오래된 배의 잔해를 발견했다.
+wrongly|He was wrongly accused.|그는 잘못 고발당했다.
+X-ray|The doctor took an X-ray of my arm.|의사가 내 팔 엑스레이를 찍었다.
+yacht|They sailed around the island on a yacht.|그들은 요트를 타고 섬 주위를 항해했다.
+yawn|She covered her yawn with her hand.|그녀는 손으로 하품을 가렸다.
+yearn|He yearned for home.|그는 고향을 그리워했다.
+youthful|She has a youthful look.|그녀는 젊어 보인다.
+yummy|This cake is yummy!|이 케이크 맛있어요!
+zebra|A zebra has black and white stripes.|얼룩말에는 검고 흰 줄무늬가 있다.
+zip|The zip on my bag is broken.|내 가방 지퍼가 고장 났다.
+zoom|Use the zoom to take a closer photo.|줌을 써서 더 가까이 찍으세요.
+abound|Fish abound in this river.|이 강에는 물고기가 풍부하다.
+abstraction|The painting is an abstraction.|그 그림은 추상화이다.
+accustomed|I'm accustomed to getting up early.|나는 일찍 일어나는 데 익숙하다.
+acidic|Lemons are acidic.|레몬은 산성이다.
+acoustic|He plays the acoustic guitar.|그는 어쿠스틱 기타를 친다.
+acoustically|The hall is acoustically perfect.|그 홀은 음향상 완벽하다.
+acoustics|The concert hall has great acoustics.|그 콘서트홀은 음향 시설이 훌륭하다.
+acutely|She was acutely aware of the danger.|그녀는 위험을 강렬하게 느끼고 있었다.
+adjoin|The kitchen adjoins the dining room.|부엌은 식당과 붙어 있다.
+adjoining|We booked adjoining rooms.|우리는 붙어 있는 방을 예약했다.
+adjustable|The chair has an adjustable height.|그 의자는 높이 조절이 된다.
+adrenaline|The ride gave me a rush of adrenaline.|그 놀이 기구를 타니 아드레날린이 솟구쳤다.
+advantageous|The deal is advantageous for both sides.|그 거래는 양측에 유리하다.
+adversary|He defeated his old adversary.|그는 오랜 적수를 꺾었다.
+aesthetic|The building has aesthetic value.|그 건물은 미적 가치가 있다.
+aesthetically|The design is aesthetically pleasing.|그 디자인은 미학적으로 보기 좋다.
+agreeable|We had an agreeable evening.|우리는 기분 좋은 저녁을 보냈다.
+aimless|He felt his life was aimless.|그는 자기 삶이 목적 없다고 느꼈다.
+aimlessly|We walked aimlessly around the city.|우리는 목적 없이 도시를 돌아다녔다.
+alienate|The new policy may alienate customers.|새 정책은 고객을 멀어지게 할 수 있다.
+alignment|Check the alignment of the wheels.|바퀴 정렬을 점검하세요.
+alleviate|The medicine will alleviate the pain.|그 약이 통증을 완화할 것이다.
+altruism|Her altruism is admirable.|그녀의 이타심은 감탄할 만하다.
+altruistic|He did it for altruistic reasons.|그는 이타적인 이유로 그 일을 했다.
+amplification|The microphone needs more amplification.|마이크 소리를 더 증폭해야 한다.
+amply|The effort was amply rewarded.|그 노력은 충분히 보상받았다.
+anchored|The boat was anchored near the shore.|배가 해안 근처에 고정되어 있었다.
+animatedly|They talked animatedly about the trip.|그들은 여행에 대해 활기차게 이야기했다.
+anthropologist|The anthropologist studied the tribe.|그 인류학자는 그 부족을 연구했다.
+anthropology|She majored in anthropology.|그녀는 인류학을 전공했다.
+anticlimactic|The ending of the movie was anticlimactic.|그 영화의 결말은 용두사미였다.
+antics|The children laughed at the clown's antics.|아이들은 광대의 익살스러운 짓에 웃었다.
+antiquated|The office uses antiquated computers.|그 사무실은 낡은 컴퓨터를 쓴다.
+antiquity|The temple dates from antiquity.|그 사원은 고대부터 있었다.
+appal|The news appalled everyone.|그 소식은 모두를 섬뜩하게 했다.
+appall|The cruelty appalled us.|그 잔인함이 우리를 섬뜩하게 했다.
+appalling|The conditions were appalling.|상황이 끔찍했다.
+appallingly|The service was appallingly slow.|서비스가 끔찍하게 느렸다.
+apprenticeship|He did a three-year apprenticeship.|그는 3년간 견습 기간을 거쳤다.
+apt|That's an apt description.|그건 적절한 묘사이다.
+apt to|He is apt to forget things.|그는 잘 잊어버리는 경향이 있다.
+aqua|She painted the wall aqua.|그녀는 벽을 청록색으로 칠했다.
+aquarium|We visited the aquarium.|우리는 수족관을 방문했다.
+artistically|She is artistically talented.|그녀는 예술적 재능이 있다.
+astray|The letter went astray.|그 편지는 분실되었다.
+atmospheric|The restaurant has an atmospheric interior.|그 식당은 분위기 있는 인테리어를 갖췄다.
+avid|He is an avid reader.|그는 열렬한 독서가이다.
+baldly|He stated the facts baldly.|그는 사실을 노골적으로 말했다.
+batter|The waves battered the ship.|파도가 배를 두들겼다.
+battered|He drives a battered old car.|그는 낡아 빠진 차를 몬다.
+bearded|A bearded man opened the door.|수염 난 남자가 문을 열었다.
+beguiling|She has a beguiling smile.|그녀의 미소는 매력적이다.
+beguilingly|The offer sounded beguilingly simple.|그 제안은 매혹적일 만큼 간단하게 들렸다.
+believably|The actor played the role believably.|그 배우는 그 역할을 그럴듯하게 연기했다.
+benign|The tumor was benign.|그 종양은 양성이었다.
+benignly|The old man smiled benignly.|노인이 상냥하게 미소 지었다.
+bequeath|He bequeathed his house to his son.|그는 집을 아들에게 유증했다.
+billiards|They played billiards after dinner.|그들은 저녁 식사 후 당구를 쳤다.
+blankness|There was a blankness in his eyes.|그의 눈에는 공허함이 있었다.
+bliss|The holiday was pure bliss.|그 휴가는 더없이 행복했다.
+blister|I got a blister from my new shoes.|새 신발 때문에 물집이 생겼다.
+blithely|He blithely ignored the warning.|그는 태평하게 경고를 무시했다.
+blockbuster|The movie became a summer blockbuster.|그 영화는 여름 흥행작이 되었다.
+bouquet|The bride held a bouquet of roses.|신부가 장미 꽃다발을 들었다.
+brainwash|Ads can brainwash people.|광고는 사람들을 세뇌할 수 있다.
+brainwashing|The film is about brainwashing.|그 영화는 세뇌에 관한 것이다.
+bribery|The official was charged with bribery.|그 공무원은 뇌물 수수로 기소되었다.
+bubbly|She has a bubbly personality.|그녀는 쾌활한 성격이다.
+buffoon|He acted like a buffoon at the party.|그는 파티에서 어릿광대처럼 굴었다.
+bulk up|He is trying to bulk up at the gym.|그는 헬스장에서 몸집을 키우려 하고 있다.
+bulky|The package is too bulky to carry.|그 소포는 너무 부피가 커서 들고 갈 수 없다.
+bureaucratically|The office is run bureaucratically.|그 사무실은 관료적으로 운영된다.
+buzzer|Press the buzzer to enter.|들어오려면 버저를 누르세요.
+bypass|The new road bypasses the town.|새 도로는 마을을 우회한다.
+calorie|This drink has zero calories.|이 음료는 칼로리가 0이다.
+candid|She gave a candid answer.|그녀는 솔직한 대답을 했다.
+candidly|He spoke candidly about his mistakes.|그는 자기 실수에 대해 솔직하게 말했다.
+carpentry|He learned carpentry from his father.|그는 아버지에게서 목공을 배웠다.
+cavity|The dentist found a cavity.|치과 의사가 충치를 발견했다.
+ceaseless|The ceaseless noise kept me awake.|끊임없는 소음 때문에 잠을 못 잤다.
+ceaselessly|She worked ceaselessly.|그녀는 끊임없이 일했다.
+cessation|The two sides agreed to a cessation of fighting.|양측은 전투 중단에 합의했다.
+chaotically|People ran chaotically through the station.|사람들이 혼란스럽게 역을 뛰어다녔다.
+characterization|The novel has strong characterization.|그 소설은 성격 묘사가 뛰어나다.
+chauffeur|A chauffeur drove the CEO to the airport.|운전기사가 CEO를 공항까지 태워다 주었다.
+chill|Chill the wine before serving.|내기 전에 와인을 차게 하세요.
+chisel|He chiseled his name into the stone.|그는 돌에 자기 이름을 끌로 새겼다.
+chiselled|The actor has a chiselled face.|그 배우는 얼굴 윤곽이 뚜렷하다.
+churn|The boat churned the water.|배가 물을 휘저었다.
+clammy|My hands were clammy with nerves.|긴장해서 손이 끈적끈적했다.
+clan|The clan has lived here for centuries.|그 씨족은 수 세기 동안 여기서 살았다.
+classy|They went to a classy restaurant.|그들은 고급스러운 식당에 갔다.
+claustrophobia|He suffers from claustrophobia.|그는 폐소 공포증이 있다.
+claustrophobic|The small room felt claustrophobic.|그 작은 방은 답답하게 느껴졌다.
+cleanly|The knife cut cleanly through the bread.|칼이 빵을 깔끔하게 잘랐다.
+clench|He clenched his fists.|그는 주먹을 꽉 쥐었다.
+cleverness|Her cleverness impressed the teacher.|그녀의 영리함이 선생님을 감탄하게 했다.
+climactic|The climactic scene was exciting.|절정 장면이 흥미진진했다.
+climax|The climax of the story is surprising.|그 이야기의 절정은 놀랍다.
+cloak|The magician wore a black cloak.|마술사는 검은 망토를 입었다.
+closeness|There is a closeness between the sisters.|그 자매 사이에는 친밀함이 있다.
+clutch|She clutched her bag tightly.|그녀는 가방을 꽉 움켜잡았다.
+clutter|Clear the clutter from your desk.|책상 위 잡동사니를 치우세요.
+collaborate|The two companies collaborated on the project.|두 회사가 그 프로젝트에서 협력했다.
+collaborative|It was a collaborative effort.|그것은 협력의 결과였다.
+collaborator|He was my collaborator on the book.|그는 그 책의 공동 작업자였다.
+commend|The manager commended her work.|매니저가 그녀의 작업을 칭찬했다.
+commendation|He received a commendation for bravery.|그는 용감함으로 표창을 받았다.
+commercially|The product was commercially successful.|그 제품은 상업적으로 성공했다.
+complementary|The two skills are complementary.|두 기술은 서로 보완적이다.
+compliant|The product is compliant with safety rules.|그 제품은 안전 규정을 준수한다.
+compliantly|The dog sat compliantly.|개가 고분고분하게 앉았다.
+compromised|The security of the system was compromised.|시스템 보안이 손상되었다.
+compulsion|He felt a compulsion to check his phone.|그는 휴대폰을 확인하고 싶은 강박을 느꼈다.
+con|He conned them out of their money.|그는 그들을 속여 돈을 빼앗았다.
+concerto|The orchestra played a piano concerto.|오케스트라가 피아노 협주곡을 연주했다.
+concur|I concur with your opinion.|당신 의견에 동의합니다.
+conditionally|The offer was accepted conditionally.|그 제안은 조건부로 수락되었다.
+confide|She confided her secret to her friend.|그녀는 친구에게 비밀을 털어놓았다.
+confinement|The animals were kept in confinement.|그 동물들은 갇혀 지냈다.
+conformity|There is pressure for conformity at school.|학교에는 순응하라는 압박이 있다.
+congregate|People congregated in the square.|사람들이 광장에 모였다.
+conjure|The magician conjured a rabbit from a hat.|마술사가 모자에서 토끼를 만들어 냈다.
+connoisseur|He is a wine connoisseur.|그는 와인 감정가이다.
+conscientious|She is a conscientious worker.|그녀는 성실한 직원이다.
+conscientiously|He did his job conscientiously.|그는 양심적으로 자기 일을 했다.
+conservatory|She studied piano at the conservatory.|그녀는 음악 학교에서 피아노를 공부했다.
+conserve|Please conserve water.|물을 아껴 주세요.
+contested|It was a closely contested election.|그것은 접전이 벌어진 선거였다.
+contextual|The word has a contextual meaning.|그 단어에는 문맥상의 의미가 있다.
+contextually|The word is used contextually.|그 단어는 문맥에 따라 쓰인다.
+convoluted|The instructions are convoluted.|설명이 난해하다.
+corps|He joined the Marine Corps.|그는 해병대에 입대했다.
+cost-effective|Solar power is cost-effective.|태양광 발전은 비용 효율이 높다.
+coupled|High prices coupled with low wages hurt families.|높은 물가와 낮은 임금이 맞물려 가정에 타격을 주었다.
+crave|I crave chocolate when I'm tired.|나는 피곤하면 초콜릿이 당긴다.
+craving|I have a craving for pizza.|피자가 무척 먹고 싶다.
+creamy|The soup is rich and creamy.|그 수프는 진하고 부드럽다.
+credibly|He spoke credibly about the issue.|그는 그 문제에 대해 믿을 수 있게 말했다.
+criteria|What are the criteria for selection?|선발 기준이 무엇인가요?
+crudely|The sign was crudely painted.|그 간판은 조잡하게 칠해져 있었다.
+crumb|There are crumbs on the table.|탁자에 부스러기가 있다.
+crumble|The old wall is crumbling.|낡은 벽이 부스러지고 있다.
+customary|It is customary to tip in America.|미국에서는 팁을 주는 것이 관례이다.
+cynic|He is a cynic about politics.|그는 정치에 대해 냉소적인 사람이다.
+cynical|She is cynical about love.|그녀는 사랑에 대해 냉소적이다.
+cynically|He smiled cynically.|그는 냉소적으로 웃었다.
+cynicism|There is a lot of cynicism about the election.|선거에 대한 냉소가 많다.
+damply|His hair hung damply on his forehead.|그의 머리카락이 이마에 축축하게 붙어 있었다.
+darkroom|The photographer works in a darkroom.|그 사진작가는 암실에서 일한다.
+daunt|The size of the task did not daunt her.|일의 규모가 그녀를 겁먹게 하지 못했다.
+daunting|Starting a new job can be daunting.|새 일을 시작하는 것은 벅찰 수 있다.
+daydream|She was lost in a daydream.|그녀는 백일몽에 빠져 있었다.
+debut|The singer made her debut last year.|그 가수는 작년에 데뷔했다.
+deceit|The story is full of lies and deceit.|그 이야기는 거짓말과 속임수로 가득하다.
+degradation|Pollution causes the degradation of the environment.|오염은 환경 악화를 일으킨다.
+degrade|Heat can degrade the quality of the battery.|열은 배터리 품질을 저하시킬 수 있다.
+degrading|The work was degrading.|그 일은 모욕적이었다.
+demo|The company gave a demo of the new app.|그 회사는 새 앱의 시연을 했다.
+demographically|The city is demographically young.|그 도시는 인구 통계학적으로 젊다.
+demography|She studies demography.|그녀는 인구 통계학을 연구한다.
+demolition|The demolition of the old building began.|오래된 건물의 철거가 시작되었다.
+depiction|The film's depiction of war is realistic.|그 영화의 전쟁 묘사는 사실적이다.
+deprivation|Sleep deprivation affects your health.|수면 부족은 건강에 영향을 준다.
+descent|The plane began its descent.|비행기가 하강을 시작했다.
+desertion|The soldier was charged with desertion.|그 군인은 탈영 혐의를 받았다.
+detest|I detest waiting.|나는 기다리는 게 정말 싫다.
+detestable|His behavior was detestable.|그의 행동은 혐오스러웠다.
+detriment|He worked late to the detriment of his health.|그는 건강을 해쳐 가며 늦게까지 일했다.
+detrimental|Smoking is detrimental to your health.|흡연은 건강에 해롭다.
+detrimentally|The changes affected the company detrimentally.|그 변화는 회사에 해로운 영향을 주었다.
+detritus|The beach was covered in detritus after the storm.|폭풍 후 해변이 쓰레기로 덮였다.
+devotee|He is a devotee of jazz.|그는 재즈의 열성 팬이다.
+digitalization|The digitalization of records saves space.|기록의 디지털화는 공간을 절약한다.
+digitalize|The library plans to digitalize its old books.|그 도서관은 옛 책을 디지털화할 계획이다.
+discourse|The book analyzes political discourse.|그 책은 정치 담론을 분석한다.
+disdain|She looked at him with disdain.|그녀는 경멸스럽게 그를 봤다.
+disillusionment|There is growing disillusionment with politics.|정치에 대한 환멸이 커지고 있다.
+dislodge|The wind dislodged a tile from the roof.|바람이 지붕 타일 하나를 떼어 냈다.
+dismally|The team performed dismally.|그 팀은 형편없는 경기를 했다.
+dismay|The news dismayed the fans.|그 소식에 팬들이 실망했다.
+dispensary|Get your medicine at the dispensary.|조제실에서 약을 받으세요.
+dispense|The machine dispenses drinks.|그 기계는 음료를 내준다.
+disquieting|The report contains disquieting news.|그 보고서에는 불안한 소식이 담겨 있다.
+dissect|Students dissect frogs in biology class.|학생들은 생물 수업에서 개구리를 해부한다.
+dissection|The dissection was done in the lab.|해부는 실험실에서 이루어졌다.
+dither|Stop dithering and make a decision.|그만 망설이고 결정하세요.
+diverge|The two roads diverge here.|두 길은 여기서 갈라진다.
+divergence|There is a divergence of opinion.|의견 차이가 있다.
+divergent|They have divergent views.|그들은 서로 다른 견해를 갖고 있다.
+docile|The horse is very docile.|그 말은 아주 유순하다.
+docilely|The dog followed him docilely.|개가 유순하게 그를 따랐다.
+domestically|The product is made domestically.|그 제품은 국내에서 만들어진다.
+domesticate|Humans domesticated dogs long ago.|인간은 오래전에 개를 길들였다.
+domestication|The domestication of animals changed human life.|동물의 가축화는 인간의 삶을 바꿨다.
+dominantly|The town is dominantly young.|그 마을은 젊은 층이 우세하다.
+domination|The company aims for market domination.|그 회사는 시장 지배를 목표로 한다.
+dramatist|He is a famous dramatist.|그는 유명한 극작가이다.
+dutiful|She is a dutiful daughter.|그녀는 순종적인 딸이다.
+dutifully|He dutifully visited his parents every week.|그는 매주 충실하게 부모님을 찾아뵈었다.
+dynamically|The company is growing dynamically.|그 회사는 역동적으로 성장하고 있다.
+eccentric|He is a bit eccentric.|그는 좀 별나다.
+eccentrically|She dresses eccentrically.|그녀는 옷을 별나게 입는다.
+eclectic|He has eclectic taste in music.|그는 음악 취향이 다양하다.
+eclectically|The room is eclectically decorated.|그 방은 여러 스타일을 섞어 꾸며져 있다.
+ecstatically|The fans cheered ecstatically.|팬들이 황홀하게 환호했다.
+effortless|She made it look effortless.|그녀는 그것을 힘들지 않은 것처럼 보이게 했다.
+ego|He has a big ego.|그는 자존심이 세다.
+elaboration|The plan needs further elaboration.|그 계획은 더 정교하게 다듬어야 한다.
+elevation|The village is at an elevation of 1,000 meters.|그 마을은 해발 1천 미터에 있다.
+elitist|He was accused of being an elitist.|그는 엘리트주의자라는 비난을 받았다.
+elongate|The shadows elongate in the evening.|저녁이 되면 그림자가 길어진다.
+elude|The answer eluded me.|답이 떠오르지 않았다.
+elusive|Success has been elusive for the team.|그 팀에게 성공은 잡히지 않았다.
+embark|We embarked on a new project.|우리는 새 프로젝트에 착수했다.
+engross|The book engrossed me for hours.|그 책에 나는 몇 시간 동안 몰두했다.
+engrossing|It was an engrossing story.|몰입하게 하는 이야기였다.
+enormously|The show was enormously popular.|그 쇼는 엄청나게 인기가 있었다.
+enterprising|He is an enterprising young man.|그는 진취적인 젊은이이다.
+enviable|She has an enviable job.|그녀는 부러운 직업을 가졌다.
+envisage|We envisage growth next year.|우리는 내년에 성장을 예상한다.
+ethically|The company acts ethically.|그 회사는 윤리적으로 행동한다.
+evoke|The song evokes memories of my childhood.|그 노래는 어린 시절의 기억을 불러일으킨다.
+ewe|The ewe had two lambs.|암양이 새끼 양 두 마리를 낳았다.
+exhibitionist|He is a bit of an exhibitionist on stage.|그는 무대 위에서 좀 과시욕이 강하다.
+exhilarate|The fast ride exhilarated the kids.|빠른 놀이 기구에 아이들이 들떴다.
+exhilarating|Skiing is exhilarating.|스키는 신난다.
+exhilaration|She felt exhilaration at the finish line.|그녀는 결승선에서 흥분을 느꼈다.
+exodus|There was an exodus of people from the city.|도시에서 사람들이 대거 빠져나갔다.
+exotically|The room was exotically decorated.|그 방은 이국적으로 꾸며져 있었다.
+exploitation|The law protects workers from exploitation.|그 법은 근로자를 착취로부터 보호한다.
+explosively|The market grew explosively.|시장이 폭발적으로 성장했다.
+exterior|The exterior of the house is white.|그 집의 외부는 흰색이다.
+extortion|He was arrested for extortion.|그는 강탈 혐의로 체포되었다.
+extravagance|The party was an extravagance.|그 파티는 사치였다.
+exuberance|The children's exuberance filled the room.|아이들의 넘치는 활기가 방을 가득 채웠다.
+exuberant|The exuberant crowd cheered.|활기 넘치는 군중이 환호했다.
+exuberantly|They danced exuberantly.|그들은 열광적으로 춤췄다.
+fabulously|He is fabulously rich.|그는 엄청난 부자이다.
+facial|She had a facial at the spa.|그녀는 스파에서 얼굴 관리를 받았다.
+facilitation|The facilitation of trade is important.|무역 촉진은 중요하다.
+fanatic|He is a football fanatic.|그는 축구광이다.
+fanatically|She cleans her house fanatically.|그녀는 광적으로 집을 청소한다.
+fanciful|The story is fanciful.|그 이야기는 공상적이다.
+farce|The meeting was a farce.|그 회의는 웃음거리였다.
+fatality|There was one fatality in the accident.|그 사고로 한 명이 사망했다.
+favorably|The plan was viewed favorably.|그 계획은 호의적인 평가를 받았다.
+ferocious|The dog looked ferocious.|그 개는 사나워 보였다.
+ferociously|The wind blew ferociously.|바람이 사납게 불었다.
+fiddle|Stop fiddling with your phone.|휴대폰 그만 만지작거려.
+fiddler|The fiddler played a lively tune.|바이올린 연주자가 경쾌한 곡을 연주했다.
+fiddly|The small buttons are fiddly.|작은 단추들은 다루기 까다롭다.
+fiend|He is a fitness fiend.|그는 운동광이다.
+fiendish|The puzzle was fiendish.|그 퍼즐은 지독히 어려웠다.
+fiendishly|The test was fiendishly difficult.|그 시험은 지독히 어려웠다.
+fiercely|She fiercely defended her team.|그녀는 맹렬히 자기 팀을 옹호했다.
+firewall|The firewall blocks dangerous websites.|방화벽이 위험한 웹사이트를 차단한다.
+fissure|The earthquake left a fissure in the ground.|지진으로 땅에 균열이 생겼다.
+flashback|The movie starts with a flashback.|그 영화는 회상 장면으로 시작한다.
+flask|He brought a flask of hot coffee.|그는 뜨거운 커피를 보온병에 담아 왔다.
+flatter|He tried to flatter the boss.|그는 상사에게 아첨하려 했다.
+flattery|Flattery will get you nowhere.|아첨해 봐야 아무 소용 없다.
+flick|She flicked the switch.|그녀는 스위치를 톡 눌렀다.
+flicker|We saw the flicker of a candle.|촛불이 깜빡이는 것을 보았다.
+folktale|My grandmother told us an old folktale.|할머니가 옛 민담을 들려주셨다.
+forensic|Forensic experts examined the evidence.|법의학 전문가들이 증거를 조사했다.
+forfeit|If you cancel, you will forfeit your deposit.|취소하면 보증금을 몰수당한다.
+formality|The interview is just a formality.|면접은 형식상의 절차일 뿐이다.
+fossil|They found a dinosaur fossil.|그들은 공룡 화석을 발견했다.
+fragmentation|The fragmentation of the market makes it hard to compete.|시장이 분열되어 경쟁이 어렵다.
+frostily|She answered frostily.|그녀는 쌀쌀맞게 대답했다.
+frosty|It was a frosty morning.|서리가 내린 아침이었다.
+fuse|The two companies fused into one.|두 회사가 하나로 합쳐졌다.
+fusion|The restaurant serves Korean-Mexican fusion food.|그 식당은 한국과 멕시코 퓨전 음식을 낸다.
+gadget|He loves new gadgets.|그는 새로운 기기를 좋아한다.
+gamely|She gamely tried to finish the race.|그녀는 용감하게 경주를 끝내려 했다.
+gape|The tourists gaped at the huge building.|관광객들은 거대한 건물을 입을 벌리고 바라봤다.
+gem|The ring has a red gem.|그 반지에는 빨간 보석이 박혀 있다.
+genome|Scientists mapped the human genome.|과학자들이 인간 게놈 지도를 만들었다.
+geological|The museum has geological samples.|그 박물관에는 지질 표본이 있다.
+geologically|The area is geologically active.|그 지역은 지질학적으로 활발하다.
+ghostly|We saw a ghostly figure in the fog.|안개 속에서 유령 같은 형체를 보았다.
+gig|The band has a gig tonight.|그 밴드는 오늘 밤 공연이 있다.
+glean|We gleaned information from many sources.|우리는 여러 출처에서 정보를 수집했다.
+glum|He looked glum after the meeting.|그는 회의 후 침울해 보였다.
+glumly|She stared glumly out the window.|그녀는 침울하게 창밖을 바라봤다.
+gnaw|The dog gnawed on a bone.|개가 뼈를 갉아먹었다.
+goose|A goose was swimming in the pond.|거위 한 마리가 연못에서 헤엄치고 있었다.
+gourmet|They ate at a gourmet restaurant.|그들은 미식가를 위한 식당에서 먹었다.
+graft|The gardener grafted the branch onto the tree.|정원사가 가지를 나무에 접붙였다.
+grapefruit|I had half a grapefruit for breakfast.|나는 아침으로 자몽 반 개를 먹었다.
+grounds|There are no grounds for complaint.|불평할 근거가 없다.
+gruelling|It was a gruelling journey.|녹초가 되는 여정이었다.
+gruesome|The detective novel has a gruesome plot.|그 추리 소설은 줄거리가 소름 끼친다.
+gruesomely|The horror movie ended gruesomely.|그 공포 영화는 섬뜩하게 끝났다.
+grumble|He always grumbles about work.|그는 늘 일에 대해 투덜거린다.
+gush|Water gushed from the broken pipe.|부서진 관에서 물이 뿜어져 나왔다.
+gushing|The review was gushing.|그 평은 과장된 칭찬 일색이었다.
+gushingly|She spoke gushingly about her new boss.|그녀는 새 상사에 대해 과장되게 칭찬했다.
+gusto|He ate his dinner with gusto.|그는 저녁을 맛있게 먹었다.
+gutsy|It was a gutsy decision.|배짱 있는 결정이었다.
+hack|Someone tried to hack into the system.|누군가 시스템을 해킹하려 했다.
+haggle|Tourists haggle over prices at the market.|관광객들은 시장에서 가격을 흥정한다.
+harass|Reporters harassed the actor.|기자들이 그 배우를 괴롭혔다.
+harassment|The company has a strict policy against harassment.|그 회사는 괴롭힘에 대해 엄격한 정책을 갖고 있다.
+headstrong|She is a headstrong girl.|그녀는 고집 센 소녀이다.
+hedgehog|A hedgehog is covered in spines.|고슴도치는 가시로 덮여 있다.
+heifer|The farmer bought a heifer.|농부가 어린 암소를 샀다.
+heighten|The music heightened the tension.|음악이 긴장감을 고조시켰다.
+hence|The shop is near the station, hence its popularity.|그 가게는 역 근처에 있다. 그러므로 인기가 많다.
+heroine|The heroine of the novel is brave.|그 소설의 여주인공은 용감하다.
+hibernate|Bears hibernate in winter.|곰은 겨울에 동면한다.
+hibernation|The bear woke from hibernation.|곰이 동면에서 깨어났다.
+homely|The hotel has a homely feel.|그 호텔은 가정적인 느낌이 있다.
+honk|The driver honked at us.|운전자가 우리에게 경적을 울렸다.
+hostess|The hostess welcomed the guests.|여주인이 손님들을 맞이했다.
+hypocrisy|He criticized the hypocrisy of politicians.|그는 정치인들의 위선을 비판했다.
+hypocrite|Don't be a hypocrite.|위선자처럼 굴지 마.
+hypocritical|It's hypocritical to say one thing and do another.|말과 행동이 다른 것은 위선적이다.
+hypocritically|He hypocritically complained about waste.|그는 위선적으로 낭비에 대해 불평했다.
+immense|The project was an immense success.|그 프로젝트는 엄청난 성공이었다.
+immensely|I enjoyed the trip immensely.|나는 그 여행을 엄청나게 즐겼다.
+immortalize|The poem immortalized the hero.|그 시는 그 영웅을 불멸하게 했다.
+imp|The little imp hid my shoes.|그 꼬마 장난꾸러기가 내 신발을 숨겼다.
+impede|Heavy snow impeded traffic.|폭설이 교통을 방해했다.
+impediment|Lack of money is an impediment to growth.|자금 부족은 성장의 장애물이다.
+impersonal|The hotel felt cold and impersonal.|그 호텔은 차갑고 비인간적인 느낌이었다.
+impersonally|The letter was written impersonally.|그 편지는 사무적으로 쓰였다.
+impersonate|He can impersonate famous people.|그는 유명인을 흉내 낼 수 있다.
+impersonation|His impersonation of the president was funny.|그의 대통령 흉내는 웃겼다.
+impersonator|The impersonator sounded just like the singer.|그 성대모사가는 그 가수와 똑같은 목소리를 냈다.
+impervious|The jacket is impervious to rain.|그 재킷은 비가 스며들지 않는다.
+impish|He has an impish smile.|그는 장난꾸러기 같은 미소를 짓는다.
+impishly|She grinned impishly.|그녀는 장난스럽게 씩 웃었다.
+implicate|The report implicated the manager.|그 보고서는 매니저를 연루시켰다.
+impoverished|The charity helps impoverished families.|그 자선 단체는 빈곤한 가정을 돕는다.
+incision|The surgeon made a small incision.|외과 의사가 작게 절개했다.
+incisor|The child lost an incisor.|그 아이는 앞니가 하나 빠졌다.
+inclusively|We try to design inclusively.|우리는 포괄적으로 설계하려고 노력한다.
+indefinite|The factory is closed for an indefinite period.|그 공장은 무기한 문을 닫았다.
+indefinitely|The meeting was postponed indefinitely.|회의가 무기한 연기되었다.
+individuality|The school encourages individuality.|그 학교는 개성을 장려한다.
+induct|He was inducted into the Hall of Fame.|그는 명예의 전당에 헌액되었다.
+inexcusable|His rudeness was inexcusable.|그의 무례함은 용서할 수 없었다.
+inexcusably|He was inexcusably late.|그는 용서할 수 없을 만큼 늦었다.
+inexhaustible|She has inexhaustible energy.|그녀는 지칠 줄 모르는 에너지를 갖고 있다.
+inexplicable|His decision was inexplicable.|그의 결정은 설명할 수 없었다.
+inexplicably|The lights inexplicably went out.|이유 없이 불이 꺼졌다.
+ingenious|That's an ingenious idea.|그건 기발한 생각이다.
+ingenuity|The design shows great ingenuity.|그 디자인은 대단한 독창성을 보여 준다.
+inherently|Driving fast is inherently dangerous.|과속 운전은 본질적으로 위험하다.
+inheritance|He received a large inheritance.|그는 많은 유산을 받았다.
+injustice|They protested against injustice.|그들은 부당함에 항의했다.
+innovate|Companies must innovate to survive.|기업은 살아남으려면 혁신해야 한다.
+insecure|She feels insecure about her English.|그녀는 자기 영어에 자신이 없다.
+insecurely|The shelf was insecurely fixed to the wall.|선반이 벽에 불안하게 고정되어 있었다.
+insensitive|His comment was insensitive.|그의 발언은 무신경했다.
+insensitively|He insensitively joked about her weight.|그는 무신경하게 그녀의 체중에 대해 농담했다.
+insightful|She made an insightful comment.|그녀는 통찰력 있는 의견을 냈다.
+insightfully|He insightfully explained the problem.|그는 통찰력 있게 문제를 설명했다.
+instinctive|Her reaction was instinctive.|그녀의 반응은 본능적이었다.
+instinctively|He instinctively covered his head.|그는 본능적으로 머리를 감쌌다.
+insubordinate|The insubordinate soldier was punished.|반항한 군인은 처벌받았다.
+insubordinately|He acted insubordinately toward his manager.|그는 상사에게 반항적으로 행동했다.
+insubordination|He was fired for insubordination.|그는 불복종으로 해고되었다.
+intellect|She is a woman of great intellect.|그녀는 지성이 뛰어난 여성이다.
+interject|"That's wrong," he interjected.|"그건 틀렸어요." 그가 끼어들었다.
+interjection|"Wow" is an interjection.|'wow'는 감탄사이다.
+intuit|She intuited that something was wrong.|그녀는 뭔가 잘못되었다는 것을 직관적으로 알았다.
+intuition|Trust your intuition.|직관을 믿으세요.
+intuitive|The app is very intuitive.|그 앱은 매우 직관적이다.
+intuitively|She intuitively knew the answer.|그녀는 직관적으로 답을 알았다.
+irate|An irate customer called the store.|격분한 고객이 가게에 전화했다.
+irately|He shouted irately at the driver.|그는 격분해서 운전자에게 소리쳤다.
+irony|The irony is that he hates sports.|아이러니하게도 그는 스포츠를 싫어한다.
+isolated|They live in an isolated village.|그들은 고립된 마을에 산다.
+jersey|He wore his team's jersey.|그는 자기 팀 유니폼을 입었다.
+justly|He was justly rewarded.|그는 정당하게 보상받았다.
+juvenile|The court deals with juveniles.|그 법원은 청소년 사건을 다룬다.
+lackluster|The team gave a lackluster performance.|그 팀은 활기 없는 경기를 했다.
+lapse|A lapse in attention caused the accident.|순간의 부주의가 사고를 일으켰다.
+latent|She has latent talent.|그녀에게는 잠재된 재능이 있다.
+lavatory|The lavatory is at the back of the plane.|화장실은 비행기 뒤쪽에 있다.
+lethargic|I feel lethargic today.|오늘은 무기력하다.
+lethargically|He moved lethargically.|그는 무기력하게 움직였다.
+lethargy|The heat caused lethargy.|더위 때문에 무기력해졌다.
+liaison|She is the liaison between the two departments.|그녀는 두 부서 사이의 연락 담당자이다.
+limitless|The possibilities are limitless.|가능성은 무한하다.
+linearly|The cost increases linearly.|비용은 직선적으로 증가한다.
+ludicrous|The idea is ludicrous.|그 생각은 터무니없다.
+ludicrously|The tickets were ludicrously expensive.|표가 터무니없이 비쌌다.
+lust|The story is about a king's lust for power.|그 이야기는 왕의 권력욕에 관한 것이다.
+macabre|The museum has a macabre exhibit.|그 박물관에는 섬뜩한 전시물이 있다.
+magnetically|The door closes magnetically.|그 문은 자석으로 닫힌다.
+magnetism|The actor has great personal magnetism.|그 배우는 대단한 개인적 매력이 있다.
+manicure|She had a manicure at the salon.|그녀는 미용실에서 손톱 손질을 받았다.
+marginally|Prices rose marginally.|가격이 약간 올랐다.
+mark-up|The store has a high mark-up on drinks.|그 가게는 음료에 높은 이윤을 붙인다.
+marvel|We marveled at the view.|우리는 그 경치에 경탄했다.
+maternal|She has strong maternal instincts.|그녀는 모성 본능이 강하다.
+maternalistic|The nurse had a maternalistic manner.|그 간호사는 어머니 같은 태도를 보였다.
+meaningless|The words were meaningless to me.|그 말은 나에게 의미가 없었다.
+meaninglessly|He stared meaninglessly at the wall.|그는 무의미하게 벽을 응시했다.
+methodical|She is very methodical in her work.|그녀는 일을 매우 체계적으로 한다.
+midwife|The midwife helped deliver the baby.|조산사가 아기 출산을 도왔다.
+mingle|Guests mingled at the party.|손님들이 파티에서 어울렸다.
+minutiae|He doesn't care about the minutiae.|그는 세부 사항에 신경 쓰지 않는다.
+monotonous|The work is monotonous.|그 일은 단조롭다.
+monotonously|He spoke monotonously.|그는 단조롭게 말했다.
+monotony|He wanted to escape the monotony of his job.|그는 일의 단조로움에서 벗어나고 싶었다.
+motley|A motley crowd gathered outside.|잡다한 사람들이 밖에 모였다.
+mountaineer|The mountaineer climbed Everest.|그 등산가는 에베레스트를 올랐다.
+munch|The children munched on cookies.|아이들이 쿠키를 우적우적 먹었다.
+muscular|He has muscular arms.|그는 팔이 근육질이다.
+mythological|The painting shows mythological figures.|그 그림은 신화 속 인물들을 보여 준다.
+mythology|She loves Greek mythology.|그녀는 그리스 신화를 좋아한다.
+naive|It was naive of me to trust him.|그를 믿다니 내가 순진했다.
+naively|I naively believed his promise.|나는 순진하게 그의 약속을 믿었다.
+naivety|Her naivety surprised us.|그녀의 순진함에 우리는 놀랐다.
+naturalness|The actor's naturalness impressed the audience.|그 배우의 자연스러움이 관객을 감동시켰다.
+neglectful|The owner was neglectful of his dog.|주인은 자기 개를 돌보는 데 태만했다.
+negligent|The company was negligent.|그 회사는 부주의했다.
+negligently|He drove negligently.|그는 부주의하게 운전했다.
+negligible|The difference is negligible.|그 차이는 무시해도 될 정도이다.
+neutralization|The neutralization of the acid took a minute.|산을 중화하는 데 1분이 걸렸다.
+neutralize|The medicine neutralizes stomach acid.|그 약은 위산을 중화한다.
+nocturnal|Owls are nocturnal animals.|올빼미는 야행성 동물이다.
+nondescript|He lives in a nondescript building.|그는 특징 없는 건물에 산다.
+norms|Social norms vary between countries.|사회 규범은 나라마다 다르다.
+numb|My fingers are numb with cold.|추위로 손가락에 감각이 없다.
+obscurely|The instructions were obscurely written.|설명서가 모호하게 쓰여 있었다.
+occupational|The job has some occupational risks.|그 일에는 직업상의 위험이 있다.
+oddity|The old car is a bit of an oddity.|그 낡은 차는 좀 특이한 물건이다.
+offspring|The parents protect their offspring.|부모는 자식을 보호한다.
+orchard|They grow apples in their orchard.|그들은 과수원에서 사과를 재배한다.
+ordinarily|Ordinarily, I go to bed at eleven.|보통 나는 11시에 잔다.
+ornamental|The fountain is ornamental.|그 분수는 장식용이다.
+otter|An otter was swimming in the river.|수달이 강에서 헤엄치고 있었다.
+outset|We knew from the outset it would be hard.|우리는 처음부터 그것이 어려울 것이라는 걸 알았다.
+overalls|The painter wore overalls.|페인트공은 작업복을 입었다.
+overdraft|He overdrafted his account by $100.|그는 계좌에서 100달러를 초과 인출했다.
+overseer|The overseer checked the workers.|감독관이 작업자들을 점검했다.
+panorama|The hotel has a panorama of the city.|그 호텔에서는 도시 전경이 보인다.
+panoramic|The tower offers panoramic views.|그 탑에서는 전경이 펼쳐진다.
+parasite|The parasite lives inside the fish.|그 기생충은 물고기 몸속에 산다.
+paternal|My paternal grandparents live in Daegu.|우리 친조부모님은 대구에 사신다.
+paternalistic|The company has a paternalistic management style.|그 회사는 가부장적인 경영 방식을 갖고 있다.
+pathos|The film is full of pathos.|그 영화는 비애감으로 가득하다.
+paywall|The newspaper put its articles behind a paywall.|그 신문은 기사를 유료로 전환했다.
+peacock|The peacock spread its tail.|공작이 꼬리를 펼쳤다.
+peasant|The peasants worked in the fields.|농민들이 들판에서 일했다.
+pedicure|She had a pedicure at the spa.|그녀는 스파에서 발 관리를 받았다.
+pendulous|The tree has pendulous branches.|그 나무는 가지가 축 늘어져 있다.
+pendulum|The clock has a swinging pendulum.|그 시계에는 흔들리는 추가 있다.
+peninsula|Korea is a peninsula.|한국은 반도이다.
+perceptive|She is very perceptive.|그녀는 매우 통찰력이 있다.
+perceptively|He perceptively noticed the problem.|그는 예리하게 문제를 알아챘다.
+perpetuate|The movie perpetuates old stereotypes.|그 영화는 낡은 고정관념을 영속시킨다.
+persecute|They were persecuted for their beliefs.|그들은 신념 때문에 박해받았다.
+persecution|They fled from persecution.|그들은 박해를 피해 달아났다.
+personalization|The app offers personalization options.|그 앱은 개인화 옵션을 제공한다.
+persuasively|She argued persuasively.|그녀는 설득력 있게 주장했다.
+pertain to|These rules pertain to all staff.|이 규정은 모든 직원과 관련된다.
+pertinent|Please ask only pertinent questions.|관련 있는 질문만 해 주세요.
+phenomenal|The book was a phenomenal success.|그 책은 경이적인 성공을 거뒀다.
+phenomenally|The app is phenomenally popular.|그 앱은 경이적으로 인기가 있다.
+physicality|The dancer's physicality is impressive.|그 무용수의 신체 표현력은 인상적이다.
+physique|He has a strong physique.|그는 체격이 건장하다.
+pigeon|Pigeons gathered in the square.|비둘기들이 광장에 모였다.
+pinnacle|Winning the award was the pinnacle of her career.|그 상을 받은 것이 그녀 경력의 정점이었다.
+placid|The lake was placid.|호수가 잔잔했다.
+placidly|The cows grazed placidly.|소들이 차분하게 풀을 뜯었다.
+plaque|There is a plaque on the wall.|벽에 명판이 붙어 있다.
+plaster|Put a plaster on the cut.|베인 곳에 반창고를 붙이세요.
+plausibility|I doubt the plausibility of his story.|나는 그의 이야기가 그럴듯한지 의심스럽다.
+plausibly|He plausibly explained the delay.|그는 지연을 그럴듯하게 설명했다.
+pleasurable|It was a pleasurable trip.|즐거운 여행이었다.
+ploy|It was just a sales ploy.|그건 그냥 판매 술책이었다.
+plumbing|The old house needs new plumbing.|그 오래된 집은 배관을 새로 해야 한다.
+plummet|Sales plummeted last month.|지난달 매출이 곤두박질쳤다.
+poetess|She was a famous poetess.|그녀는 유명한 여류 시인이었다.
+poise|She answered with poise.|그녀는 침착하게 대답했다.
+popularization|The popularization of the internet changed society.|인터넷의 대중화가 사회를 바꿨다.
+portrayal|The film's portrayal of the king is fair.|그 영화의 왕 묘사는 공정하다.
+possessor|He is the proud possessor of a new car.|그는 새 차를 자랑스럽게 소유하고 있다.
+posture|Good posture is important.|좋은 자세는 중요하다.
+pounce|The cat pounced on the mouse.|고양이가 쥐를 덮쳤다.
+preach|The pastor preached about kindness.|목사님이 친절에 대해 설교했다.
+preacher|The preacher spoke for an hour.|설교자가 한 시간 동안 이야기했다.
+premises|Smoking is not allowed on the premises.|구내에서는 흡연이 금지되어 있다.
+primitively|The tools were primitively made.|그 도구들은 원시적으로 만들어졌다.
+principally|The product is principally for children.|그 제품은 주로 아이들을 위한 것이다.
+privileged|He grew up in a privileged family.|그는 특권층 가정에서 자랐다.
+profess|He professed his love for her.|그는 그녀에게 사랑을 고백했다.
+professionalism|We value professionalism.|우리는 전문성을 중시한다.
+profound|The book had a profound effect on me.|그 책은 나에게 깊은 영향을 주었다.
+profoundly|I was profoundly moved.|나는 깊이 감동받았다.
+prohibitive|The cost is prohibitive.|비용이 엄두를 못 낼 만큼 비싸다.
+prohibitively|Housing is prohibitively expensive.|집값이 엄청나게 비싸다.
+proliferate|Coffee shops have proliferated in the city.|그 도시에 커피숍이 급증했다.
+prolific|He is a prolific writer.|그는 다작 작가이다.
+prolifically|She writes prolifically.|그녀는 왕성하게 글을 쓴다.
+prophet|He was seen as a prophet.|그는 예언자로 여겨졌다.
+prophetic|His words proved prophetic.|그의 말은 예언처럼 들어맞았다.
+protagonist|The protagonist is a young doctor.|주인공은 젊은 의사이다.
+provisions|We packed provisions for the trip.|우리는 여행용 식량을 챙겼다.
+provocative|He made a provocative statement.|그는 도발적인 발언을 했다.
+provocatively|She asked provocatively.|그녀는 도발적으로 물었다.
+prowl|A cat prowled around the garden.|고양이가 정원을 배회했다.
+psyche|The war deeply affected the national psyche.|전쟁은 국민 정신에 깊은 영향을 미쳤다.
+psychiatric|He works in a psychiatric hospital.|그는 정신 병원에서 일한다.
+psychiatrist|She went to see a psychiatrist.|그녀는 정신과 의사를 만나러 갔다.
+purity|The purity of the water is tested daily.|물의 순도를 매일 검사한다.
+quarry|Stone is taken from the quarry.|채석장에서 돌을 캐낸다.
+quest|They went on a quest for treasure.|그들은 보물을 찾아 떠났다.
+quip|He made a quick quip.|그는 재치 있는 말을 재빨리 던졌다.
+quirk|It's one of his quirks.|그건 그의 별난 점 중 하나이다.
+quirky|The café has a quirky design.|그 카페는 디자인이 별나다.
+radiator|The radiator heats the room.|라디에이터가 방을 데운다.
+rapport|She has a good rapport with her students.|그녀는 학생들과 사이가 좋다.
+rarity|Snow is a rarity here.|여기서 눈은 드문 일이다.
+raunchily|The comedian joked raunchily.|그 코미디언은 노골적으로 농담했다.
+raunchy|The comedy show was too raunchy for children.|그 코미디 쇼는 아이들에게는 너무 선정적이었다.
+readable|The book is very readable.|그 책은 아주 읽기 쉽다.
+realism|The painting shows great realism.|그 그림은 뛰어난 사실성을 보여 준다.
+realist|He is a realist about his chances.|그는 자기 가능성에 대해 현실주의자이다.
+reassurance|She needed reassurance.|그녀는 안심시켜 줄 말이 필요했다.
+recess|The court took a short recess.|법원은 잠시 휴정했다.
+recessive|Blue eyes are a recessive trait.|파란 눈은 열성 형질이다.
+recharge|Recharge your phone overnight.|밤새 휴대폰을 충전하세요.
+recognisable|The building is instantly recognisable.|그 건물은 금방 알아볼 수 있다.
+recognisably|The town is recognisably the same.|그 마을은 알아볼 수 있을 만큼 그대로이다.
+recognizable|Her voice is easily recognizable.|그녀의 목소리는 쉽게 알아볼 수 있다.
+recognizably|He was recognizably older.|그는 알아볼 수 있을 만큼 나이 들어 보였다.
+rediscover|She rediscovered her love of music.|그녀는 음악에 대한 사랑을 다시 발견했다.
+reenact|They reenacted the famous battle.|그들은 그 유명한 전투를 재연했다.
+refreshing|A cold drink is refreshing.|차가운 음료는 상쾌하다.
+refreshingly|He was refreshingly honest.|그는 신선할 정도로 솔직했다.
+refurbish|The hotel was refurbished last year.|그 호텔은 작년에 새로 단장했다.
+refurbishment|The store is closed for refurbishment.|그 가게는 개장 공사로 문을 닫았다.
+relapse|The patient relapsed after a week.|환자는 일주일 뒤 재발했다.
+relinquish|He relinquished control of the company.|그는 회사 경영권을 포기했다.
+reluctantly|He reluctantly agreed.|그는 마지못해 동의했다.
+remedial|The school offers remedial classes.|그 학교는 보충 수업을 제공한다.
+reminisce|They reminisced about their school days.|그들은 학창 시절을 추억했다.
+reminiscent|The song is reminiscent of the 1980s.|그 노래는 1980년대를 연상시킨다.
+remorse|He showed no remorse.|그는 아무 후회도 보이지 않았다.
+remorsefully|She looked at him remorsefully.|그녀는 후회스럽게 그를 바라봤다.
+remorseless|The heat was remorseless.|더위가 무자비했다.
+remorselessly|The rain fell remorselessly.|비가 가차 없이 내렸다.
+remotely|She works remotely from home.|그녀는 집에서 원격으로 일한다.
+removed|His story is far removed from reality.|그의 이야기는 현실과 동떨어져 있다.
+rendering|Her rendering of the song was beautiful.|그녀의 그 노래 연주는 아름다웠다.
+repel|This spray repels mosquitoes.|이 스프레이는 모기를 쫓는다.
+repellant|Use insect repellant in the forest.|숲에서는 방충제를 쓰세요.
+repertory|The theater has a wide repertory.|그 극장은 레퍼토리가 다양하다.
+repute|He is reputed to be a good doctor.|그는 좋은 의사라는 평판이 있다.
+resent|She resents being told what to do.|그녀는 이래라저래라 하는 것에 분개한다.
+resilience|The town showed resilience after the flood.|그 마을은 홍수 후 회복력을 보여 주었다.
+resilient|Children are often very resilient.|아이들은 대개 회복력이 아주 강하다.
+resin|The varnish is made from tree resin.|그 니스는 나무 수지로 만든다.
+resonate|Her words resonated with the audience.|그녀의 말이 청중의 마음에 울려 퍼졌다.
+respite|The rain gave us a brief respite from the heat.|비 덕분에 잠시 더위를 피할 수 있었다.
+restoration|The restoration of the old palace took ten years.|옛 궁궐 복원에 10년이 걸렸다.
+restorative|A good night's sleep is restorative.|밤에 푹 자면 회복이 된다.
+retrace|I retraced my steps to find my keys.|열쇠를 찾으려고 왔던 길을 되짚어 갔다.
+revealing|The interview was very revealing.|그 인터뷰는 많은 것을 드러냈다.
+revere|The people revere their king.|국민들은 왕을 숭배한다.
+riveting|The movie was riveting.|그 영화는 매혹적이었다.
+robustly|The bridge is robustly built.|그 다리는 튼튼하게 지어졌다.
+rotate|The earth rotates once a day.|지구는 하루에 한 번 자전한다.
+roundup|Here is a roundup of today's news.|오늘의 뉴스 요약입니다.
+rudimentary|He has a rudimentary knowledge of French.|그는 프랑스어를 기초 수준으로 안다.
+rudiments|She taught me the rudiments of cooking.|그녀는 나에게 요리의 기초를 가르쳐 주었다.
+rumble|Thunder rumbled in the distance.|멀리서 천둥이 우르릉거렸다.
+rustle|The leaves rustled in the wind.|나뭇잎이 바람에 바스락거렸다.
+ruthless|He is a ruthless businessman.|그는 무자비한 사업가이다.
+ruthlessness|The company is known for its ruthlessness.|그 회사는 무자비함으로 유명하다.
+salivate|The smell of food made me salivate.|음식 냄새에 군침이 돌았다.
+saloon|The cowboy walked into the saloon.|카우보이가 술집으로 걸어 들어갔다.
+salvation|The new job was his salvation.|새 일자리가 그를 구원했다.
+salve|Put some salve on the burn.|화상에 연고를 바르세요.
+sanctity|They respect the sanctity of the temple.|그들은 사원의 신성함을 존중한다.
+sap|Maple syrup is made from tree sap.|메이플 시럽은 나무 수액으로 만든다.
+sarcasm|I could hear the sarcasm in his voice.|그의 목소리에서 빈정거림이 느껴졌다.
+sarcastic|She made a sarcastic remark.|그녀는 비꼬는 말을 했다.
+sarcastically|"Great job," he said sarcastically.|"잘했네." 그가 비꼬듯이 말했다.
+scathing|The critic wrote a scathing review.|평론가가 신랄한 평을 썼다.
+scoff|They scoffed at his idea.|그들은 그의 아이디어를 비웃었다.
+scorn|She treated the offer with scorn.|그녀는 그 제안을 경멸했다.
+scornful|He gave a scornful laugh.|그는 경멸하듯 웃었다.
+scornfully|She looked at him scornfully.|그녀는 그를 경멸적으로 바라봤다.
+screenplay|He wrote the screenplay for the film.|그는 그 영화의 각본을 썼다.
+screenwriter|She is a famous screenwriter.|그녀는 유명한 시나리오 작가이다.
+scrutinize|The bank scrutinized the loan application.|은행은 대출 신청서를 면밀히 조사했다.
+sedate|The vet sedated the dog.|수의사가 개를 진정시켰다.
+sedately|They walked sedately through the park.|그들은 공원을 차분하게 걸었다.
+sedentary|A sedentary lifestyle is bad for your health.|주로 앉아서 지내는 생활은 건강에 나쁘다.
+seedling|Plant the seedlings in spring.|봄에 묘목을 심으세요.
+self-conscious|She feels self-conscious about her accent.|그녀는 자기 억양에 대해 남의 시선을 의식한다.
+self-worth|The program helps build self-worth.|그 프로그램은 자존감을 키우는 데 도움이 된다.
+sentient|Animals are sentient beings.|동물은 지각이 있는 존재이다.
+sentimental|The watch has sentimental value.|그 시계에는 감상적인 가치가 있다.
+sentimentally|He spoke sentimentally about his childhood.|그는 어린 시절에 대해 감상적으로 말했다.
+sequel|The sequel was better than the first movie.|속편이 첫 영화보다 나았다.
+settee|They sat on the settee.|그들은 긴 의자에 앉았다.
+shambles|The room was a shambles after the party.|파티 후 방은 난장판이었다.
+shortlist|She was shortlisted for the job.|그녀는 그 일자리의 최종 후보에 올랐다.
+showy|She wore a showy necklace.|그녀는 화려한 목걸이를 했다.
+silhouette|We saw the silhouette of the mountains.|우리는 산의 실루엣을 보았다.
+sketchbook|She draws in her sketchbook every day.|그녀는 매일 스케치북에 그림을 그린다.
+slackly|The rope hung slackly.|밧줄이 느슨하게 늘어져 있었다.
+slob|Don't be such a slob; clean your room.|게으름 피우지 말고 방 좀 치워.
+smug|He looked smug after winning.|그는 이긴 후 우쭐대는 표정이었다.
+smugly|She smiled smugly.|그녀는 우쭐대며 미소 지었다.
+snail|A snail moved slowly across the path.|달팽이가 길을 천천히 가로질렀다.
+snooze|I snoozed on the sofa after lunch.|나는 점심 후 소파에서 잠깐 잤다.
+socialization|School plays a role in socialization.|학교는 사회화에 역할을 한다.
+somber|The mood at the meeting was somber.|회의 분위기가 침울했다.
+somberly|He spoke somberly about the loss.|그는 그 손실에 대해 침울하게 말했다.
+sombrely|They walked sombrely behind the coffin.|그들은 관 뒤를 침울하게 걸었다.
+somersault|The gymnast did a somersault.|체조 선수가 공중제비를 돌았다.
+spartan|The room was spartan but clean.|그 방은 검소하지만 깨끗했다.
+specimen|The scientist collected a specimen.|과학자가 표본을 채취했다.
+spontaneous|The crowd gave spontaneous applause.|관중이 자발적으로 박수를 쳤다.
+spontaneously|They spontaneously decided to go to the beach.|그들은 즉흥적으로 해변에 가기로 했다.
+sprawl|Urban sprawl is a problem in many cities.|도시 확산은 많은 도시의 문제이다.
+sprout|The seeds sprouted after a week.|씨앗이 일주일 후 싹이 났다.
+squander|Don't squander your money.|돈을 낭비하지 마세요.
+staccato|He spoke in short, staccato sentences.|그는 짧고 끊어지는 문장으로 말했다.
+staggering|The cost was staggering.|비용이 충격적이었다.
+stamina|Running builds stamina.|달리기는 체력을 길러 준다.
+startling|The results were startling.|결과가 놀라웠다.
+startlingly|The view was startlingly beautiful.|경치가 놀랄 만큼 아름다웠다.
+stately|They visited a stately home.|그들은 위엄 있는 저택을 방문했다.
+stiffen|My back stiffened after sitting all day.|하루 종일 앉아 있었더니 허리가 뻣뻣해졌다.
+stimuli|Babies react to different stimuli.|아기들은 다양한 자극에 반응한다.
+stoke|The news stoked fears of a recession.|그 소식이 불황에 대한 두려움을 부채질했다.
+strap|The strap of my bag broke.|가방 끈이 끊어졌다.
+strapping|He is a strapping young man.|그는 건장한 청년이다.
+stray|The dog strayed from home.|개가 집에서 길을 잃었다.
+stressfully|She worked stressfully to meet the deadline.|그녀는 마감을 맞추려고 스트레스를 받으며 일했다.
+stretching|Do some stretching before you run.|달리기 전에 스트레칭을 하세요.
+structurally|The building is structurally sound.|그 건물은 구조적으로 튼튼하다.
+stuffily|The room was stuffily warm.|방이 답답할 정도로 더웠다.
+stuffiness|Open the window to reduce the stuffiness.|답답함을 줄이려면 창문을 여세요.
+stuffy|The room is hot and stuffy.|방이 덥고 답답하다.
+stylistic|The two books have stylistic differences.|두 책은 문체상의 차이가 있다.
+stylistically|The essay is stylistically excellent.|그 에세이는 문체상 훌륭하다.
+subtly|The colors change subtly.|색이 미묘하게 변한다.
+suburban|They live in a suburban area.|그들은 교외 지역에 산다.
+suburbia|Many families moved to suburbia.|많은 가족이 교외로 이사했다.
+succulent|She grows succulents on her desk.|그녀는 책상에서 다육 식물을 키운다.
+succulently|The meat was succulently tender.|고기가 즙이 많고 부드러웠다.
+suds|The sink was full of soap suds.|싱크대가 비누 거품으로 가득했다.
+suffice|A short answer will suffice.|짧은 답이면 충분하다.
+suitor|The princess had many suitors.|공주에게는 구혼자가 많았다.
+superficial|The damage is only superficial.|손상은 피상적일 뿐이다.
+superficially|The two plans are superficially similar.|두 계획은 겉보기에 비슷하다.
+supple|Yoga keeps your body supple.|요가는 몸을 유연하게 해 준다.
+suspension|The student received a one-week suspension.|그 학생은 일주일 정학을 받았다.
+sustainably|The fish are caught sustainably.|그 생선은 지속 가능한 방식으로 잡는다.
+symptomatic|The delays are symptomatic of bigger problems.|그 지연은 더 큰 문제의 징후이다.
+synopsis|Read the synopsis before watching the film.|영화를 보기 전에 개요를 읽으세요.
+synthetically|The vitamin is made synthetically.|그 비타민은 합성으로 만들어진다.
+tact|She handled the problem with tact.|그녀는 요령 있게 문제를 처리했다.
+tactful|Please be tactful when you tell him.|그에게 말할 때 눈치 있게 하세요.
+tactfully|He tactfully changed the subject.|그는 재치 있게 화제를 바꿨다.
+tangle|My earphones always tangle.|내 이어폰은 늘 엉킨다.
+tangled|Her hair was tangled.|그녀의 머리카락이 엉켜 있었다.
+tantamount|His silence was tantamount to a yes.|그의 침묵은 동의나 마찬가지였다.
+tantrum|The child threw a tantrum in the store.|아이가 가게에서 떼를 썼다.
+tastebud|Spicy food wakes up your tastebuds.|매운 음식은 미각을 깨운다.
+taut|Pull the rope taut.|밧줄을 팽팽하게 당기세요.
+tautly|The wire was stretched tautly.|철사가 팽팽하게 당겨져 있었다.
+tedious|The work is tedious.|그 일은 지루하다.
+tediously|The meeting went on tediously.|회의가 지루하게 이어졌다.
+tedium|He listened to music to relieve the tedium.|그는 지루함을 덜려고 음악을 들었다.
+telltale|There were telltale signs of a problem.|문제가 있다는 숨길 수 없는 징후가 있었다.
+temperament|She has a calm temperament.|그녀는 차분한 기질을 가졌다.
+temperamental|The old printer is temperamental.|그 낡은 프린터는 변덕스럽다.
+temperamentally|He is temperamentally suited to teaching.|그는 기질적으로 가르치는 일에 맞다.
+terrain|The terrain is rough and rocky.|지형이 거칠고 바위가 많다.
+testament|The building is a testament to his skill.|그 건물은 그의 기술을 보여 주는 증거이다.
+timid|She is too timid to speak in class.|그녀는 너무 소심해서 수업 시간에 말을 못 한다.
+tinker|He likes to tinker with old cars.|그는 낡은 차를 만지작거리는 것을 좋아한다.
+torment|The heat tormented us all summer.|더위가 여름 내내 우리를 괴롭혔다.
+torturous|The long wait was torturous.|긴 기다림은 고문 같았다.
+toughness|Athletes need mental toughness.|운동선수에게는 정신적 강인함이 필요하다.
+tract|They bought a large tract of land.|그들은 넓은 땅을 샀다.
+trampoline|The kids are jumping on the trampoline.|아이들이 트램펄린에서 뛰고 있다.
+tranquil|The garden is tranquil.|정원이 고요하다.
+tranquility|I enjoy the tranquility of the countryside.|나는 시골의 평온함을 즐긴다.
+transatlantic|They took a transatlantic flight.|그들은 대서양 횡단 비행기를 탔다.
+transfix|The audience was transfixed by the performance.|관객들은 공연에 얼어붙은 듯 빠져들었다.
+trauma|He suffered trauma after the accident.|그는 사고 후 정신적 외상을 겪었다.
+traumatic|It was a traumatic experience.|그것은 충격적인 경험이었다.
+trying|It has been a trying week.|힘든 한 주였다.
+turn to|She turned to her friends for help.|그녀는 친구들에게 도움을 구했다.
+twitch|His eye twitched.|그의 눈이 씰룩거렸다.
+tycoon|He is a shipping tycoon.|그는 해운업 재벌이다.
+unassisted|The baby can now walk unassisted.|아기는 이제 도움 없이 걸을 수 있다.
+unconventional|She has an unconventional style.|그녀는 색다른 스타일을 갖고 있다.
+unconvincing|His excuse was unconvincing.|그의 변명은 설득력이 없었다.
+unconvincingly|He smiled unconvincingly.|그는 어색하게 미소 지었다.
+undaunted|Undaunted by the rain, they continued the hike.|비에 굴하지 않고 그들은 등산을 계속했다.
+unenviable|He has the unenviable task of telling her.|그는 그녀에게 그 말을 해야 하는 달갑지 않은 일을 맡았다.
+unenviably|She was unenviably placed between the two sides.|그녀는 딱하게도 양쪽 사이에 끼어 있었다.
+uneventful|The flight was uneventful.|비행은 평온했다.
+uniformity|The school uniform creates uniformity.|교복은 획일성을 만든다.
+uninspiring|The speech was uninspiring.|그 연설은 재미없었다.
+unison|The choir sang in unison.|합창단이 제창했다.
+unmanageable|Her hair is unmanageable.|그녀의 머리카락은 다루기 힘들다.
+unmanned|The company tested an unmanned aircraft.|그 회사는 무인 항공기를 시험했다.
+unmusical|He is completely unmusical.|그는 음악적 감각이 전혀 없다.
+unmusically|He sang unmusically but happily.|그는 음악성은 없었지만 즐겁게 노래했다.
+unoccupied|The house has been unoccupied for years.|그 집은 몇 년째 비어 있다.
+unreliably|The old car runs unreliably.|그 낡은 차는 믿을 수 없게 달린다.
+unscathing|His unscathing feedback made her feel better.|상처 주지 않는 그의 피드백에 그녀는 기분이 나아졌다.
+unsettle|The news unsettled the investors.|그 소식은 투자자들을 불안하게 했다.
+unsettling|It was an unsettling experience.|불안하게 만드는 경험이었다.
+unsustainable|The current growth is unsustainable.|현재의 성장은 지속 불가능하다.
+unsustainably|The forest is being cut unsustainably.|그 숲이 지속 불가능하게 벌목되고 있다.
+untangle|She untangled the necklace.|그녀는 엉킨 목걸이를 풀었다.
+untangled|Finally, the wires were untangled.|마침내 전선이 풀렸다.
+unwavering|She has unwavering faith in her team.|그녀는 자기 팀을 확고하게 믿는다.
+unwaveringly|He unwaveringly supported her.|그는 흔들림 없이 그녀를 지지했다.
+upheaval|The country went through political upheaval.|그 나라는 정치적 격변을 겪었다.
+utensil|Kitchen utensils are in the drawer.|주방 기구는 서랍에 있다.
+vegetation|The island has thick vegetation.|그 섬에는 초목이 무성하다.
+venerate|The people venerate their ancestors.|그 사람들은 조상을 공경한다.
+veneration|The temple is a place of veneration.|그 사원은 숭배의 장소이다.
+ventilate|Ventilate the room after painting.|페인트칠 후 방을 환기하세요.
+ventilation|The room has poor ventilation.|그 방은 환기가 잘 안 된다.
+verandah|We had tea on the verandah.|우리는 베란다에서 차를 마셨다.
+versatile|She is a versatile actress.|그녀는 다재다능한 배우이다.
+versatility|The tool's versatility makes it popular.|그 도구는 다용도라서 인기가 있다.
+verve|She played the piano with verve.|그녀는 열정적으로 피아노를 쳤다.
+vicious|The storm was vicious.|폭풍이 사나웠다.
+viciously|The dog barked viciously.|개가 사납게 짖었다.
+victorious|The victorious team celebrated.|승리한 팀이 축하했다.
+victoriously|He raised his arms victoriously.|그는 의기양양하게 팔을 들어 올렸다.
+violet|She wore a violet dress.|그녀는 보라색 드레스를 입었다.
+vitality|The city is full of vitality.|그 도시는 활력이 넘친다.
+voluntarily|He voluntarily left the company.|그는 자발적으로 회사를 떠났다.
+voracious|She is a voracious reader.|그녀는 열렬한 독서가이다.
+voraciously|He ate voraciously.|그는 게걸스럽게 먹었다.
+wares|The traders displayed their wares.|상인들이 상품을 진열했다.
+washtub|She washed clothes in a washtub.|그녀는 빨래통에서 옷을 빨았다.
+waterfront|We walked along the waterfront.|우리는 해안가를 따라 걸었다.
+wayside|Many good ideas fall by the wayside.|좋은 아이디어 중 상당수가 흐지부지된다.
+wicked|The wicked witch cast a spell.|사악한 마녀가 주문을 걸었다.
+wickedly|He grinned wickedly.|그는 짓궂게 씩 웃었다.
+withdrawn|He became quiet and withdrawn.|그는 조용하고 내성적으로 변했다.
+wizened|The wizened old man smiled.|쭈글쭈글한 노인이 미소 지었다.
+woo|The company is trying to woo new customers.|그 회사는 새 고객을 끌어들이려 하고 있다.
+wooded|The house is in a wooded area.|그 집은 숲이 우거진 곳에 있다.
+wrangle|They wrangled over the price.|그들은 가격을 두고 언쟁했다.
+wrench|He wrenched the door open.|그는 문을 비틀어 열었다.
+wry|She gave a wry smile.|그녀는 비꼬는 듯한 미소를 지었다.
+wryly|He smiled wryly.|그는 비꼬듯 미소 지었다.
+zany|The movie has a zany sense of humor.|그 영화에는 엉뚱한 유머가 있다.
+aberration|The bad result was an aberration.|나쁜 결과는 일탈이었다.
+abhor|I abhor violence.|나는 폭력을 혐오한다.
+abhorrent|Cruelty to animals is abhorrent.|동물 학대는 혐오스럽다.
+abhorrently|They behaved abhorrently.|그들은 혐오스럽게 행동했다.
+abject|They lived in abject poverty.|그들은 비참한 가난 속에 살았다.
+abundantly|It is abundantly clear that he is wrong.|그가 틀렸다는 것이 너무나 분명하다.
+acreage|The farm's acreage has increased.|그 농장의 면적이 늘었다.
+acrobatic|The show has acrobatic performances.|그 쇼에는 곡예 공연이 있다.
+acrobatically|The dancer moved acrobatically.|무용수가 곡예하듯 움직였다.
+acrobatics|The children enjoyed the acrobatics.|아이들은 곡예를 즐겼다.
+ad lib|The actor's ad lib remarks were funny.|그 배우의 즉흥 대사가 웃겼다.
+ad-lib|He forgot his lines and had to ad-lib.|그는 대사를 잊어서 즉흥적으로 말해야 했다.
+additive|The food contains no additives.|그 음식에는 첨가물이 없다.
+adept|She is adept at solving problems.|그녀는 문제 해결에 능숙하다.
+adhesion|The glue has strong adhesion.|그 접착제는 접착력이 강하다.
+adornment|The dress needs no adornment.|그 드레스는 장식이 필요 없다.
+adulterate|The milk was adulterated with water.|우유에 물이 섞여 있었다.
+affectation|Her accent is just an affectation.|그녀의 억양은 그냥 가식이다.
+aghast|She was aghast at the price.|그녀는 가격에 경악했다.
+agile|Cats are agile animals.|고양이는 민첩한 동물이다.
+agility|The player showed great agility.|그 선수는 대단한 민첩성을 보였다.
+all-encompassing|The book is an all-encompassing guide.|그 책은 모든 것을 아우르는 안내서이다.
+allegorical|The story is allegorical.|그 이야기는 우화적이다.
+allegory|The novel is an allegory of war.|그 소설은 전쟁에 대한 우화이다.
+allot|Each team was allotted one room.|각 팀에 방 하나씩 할당되었다.
+allotment|Each department receives an allotment of funds.|각 부서는 자금을 할당받는다.
+allude|He alluded to the problem but didn't explain.|그는 그 문제를 암시했지만 설명하지는 않았다.
+allusion|The poem contains an allusion to the Bible.|그 시에는 성경을 암시하는 부분이 있다.
+amorphous|The plan is still amorphous.|그 계획은 아직 형태가 없다.
+amorphously|The idea was amorphously described.|그 아이디어는 모호하게 설명되었다.
+anarchic|The meeting was anarchic.|그 회의는 무정부 상태였다.
+angst|The novel is full of teenage angst.|그 소설은 십대의 불안으로 가득하다.
+angsty|He wrote angsty songs as a teen.|그는 십대 때 불안한 감정을 담은 노래를 썼다.
+angular|He has an angular face.|그는 얼굴이 각졌다.
+angularity|The building is known for its angularity.|그 건물은 각진 모양으로 유명하다.
+annex|The hospital opened a new annex.|그 병원은 새 별관을 열었다.
+anonymity|The donor asked for anonymity.|기부자는 익명을 요청했다.
+antediluvian|His computer is antediluvian.|그의 컴퓨터는 아주 낡았다.
+anthology|The book is an anthology of short stories.|그 책은 단편 소설 선집이다.
+anthropological|She did anthropological research in Africa.|그녀는 아프리카에서 인류학 연구를 했다.
+anthropologically|The site is anthropologically important.|그 유적지는 인류학적으로 중요하다.
+anticlimactically|The game ended anticlimactically.|경기는 맥 빠지게 끝났다.
+antidote|There is no antidote to the poison.|그 독에는 해독제가 없다.
+antithesis|Hate is the antithesis of love.|증오는 사랑의 정반대이다.
+antithetical|His views are antithetical to mine.|그의 견해는 나와 정반대이다.
+apostle|He was an apostle of free trade.|그는 자유 무역의 사도였다.
+apprehend|The police apprehended the thief.|경찰이 도둑을 체포했다.
+aptitude|She has an aptitude for languages.|그녀는 언어에 적성이 있다.
+arcane|The rules are arcane.|그 규칙은 난해하다.
+arcanely|The contract was arcanely worded.|계약서는 불가해하게 쓰여 있었다.
+archetypal|He is the archetypal English gentleman.|그는 전형적인 영국 신사이다.
+archetype|The hero is an archetype in many stories.|영웅은 많은 이야기에 나오는 원형이다.
+archival|The library has archival photos.|그 도서관에는 기록 보관용 사진이 있다.
+ardor|He spoke with ardor.|그는 열정적으로 말했다.
+arduous|It was an arduous climb.|고된 등반이었다.
+arduously|They worked arduously for months.|그들은 몇 달 동안 힘들게 일했다.
+armory|The castle has an old armory.|그 성에는 오래된 무기고가 있다.
+articulation|Good articulation helps listeners understand.|분명한 발음은 듣는 사람이 이해하는 데 도움이 된다.
+artifact|The museum displays ancient artifacts.|그 박물관은 고대 유물을 전시한다.
+artifice|The ad relies on artifice.|그 광고는 책략에 의존한다.
+assimilate|Immigrants assimilated into the new culture.|이민자들은 새 문화에 동화되었다.
+assimilation|Language helps assimilation.|언어는 동화를 돕는다.
+astringent|Use an astringent to clean your face.|얼굴을 닦을 때 수렴제를 쓰세요.
+athleticism|The player's athleticism is impressive.|그 선수의 운동 능력은 인상적이다.
+attributive|In "red car," "red" is an attributive adjective.|'red car'에서 'red'는 한정적 형용사이다.
+attrition|The company reduced staff through attrition.|그 회사는 자연 감소를 통해 인원을 줄였다.
+attuned|She is attuned to her customers' needs.|그녀는 고객의 요구를 잘 안다.
+austere|The room was austere.|그 방은 꾸밈없이 소박했다.
+austerely|He lived austerely.|그는 엄격하게 절제하며 살았다.
+austerity|The government announced austerity measures.|정부는 긴축 조치를 발표했다.
+authenticity|Experts confirmed the authenticity of the painting.|전문가들이 그 그림이 진품임을 확인했다.
+autonomously|The robot works autonomously.|그 로봇은 자율적으로 작동한다.
+autopilot|The plane was on autopilot.|비행기는 자동 조종 중이었다.
+avian|Avian flu is a disease of birds.|조류 독감은 새의 질병이다.
+axiom|It is an axiom that time is money.|시간이 돈이라는 것은 공리이다.
+axiomatic|It is axiomatic that health matters.|건강이 중요하다는 것은 자명하다.
+babble|The baby babbled happily.|아기가 즐겁게 옹알거렸다.
+banish|The king banished him from the country.|왕은 그를 나라에서 추방했다.
+banishment|He lived in banishment for years.|그는 수년간 추방되어 살았다.
+baroque|The church has a baroque design.|그 교회는 바로크 양식이다.
+bauble|She bought a cheap bauble at the market.|그녀는 시장에서 싸구려 장신구를 샀다.
+behest|He came at the behest of his boss.|그는 상사의 요청으로 왔다.
+belligerence|His belligerence made people uncomfortable.|그의 호전성이 사람들을 불편하게 했다.
+belligerent|He became belligerent after losing.|그는 지고 나서 호전적으로 변했다.
+bereft|She was bereft of hope.|그녀는 희망을 잃었다.
+bereftly|She stared bereftly at the empty room.|그녀는 상실감 속에 빈방을 바라봤다.
+besiege|Fans besieged the singer at the airport.|팬들이 공항에서 그 가수를 에워쌌다.
+blandishment|He resisted the blandishments of the salesman.|그는 판매원의 감언이설을 뿌리쳤다.
+blight|The blight destroyed the potato crop.|병충해로 감자 농사를 망쳤다.
+blitz|The company blitzed the market with ads.|그 회사는 광고로 시장을 집중 공략했다.
+blubber|Whales have a thick layer of blubber.|고래에게는 두꺼운 지방층이 있다.
+blubbery|The seal has a blubbery body.|바다표범은 몸이 뚱뚱하다.
+blurb|Read the blurb on the back of the book.|책 뒤표지의 홍보 문구를 읽어 보세요.
+bogus|The email was from a bogus company.|그 이메일은 가짜 회사에서 온 것이었다.
+bona fide|He is a bona fide expert.|그는 진짜 전문가이다.
+bout|I had a bout of flu last week.|지난주에 한바탕 독감을 앓았다.
+brandish|The actor brandished a sword on stage.|그 배우는 무대에서 칼을 휘둘렀다.
+breadwinner|She is the main breadwinner in her family.|그녀가 가족의 주된 생계 부양자이다.
+brevity|The speech was praised for its brevity.|그 연설은 간결함으로 칭찬받았다.
+brim|Her eyes brimmed with tears.|그녀의 눈에 눈물이 넘쳐흘렀다.
+brimstone|The air smelled of brimstone near the volcano.|화산 근처 공기에서 유황 냄새가 났다.
+brink|The company is on the brink of bankruptcy.|그 회사는 파산 직전이다.
+brood|He sat brooding over his mistake.|그는 자기 실수를 곰곰이 생각하며 앉아 있었다.
+brouhaha|The brouhaha over the new law soon died down.|새 법을 둘러싼 소동은 곧 잠잠해졌다.
+buccaneer|Pirates buccaneered along the coast for years.|해적들은 수년간 해안을 따라 해적질을 했다.
+buffoonery|The audience laughed at his buffoonery.|관객들은 그의 익살에 웃었다.
+burgeoning|The city has a burgeoning tech industry.|그 도시는 기술 산업이 급성장하고 있다.
+buzzard|A buzzard circled in the sky.|말똥가리가 하늘을 맴돌았다.
+caffeinate|The company caffeinated its new drink.|그 회사는 신제품 음료에 카페인을 넣었다.
+calamitous|The flood had calamitous effects.|홍수는 재앙적인 결과를 가져왔다.
+calamitously|The plan failed calamitously.|그 계획은 비참하게 실패했다.
+calamity|The fire was a calamity for the town.|그 화재는 마을에 재앙이었다.
+callous|His callous remarks hurt her.|그의 냉담한 말이 그녀에게 상처를 주었다.
+callously|He callously ignored their pleas.|그는 그들의 간청을 냉담하게 무시했다.
+calorific|Cakes are highly calorific.|케이크는 열량이 매우 높다.
+capacious|She carries a capacious handbag.|그녀는 널찍한 핸드백을 들고 다닌다.
+carbonize|The wood was carbonized in the fire.|나무가 불에 탄화되었다.
+catastrophically|The bridge failed catastrophically.|그 다리는 파멸적으로 무너졌다.
+cay|We sailed to a small cay.|우리는 작은 섬으로 항해했다.
+centralized|The country has a centralized government.|그 나라는 중앙 집권 정부를 갖고 있다.
+choreographical|The dance has complex choreographical patterns.|그 춤은 안무 구성이 복잡하다.
+choreography|The choreography of the show was amazing.|그 쇼의 안무가 놀라웠다.
+chronologically|The events are listed chronologically.|사건들이 연대순으로 나열되어 있다.
+chronology|The book gives a chronology of the war.|그 책은 전쟁의 연대기를 보여 준다.
+chrysalis|The butterfly came out of its chrysalis.|나비가 번데기에서 나왔다.
+cinematographer|The cinematographer won an award.|그 촬영 감독은 상을 받았다.
+cinematography|The film's cinematography is beautiful.|그 영화의 촬영이 아름답다.
+circumnavigate|They plan to circumnavigate the globe by boat.|그들은 배로 세계를 일주할 계획이다.
+circumnavigation|His circumnavigation of the world took two years.|그의 세계 일주는 2년이 걸렸다.
+clinch|They clinched the deal at the last minute.|그들은 막판에 거래를 매듭지었다.
+cloister|The monks walked in the cloister.|수도사들이 수도원 회랑을 걸었다.
+cloistered|She lived a cloistered life.|그녀는 은둔 생활을 했다.
+coax|She coaxed the cat out of the tree.|그녀는 고양이를 구슬려 나무에서 내려오게 했다.
+cocoon|The blanket cocooned the baby.|담요가 아기를 감쌌다.
+cogent|He made a cogent argument.|그는 설득력 있는 주장을 했다.
+cogently|She argued cogently for the plan.|그녀는 그 계획을 설득력 있게 주장했다.
+collide|Two cars collided at the corner.|모퉁이에서 차 두 대가 충돌했다.
+collider|Scientists use a particle collider.|과학자들은 입자 충돌기를 사용한다.
+colloquial|The book uses colloquial English.|그 책은 구어체 영어를 쓴다.
+colloquially|The building is colloquially called "the Gherkin."|그 건물은 구어로 '거킨'이라고 불린다.
+colloquium|She spoke at a history colloquium.|그녀는 역사 학술 회의에서 발표했다.
+combustion|The engine uses internal combustion.|그 엔진은 내연 방식이다.
+commensurate|Salary will be commensurate with experience.|급여는 경력에 상응할 것이다.
+commensurately|Prices rose commensurately with costs.|비용에 비례하여 가격이 올랐다.
+commode|The hospital room has a commode.|그 병실에는 변기 의자가 있다.
+compellingly|She wrote compellingly about her life.|그녀는 자신의 삶에 대해 설득력 있게 썼다.
+conciliation|The dispute was settled by conciliation.|그 분쟁은 조정으로 해결되었다.
+conciliatory|He made a conciliatory gesture.|그는 회유적인 몸짓을 보였다.
+concurrence|The plan has the concurrence of the board.|그 계획은 이사회의 동의를 얻었다.
+condensation|There is condensation on the window.|창문에 물방울이 맺혔다.
+condone|We do not condone violence.|우리는 폭력을 용납하지 않는다.
+conduit|The pipe serves as a conduit for water.|그 관은 물이 지나가는 통로 역할을 한다.
+confabulate|The old friends confabulated over tea.|오랜 친구들이 차를 마시며 담소를 나눴다.
+confabulation|Their confabulation lasted all afternoon.|그들의 담소는 오후 내내 계속되었다.
+confection|The bakery sells sweet confections.|그 빵집은 달콤한 과자를 판다.
+confrontational|His style is too confrontational.|그의 방식은 너무 대립적이다.
+confrontationally|He spoke confrontationally.|그는 대립적으로 말했다.
+conjecture|Scientists conjectured that the star was dying.|과학자들은 그 별이 소멸하고 있다고 추측했다.
+connotation|The word has a negative connotation.|그 단어에는 부정적인 함축이 있다.
+connote|The color red can connote danger.|빨간색은 위험을 함축할 수 있다.
+consign|She consigned the paintings to an auction house.|그녀는 그림들을 경매 회사에 맡겼다.
+consternation|The news caused consternation.|그 소식은 당황을 일으켰다.
+constrained|We are constrained by a small budget.|우리는 적은 예산에 제약을 받는다.
+contagion|The fear of contagion kept people home.|전염에 대한 두려움 때문에 사람들이 집에 있었다.
+contemptuous|She gave him a contemptuous look.|그녀는 그를 경멸하는 눈으로 봤다.
+contemptuously|He laughed contemptuously.|그는 경멸하듯 웃었다.
+contractually|We are contractually bound to finish by May.|우리는 계약상 5월까지 끝내야 한다.
+contraption|He built a strange contraption.|그는 이상한 기계를 만들었다.
+contrive|She contrived a way to escape.|그녀는 빠져나갈 방법을 꾸몄다.
+cordon|Police cordoned off the street.|경찰이 그 거리를 차단했다.
+corpse|In the novel, the detective finds a corpse in the library.|그 소설에서 탐정은 서재에서 시체를 발견한다.
+corpus|The dictionary is based on a large corpus.|그 사전은 대규모 말뭉치를 기반으로 한다.
+cosmic|The movie is about cosmic events.|그 영화는 우주의 사건들에 관한 것이다.
+cosset|She cosseted her only child.|그녀는 외동아이를 애지중지했다.
+counterproductive|Shouting at staff is counterproductive.|직원들에게 소리치는 것은 역효과를 낳는다.
+counterproductively|The new rule worked counterproductively.|새 규정은 역효과를 냈다.
+crippling|The company has crippling debts.|그 회사는 심각한 부채를 안고 있다.
+crony|He gave jobs to his cronies.|그는 측근들에게 일자리를 주었다.
+crystallization|The crystallization of sugar takes time.|설탕이 결정화되는 데는 시간이 걸린다.
+cull|The farmers had to cull the sick animals.|농부들은 병든 동물을 도태시켜야 했다.
+cultish|The brand has a cultish following.|그 브랜드에는 사이비 집단 같은 열성 팬들이 있다.
+curate|She curated the art exhibition.|그녀가 그 미술 전시회를 기획했다.
+curator|The museum curator explained the painting.|박물관 큐레이터가 그 그림을 설명했다.
+dampen|The rain dampened our spirits.|비가 우리 기분을 가라앉혔다.
+deaden|The walls deaden the noise.|벽이 소음을 약하게 한다.
+declination|He sent a polite declination to the invitation.|그는 초대에 정중한 거절의 답을 보냈다.
+deficient|His diet is deficient in vitamins.|그의 식단에는 비타민이 부족하다.
+deficiently|The room was deficiently heated.|방이 불충분하게 데워졌다.
+delicatessen|We bought sandwiches at the delicatessen.|우리는 조제 식품점에서 샌드위치를 샀다.
+demystification|The book offers a demystification of finance.|그 책은 금융을 명쾌하게 설명해 준다.
+demystify|The class tries to demystify computers.|그 수업은 컴퓨터를 쉽게 설명하려 한다.
+denotation|The denotation of a word is its basic meaning.|단어의 명시적 의미는 그 기본 뜻이다.
+denunciation|The speech was a strong denunciation of war.|그 연설은 전쟁을 강하게 비난했다.
+depraved|The villain in the film is depraved.|그 영화 속 악당은 타락했다.
+depravity|The novel shows the depravity of the city.|그 소설은 그 도시의 타락상을 보여 준다.
+deprecate|He deprecated the use of violence.|그는 폭력 사용을 비난했다.
+deprecatingly|He spoke deprecatingly about his own work.|그는 자기 작품에 대해 겸손하게 말했다.
+depressive|He suffers from a depressive illness.|그는 우울증을 앓고 있다.
+derelict|The derelict building will be torn down.|그 버려진 건물은 철거될 것이다.
+derision|His idea was met with derision.|그의 아이디어는 조롱을 받았다.
+derisive|There was derisive laughter.|조롱하는 웃음소리가 났다.
+derisively|They laughed derisively.|그들은 조롱조로 웃었다.
+deterrent|High fines act as a deterrent.|높은 벌금은 억제책 역할을 한다.
+detract|The noise detracted from our enjoyment.|소음이 우리의 즐거움을 손상시켰다.
+deviant|The study looks at social deviants.|그 연구는 사회적 일탈자를 살펴본다.
+deviantly|The data behaved deviantly.|데이터가 일탈적인 양상을 보였다.
+diffuse|The light was soft and diffuse.|빛이 부드럽고 은은하게 퍼져 있었다.
+diligently|She studied diligently for the exam.|그녀는 시험을 위해 부지런히 공부했다.
+disdainful|He was disdainful of cheap food.|그는 값싼 음식을 경멸했다.
+disparage|Don't disparage other people's work.|남의 작업을 폄하하지 마세요.
+disparagement|Her disparagement of the plan upset the team.|그녀가 그 계획을 폄하해서 팀이 속상해했다.
+disparaging|He made disparaging remarks.|그는 폄하하는 말을 했다.
+disparagingly|She spoke disparagingly of her rival.|그녀는 경쟁자에 대해 얕보듯이 말했다.
+dispersal|The wind helps the dispersal of seeds.|바람이 씨앗의 분산을 돕는다.
+disperse|The crowd dispersed after the concert.|콘서트 후 군중이 흩어졌다.
+dissemble|He dissembled his true feelings.|그는 진짜 감정을 숨겼다.
+disseminate|The internet helps disseminate information.|인터넷은 정보를 퍼뜨리는 데 도움이 된다.
+dissemination|The dissemination of news is fast online.|온라인에서는 뉴스가 빠르게 보급된다.
+dissension|There was dissension within the team.|팀 안에 불화가 있었다.
+distill|They distill whisky from barley.|그들은 보리로 위스키를 증류한다.
+distillation|Water can be purified by distillation.|물은 증류로 정화할 수 있다.
+divination|Ancient people used divination to see the future.|고대인들은 미래를 보려고 점을 쳤다.
+dole out|The teacher doled out candy to the children.|선생님이 아이들에게 사탕을 조금씩 나눠 주었다.
+domesticity|He enjoys the quiet domesticity of his home.|그는 집의 조용한 가정생활을 즐긴다.
+drabness|The bright flowers broke the drabness of the room.|밝은 꽃들이 방의 칙칙함을 깼다.
+dribble|He dribbled the ball past two players.|그는 두 선수를 제치고 공을 드리블했다.
+drudgery|Housework can be drudgery.|집안일은 고된 일일 수 있다.
+dubiously|She looked at the food dubiously.|그녀는 음식을 의심스럽게 바라봤다.
+dwarfism|Dwarfism is a medical condition.|왜소증은 의학적 질환이다.
+ebb|His energy began to ebb.|그의 기력이 약해지기 시작했다.
+eccentricity|His eccentricity made him famous.|그의 기벽이 그를 유명하게 만들었다.
+echolocate|Bats echolocate to find food.|박쥐는 반향 위치를 측정해 먹이를 찾는다.
+echolocation|Dolphins use echolocation.|돌고래는 반향 위치 측정을 이용한다.
+ecotourism|Ecotourism is growing in Costa Rica.|코스타리카에서 생태 관광이 늘고 있다.
+edification|The lecture was for the edification of the students.|그 강의는 학생들을 교화하기 위한 것이었다.
+edifice|The museum is a grand edifice.|그 박물관은 웅장한 건물이다.
+edify|The program aims to edify viewers.|그 프로그램은 시청자를 교화하는 것을 목표로 한다.
+egalitarian|They believe in an egalitarian society.|그들은 평등주의 사회를 믿는다.
+eke out|They eked out a living on the farm.|그들은 농장에서 겨우 생계를 꾸려 나갔다.
+elated|She was elated by the news.|그녀는 그 소식에 신이 났다.
+elation|He felt elation after winning.|그는 이긴 후 의기양양함을 느꼈다.
+electrode|Attach the electrode to the patient's chest.|환자의 가슴에 전극을 붙이세요.
+elephantine|The building is elephantine in size.|그 건물은 크기가 거대하다.
+embodiment|She is the embodiment of kindness.|그녀는 친절의 화신이다.
+eminence|He rose to eminence as a lawyer.|그는 변호사로 명성을 얻었다.
+eminent|She is an eminent scientist.|그녀는 저명한 과학자이다.
+emolument|The director's emolument was increased.|이사의 보수가 인상되었다.
+emulate|He tried to emulate his father.|그는 아버지를 본받으려 했다.
+emulation|Her success inspired emulation.|그녀의 성공은 모방을 불러일으켰다.
+emulsification|Emulsification mixes oil and water.|유화는 기름과 물을 섞는다.
+emulsifier|Egg yolk is a natural emulsifier.|달걀노른자는 천연 유화제이다.
+emulsify|Whisk the sauce to emulsify it.|소스를 휘저어 유화시키세요.
+enabler|Technology is an enabler of change.|기술은 변화의 조력자이다.
+encumber|Heavy bags encumbered the travelers.|무거운 가방이 여행자들을 힘들게 했다.
+encumbrance|The old rules are an encumbrance.|낡은 규정은 방해물이다.
+enduringly|The song is enduringly popular.|그 노래는 지속적으로 인기가 있다.
+engender|The policy engendered strong opposition.|그 정책은 강한 반대를 불러일으켰다.
+enthuse|She enthused about her new job.|그녀는 새 일에 대해 열광적으로 이야기했다.
+ephemera|He collects old tickets and other ephemera.|그는 옛날 표와 기타 수명이 짧은 물건들을 모은다.
+ephemeral|Fashion trends are ephemeral.|패션 유행은 덧없다.
+ephemerality|The poem is about the ephemerality of youth.|그 시는 젊음의 덧없음에 관한 것이다.
+epoxy|Use epoxy to fix the broken cup.|깨진 컵을 고치려면 에폭시를 쓰세요.
+equable|She has an equable temperament.|그녀는 차분한 기질을 갖고 있다.
+etch|The memory is etched in my mind.|그 기억은 내 마음에 새겨져 있다.
+etching|The museum displays old etchings.|그 박물관은 오래된 동판화를 전시한다.
+ethos|The company has a strong team ethos.|그 회사에는 강한 팀 기풍이 있다.
+euphemism|"Passed away" is a euphemism for "died."|'passed away'는 'died'의 완곡어법이다.
+euphemistic|The report used euphemistic language.|그 보고서는 완곡한 표현을 썼다.
+euphemistically|The layoffs were euphemistically called "restructuring."|해고는 완곡하게 '구조 조정'이라고 불렸다.
+euphoria|There was euphoria after the victory.|승리 후 희열이 가득했다.
+euphoric|The fans were euphoric.|팬들은 황홀해했다.
+euphorically|They celebrated euphorically.|그들은 들떠서 축하했다.
+evokingly|The writer described the village evokingly.|작가는 그 마을을 생생하게 떠오르게 묘사했다.
+exalted|He held an exalted position.|그는 고귀한 지위에 있었다.
+exaltedly|She smiled exaltedly after the win.|그녀는 이긴 후 의기양양하게 미소 지었다.
+exorcism|The movie is about an exorcism.|그 영화는 퇴마에 관한 것이다.
+exorcist|The exorcist arrived at the old house.|퇴마사가 그 오래된 집에 도착했다.
+extant|Few copies of the book are still extant.|그 책은 현존하는 사본이 거의 없다.
+extracurricular|She joined many extracurricular activities.|그녀는 많은 과외 활동에 참여했다.
+exude|She exudes confidence.|그녀는 자신감을 풍긴다.
+fabled|They visited the fabled city.|그들은 그 전설적인 도시를 방문했다.
+fabricate|He fabricated the story.|그는 그 이야기를 날조했다.
+fabrication|His excuse was a complete fabrication.|그의 변명은 완전한 날조였다.
+fabulate|Children love to fabulate stories.|아이들은 이야기 지어내기를 좋아한다.
+fabulation|The novel is a work of fabulation.|그 소설은 꾸며 낸 이야기이다.
+facsimile|The museum shows a facsimile of the old map.|그 박물관은 옛 지도의 복제본을 보여 준다.
+fallacy|It is a fallacy that money brings happiness.|돈이 행복을 가져온다는 것은 오류이다.
+farcical|The meeting was farcical.|그 회의는 우스꽝스러웠다.
+feign|He feigned illness to stay home.|그는 집에 있으려고 아픈 척했다.
+ferocity|The ferocity of the storm surprised us.|폭풍의 흉포함에 우리는 놀랐다.
+fete|The village holds a summer fete.|그 마을은 여름 축제를 연다.
+figuratively|I was speaking figuratively.|저는 비유적으로 말한 거예요.
+flagging|The coffee revived my flagging energy.|커피가 약해지던 내 기운을 되살려 주었다.
+flightiness|Her flightiness made her hard to work with.|그녀는 변덕스러워서 함께 일하기 어려웠다.
+flighty|He is too flighty to be trusted.|그는 너무 변덕스러워서 믿을 수 없다.
+flit|Butterflies flitted from flower to flower.|나비들이 꽃에서 꽃으로 훨훨 날아다녔다.
+floe|A seal rested on the ice floe.|바다표범이 부빙 위에서 쉬었다.
+floodgates|The new law opened the floodgates to lawsuits.|새 법은 소송이 쏟아지는 수문을 열었다.
+forfeiture|The crime led to the forfeiture of his property.|그 범죄로 그의 재산이 몰수되었다.
+forlorn|The empty house looked forlorn.|빈집이 쓸쓸해 보였다.
+forlornly|The dog waited forlornly by the door.|개가 문 옆에서 쓸쓸하게 기다렸다.
+formidably|She is formidably intelligent.|그녀는 만만찮게 영리하다.
+fractious|The fractious child refused to sleep.|성마른 아이가 자기를 거부했다.
+frolic|The puppies frolicked in the garden.|강아지들이 정원에서 뛰놀았다.
+fruition|The plan finally came to fruition.|그 계획이 마침내 결실을 맺었다.
+gale|A gale blew all night.|밤새 강풍이 불었다.
+gambit|It was a clever gambit.|그것은 영리한 책략이었다.
+gauche|He felt gauche at the party.|그는 파티에서 어색함을 느꼈다.
+genomic|The lab does genomic research.|그 연구소는 게놈 연구를 한다.
+genomically|The two species are genomically similar.|두 종은 유전체적으로 비슷하다.
+glitz|He doesn't care for the glitz of Hollywood.|그는 할리우드의 화려함에 관심이 없다.
+glitzy|They went to a glitzy party.|그들은 화려한 파티에 갔다.
+glory in|He gloried in his success.|그는 자기 성공을 자랑스러워했다.
+gout|My grandfather suffers from gout.|우리 할아버지는 통풍을 앓고 계신다.
+gravitate|Young people gravitate to big cities.|젊은이들은 대도시로 끌린다.
+gravitational|The moon has a gravitational pull on the earth.|달은 지구에 중력의 영향을 미친다.
+gravitationally|The planets are gravitationally bound to the sun.|행성들은 중력에 의해 태양에 묶여 있다.
+grievance|Workers aired their grievances.|근로자들이 불만을 토로했다.
+habitation|The island is unfit for human habitation.|그 섬은 사람이 살기에 적합하지 않다.
+hamper|Bad weather hampered the rescue.|악천후가 구조를 방해했다.
+haphazard|The files were stored in a haphazard way.|파일들이 되는대로 보관되어 있었다.
+haphazardly|Books were piled haphazardly on the floor.|책들이 바닥에 무계획적으로 쌓여 있었다.
+hapless|The hapless driver got lost again.|불운한 운전자가 또 길을 잃었다.
+happenstance|We met by happenstance.|우리는 우연히 만났다.
+haughtily|She looked at us haughtily.|그녀는 우리를 거만하게 바라봤다.
+haughty|He has a haughty manner.|그는 태도가 거만하다.
+hauntingly|The music was hauntingly beautiful.|그 음악은 잊히지 않을 만큼 아름다웠다.
+headmistress|The headmistress spoke to the students.|여자 교장 선생님이 학생들에게 말했다.
+helm|She took the helm of the company.|그녀가 회사의 지휘를 맡았다.
+herald|The new phone heralds a new era.|새 휴대폰이 새 시대를 예고한다.
+hermetic|The jar has a hermetic seal.|그 병은 밀폐되어 있다.
+hermit|He lived like a hermit in the mountains.|그는 산속에서 은둔자처럼 살았다.
+hinder|The noise hindered my work.|소음이 내 일을 방해했다.
+hindrance|The old rules are a hindrance to growth.|낡은 규정은 성장에 방해가 된다.
+hindsight|In hindsight, we should have left earlier.|돌이켜 보면 우리는 더 일찍 떠났어야 했다.
+histrionic|Her histrionic behavior annoyed everyone.|그녀의 과장된 행동이 모두를 짜증 나게 했다.
+histrionically|He sighed histrionically.|그는 연극조로 한숨을 쉬었다.
+hitch|We hitched a ride to the town.|우리는 마을까지 차를 얻어 탔다.
+hoist|They hoisted the flag.|그들은 깃발을 들어 올렸다.
+homestead|They lived on a homestead in the country.|그들은 시골 농가에서 살았다.
+hotelier|The hotelier owns three hotels.|그 호텔 경영자는 호텔 세 곳을 소유하고 있다.
+huddle|The children huddled together for warmth.|아이들이 온기를 위해 옹기종기 모였다.
+hull|The ship's hull was damaged.|배의 선체가 손상되었다.
+hypnotherapy|She tried hypnotherapy to quit smoking.|그녀는 담배를 끊으려고 최면 요법을 시도했다.
+hypothesize|Scientists hypothesize that the climate is changing.|과학자들은 기후가 변하고 있다는 가설을 세운다.
+hysteria|There was mass hysteria after the news.|그 소식 이후 집단 히스테리가 일어났다.
+hysterical|The movie was hysterical.|그 영화는 너무 웃겼다.
+hysterically|They laughed hysterically.|그들은 발작적으로 웃었다.
+idiomatic|Her English is very idiomatic.|그녀의 영어는 매우 관용적이다.
+idiomatically|The sentence is not idiomatically correct.|그 문장은 관용적으로 맞지 않다.
+idiosyncrasy|Everyone has their own idiosyncrasies.|누구나 자기만의 특이한 점이 있다.
+idiosyncratic|He has an idiosyncratic style of writing.|그는 특유의 글쓰기 스타일을 갖고 있다.
+ignominious|The team suffered an ignominious defeat.|그 팀은 수치스러운 패배를 당했다.
+ignominiously|He was ignominiously fired.|그는 굴욕적으로 해고되었다.
+impeccable|Her manners are impeccable.|그녀의 예의범절은 흠잡을 데가 없다.
+impeccably|He was impeccably dressed.|그는 완벽하게 차려입었다.
+imperceptible|The change was almost imperceptible.|그 변화는 거의 감지할 수 없었다.
+imperceptibly|The light faded imperceptibly.|빛이 알아차릴 수 없게 희미해졌다.
+imposition|The imposition of a new tax angered people.|새 세금 부과가 사람들을 화나게 했다.
+impresario|The impresario organized the concert.|기획자가 그 콘서트를 준비했다.
+impressionistic|The painting has an impressionistic style.|그 그림은 인상주의적인 스타일이다.
+impressionistically|The scene was painted impressionistically.|그 장면은 인상주의 기법으로 그려졌다.
+improvisational|He took an improvisational theater class.|그는 즉흥 연극 수업을 들었다.
+inartistic|The building is plain and inartistic.|그 건물은 평범하고 비예술적이다.
+inchoate|The plan is still inchoate.|그 계획은 아직 초기 단계이다.
+inchoately|The idea was inchoately formed.|그 아이디어는 미완성 상태로 형성되었다.
+incipient|There were signs of incipient problems.|초기 문제의 징후가 있었다.
+incise|The artist incised a pattern into the clay.|예술가가 점토에 무늬를 새겼다.
+incongruity|The incongruity of the situation made us laugh.|상황의 부조화가 우리를 웃게 했다.
+incongruous|The modern building looks incongruous in the old town.|그 현대식 건물은 구시가지에서 어울리지 않아 보인다.
+incongruously|He was incongruously dressed in a suit at the beach.|그는 해변에서 어울리지 않게 정장을 입고 있었다.
+indignant|She was indignant at the unfair treatment.|그녀는 부당한 대우에 분개했다.
+indignantly|He indignantly denied the charge.|그는 분개하며 혐의를 부인했다.
+indiscretion|He regretted his youthful indiscretion.|그는 젊은 시절의 경솔한 행동을 후회했다.
+individualism|American culture values individualism.|미국 문화는 개인주의를 중시한다.
+indolence|His indolence cost him the job.|그는 나태 때문에 일자리를 잃었다.
+indolent|The indolent student never did his homework.|게으른 학생은 숙제를 한 번도 하지 않았다.
+indolently|He lay indolently on the sofa.|그는 소파에 게으르게 누워 있었다.
+inducement|The company offered inducements to new customers.|그 회사는 신규 고객에게 유인책을 제공했다.
+indulgence|Chocolate is my only indulgence.|초콜릿이 내 유일한 사치이다.
+indulgently|The grandmother smiled indulgently.|할머니가 너그럽게 미소 지었다.
+inexorability|They accepted the inexorability of change.|그들은 변화의 불가피성을 받아들였다.
+inexorable|The inexorable rise in prices continued.|가격의 거침없는 상승이 계속되었다.
+inexorably|Prices rose inexorably.|가격이 거침없이 올랐다.
+infallibility|No one believes in the infallibility of experts.|누구도 전문가가 절대 틀리지 않는다고 믿지 않는다.
+infallible|No one is infallible.|절대 틀리지 않는 사람은 없다.
+infallibly|She infallibly remembers birthdays.|그녀는 생일을 틀림없이 기억한다.
+infernal|Stop that infernal noise!|그 지옥 같은 소음 좀 그만해!
+infernally|It was infernally hot.|지독하게 더웠다.
+informant|The reporter protected her informant.|기자는 정보원을 보호했다.
+ingenuous|She gave an ingenuous smile.|그녀는 순진한 미소를 지었다.
+ingenuously|He ingenuously believed every word.|그는 천진하게 모든 말을 믿었다.
+ingrate|Don't be an ingrate; say thank you.|배은망덕하게 굴지 말고 고맙다고 해.
+ingratiate|He tried to ingratiate himself with the boss.|그는 상사의 환심을 사려 했다.
+ingratiating|She has an ingratiating smile.|그녀는 환심을 사려는 미소를 짓는다.
+ingratiatingly|He smiled ingratiatingly at the customer.|그는 고객에게 알랑거리며 미소 지었다.
+innuendo|The article was full of innuendo.|그 기사는 빈정거림으로 가득했다.
+inscrutable|His face was inscrutable.|그의 표정은 불가사의했다.
+instantaneous|The response was instantaneous.|반응이 즉각적이었다.
+instantaneously|The message arrived instantaneously.|메시지가 즉시 도착했다.
+insular|The village is small and insular.|그 마을은 작고 폐쇄적이다.
+interlocking|The puzzle has interlocking pieces.|그 퍼즐은 맞물리는 조각들로 되어 있다.
+interlude|There was a short musical interlude.|짧은 음악 막간이 있었다.
+interrogate|The police interrogated the suspect.|경찰이 용의자를 심문했다.
+interrogation|The interrogation lasted three hours.|심문은 세 시간 동안 계속되었다.
+interrogative|"What" is an interrogative word.|'what'은 의문사이다.
+interrogatively|She looked at him interrogatively.|그녀는 묻는 듯이 그를 바라봤다.
+intersperse|The speech was interspersed with jokes.|그 연설에는 농담이 곳곳에 섞여 있었다.
+interweave|The novel interweaves two stories.|그 소설은 두 이야기를 엮어 짠다.
+intrinsically|The job is intrinsically rewarding.|그 일은 본질적으로 보람 있다.
+ironic|It's ironic that the fire station burned down.|소방서가 불탄 것은 역설적이다.
+irrelevancy|His comments were an irrelevancy.|그의 발언은 부적절했다.
+irrevocable|The decision is irrevocable.|그 결정은 돌이킬 수 없다.
+irrevocably|The town was irrevocably changed.|그 마을은 돌이킬 수 없게 변했다.
+jargon|Avoid technical jargon in the report.|보고서에서는 전문 용어를 피하세요.
+jarring|The jarring sound woke me up.|귀에 거슬리는 소리에 잠이 깼다.
+kinetic|Moving objects have kinetic energy.|움직이는 물체는 운동 에너지를 갖는다.
+kinetically|The sculpture moves kinetically in the wind.|그 조각품은 바람에 따라 움직인다.
+knack|She has a knack for languages.|그녀는 언어에 소질이 있다.
+lament|They lamented the loss of the old theater.|그들은 옛 극장이 사라진 것을 애통해했다.
+lamentation|There was great lamentation at his death.|그의 죽음에 큰 애도가 있었다.
+laryngitis|She lost her voice due to laryngitis.|그녀는 후두염으로 목소리가 나오지 않았다.
+lassitude|The heat brought on a feeling of lassitude.|더위 때문에 권태감이 들었다.
+laud|Critics lauded the new film.|평론가들이 새 영화를 칭찬했다.
+laudatory|The book received laudatory reviews.|그 책은 찬사 일색의 평을 받았다.
+leaven|Humor leavened the long speech.|유머가 긴 연설에 활기를 주었다.
+leavening|Yeast is used as a leavening.|효모는 발효제로 쓰인다.
+legion|His fans are legion.|그의 팬은 무수히 많다.
+liaise|She liaises with our partners in Japan.|그녀는 일본 협력사와 연락을 담당한다.
+locomotion|Fish use their tails for locomotion.|물고기는 꼬리로 이동한다.
+locomotive|The old steam locomotive is in a museum.|그 오래된 증기 기관차는 박물관에 있다.
+loiter|Teenagers loitered outside the store.|십대들이 가게 밖에서 어슬렁거렸다.
+lurid|The magazine printed lurid stories.|그 잡지는 선정적인 기사를 실었다.
+luridly|The crime was luridly described.|그 범죄는 선정적으로 묘사되었다.
+lyrical|The song has lyrical beauty.|그 노래에는 서정적인 아름다움이 있다.
+lyrically|She writes lyrically about nature.|그녀는 자연에 대해 서정적으로 쓴다.
+lyricist|He is a famous lyricist.|그는 유명한 작사가이다.
+maelstrom|The city was a maelstrom of activity.|그 도시는 활동의 소용돌이였다.
+maggot|There were maggots in the rotten fruit.|썩은 과일에 구더기가 있었다.
+magnanimity|He showed magnanimity in victory.|그는 승리 속에서도 관대함을 보였다.
+magnanimous|She was magnanimous in defeat.|그녀는 패배 속에서도 도량이 컸다.
+magnanimously|He magnanimously forgave them.|그는 관대하게 그들을 용서했다.
+magnate|He is a shipping magnate.|그는 해운업계의 거물이다.
+magpie|A magpie sat on the fence.|까치 한 마리가 울타리에 앉아 있었다.
+malice|He did it without malice.|그는 악의 없이 그렇게 했다.
+malicious|Someone spread malicious rumors.|누군가 악의적인 소문을 퍼뜨렸다.
+maliciously|The software was maliciously changed.|그 소프트웨어가 악의적으로 변경되었다.
+malleability|Gold is known for its malleability.|금은 잘 늘어나는 성질로 유명하다.
+malleable|Young children are very malleable.|어린아이들은 매우 유순하다.
+mangle|The machine mangled the paper.|기계가 종이를 망가뜨렸다.
+mariner|The old mariner told stories of the sea.|늙은 선원이 바다 이야기를 들려주었다.
+marketability|We tested the marketability of the product.|우리는 그 제품의 시장성을 시험했다.
+materialism|The book criticizes modern materialism.|그 책은 현대의 물질주의를 비판한다.
+materialistic|He is too materialistic.|그는 너무 물질주의적이다.
+materialization|The materialization of the plan took years.|그 계획이 실현되는 데 수년이 걸렸다.
+materialize|The promised bonus never materialized.|약속된 보너스는 끝내 실현되지 않았다.
+maverick|He is a maverick in the industry.|그는 업계의 이단아이다.
+meager|They lived on a meager income.|그들은 빈약한 수입으로 살았다.
+mediate|A lawyer mediated the dispute.|변호사가 그 분쟁을 중재했다.
+mediation|The case was settled through mediation.|그 사건은 중재로 해결되었다.
+mediocrity|The team settled for mediocrity.|그 팀은 평범함에 안주했다.
+melancholy|The song has a feeling of melancholy.|그 노래에는 우울한 느낌이 있다.
+melodious|She has a melodious voice.|그녀의 목소리는 선율이 아름답다.
+melodiously|The birds sang melodiously.|새들이 아름다운 선율로 노래했다.
+menace|The dog is a menace to the neighborhood.|그 개는 동네의 위협거리이다.
+menacing|He gave a menacing look.|그는 위협적인 눈빛을 보냈다.
+menacingly|The dark clouds gathered menacingly.|먹구름이 위협적으로 몰려들었다.
+menial|He did menial jobs to pay for school.|그는 학비를 벌려고 허드렛일을 했다.
+mercantile|The city has a long mercantile history.|그 도시는 오랜 상업의 역사를 갖고 있다.
+mercenary|The army hired mercenaries.|그 군대는 용병을 고용했다.
+mesh|Their ideas meshed well.|그들의 아이디어가 잘 맞물렸다.
+mesmeric|The music had a mesmeric effect.|그 음악은 최면을 거는 듯한 효과가 있었다.
+metalled|They drove on a metalled road.|그들은 자갈로 포장된 길을 달렸다.
+meteorological|The meteorological office issued a warning.|기상청이 경보를 발령했다.
+meteorology|She studied meteorology.|그녀는 기상학을 공부했다.
+methodological|The study has methodological problems.|그 연구에는 방법론적 문제가 있다.
+methodologically|The research is methodologically sound.|그 연구는 방법론적으로 견고하다.
+meticulous|She is meticulous about details.|그녀는 세부 사항에 꼼꼼하다.
+meticulously|He meticulously checked every page.|그는 모든 페이지를 꼼꼼하게 확인했다.
+midwifery|She is studying midwifery.|그녀는 조산술을 공부하고 있다.
+mien|He has a serious mien.|그는 진지한 풍채를 지녔다.
+milieu|He grew up in an artistic milieu.|그는 예술적인 환경에서 자랐다.
+minefield|The legal issues are a minefield.|그 법적 문제들은 지뢰밭이다.
+misdemeanor|He was charged with a misdemeanor.|그는 경범죄로 기소되었다.
+modernism|The museum focuses on modernism.|그 박물관은 모더니즘에 초점을 둔다.
+monastic|They live a monastic life.|그들은 수도원 생활을 한다.
+moor|We walked across the moor.|우리는 황야를 가로질러 걸었다.
+moribund|The industry is moribund.|그 산업은 소멸 직전이다.
+mottled|The leaves are mottled with brown spots.|그 잎들은 갈색 반점으로 얼룩덜룩하다.
+mull over|I need time to mull over your offer.|당신의 제안을 곰곰이 생각할 시간이 필요해요.
+mundanity|He wanted to escape the mundanity of office life.|그는 사무실 생활의 평범함에서 벗어나고 싶었다.
+munificence|The museum was built through the munificence of a donor.|그 박물관은 한 기부자의 후함 덕분에 지어졌다.
+muscle-bound|The muscle-bound man lifted the box easily.|근육질 남자가 상자를 쉽게 들어 올렸다.
+mutinous|The crew became mutinous.|선원들이 반항적으로 변했다.
+mutinously|The students stared mutinously at the teacher.|학생들이 반항적으로 선생님을 쳐다봤다.
+myriad|The city offers a myriad of choices.|그 도시는 무수한 선택지를 제공한다.
+mystique|The brand has a certain mystique.|그 브랜드에는 어떤 신비감이 있다.
+nascent|The company is in its nascent stage.|그 회사는 초기 단계에 있다.
+neophyte|He is a neophyte in politics.|그는 정치 초보자이다.
+nigh|The end of the year is nigh.|연말이 가까이 왔다.
+nonchalant|She tried to look nonchalant.|그녀는 태연한 척하려 했다.
+nonchalantly|He nonchalantly walked away.|그는 태연하게 걸어갔다.
+nostalgia|The song filled me with nostalgia.|그 노래를 들으니 향수에 젖었다.
+nostalgic|The photos made me feel nostalgic.|그 사진들을 보니 향수를 느꼈다.
+nostalgically|She spoke nostalgically of her childhood.|그녀는 어린 시절을 그리운 듯이 이야기했다.
+notoriety|He gained notoriety for his behavior.|그는 그 행동으로 악명을 얻었다.
+notoriously|The road is notoriously dangerous.|그 도로는 위험하기로 악명 높다.
+oblique|He made an oblique reference to the problem.|그는 그 문제를 간접적으로 언급했다.
+octogenarian|The octogenarian still runs every day.|그 80대 노인은 아직도 매일 달린다.
+opacity|The opacity of the process worried investors.|그 과정의 불투명성이 투자자들을 걱정시켰다.
+opaque|The glass is opaque.|그 유리는 불투명하다.
+opulence|The hotel is known for its opulence.|그 호텔은 호화로움으로 유명하다.
+opulent|They live in an opulent mansion.|그들은 호화로운 저택에 산다.
+opulently|The room was opulently decorated.|그 방은 호화롭게 꾸며져 있었다.
+ordain|He was ordained as a priest.|그는 사제로 서품되었다.
+ore|The mine produces iron ore.|그 광산은 철광석을 생산한다.
+ornate|The church has an ornate ceiling.|그 교회에는 화려하게 장식된 천장이 있다.
+ostensible|The ostensible reason was illness.|표면상의 이유는 질병이었다.
+ostensibly|He was ostensibly on a business trip.|그는 표면상 출장 중이었다.
+outmoded|The factory uses outmoded machines.|그 공장은 구식 기계를 쓴다.
+overlay|The map is overlaid with traffic data.|지도 위에 교통 데이터가 덮여 있다.
+painstaking|The restoration was painstaking work.|그 복원은 공들인 작업이었다.
+painstakingly|She painstakingly repaired the old book.|그녀는 오래된 책을 공들여 수선했다.
+palatable|The medicine is more palatable with juice.|그 약은 주스와 함께 먹으면 먹을 만하다.
+palate|The wine is pleasant to the palate.|그 와인은 입맛에 맞는다.
+parable|The teacher told a parable.|선생님이 우화를 들려주었다.
+paradoxical|It is paradoxical that more choice makes people unhappy.|선택지가 많을수록 사람들이 불행해진다는 것은 역설적이다.
+paradoxically|Paradoxically, the cheaper model sold less.|역설적으로 더 싼 모델이 덜 팔렸다.
+paralysingly|The cold was paralysingly intense.|추위가 몸이 마비될 만큼 혹독했다.
+paralyzingly|She was paralyzingly shy.|그녀는 꼼짝 못 할 만큼 수줍음을 탔다.
+paramount|Safety is of paramount importance.|안전이 가장 중요하다.
+parasitic|The plant is parasitic.|그 식물은 기생 식물이다.
+parochial|His views are rather parochial.|그의 견해는 다소 편협하다.
+patchily|The rain fell patchily across the region.|비가 그 지역 곳곳에 군데군데 내렸다.
+patchy|The fog was patchy this morning.|오늘 아침 안개가 군데군데 꼈다.
+patronize|Don't patronize me.|나를 깔보지 마세요.
+patronizing|His tone was patronizing.|그의 말투는 깔보는 듯했다.
+patronizingly|She smiled patronizingly.|그녀는 깔보듯 미소 지었다.
+pedestal|The statue stands on a pedestal.|그 조각상은 받침대 위에 서 있다.
+perch|A bird perched on the branch.|새 한 마리가 나뭇가지에 앉았다.
+pervasive|Smartphones are pervasive in modern life.|스마트폰은 현대 생활에 만연해 있다.
+pervasiveness|The pervasiveness of ads is annoying.|광고가 어디에나 있는 것이 성가시다.
+perverse|He takes a perverse pleasure in arguing.|그는 논쟁하는 데서 비뚤어진 즐거움을 느낀다.
+perversity|Out of perversity, he refused to help.|그는 심술 때문에 돕기를 거부했다.
+philanthropic|She supports many philanthropic causes.|그녀는 많은 자선 활동을 후원한다.
+philanthropically|He gave philanthropically to schools.|그는 박애 정신으로 학교에 기부했다.
+philanthropist|The philanthropist donated a million dollars.|그 자선가는 100만 달러를 기부했다.
+philanthropy|She is known for her philanthropy.|그녀는 자선 활동으로 유명하다.
+philistine|He is a philistine who doesn't care about art.|그는 예술에 관심 없는 교양 없는 사람이다.
+physiological|Stress causes physiological changes.|스트레스는 생리적 변화를 일으킨다.
+physiologically|Humans are physiologically similar.|인간은 생리학적으로 비슷하다.
+plumage|The bird has bright plumage.|그 새는 깃털이 화려하다.
+plume|A plume of smoke rose from the chimney.|굴뚝에서 연기 기둥이 피어올랐다.
+plutocrat|The country is run by plutocrats.|그 나라는 부호 정치가들이 운영한다.
+polysyllabic|He likes to use polysyllabic words.|그는 다음절 단어를 즐겨 쓴다.
+ponderous|The speech was slow and ponderous.|그 연설은 느리고 지루했다.
+ponderously|The elephant moved ponderously.|코끼리가 육중하게 움직였다.
+portent|Dark clouds are a portent of rain.|먹구름은 비의 징조이다.
+portraiture|She is famous for her portraiture.|그녀는 초상화법으로 유명하다.
+posit|The theory posits that the universe is expanding.|그 이론은 우주가 팽창하고 있다고 가정한다.
+posterity|The photos were saved for posterity.|그 사진들은 후세를 위해 보존되었다.
+postural|Yoga improves postural balance.|요가는 자세 균형을 개선한다.
+posturing|His posturing didn't impress anyone.|그의 허세는 아무에게도 감명을 주지 못했다.
+precocious|She was a precocious child.|그녀는 조숙한 아이였다.
+precociously|He talked precociously for his age.|그는 나이에 비해 조숙하게 말했다.
+preconception|We had preconceptions about the city.|우리는 그 도시에 대한 선입견이 있었다.
+predilection|She has a predilection for spicy food.|그녀는 매운 음식을 특히 좋아한다.
+preeminent|He is the preeminent expert in the field.|그는 그 분야의 탁월한 전문가이다.
+preoccupation|His preoccupation with work worried his family.|그가 일에 몰두해서 가족이 걱정했다.
+prescriptive|The rules are too prescriptive.|그 규칙은 너무 규범적이다.
+presentational|She has good presentational skills.|그녀는 표현 능력이 뛰어나다.
+preservationist|Preservationists want to save the old building.|보존주의자들은 그 오래된 건물을 지키고 싶어 한다.
+pressurization|The cabin pressurization failed.|객실 가압 장치가 고장 났다.
+pressurize|The cabin is pressurized for the flight.|객실은 비행을 위해 가압되어 있다.
+presuppose|The plan presupposes that sales will grow.|그 계획은 매출이 늘 것을 전제로 한다.
+presupposition|The argument rests on a false presupposition.|그 주장은 잘못된 전제에 기대고 있다.
+primeval|They walked through a primeval forest.|그들은 태고의 숲을 걸었다.
+prissy|She is a bit prissy about food.|그녀는 음식에 좀 새침하게 군다.
+procedural|There were some procedural errors.|몇 가지 절차상의 오류가 있었다.
+promenade|We walked along the promenade.|우리는 산책로를 따라 걸었다.
+promotable|She is a highly promotable employee.|그녀는 승진 가능성이 높은 직원이다.
+proportionally|Taxes increase proportionally with income.|세금은 소득에 비례하여 늘어난다.
+proprietorial|He has a proprietorial attitude toward the project.|그는 그 프로젝트에 대해 주인 행세를 한다.
+proscribe|The law proscribes smoking in public places.|그 법은 공공장소 흡연을 금지한다.
+proscription|There is a proscription on hunting here.|이곳에서는 사냥이 금지되어 있다.
+prostrate|The pilgrims prostrated themselves before the altar.|순례자들이 제단 앞에 엎드렸다.
+protrude|A nail protruded from the wall.|벽에서 못 하나가 튀어나와 있었다.
+protrusion|There is a small protrusion on the surface.|표면에 작은 돌출부가 있다.
+proverbial|He was as quiet as the proverbial mouse.|그는 속담에 나오는 쥐처럼 조용했다.
+provocation|He reacted without provocation.|그는 도발도 없었는데 반응했다.
+proximal|The injury is on the proximal part of the arm.|부상은 팔의 몸 중심 쪽 부위에 있다.
+prurience|Critics accused the show of prurience.|비평가들은 그 프로그램이 호색적이라고 비난했다.
+prurient|The newspaper was criticized for its prurient coverage.|그 신문은 외설적인 보도로 비판받았다.
+punitive|The court ordered punitive damages.|법원은 징벌적 손해 배상을 명령했다.
+punitively|The rules were applied punitively.|규칙이 징벌적으로 적용되었다.
+puritanical|He has puritanical views about drinking.|그는 음주에 대해 청교도적인 견해를 갖고 있다.
+pyre|In some cultures, the dead are burned on a funeral pyre.|어떤 문화에서는 죽은 이를 화장용 장작더미에서 태운다.
+qualm|She had no qualms about quitting.|그녀는 그만두는 것에 불안감이 없었다.
+quiver|Her voice quivered with emotion.|그녀의 목소리가 감정으로 떨렸다.
+rapture|The audience listened in rapture.|청중이 황홀하게 들었다.
+rapturous|The singer received a rapturous welcome.|그 가수는 열광적인 환영을 받았다.
+rapturously|The fans applauded rapturously.|팬들이 열광적으로 박수를 쳤다.
+ravish|The beauty of the place ravished us.|그곳의 아름다움에 우리는 황홀해졌다.
+rebuke|The manager rebuked him for being late.|매니저가 지각했다고 그를 꾸짖었다.
+recitation|The students gave a poetry recitation.|학생들이 시 낭송을 했다.
+recluse|He became a recluse after retirement.|그는 은퇴 후 은둔자가 되었다.
+reclusive|The reclusive writer rarely gives interviews.|그 은둔 작가는 인터뷰를 거의 하지 않는다.
+recourse|We have no recourse but to sue.|우리는 소송 말고는 의지할 방법이 없다.
+recumbent|He rides a recumbent bicycle.|그는 누워서 타는 자전거를 탄다.
+recuperate|She is recuperating from surgery.|그녀는 수술 후 회복 중이다.
+recuperation|Recuperation will take two weeks.|회복에는 2주가 걸릴 것이다.
+recuperative|The trip had a recuperative effect.|그 여행은 회복 효과가 있었다.
+redundantly|The data was stored redundantly.|데이터가 불필요하게 중복 저장되었다.
+reissue|The album was reissued last year.|그 앨범은 작년에 재발매되었다.
+relegate|He was relegated to a junior position.|그는 하급 직위로 좌천되었다.
+remit|Please remit payment within 30 days.|30일 이내에 대금을 송금해 주세요.
+remittance|Many families depend on remittances from abroad.|많은 가정이 해외 송금에 의존한다.
+remonstrance|His remonstrance was ignored.|그의 항의는 무시되었다.
+remorseful|He was remorseful about his mistake.|그는 자기 실수를 후회했다.
+repose|She reposed on the sofa.|그녀는 소파에서 쉬었다.
+reproach|She reproached him for forgetting.|그녀는 잊어버렸다고 그를 비난했다.
+reptilian|The creature had reptilian skin.|그 생물은 파충류 같은 피부를 가졌다.
+requisition|Submit a requisition for new supplies.|새 비품 요청서를 제출하세요.
+residue|Wipe off the sticky residue.|끈적한 잔여물을 닦아 내세요.
+resound|Laughter resounded through the hall.|웃음소리가 홀 전체에 울려 퍼졌다.
+resounding|The event was a resounding success.|그 행사는 대성공이었다.
+resoundingly|The team was resoundingly defeated.|그 팀은 크게 졌다.
+resuscitate|The doctors resuscitated the patient.|의사들이 환자를 소생시켰다.
+resuscitation|He was given resuscitation at the scene.|그는 현장에서 소생술을 받았다.
+retrospection|In retrospection, it was a good year.|돌이켜 보면 좋은 한 해였다.
+retrospective|The museum held a retrospective of her work.|그 미술관은 그녀의 작품 회고전을 열었다.
+revelatory|The documentary was revelatory.|그 다큐멘터리는 많은 것을 드러냈다.
+reverb|The guitar has too much reverb.|그 기타는 잔향이 너무 많다.
+reverberate|His voice reverberated in the hall.|그의 목소리가 홀에 울렸다.
+reverberation|The reverberation of the bell lasted long.|종소리의 반향이 오래 이어졌다.
+revile|The leader was reviled by his enemies.|그 지도자는 적들에게 욕을 먹었다.
+revulsion|She felt revulsion at the smell.|그녀는 그 냄새에 혐오감을 느꼈다.
+rhetorical|It was a rhetorical question.|그건 수사적인 질문이었다.
+rhetorically|He asked rhetorically, "Who cares?"|그는 수사적으로 "누가 신경 써?"라고 물었다.
+rickety|The old chair is rickety.|그 낡은 의자는 흔들거린다.
+rife|Rumors are rife in the office.|사무실에 소문이 만연하다.
+rift|There is a rift between the two brothers.|두 형제 사이에 불화가 있다.
+romp|The kids romped in the snow.|아이들이 눈밭에서 뛰놀았다.
+romper|The baby wore a blue romper.|아기가 파란 아기 옷을 입었다.
+ruminant|Cows are ruminant animals.|소는 반추 동물이다.
+ruminate|He ruminated on the meaning of life.|그는 삶의 의미를 곰곰이 생각했다.
+rumination|After much rumination, she made a decision.|오랜 심사숙고 끝에 그녀는 결정을 내렸다.
+ruminative|He was in a ruminative mood.|그는 생각에 잠긴 기분이었다.
+salivary|Food stimulates the salivary glands.|음식은 침샘을 자극한다.
+sandwiched|The shop is sandwiched between two banks.|그 가게는 두 은행 사이에 끼어 있다.
+scavenger|Crows are scavengers.|까마귀는 청소 동물이다.
+scholarly|She wrote a scholarly article.|그녀는 학술 논문을 썼다.
+scroll|The museum displays an ancient scroll.|그 박물관은 고대 두루마리를 전시한다.
+secularly|The holiday is celebrated secularly.|그 휴일은 세속적으로 기념된다.
+seedy|They stayed in a seedy hotel.|그들은 지저분한 호텔에 묵었다.
+seismic|The internet caused a seismic shift in business.|인터넷은 비즈니스에 엄청난 변화를 가져왔다.
+selectivity|The university is known for its selectivity.|그 대학은 엄격한 선발로 유명하다.
+self-aggrandizement|His speech was full of self-aggrandizement.|그의 연설은 자기 과시로 가득했다.
+shamble|The old man shambled down the street.|노인이 거리를 어기적거리며 걸었다.
+sheaf|He carried a sheaf of papers.|그는 서류 다발을 들고 있었다.
+shimmer|The lake shimmered in the moonlight.|호수가 달빛 속에서 희미하게 빛났다.
+shoal|A shoal of fish swam past the boat.|물고기 떼가 배 옆을 헤엄쳐 지나갔다.
+side-step|He side-stepped the question.|그는 질문을 피했다.
+singe|He singed his hair on the candle.|그는 촛불에 머리카락을 그을렸다.
+skew|The small sample skewed the results.|작은 표본이 결과를 왜곡했다.
+slab|The path is made of stone slabs.|그 길은 돌판으로 되어 있다.
+slither|The snake slithered into the grass.|뱀이 풀숲으로 미끄러지듯 들어갔다.
+smattering|He has a smattering of French.|그는 프랑스어를 겉핥기로 안다.
+snippet|I heard a snippet of their conversation.|나는 그들의 대화 한 토막을 들었다.
+snobbery|There is a lot of snobbery in the art world.|미술계에는 속물근성이 많다.
+solicit|The charity solicits donations online.|그 자선 단체는 온라인으로 기부를 요청한다.
+soliloquize|The actor soliloquized on stage.|배우가 무대에서 독백했다.
+solipsism|The novel explores the idea of solipsism.|그 소설은 유아론의 개념을 탐구한다.
+solitariness|He enjoys the solitariness of the mountains.|그는 산의 고독을 즐긴다.
+solitary|He took a solitary walk.|그는 혼자 산책했다.
+solitude|She enjoys solitude.|그녀는 고독을 즐긴다.
+spatial|The game improves spatial skills.|그 게임은 공간 능력을 향상시킨다.
+spatially|The rooms are spatially well designed.|그 방들은 공간적으로 잘 설계되어 있다.
+spire|The church spire is visible from far away.|교회 첨탑이 멀리서도 보인다.
+splinter|The wood splintered under the weight.|무게에 나무가 쪼개졌다.
+spontaneity|The trip lacked spontaneity.|그 여행에는 즉흥성이 부족했다.
+spurious|The claim is spurious.|그 주장은 가짜이다.
+spuriously|The ad spuriously claims to cure everything.|그 광고는 모든 것을 고친다고 그럴싸하게 주장한다.
+squint|She squinted in the bright sun.|그녀는 밝은 햇빛에 눈을 가늘게 떴다.
+squirm|The child squirmed in his seat.|아이가 자리에서 몸부림쳤다.
+squirmy|The puppy is squirmy and playful.|그 강아지는 꿈틀거리고 장난기가 많다.
+standing|She has a high standing in the community.|그녀는 지역 사회에서 지위가 높다.
+sterility|The lab maintains strict sterility.|그 실험실은 엄격한 무균 상태를 유지한다.
+stipulate|The contract stipulates payment within 30 days.|계약서는 30일 이내 지급을 규정한다.
+stipulation|There is a stipulation that you must be over 18.|18세 이상이어야 한다는 규정이 있다.
+stoicism|She faced the pain with stoicism.|그녀는 금욕적인 자세로 고통을 견뎠다.
+stratosphere|The balloon rose into the stratosphere.|풍선이 성층권까지 올라갔다.
+stringent|The factory has stringent safety rules.|그 공장은 안전 규정이 엄격하다.
+stringently|The rules are stringently enforced.|규칙이 엄격하게 시행된다.
+stultify|Routine work can stultify the mind.|틀에 박힌 일은 정신을 무력하게 할 수 있다.
+stultifyingly|The lecture was stultifyingly dull.|그 강의는 맥 빠지게 지루했다.
+subsist|They subsist on rice and vegetables.|그들은 쌀과 채소로 근근이 살아간다.
+subsistence|Many families live at subsistence level.|많은 가정이 최저 생활 수준으로 산다.
+substantiate|Can you substantiate your claim?|당신의 주장을 입증할 수 있나요?
+succumb|He finally succumbed to the temptation.|그는 결국 유혹에 굴복했다.
+suffuse|A warm light suffused the room.|따뜻한 빛이 방에 퍼졌다.
+sulphuric|Sulphuric acid is very dangerous.|황산은 매우 위험하다.
+summarily|He was summarily dismissed.|그는 즉결로 해고되었다.
+superfluous|Remove any superfluous words.|불필요한 단어는 모두 빼세요.
+superfluously|He superfluously added more details.|그는 쓸데없이 세부 사항을 더 덧붙였다.
+surrealism|The museum has a collection of surrealism.|그 미술관에는 초현실주의 작품이 있다.
+surrealist|Dali was a famous surrealist.|달리는 유명한 초현실주의자였다.
+surreptitious|She took a surreptitious look at her phone.|그녀는 몰래 휴대폰을 힐끗 봤다.
+surreptitiously|He surreptitiously left the meeting.|그는 몰래 회의에서 빠져나갔다.
+swivel|She swiveled in her chair.|그녀는 의자를 빙 돌렸다.
+syllabic|The poem has a syllabic pattern.|그 시에는 음절 패턴이 있다.
+synthesis|The report is a synthesis of many studies.|그 보고서는 여러 연구를 종합한 것이다.
+tacit|There was a tacit agreement between them.|그들 사이에는 암묵적인 합의가 있었다.
+tacitly|He tacitly accepted the plan.|그는 암묵적으로 그 계획을 받아들였다.
+taciturn|He is a taciturn man.|그는 말수가 적은 사람이다.
+taciturnity|His taciturnity made him seem unfriendly.|그는 과묵해서 무뚝뚝해 보였다.
+tactically|The move was tactically clever.|그 조치는 전술적으로 영리했다.
+tantalize|The smell of food tantalized us.|음식 냄새가 우리를 감질나게 했다.
+tantalizingly|The prize was tantalizingly close.|상이 감질나게 가까이 있었다.
+taste-maker|She is a taste-maker in the fashion world.|그녀는 패션계의 유행 선도자이다.
+teem|The river teems with fish.|그 강에는 물고기가 많다.
+telescopic|The camera has a telescopic lens.|그 카메라에는 망원 렌즈가 있다.
+telescopically|The antenna extends telescopically.|그 안테나는 망원경처럼 늘어난다.
+tenacious|She is a tenacious negotiator.|그녀는 집요한 협상가이다.
+tenaciously|He tenaciously held on to his dream.|그는 끈질기게 꿈을 붙잡았다.
+tenacity|Her tenacity helped her succeed.|그녀의 끈기가 성공을 도왔다.
+testimonial|The website has testimonials from customers.|그 웹사이트에는 고객들의 추천의 글이 있다.
+tetchy|He gets tetchy when he is tired.|그는 피곤하면 짜증을 낸다.
+thicket|The rabbit hid in the thicket.|토끼가 덤불 속에 숨었다.
+timidity|She overcame her timidity.|그녀는 소심함을 극복했다.
+topographical|We used a topographical map.|우리는 지형도를 사용했다.
+topographically|The area is topographically interesting.|그 지역은 지형적으로 흥미롭다.
+topography|The topography of the island is rugged.|그 섬의 지형은 험하다.
+topple|The wind toppled the tree.|바람에 나무가 넘어졌다.
+torrential|Torrential rain caused flooding.|억수 같은 비로 홍수가 났다.
+totemic|The tower is a totemic symbol of the city.|그 탑은 그 도시의 상징이다.
+totter|The old man tottered down the street.|노인이 비틀거리며 거리를 걸었다.
+tranquilize|The vet tranquilized the horse.|수의사가 말을 진정시켰다.
+transmitter|The radio transmitter is on the hill.|라디오 송신기가 언덕 위에 있다.
+treacherous|The mountain road is treacherous in winter.|그 산길은 겨울에 위험하다.
+treacherously|He treacherously betrayed his friend.|그는 친구를 배신했다.
+treachery|The story is about love and treachery.|그 이야기는 사랑과 배반에 관한 것이다.
+trifle|Don't worry about such a trifle.|그런 사소한 일에 신경 쓰지 마세요.
+truism|It's a truism that health is important.|건강이 중요하다는 것은 자명한 이치다.
+turret|The castle has four turrets.|그 성에는 작은 탑이 네 개 있다.
+unadulterated|The juice is pure, unadulterated orange.|그 주스는 아무것도 섞지 않은 순수한 오렌지이다.
+uncanny|She has an uncanny resemblance to her aunt.|그녀는 이모와 묘하게 닮았다.
+undemonstrative|He is an undemonstrative man.|그는 감정을 드러내지 않는 사람이다.
+undemonstratively|She nodded undemonstratively.|그녀는 무덤덤하게 고개를 끄덕였다.
+undiminishing|Her undiminishing energy amazed us.|그녀의 줄어들지 않는 에너지에 우리는 놀랐다.
+unencumbered|She traveled unencumbered by luggage.|그녀는 짐 없이 가볍게 여행했다.
+unequivocal|The answer was an unequivocal no.|대답은 명백한 거절이었다.
+unequivocally|He unequivocally denied the rumor.|그는 그 소문을 명백하게 부인했다.
+unexceptional|The food was unexceptional.|음식은 평범했다.
+unexceptionally|The day passed unexceptionally.|그날은 평범하게 지나갔다.
+unexcused|He had three unexcused absences.|그는 무단결석이 세 번 있었다.
+unfeasible|The plan is financially unfeasible.|그 계획은 재정적으로 실행 불가능하다.
+unfeasibly|The car was unfeasibly cheap.|그 차는 믿기 힘들 만큼 쌌다.
+unharried|They enjoyed an unharried breakfast.|그들은 여유로운 아침 식사를 즐겼다.
+unmediated|The app offers unmediated access to experts.|그 앱은 전문가와의 직접적인 연결을 제공한다.
+unnerve|The silence unnerved him.|침묵이 그를 불안하게 했다.
+unnerving|It was an unnerving experience.|불안하게 하는 경험이었다.
+unnervingly|The house was unnervingly quiet.|그 집은 불안할 정도로 조용했다.
+unobtrusive|The service was quick and unobtrusive.|서비스가 빠르고 눈에 띄지 않았다.
+unobtrusively|The waiter unobtrusively refilled our glasses.|웨이터가 눈에 띄지 않게 우리 잔을 채웠다.
+unobtrusiveness|Her unobtrusiveness made her a good assistant.|그녀는 나서지 않는 성격이라 좋은 비서였다.
+unpromising|The start of the project was unpromising.|그 프로젝트의 시작은 가망 없어 보였다.
+unravel|The detective unraveled the mystery.|탐정이 그 미스터리를 풀었다.
+unsurpassed|The view from the top is unsurpassed.|꼭대기에서 본 경치는 최고다.
+unsuspected|The test revealed an unsuspected problem.|검사에서 예상하지 못한 문제가 드러났다.
+utilitarian|The building has a utilitarian design.|그 건물은 실용적인 디자인이다.
+vandal|Vandals broke the bus stop windows.|공공 기물 파손자들이 버스 정류장 유리를 깼다.
+vandalize|Someone vandalized the park benches.|누군가 공원 벤치를 파손했다.
+venomous|Some spiders are venomous.|어떤 거미는 독이 있다.
+venomously|She spoke venomously about her rival.|그녀는 경쟁자에 대해 악의적으로 말했다.
+verbatim|He repeated the speech verbatim.|그는 그 연설을 말 그대로 반복했다.
+verily|Verily, I tell you the truth.|진실로 너희에게 말하노라.
+verisimilitude|The film has great verisimilitude.|그 영화는 매우 그럴듯하다.
+veritable|The garden is a veritable paradise.|그 정원은 진정한 낙원이다.
+vermin|The old house was full of vermin.|그 오래된 집은 해충투성이였다.
+vestigial|Humans have some vestigial organs.|인간에게는 몇몇 흔적 기관이 있다.
+vestigially|The tail remains vestigially in some animals.|어떤 동물에게는 꼬리가 흔적으로 남아 있다.
+vicinity|There is a hotel in the vicinity of the airport.|공항 부근에 호텔이 있다.
+vindicate|The results vindicated her decision.|결과가 그녀의 결정이 옳았음을 입증했다.
+vindication|The verdict was a vindication of his innocence.|그 판결은 그의 무죄를 입증해 주었다.
+virginal|Virginal snow covered the field.|깨끗한 눈이 들판을 덮었다.
+virtuosity|The pianist played with great virtuosity.|그 피아니스트는 대단한 기교로 연주했다.
+virtuoso|He is a violin virtuoso.|그는 바이올린 거장이다.
+vocational|She attended a vocational school.|그녀는 직업 학교에 다녔다.
+voracity|The voracity of the fire surprised the firefighters.|불길의 맹렬함에 소방관들이 놀랐다.
+vortex|The boat was caught in a vortex.|배가 소용돌이에 휘말렸다.
+wallow|The pigs wallowed in the mud.|돼지들이 진흙 속에서 뒹굴었다.
+wane|Interest in the show began to wane.|그 쇼에 대한 관심이 약해지기 시작했다.
+wayward|The wayward teenager ignored the rules.|제멋대로인 십대가 규칙을 무시했다.
+wheeze|He wheezed after climbing the stairs.|그는 계단을 오른 후 쌕쌕거렸다.
+whir|The fan whirred quietly.|선풍기가 조용히 윙윙거렸다.
+whirlwind|It was a whirlwind tour of Europe.|숨 가쁜 유럽 여행이었다.
+wistful|She gave a wistful smile.|그녀는 아쉬워하는 미소를 지었다.
+wistfully|He looked wistfully at the old photos.|그는 아쉬운 듯이 옛날 사진을 바라봤다.
+wordage|The article has a wordage of 1,000.|그 기사는 단어 수가 1천 개이다.
+wordsmith|He is a talented wordsmith.|그는 글 솜씨가 뛰어난 사람이다.
+wrack|Pain wracked his body.|통증이 그의 몸을 괴롭혔다.
+zoologist|The zoologist studies birds.|그 동물학자는 새를 연구한다.
+zoology|She has a degree in zoology.|그녀는 동물학 학위가 있다.
 `;
