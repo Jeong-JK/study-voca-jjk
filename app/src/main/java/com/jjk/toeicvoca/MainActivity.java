@@ -3,6 +3,7 @@ package com.jjk.toeicvoca;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Insets;
@@ -43,6 +44,7 @@ import java.util.Locale;
 public class MainActivity extends Activity {
     private WebView web;
     private LinearLayout root;
+    private BillingBridge billing;
     private TextToSpeech tts;
     private volatile boolean ttsReady = false;
 
@@ -219,6 +221,11 @@ public class MainActivity extends Activity {
         web.addJavascriptInterface(new Speaker(), "Android");   // 발음 듣기
         web.addJavascriptInterface(new Ads(), "AndroidAds");    // 광고
         web.addJavascriptInterface(new AppBridge(), "AndroidApp");   // 앱 버전 · 알림
+        // 구독 결제: 플레이스토어용(release) 빌드에서만. 직접 설치하는 테스트 APK(debug)는 예전처럼 등급을 바로 바꿀 수 있음
+        if ((getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) == 0) {
+            billing = new BillingBridge(this, this::callJs);
+            web.addJavascriptInterface(billing, "AndroidBilling");
+        }
         web.loadUrl("file:///android_asset/index.html");
 
         // 화면 = 웹 화면(위) + 배너 광고(아래, 평소엔 숨김)
@@ -312,6 +319,7 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         if (tts != null) tts.shutdown();
         if (banner != null) banner.destroy();
+        if (billing != null) billing.destroy();
         super.onDestroy();
     }
 }

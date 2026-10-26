@@ -51,4 +51,5 @@ android {
 
 dependencies {
     implementation("com.google.android.gms:play-services-ads:23.6.0")   // AdMob 광고
+    implementation("com.android.billingclient:billing:8.0.0")          // Google Play 구독 결제
 }

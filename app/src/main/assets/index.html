@@ -231,7 +231,7 @@ const TYPES = [['명', '명사'], ['동', '동사'], ['형', '형용사'], ['부
   W.forEach(o => { const x = LV[o.w.toLowerCase()] || ['B1', false]; o.lv = x[0]; o.lvv = x[1]; }); }
 const deckIdx = k => [...W.keys()].filter(i => DECKS[k].has.includes(W[i].d));
 const KEY = 'toeic_voca_decks_v1';
-// 구독 플랜 (결제 연동 전: 플랜 화면에서 바로 전환되는 테스트용)
+// 구독 플랜 (Free 무료 / Basic · Premium 월 구독)
 const PLANS = {
   free:    { name: 'Free',    max: 20,  banner: true,  endAd: true,  redo: false, oneDay: true,  pick: false,
              perks: ['하루 20개', '하루에 Day 1개씩 진행', '지난 Day 다시 테스트 · 발음 듣기', '오답은 목록으로만 확인 (다시 풀기 ✕)', '문제 풀 때 하단 광고 · 하루치 끝나면 광고'] },
@@ -670,25 +670,92 @@ function amountView(first) {
 function setAmount(a) { ALL.perDay = Math.min(a, plan().max); trimDays(); save(); }
 
 // ---------- 구독 플랜 ----------
+// 플레이스토어 버전: Google Play 월 구독(AndroidBilling). 그 외(직접 설치한 테스트 APK·브라우저): 누르면 바로 전환
+const BILL = window.AndroidBilling || null;
+let PRICES = {}, planOpt = null, buying = null;
+const RANK = { free: 0, basic: 1, premium: 2 };
+
+// 등급이 바뀌면: 학습량을 새 등급 최대치 안으로
+function setPlan(p) {
+  ALL.plan = p;
+  if (ALL.perDay != null && ALL.perDay > plan().max) setAmount(plan().max);
+  save();
+}
+
 function planView(opt = {}) {
+  planOpt = opt;
+  const cur = ALL.plan;
+  const btn = k => {
+    if (k === cur) return BILL && k !== 'free' ? `<button class="btn ghost" data-m="1">구독 관리 · 해지 (Google Play)</button>` : '';
+    const label = RANK[k] > RANK[cur] ? ' 업그레이드' : ' 변경';
+    if (!BILL) return `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}">${ro(PLANS[k].name)}${label}</button>`;
+    if (k === 'free') return `<button class="btn ghost" data-m="1">Free로 변경 (Google Play에서 구독 해지)</button>`;
+    const price = PRICES[k];
+    return `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}"${price ? '' : ' disabled'}>${price ? `${ro(PLANS[k].name)}${label}` : '가격 불러오는 중…'}</button>`;
+  };
   app.innerHTML = `
     <div class="top"><span>구독</span><button class="x" id="x">✕</button></div>
     ${opt.want ? `<p class="muted">하루 ${opt.want}개는 ${PLANS[PLAN_OF(opt.want)].name}부터 쓸 수 있어요.</p>` : ''}
     ${Object.entries(PLANS).map(([k, p]) => `
-      <div class="card plan ${k}${k === ALL.plan ? ' cur' : ''}">
-        <div class="plan-h"><b>${p.name}</b>${k === ALL.plan ? '<span class="chip">이용 중</span>' : ''}</div>
+      <div class="card plan ${k}${k === cur ? ' cur' : ''}">
+        <div class="plan-h"><b>${p.name}</b>${k === cur ? '<span class="chip">이용 중</span>' : BILL && PRICES[k] ? `<span class="muted" style="font-size:14px">월 ${PRICES[k]}</span>` : ''}</div>
         <ul>${p.perks.map(t => `<li>${t}</li>`).join('')}</ul>
-        ${k === ALL.plan ? '' : `<button class="btn${k === 'premium' ? '' : ' ghost'}" data-p="${k}">${ro(p.name)}${Object.keys(PLANS).indexOf(k) > Object.keys(PLANS).indexOf(ALL.plan) ? ' 업그레이드' : ' 변경'}</button>`}
+        ${btn(k)}
       </div>`).join('')}
-    <p class="muted" style="font-size:12px">※ 결제 연동 전 테스트 버전이라 누르면 바로 바뀌어요.</p>
+    ${BILL
+      ? `<p class="muted" style="font-size:12px">구독은 Google Play 계정으로 결제되며 해지하기 전까지 매월 자동으로 갱신돼요. 해지는 Google Play → 결제 및 정기 결제에서 언제든 할 수 있고, 해지해도 이미 결제한 기간이 끝날 때까지는 계속 쓸 수 있어요. 등급을 바꾸면 남은 기간만큼 금액이 조정돼요.</p>
+         <button class="link" id="restore" style="font-size:13px">구독 상태 다시 불러오기</button>`
+      : `<p class="muted" style="font-size:12px">※ 테스트 버전이라 누르면 바로 바뀌어요.</p>`}
     <div class="spacer"></div>`;
-  document.getElementById('x').onclick = () => opt.first ? amountView(true) : (opt.back || home)();
-  document.querySelectorAll('.plan .btn').forEach(b => b.onclick = () => {
-    ALL.plan = b.dataset.p;
-    if (opt.want && opt.want <= plan().max) setAmount(opt.want);
-    else if (ALL.perDay != null && ALL.perDay > plan().max) setAmount(plan().max);   // 등급을 낮추면 학습량도 그 등급 최대치로
-    save(); (opt.back || home)();
+  document.getElementById('x').onclick = () => { planOpt = null; opt.first ? amountView(true) : (opt.back || home)(); };
+  document.querySelectorAll('.plan .btn[data-m]').forEach(b => b.onclick = () => BILL.manage());
+  document.querySelectorAll('.plan .btn[data-p]').forEach(b => b.onclick = () => {
+    const k = b.dataset.p;
+    if (BILL) { buying = { plan: k, opt }; BILL.buy(k); return; }
+    planDone(k, opt);
   });
+  const rs = document.getElementById('restore'); if (rs) rs.onclick = () => { BILL.refresh(); rs.textContent = '불러오는 중…'; };
+  if (BILL && !PRICES.basic) BILL.refresh();
+}
+
+// 등급 변경이 끝난 뒤 (구독 결제 완료 포함): 원래 하려던 학습량 적용 후 이전 화면으로
+function planDone(k, opt) {
+  planOpt = null;
+  setPlan(k);
+  if (opt.want && opt.want <= plan().max) setAmount(opt.want);
+  (opt.back || home)();
+}
+
+// ---- Google Play 결제 결과 (BillingBridge.java에서 호출) ----
+window.onBillingProducts = json => {
+  try { PRICES = JSON.parse(json) || {}; } catch (e) { PRICES = {}; }
+  if (planOpt) planView(planOpt);
+};
+window.onBillingPlan = p => {
+  if (!PLANS[p]) return;
+  const changed = p !== ALL.plan;
+  if (buying && p === buying.plan) { const b = buying; buying = null; return planDone(p, b.opt); }   // 방금 결제한 등급이 반영됨
+  if (!changed) { if (planOpt) planView(planOpt); return; }
+  setPlan(p);
+  if (planOpt) return planView(planOpt);
+  // 구독이 끝났거나 다른 기기에서 바꾼 경우: 지금 화면의 등급 표시만 갱신 (문제 푸는 중이면 그대로 둠)
+  const on = tabs.hidden ? null : tabs.querySelector('.on');
+  if (on && on.dataset.t === 'study') home();
+  else if (on && on.dataset.t === 'more') moreView();
+};
+window.onBillingResult = code => {
+  if (code === 'cancel') { buying = null; return; }
+  const msg = { pending: '결제가 아직 처리 중이에요. 완료되면 자동으로 적용돼요.',
+                noproduct: '구독 상품을 불러오지 못했어요. 잠시 후 다시 시도해주세요.',
+                unavailable: 'Google Play 결제에 연결하지 못했어요. Play 스토어 로그인과 인터넷 연결을 확인해주세요.',
+                error: '결제를 진행하지 못했어요. 잠시 후 다시 시도해주세요.' }[code];
+  if (code !== 'pending') buying = null;
+  if (msg && (planOpt || code === 'pending')) alert(msg);
+};
+// 앱을 켤 때 · 다시 돌아올 때 구독 상태 확인 (해지·만료·다른 기기 변경 반영)
+if (BILL) {
+  BILL.refresh();
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) BILL.refresh(); });
 }
 
 // 아는 단어 목록 (되돌리면 다시 출제됨)
@@ -1337,7 +1404,7 @@ function guideView() {
     ${sec('7-1. 오늘의 복습', `<p>본 학습에서 푼 단어는 <b>1일 → 3일 → 7일 → 14일 → 30일 → 60일</b> 간격으로 다시 나와요(망각곡선). 학습 탭의 <b>🔁 오늘의 복습</b>에서 풀고, 맞히면 다음 복습이 더 뒤로 미뤄지고 틀리면 다음 날 다시 나와요.</p>`)}
     ${sec('7-2. 문제 유형', `<p><b>더보기 → 문제 유형</b>에서 켜둔 유형이 섞여서 나와요.</p><ul><li><b>영어 → 뜻</b>: 단어를 보고 뜻 고르기</li><li><b>뜻 → 영어</b>: 뜻을 보고 영어 단어 고르기</li><li><b>듣고 고르기</b>: 발음만 듣고 뜻 고르기 (🔊로 다시 듣기)</li><li><b>스펠링 쓰기</b>: 첫 글자와 글자 수를 힌트로 직접 입력</li></ul><p>답을 고르면 그 단어가 들어간 <b>예문</b>과 해석이 보여요(예문이 있는 단어).</p>`)}
     ${sec('7-3. 단어 검색', `<p>학습 탭 위의 <b>🔍</b>이나 <b>더보기 → 단어 검색</b>에서 영어나 한글 뜻으로 찾을 수 있어요. 눌러서 발음·예문을 보고, 아는 단어로 빼거나 오답노트에 넣을 수 있어요.</p>`)}
-    ${sec('8. 멤버십', `<ul><li><b>Free</b> — 하루 20개, 하루 Day 1개, 오답은 목록으로만 확인, 광고 있음</li><li><b>Basic</b> — 하루 50개까지, 하루 Day 1개, 오답 다시 풀기·오답노트 풀기, 하루치 끝날 때만 광고</li><li><b>Premium</b> — 하루 100개까지, Day를 골라 원하는 만큼 학습, 광고 없음</li></ul><p><b>더보기 → 구독 멤버십 관리</b>에서 바꿀 수 있어요.</p>`)}
+    ${sec('8. 멤버십', `<ul><li><b>Free</b> — 하루 20개, 하루 Day 1개, 오답은 목록으로만 확인, 광고 있음</li><li><b>Basic</b> — 하루 50개까지, 하루 Day 1개, 오답 다시 풀기·오답노트 풀기, 하루치 끝날 때만 광고</li><li><b>Premium</b> — 하루 100개까지, Day를 골라 원하는 만큼 학습, 광고 없음</li></ul><p>Basic · Premium은 Google Play 월 구독이에요. <b>더보기 → 구독 멤버십 관리</b>에서 구독하거나 바꿀 수 있고, 해지는 Google Play → 결제 및 정기 결제에서 언제든 할 수 있어요.</p>`)}
     ${sec('9. 알림', `<p><b>더보기 → 푸시 알림</b>에서 공지사항·업데이트·이벤트·일일 학습 알림을 각각 켜고 끌 수 있어요. 일일 학습 알림은 원하는 시간을 정할 수 있어요.</p>`)}
     ${sec('10. 기록과 초기화', `<p><b>더보기</b> 위쪽에서 총 학습한 단어 수와 전체 정답률을 볼 수 있고, <b>학습 기록</b>에서 Day별 첫 정답률을 확인할 수 있어요. <b>데이터 초기화</b>를 하면 진도·학습 기록·오답노트·복습 일정·통계가 지워져요.</p>`)}
     ${sec('11. 백업 · 복원', `<p><b>더보기 → 학습 기록 백업 · 복원</b>에서 기록을 파일로 저장해두세요. 폰을 바꾸거나 앱을 다시 설치했을 때 그 파일을 불러오면 그대로 이어서 할 수 있어요. 구글 드라이브에 저장해두면 편해요.</p>`)}
