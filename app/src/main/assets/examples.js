@@ -9707,4 +9707,103 @@ wordsmith|He is a talented wordsmith.|그는 글 솜씨가 뛰어난 사람이�
 wrack|Pain wracked his body.|통증이 그의 몸을 괴롭혔다.
 zoologist|The zoologist studies birds.|그 동물학자는 새를 연구한다.
 zoology|She has a degree in zoology.|그녀는 동물학 학위가 있다.
+a|I need a pen.|나는 펜이 하나 필요하다.
+although|Although it was raining, we went out.|비가 오고 있었지만 우리는 나갔다.
+against|Most people voted against the plan.|대부분의 사람들이 그 계획에 반대표를 던졌다.
+and|I bought bread and milk.|나는 빵과 우유를 샀다.
+another|Can I have another cup of coffee?|커피 한 잔 더 마실 수 있을까요?
+any|Do you have any questions?|질문 있으신가요?
+anyone|Has anyone seen my keys?|누구 내 열쇠 본 사람 있어?
+as|He is as tall as his father.|그는 아버지만큼 키가 크다.
+at|Let's meet at the station.|역에서 만나자.
+be|I want to be a teacher.|나는 선생님이 되고 싶다.
+because|I stayed home because I was sick.|나는 아파서 집에 있었다.
+anybody|Is anybody home?|집에 누구 있어요?
+anything|Do you need anything from the store?|가게에서 뭐 필요한 거 있어?
+between|The bank is between the cafe and the bakery.|은행은 카페와 빵집 사이에 있다.
+but|It's small but comfortable.|작지만 편안하다.
+by|She sat by the window.|그녀는 창가에 앉았다.
+could|Could you help me with this?|이것 좀 도와주실 수 있나요?
+do|What do you do on weekends?|주말에 뭐 하세요?
+each|Each room has its own bathroom.|각 방에는 욕실이 따로 있다.
+eighty|My grandmother is eighty years old.|우리 할머니는 여든 살이시다.
+eleven|The meeting starts at eleven.|회의는 11시에 시작한다.
+everybody|Everybody was laughing.|모두가 웃고 있었다.
+during|Please turn off your phone during the movie.|영화 중에는 휴대폰을 꺼 주세요.
+eight|I usually get up at eight.|나는 보통 8시에 일어난다.
+every|I go jogging every morning.|나는 매일 아침 조깅을 한다.
+everyone|Thank you, everyone.|여러분 모두 감사합니다.
+everything|Everything is ready for the party.|파티 준비가 다 됐다.
+fifteen|The bus comes every fifteen minutes.|버스는 15분마다 온다.
+five|I have five cousins.|나는 사촌이 다섯 명 있다.
+for|This gift is for you.|이 선물은 너를 위한 거야.
+fifty|The ticket costs fifty dollars.|표는 50달러다.
+forty|It takes forty minutes by car.|차로 40분 걸린다.
+four|We are a family of four.|우리는 네 식구다.
+from|Where are you from?|어디 출신이세요?
+have|I have two brothers.|나는 남자 형제가 둘 있다.
+hundred|There were about a hundred people there.|거기에 백 명쯤 있었다.
+I|I like coffee.|나는 커피를 좋아한다.
+if|Call me if you need help.|도움이 필요하면 전화해.
+into|She walked into the room.|그녀는 방 안으로 걸어 들어갔다.
+he|He works at a bank.|그는 은행에서 일한다.
+itself|The door closed by itself.|문이 저절로 닫혔다.
+many|There are many restaurants on this street.|이 거리에는 식당이 많다.
+might|It might rain this afternoon.|오늘 오후에 비가 올지도 모른다.
+million|The city has over a million people.|그 도시의 인구는 백만 명이 넘는다.
+myself|I made this cake myself.|이 케이크는 내가 직접 만들었다.
+nine|The store opens at nine.|가게는 9시에 연다.
+ninety|He lived to be ninety.|그는 아흔 살까지 살았다.
+nobody|Nobody answered the phone.|아무도 전화를 받지 않았다.
+must|You must wear a seat belt.|안전벨트를 매야 한다.
+nineteen|She was nineteen when she moved to Seoul.|그녀는 열아홉 살에 서울로 이사했다.
+nothing|There is nothing in the box.|상자에는 아무것도 없다.
+one|I only have one question.|질문이 딱 하나 있다.
+or|Would you like tea or coffee?|차와 커피 중 뭘 드릴까요?
+other|Do you have it in other colors?|다른 색도 있나요?
+of|She is a friend of mine.|그녀는 내 친구 중 한 명이다.
+ought|You ought to see a doctor.|너는 병원에 가 봐야 해.
+per|The hotel costs 100 dollars per night.|그 호텔은 1박에 100달러다.
+seven|There are seven days in a week.|일주일은 7일이다.
+should|You should get some rest.|좀 쉬는 게 좋겠어.
+seventy|About seventy people came to the event.|행사에 70명쯤 왔다.
+shall|Shall we go for a walk?|산책하러 갈까요?
+she|She is my sister.|그녀는 내 여동생이다.
+sixty|There are sixty minutes in an hour.|한 시간은 60분이다.
+somebody|Somebody left their umbrella here.|누군가 여기에 우산을 두고 갔다.
+something|I want to eat something sweet.|단 것이 먹고 싶다.
+six|The class ends at six.|수업은 6시에 끝난다.
+some|Would you like some water?|물 좀 드릴까요?
+someone|Someone is knocking on the door.|누군가 문을 두드리고 있다.
+ten|I'll be there in ten minutes.|10분 뒤에 도착할게.
+the|Please close the door.|문 좀 닫아 주세요.
+such|It was such a nice day.|정말 좋은 날이었다.
+than|She is older than me.|그녀는 나보다 나이가 많다.
+themselves|The children made lunch by themselves.|아이들이 스스로 점심을 만들었다.
+thirty|The store closes in thirty minutes.|가게는 30분 뒤에 문을 닫는다.
+three|I have three meetings today.|오늘 회의가 세 개 있다.
+twelve|Lunch is at twelve.|점심은 12시다.
+two|Two coffees, please.|커피 두 잔 주세요.
+they|They live next door.|그들은 옆집에 산다.
+this|Is this your bag?|이거 네 가방이야?
+thousand|The phone costs a thousand dollars.|그 휴대폰은 천 달러다.
+to|I'm going to the airport.|나는 공항에 가는 중이다.
+toward|He walked toward the exit.|그는 출구 쪽으로 걸어갔다.
+twenty|She is twenty years old.|그녀는 스무 살이다.
+until|Wait here until I come back.|내가 돌아올 때까지 여기서 기다려.
+what|What time is it?|몇 시야?
+whether|I don't know whether he will come.|그가 올지 안 올지 모르겠다.
+under|The cat is under the table.|고양이가 탁자 밑에 있다.
+unless|We'll be late unless we leave now.|지금 떠나지 않으면 늦을 거야.
+we|We are going to the beach.|우리는 해변에 갈 거다.
+whatever|You can order whatever you want.|원하는 건 뭐든 주문해도 돼.
+which|Which bus goes downtown?|어느 버스가 시내로 가나요?
+who|Who is that man?|저 남자는 누구야?
+with|I live with my parents.|나는 부모님과 함께 산다.
+without|I can't drink coffee without sugar.|나는 설탕 없이는 커피를 못 마신다.
+yeah|Yeah, that sounds good.|응, 좋아.
+within|Please reply within three days.|3일 이내에 답장해 주세요.
+would|Would you like some tea?|차 좀 드시겠어요?
+you|Nice to meet you.|만나서 반가워요.
+yourself|Help yourself to some cake.|케이크 마음껏 드세요.
 `;

@@ -133,7 +133,7 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 .pct{flex:0 0 40px;text-align:right;font-size:13px;color:var(--sub)}
 .ck{display:flex;align-items:center;gap:12px;cursor:pointer}.ck input{width:22px;height:22px;accent-color:var(--accent);margin:0;flex:none}.ck span:nth-of-type(1){flex:1}
 .sec small{font-weight:600;color:var(--accent)}
-.decks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:var(--line);padding:4px;border-radius:14px;margin:-12px 0 18px}
+.decks{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:var(--line);padding:4px;border-radius:14px;margin:-12px 0 18px}
 .deck{border:0;border-radius:10px;padding:9px 4px;background:transparent;color:var(--sub);font-family:inherit;font-weight:600;font-size:15px}
 .deck small{display:block;font-size:11px;font-weight:500;opacity:.8;margin-top:2px}
 .deck.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
@@ -203,22 +203,27 @@ input[type=time]{font:inherit;font-size:16px;border:1px solid var(--line);border
 <script src="bsl.js"></script>
 <script src="ngsl.js"></script>
 <script src="cefr.js"></script>
+<script src="spoken.js"></script>
 <script src="ipa.js"></script>
 <script src="levels.js"></script>
 <script src="examples.js"></script>
 <script>
 // ---------- 데이터 ----------
 const W = [], seen = new Set();
-[['T', WORDS_RAW], ['P', PHRASES_RAW], ['B', BSL_RAW], ['G', NGSL_RAW], ['C', CEFR_RAW]].forEach(([d, raw]) => raw.trim().split('\n').forEach(l => {
+[['T', WORDS_RAW], ['P', PHRASES_RAW], ['B', BSL_RAW], ['G', NGSL_RAW], ['C', CEFR_RAW], ['S', SPOKEN_NEW_RAW]].forEach(([d, raw]) => raw.trim().split('\n').forEach(l => {
   const [w, p, m] = l.split('|').map(s => s && s.trim());
   if (!w || !m || seen.has(w.toLowerCase())) return;
   seen.add(w.toLowerCase()); W.push({ w, p, m, d });
 }));
-// 단어장: 토익(TSL+숙어+비즈니스) / 기본(NGSL) / 전부
+// 스피킹(NGSL-Spoken): 말하기 빈출 721개 — 다른 단어장과 겹치는 단어도 포함. 영어 뜻도 같이 보관
+const ENDEF = {}, SPOKEN = new Set();
+SPOKEN_RAW.trim().split('\n').forEach(l => { const [w, d] = l.split('|'); const k = w.trim().toLowerCase(); SPOKEN.add(k); if (d) ENDEF[k] = d.trim(); });
+// 단어장: 토익(TSL+숙어+비즈니스) / 기본(NGSL) / 스피킹 / 전부
 const DECKS = {
-  toeic: { name: '토익', desc: '토익 단어 + 숙어 + 비즈니스 어휘', has: 'TPB' },
-  basic: { name: '기본', desc: '일반 영어 단어 (NGSL + CEFR, 입문~최상급)', has: 'GC' },
-  all:   { name: '전부', desc: '모든 단어와 숙어', has: 'TPBGC' },
+  toeic:  { name: '토익', desc: '토익 단어 + 숙어 + 비즈니스 어휘', has: 'TPB' },
+  basic:  { name: '기본', desc: '일반 영어 단어 (NGSL + CEFR, 입문~최상급)', has: 'GC' },
+  spoken: { name: '스피킹', desc: '말하기 빈출 단어 721개 (NGSL-Spoken)', list: SPOKEN },
+  all:    { name: '전부', desc: '모든 단어와 숙어', has: 'TPBGCS' },
 };
 // 발음기호: 단어(소문자) → [미국, 영국]
 const IPA = {};
@@ -226,10 +231,10 @@ IPA_RAW.trim().split('\n').forEach(l => { const [w, us, uk] = l.split('|'); IPA[
 // 레벨(CEFR): A1 입문 ~ C2 최상급. v = 1 이면 공식 목록 기준(레벨 테스트 출제용), 0 이면 추정
 const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const LV_NAME = { A1: '입문', A2: '초급', B1: '중급', B2: '중상급', C1: '고급', C2: '최상급' };
-const TYPES = [['명', '명사'], ['동', '동사'], ['형', '형용사'], ['부', '부사'], ['숙', '숙어']];
+const TYPES = [['명', '명사'], ['동', '동사'], ['형', '형용사'], ['부', '부사'], ['숙', '숙어'], ['기', '기능어 (대명사·전치사·접속사 등)']];
 { const LV = {}; LEVEL_RAW.trim().split('\n').forEach(l => { const [w, L, v] = l.split('|'); LV[w] = [L, v === '1']; });
   W.forEach(o => { const x = LV[o.w.toLowerCase()] || ['B1', false]; o.lv = x[0]; o.lvv = x[1]; }); }
-const deckIdx = k => [...W.keys()].filter(i => DECKS[k].has.includes(W[i].d));
+const deckIdx = k => [...W.keys()].filter(i => DECKS[k].list ? DECKS[k].list.has(W[i].w.toLowerCase()) : DECKS[k].has.includes(W[i].d));
 const KEY = 'toeic_voca_decks_v1';
 // 구독 플랜 (Free 무료 / Basic · Premium 월 구독)
 const PLANS = {
@@ -243,7 +248,7 @@ const PLANS = {
 const ro = name => name + (name === 'Free' ? '로' : '으로');   // Basic으로 / Premium으로 / Free로
 const PLAN_OF = a => a <= PLANS.free.max ? 'free' : a <= PLANS.basic.max ? 'basic' : 'premium';   // 이 학습량을 쓰려면 필요한 최소 등급
 const AMT_MIN = 20, AMT_MAX = 100, AMT_STEP = 10;   // 하루 학습량: 20~100개, 10개 단위
-const POS = { '명': '명사', '동': '동사', '형': '형용사', '부': '부사', '숙': '숙어' };
+const POS = { '명': '명사', '동': '동사', '형': '형용사', '부': '부사', '숙': '숙어', '기': '기능어' };
 
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -262,6 +267,7 @@ if (!ALL.push) ALL.push = { notice: true, update: true, event: false, daily: fal
 if (ALL.autoSay === undefined) ALL.autoSay = true;       // 자동 발음
 if (!Array.isArray(ALL.levels) || !ALL.levels.length) ALL.levels = [...LEVELS];   // 출제 레벨
 if (!Array.isArray(ALL.types) || !ALL.types.length) ALL.types = TYPES.map(t => t[0]);   // 출제 유형(품사·숙어)
+if (!ALL.typesFn) { if (!ALL.types.includes('기')) ALL.types.push('기'); ALL.typesFn = 1; }   // 기능어 유형이 새로 생김 → 기존 사용자도 켜기
 if (ALL.myLevel === undefined) ALL.myLevel = null;       // 레벨 테스트 결과
 // 문제 유형: ek 영→한 · ke 한→영 · listen 듣고 고르기 · spell 스펠링 쓰기 (켜둔 것 중에서 섞어서 출제)
 const QTYPES = [['ek', '영어 → 뜻', '단어를 보고 뜻 고르기'], ['ke', '뜻 → 영어', '뜻을 보고 영어 단어 고르기'], ['listen', '듣고 고르기', '발음만 듣고 뜻 고르기 (리스닝)'], ['spell', '스펠링 쓰기', '뜻을 보고 영어 단어 직접 입력 (숙어 제외)']];
@@ -1211,7 +1217,7 @@ function qtypeView() {
 }
 
 // 단어 검색: 영어(앞부분부터) 또는 한글 뜻으로
-const SRC_NAME = { T: '토익', P: '토익 숙어', B: '비즈니스', G: '기본', C: '기본' };
+const SRC_NAME = { T: '토익', P: '토익 숙어', B: '비즈니스', G: '기본', C: '기본', S: '스피킹' };
 let searchQ = '';
 function searchView(back = home) {
   app.innerHTML = `
@@ -1227,7 +1233,8 @@ function searchView(back = home) {
     const sr = ALL.srs[k];
     return `<div class="sdet">
       ${ipa ? `<div class="muted">/${esc(ipa)}/</div>` : ''}
-      <div class="sm"><span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span><span class="chip">${SRC_NAME[w.d]}</span></div>
+      <div class="sm"><span class="chip">${POS[w.p] || w.p}</span><span class="chip lv">${w.lv}</span><span class="chip">${SRC_NAME[w.d]}</span>${SPOKEN.has(k) && w.d !== 'S' ? '<span class="chip">스피킹</span>' : ''}</div>
+      ${ENDEF[k] ? `<div class="muted" style="font-size:13px;margin:2px 0 6px">${esc(ENDEF[k])}</div>` : ''}
       ${ex ? `<div class="ex"><div>${exHTML(ex[0], w.w)}</div><small>${esc(ex[1])}</small></div>` : ''}
       ${ALL.wrongNote[k] ? `<p class="muted" style="margin:6px 0 0">오답노트 ✕${ALL.wrongNote[k].n}</p>` : ''}
       ${sr && !isKnown(i) ? `<p class="muted" style="margin:4px 0 0">다음 복습: ${sr.due <= dayNo() ? '오늘' : (sr.due - dayNo()) + '일 뒤'}</p>` : ''}
@@ -1394,7 +1401,7 @@ function guideView() {
     <div class="top"><span>앱 사용설명서</span><button class="x" id="x">✕</button></div>
     <div class="doc">
     ${sec('1. 시작하기', `<p>처음 실행하면 <b>하루에 공부할 단어 수</b>를 슬라이더로 고릅니다(20~100개, 10개 단위). 나중에 <b>더보기 → 하루 학습량</b>에서 바꿀 수 있고, 바꾼 학습량은 아직 시작하지 않은 Day부터 적용돼요.</p>`)}
-    ${sec('2. 단어장 고르기', `<p><b>학습</b> 탭 위쪽에서 단어장을 고릅니다.</p><ul><li><b>토익</b> — 토익 빈출 단어 + 숙어 + 비즈니스 어휘</li><li><b>기본</b> — 일반 영어 단어 (입문~최상급)</li><li><b>전부</b> — 모든 단어와 숙어</li></ul><p>단어장마다 진도가 따로 저장돼요.</p>`)}
+    ${sec('2. 단어장 고르기', `<p><b>학습</b> 탭 위쪽에서 단어장을 고릅니다.</p><ul><li><b>토익</b> — 토익 빈출 단어 + 숙어 + 비즈니스 어휘</li><li><b>기본</b> — 일반 영어 단어 (입문~최상급)</li><li><b>스피킹</b> — 영어 말하기에서 자주 쓰는 단어 721개 (NGSL-Spoken). 다른 단어장과 겹치는 단어도 들어 있고, 단어 검색에서 영어 뜻도 볼 수 있어요</li><li><b>전부</b> — 모든 단어와 숙어</li></ul><p>단어장마다 진도가 따로 저장돼요.</p>`)}
     ${sec('2-1. 레벨 테스트와 출제 설정', `<p>처음 설치하면 <b>레벨 테스트 20문제</b>로 단어 실력을 확인해요. 결과에 따라 아직 헷갈리는 레벨부터 공부하도록 맞춰져요. 모르는 단어는 찍지 말고 '모르겠어요'를 누르는 게 정확해요.</p><p><b>더보기 → 출제 설정</b>에서 레벨(A1 입문 ~ C2 최상급)과 유형(명사·동사·형용사·부사·숙어)을 체크해서 원하는 단어만 나오게 할 수 있어요. 레벨 테스트는 언제든 다시 볼 수 있어요.</p>`)}
     ${sec('3. 하루 학습', `<p><b>시작하기</b>를 누르면 그날의 단어가 4지선다(A~D)로 나옵니다.</p><ul><li>단어 아래에 <b>미국식 발음기호</b>가 보여요.</li><li>문제가 나오면 미국 → 영국 발음 순서로 읽어줘요. 🔁 다시 듣기, 🔊 미국, 🔊 영국 버튼으로 다시 들을 수 있어요. (더보기 → 자동 발음에서 끌 수 있어요)</li><li>맞히면 바로 다음 문제로, 틀리면 정답을 보여주고 '다음'을 눌러 넘어가요.</li><li>중간에 ✕로 나가도 진도가 저장돼서 <b>이어하기</b>로 계속할 수 있어요.</li></ul>`)}
     ${sec('4. 오답 복습', `<p>하루치를 다 풀면 <b>틀린 단어만 다시</b> 나오고, 전부 맞힐 때까지 반복해요. 풀다가 나갔을 때는 학습 탭의 <b>'지금까지 틀린 N개 보기'</b>로 미리 확인할 수 있어요.</p>`)}
